@@ -1,3 +1,10 @@
-# foundations
+# Index
 
-Foundations and umbrella bodies whose positions bind downstream projects. One record per organisation.
+Directory: `foundations/`
+
+## Concepts
+
+| Title | Type | Description |
+|-------|------|-------------|
+| [Linux Foundation](linux-foundation.md) | Organization | Permits AI-generated contributions to LF projects as a baseline, reasoning en... |
+

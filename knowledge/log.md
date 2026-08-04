@@ -15,6 +15,24 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [Linux Foundation](foundations/linux-foundation.md) — the first `foundations/`
+  record, and the most upstream document in the bundle. It permits AI-generated contributions to LF
+  projects as a **baseline projects may override**, and reasons entirely from licence compatibility
+  and third-party rights. It **does not invoke the DCO**: zero occurrences of `DCO`,
+  `Developer Certificate of Origin` or `Signed-off-by`, checked by counting on the fetched page
+  rather than by reading it.
+* **Negative sweep, not written up as records.** Phoenix, Ash, MacPorts, Proxmox and Pulp were
+  probed for AI terms in their own contribution docs; none showed a contribution policy. These are
+  **deliberately not records yet** — the evidence is one or two file fetches each, which is weaker
+  than [FreeBSD](distributions/freebsd.md)'s absence, where Core publicly stated it was drafting a
+  policy and named where it would land. Files checked: `phoenixframework/phoenix` `CONTRIBUTING.md`
+  and `README.md`; `ash-project/ash` `README.md`; the MacPorts guide source; the Proxmox developer
+  documentation wiki; the Pulp project developer docs. A future pass should start from these and
+  widen, not repeat them.
+* **A probe false positive worth remembering.** The Ash `README.md` matched the AI pattern — on
+  `AshAI`, a *product feature* (Structured Outputs, MCP, Vectorization). A keyword sweep for
+  contribution policy will hit projects that *build* AI tooling, and the hit rate is highest exactly
+  where the subject matter overlaps. Confirm what a match is before recording it as a stance.
 * **Creation**: [Rust](projects/rust.md), [Python](projects/python.md),
   [Ansible](projects/ansible.md). Ansible's policy is the most conventionally drafted in the bundle
   — RFC 2119 keywords, a stated scope covering forum and Matrix as well as code, and a named

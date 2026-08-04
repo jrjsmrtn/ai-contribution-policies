@@ -15,5 +15,6 @@ Bundle root.
 ## Subdirectories
 
 - [distributions/](distributions/index.md)
+- [foundations/](foundations/index.md)
 - [projects/](projects/index.md)
 
