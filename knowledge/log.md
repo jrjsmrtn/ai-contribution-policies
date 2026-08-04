@@ -15,6 +15,14 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [Rust](projects/rust.md), [Python](projects/python.md),
+  [Ansible](projects/ansible.md). Ansible's policy is the most conventionally drafted in the bundle
+  — RFC 2119 keywords, a stated scope covering forum and Matrix as well as code, and a named
+  reporting address. It also uses `Assisted-by:`, **the same field name as the kernel with a
+  different value grammar**, so the tag is a convention rather than a format. Rust has nothing
+  adopted (RFC 3950 closed; RFC 3959 and rust-forge#1040 open) but the open draft is the most
+  developed text encountered, and the only one that concedes its own unenforceability: its goal is
+  *"to remove plausible deniability"*, modelled on anti-money-laundering compliance.
 * **Creation**: [Linux Kernel](projects/linux-kernel.md), [Git](projects/git.md),
   [Debian](distributions/debian.md), [FreeBSD](distributions/freebsd.md). Two are **state changes
   the survey could not have known**: the kernel's guidelines were merged in-tree as
