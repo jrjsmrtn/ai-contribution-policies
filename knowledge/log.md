@@ -15,6 +15,18 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **`overview.md` written.** It was held as a skeleton on the rule that a map drawn before the
+  territory is surveyed describes the surveyor. Fifteen records now span every shape encountered, so
+  it is drawable — and under the amended ADR-0011 it is no longer waiting on coverage, which is not
+  the deliverable. The survey's four-group taxonomy (bans / guidelines-in-progress / active
+  integration / no policy) is **not** what it was replaced with: that grouping sorted by *verdict*,
+  and verdict turned out to be the least predictive thing about a policy. The map sorts by **shape**
+  — what the rule governs — because that is what tells a contributor what to do.
+* **One unsourced claim caught in the draft.** The tag table listed Fedora as using `Assisted-by:`.
+  True according to secondary reporting, but Fedora has no record because its primary is unreachable,
+  so the overview would have asserted as fact something the bundle deliberately declined to record.
+  Removed. A summary page is exactly where an unsourced claim survives longest, because it reads as
+  a conclusion drawn from the records rather than as a claim of its own.
 * **Creation**: [OpenInfra](foundations/openinfra.md), [curl](projects/curl.md),
   [Zig](projects/zig.md) — chosen for novel reasoning under the amended scope, and between them they
   bracket the whole spectrum. **OpenInfra settles the tag question**: it uses `Assisted-By:` for

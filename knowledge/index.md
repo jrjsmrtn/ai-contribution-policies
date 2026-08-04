@@ -10,7 +10,7 @@ Bundle root.
 
 | Title | Type | Description |
 |-------|------|-------------|
-| [How open source treats AI-authored contributions](overview.md) | Practice | The read-through map of project positions on AI-generated code — the stance... |
+| [How open source treats AI-authored contributions](overview.md) | Practice | The read-through map — the six shapes a policy takes, the seven axes each o... |
 
 ## Subdirectories
 
