@@ -15,6 +15,26 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [OpenInfra](foundations/openinfra.md), [curl](projects/curl.md),
+  [Zig](projects/zig.md) — chosen for novel reasoning under the amended scope, and between them they
+  bracket the whole spectrum. **OpenInfra settles the tag question**: it uses `Assisted-By:` for
+  *predictive* tools and `Generated-By:` for *generative* ones, so the field names other projects
+  disagree about are not competing spellings but names for two degrees of authorship. Its labels are
+  also **mutable** — reviewers may remove one after substantial rework — which makes the tag a
+  statement about the current artifact rather than about its history. Nothing else here works that
+  way, and the two readings are incompatible. **curl** is the only policy shaped by inbound security
+  reports: disclosure is a **MUST** for AI-found findings, and fabricated reports earn an immediate
+  ban. **Zig** is the maximum, and its force comes from placement — the ban is a **Code of Conduct**
+  clause, so a violation is misconduct rather than a bad patch.
+* **A cross-record correction.** The ASF record said the tag field names were "an unsettled
+  convention". OpenInfra shows they are not unsettled so much as *partial* — each project adopted
+  the tag for one degree and left the other unnamed. The ASF record now points at OpenInfra rather
+  than leaving the weaker claim standing.
+* **GCC blocked.** `gcc.gnu.org/wiki/AIpolicy` returns an Anubis challenge, the same wall as Fedora.
+  Secondary reporting says the Steering Committee declined legally-significant AI contributions with
+  a carve-out for test cases; **not recorded**, because the primary was not read. The test-case
+  carve-out would be novel if it verifies — worth prioritising when a browser is available, together
+  with Fedora.
 * **Creation**: [Apache Software Foundation](foundations/apache-software-foundation.md). Its
   conditions are near-identical to the Linux Foundation's, but it **bounds the contributor's duty**:
   *"Don't second guess vendor's terms of use … you are not expected to go outside of the TOU text

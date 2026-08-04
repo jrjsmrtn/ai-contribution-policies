@@ -74,9 +74,14 @@ That makes **three field names across five organisations** for the same job:
 | `Generated-by:` | Apache Software Foundation |
 
 The semantics differ too, not only the spelling — *assisted* and *generated* describe different
-degrees of authorship, so a project could plausibly want both. Anyone building tooling should treat
-this as an unsettled convention: emit what the target project asks for, and do not assume a parser
-written for one will read the other.
+degrees of authorship, so a project could plausibly want both.
+
+**[OpenInfra](openinfra.md) uses both, and says which is which**: `Assisted-By:` for *predictive*
+tools (auto-complete), `Generated-By:` for *generative* ones. Read through that scheme, the ASF and
+the [Linux kernel](../projects/linux-kernel.md) are not disagreeing about spelling — each has
+adopted the tag for one degree of authorship and left the other unnamed. Anyone building tooling
+should still emit what the target project asks for, but should not assume the two fields are
+interchangeable: they are not synonyms.
 
 ## What a contributor must do
 
