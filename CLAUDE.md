@@ -39,6 +39,22 @@ body can revisit at any meeting; a specification is not.
 replaces went eleven months without re-checking, which is the entire reason the bundle exists.
 Re-verify against the primary page, and if it has moved, record where it moved to.
 
+## Curated and deep, not exhaustive
+
+**190+ organisations have published AI contribution policies.** Enumeration is not a reachable
+goal and was never what the migrated 27-entry survey achieved either. This bundle earns its keep by
+being *deep* where it is present: read the primary text, quote it, and extract the rule that
+transfers to a project drafting its own.
+
+Prefer, in order: **foundations** (they set defaults for many projects at once), **projects whose
+reasoning is novel** (a new axis, a conceded limitation, an enforcement mechanism nobody else has),
+and **projects the consuming skills actually encounter**. A record that only restates a stance
+already covered by three others earns nothing.
+
+`melissawm/open-source-ai-contribution-policies` is a useful **lead list** and nothing more. It is a
+third-party aggregation, some links are already stale, and no entry counts as evidence until its
+primary has been read here.
+
 ## Some primary sources are not machine-retrievable
 
 Fedora's council policy and its source repository both sit behind an **Anubis proof-of-work

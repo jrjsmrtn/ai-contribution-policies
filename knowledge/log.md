@@ -15,6 +15,32 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [Apache Software Foundation](foundations/apache-software-foundation.md). Its
+  conditions are near-identical to the Linux Foundation's, but it **bounds the contributor's duty**:
+  *"Don't second guess vendor's terms of use … you are not expected to go outside of the TOU text
+  for further clarifications."* It also makes the tool's own similarity reporting the evidence that
+  discharges the third-party-material check — an obligation otherwise unsatisfiable, since nobody
+  can audit training data. Its disclosure token is `Generated-by:`, a **third spelling**.
+* **Scope finding — the landscape is far larger than 27.** A public index
+  (`melissawm/open-source-ai-contribution-policies`) lists **190+ organisations** with published AI
+  contribution policies, including LLVM, OpenJDK, Django, Kubernetes, curl, GCC, SciPy, NumPy,
+  PyTorch, Zig, Drupal, Firefox and Wikipedia. **Enumeration is no longer a reachable goal**, and
+  the migrated survey's 27 entries were a slice of a much bigger field even when written. This
+  bundle should be *curated and deep* — records that read the primary text and extract the
+  transferable rule — and should point at that index for breadth rather than race it. Treat the
+  index as a **lead list only**: it is a third-party aggregation, several of its links are already
+  stale (it points at CPython's `generative-ai/` path, which now redirects), and nothing in it is
+  evidence until the primary is read.
+* **Fedora, fourth route, still blocked — but its state has changed.** Secondary reporting is
+  consistent that the Council **approved** the policy (2025-10), that it requires disclosure *when a
+  significant part is taken from a tool without changes*, that it uses `Assisted-by`, that AI *"must
+  not be the sole or final arbiter"* in review, that scope extends past code to documentation,
+  design assets and social posts, and that large-scale initiatives are excluded and handled
+  individually. **None of that is recorded as a record**, because every route to the primary text
+  returns an Anubis challenge: `docs.fedoraproject.org` (curl and WebFetch), pagure raw, and the
+  GitLab mirror (403). Noted here so the next pass starts from "approved, needs a browser" rather
+  than re-deriving it. If the disclosure threshold survives verification it is **near-identical to
+  Ansible's** — both Red Hat-adjacent, which is worth checking for common drafting.
 * **Creation**: [Linux Foundation](foundations/linux-foundation.md) — the first `foundations/`
   record, and the most upstream document in the bundle. It permits AI-generated contributions to LF
   projects as a **baseline projects may override**, and reasons entirely from licence compatibility
