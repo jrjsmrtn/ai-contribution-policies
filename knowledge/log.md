@@ -15,6 +15,13 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [NetBSD](distributions/netbsd.md) and [QEMU](projects/qemu.md), both verified
+  against their own pages. Both are **narrower than the survey recorded**: NetBSD presumes LLM
+  output tainted but permits it with *prior written approval by core*, and QEMU grounds its rule in
+  DCO compliance and runs a documented exceptions process. "Complete ban" was wrong for both.
+* **Blocked**: Fedora's council policy. The docs site *and* its pagure source repository both sit
+  behind an Anubis proof-of-work challenge, returning HTTP 200 with a challenge page rather than
+  the document. Source located, retrieval needs a human; no record written.
 * **Creation**: [Gentoo](distributions/gentoo.md), verified against the Council's own wiki page
   rather than imported from the survey this bundle will replace. It is the first record and sets
   the shape: what the policy says, when the body decided it, and where that is written down.

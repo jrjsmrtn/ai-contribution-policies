@@ -39,6 +39,22 @@ body can revisit at any meeting; a specification is not.
 replaces went eleven months without re-checking, which is the entire reason the bundle exists.
 Re-verify against the primary page, and if it has moved, record where it moved to.
 
+## Some primary sources are not machine-retrievable
+
+Fedora's council policy and its source repository both sit behind an **Anubis proof-of-work
+challenge**. `curl` receives **HTTP 200 with a challenge page**, not the document — so a status
+code proves the server answered, never that the content arrived. Check for the text you came for,
+not for `200`.
+
+When a source cannot be fetched:
+
+- **Do not fall back to a summary elsewhere.** A secondary source is what this bundle exists to
+  replace.
+- **Record the state**: source located, retrieval blocked, needs a human with a browser. A record
+  that says *"unverified, and here is exactly where to look"* is worth more than one that quietly
+  repeats an old claim.
+- Do not write a record at all until someone has read the primary text.
+
 ## Scope boundaries (ADR-0011)
 
 - **Procedure** — how to check requirements before contributing — belongs to `analyze-project`.
