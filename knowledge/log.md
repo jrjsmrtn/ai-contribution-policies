@@ -15,6 +15,14 @@ with a copied directory.
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
   categories filed by organisation type, and one verified exemplar record.
+* **Creation**: [Linux Kernel](projects/linux-kernel.md), [Git](projects/git.md),
+  [Debian](distributions/debian.md), [FreeBSD](distributions/freebsd.md). Two are **state changes
+  the survey could not have known**: the kernel's guidelines were merged in-tree as
+  `Documentation/process/coding-assistants.rst` (2026-04), and Debian opened a General
+  Resolution on LLM usage whose discussion period runs 2026-07-23 to 2026-08-08. Git turns out to
+  carry an explicit AI section that both rejects AI-looking submissions *and* recommends careful AI
+  use. FreeBSD documents a verified **absence** — Core reported drafting a policy in 2025; the
+  Committer's Guide still has no mention of AI as of 2026-08-04.
 * **Creation**: [NetBSD](distributions/netbsd.md) and [QEMU](projects/qemu.md), both verified
   against their own pages. Both are **narrower than the survey recorded**: NetBSD presumes LLM
   output tainted but permits it with *prior written approval by core*, and QEMU grounds its rule in
