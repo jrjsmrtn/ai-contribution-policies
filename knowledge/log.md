@@ -20,6 +20,29 @@ with a copied directory.
   `gcc.gnu.org/ai-policy.html`), and neither did the Fedora council path recorded here. The earlier
   caution — *a status code proves the server answered, never that the content arrived* — was applied
   to **content** and not to **existence**, which is the same error one level up.
+* **`vendors/` filled** — [SUSE](vendors/suse.md), [Red Hat](vendors/red-hat.md),
+  [Canonical](vendors/canonical.md). The category was empty and now carries the finding that
+  justifies it existing: **a vendor's policy governs its own staff, not your contribution.** SUSE
+  says so outright (*"The policy applies to SUSE employees"*), Red Hat defers to *"standards and
+  practices of each unique community"*, and Canonical publishes nothing. Where a vendor also runs a
+  community — Fedora, openSUSE, Ubuntu — the community's policy is what binds a contributor, and
+  reading the vendor's stance as its communities' policy gets both wrong.
+* **SUSE contradicts itself across two published versions**, which is the sharpest caution in the
+  bundle about trusting a single source. The **2024-04 PDF** states *"AI pair programming must not
+  be used"*; the **live web policy contains no AI clause at all** — verified by counting occurrences,
+  and confirmed complete because it carries the four sections that *bracket* the AI clause in the
+  PDF. Which is current is not established. "SUSE bans AI pair programming" is widely repeated and
+  traces to the PDF; it may no longer be true.
+* **A claim declined.** Secondary sources describe Red Hat as having staff guidelines *"based on 3
+  principles"*. **No such enumeration appears in either Red Hat post read**, so it is not recorded —
+  the record names the claim, says where it looked, and leaves the gap open. The second post is
+  industry guidance addressed to organisations generally, not Red Hat policy; reading it as policy is
+  an easy category error to make from a search result.
+* **Canonical's absence is a strong one**: no AI mention across eighteen sections of contributor
+  documentation covering the whole contribution path, *including the sponsorship queue where such a
+  rule would sit*. It also requires a **Harmony-based CLA** that licenses rather than assigns and is
+  itself silent on AI — so contributors sign a heavier instrument than most projects ask for, and it
+  still does not answer the question.
 * **Re-verified [Debian](distributions/debian.md)** three days before its discussion period closes.
   Still *In Discussion* to 2026-08-08; **voting period not yet announced**. Three material changes
   since first recorded: Proposal **B** amended twice, **C** amended once, and **A** is now framed as

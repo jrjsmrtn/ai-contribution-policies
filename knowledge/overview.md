@@ -45,6 +45,18 @@ sources:
   - id: gcc-ai-policy
     title: GNU Compiler Collection - AI Policy
     resource: https://gcc.gnu.org/ai-policy.html
+  - id: suse-policy-html
+    title: SUSE Open Source Policy (live web version)
+    resource: https://opensource.suse.com/legal/policy
+  - id: suse-policy-pdf
+    title: SUSE Open Source Policy, effective 2024-04 (PDF)
+    resource: https://www.suse.com/siteassets/suse_open_source_policy2.pdf
+  - id: redhat-ai-assisted-dev
+    title: 'AI-assisted development: Supercharging the open source way (Red Hat blog)'
+    resource: https://www.redhat.com/en/blog/ai-assisted-development-supercharging-open-source-way
+  - id: canonical-cla
+    title: Contributor Licence Agreement — Ubuntu and Canonical Legal
+    resource: https://canonical.com/legal/contributors
   - id: policy-index
     title: open-source-ai-contribution-policies (third-party index; lead list only)
     resource: https://github.com/melissawm/open-source-ai-contribution-policies
@@ -136,6 +148,26 @@ whether the contribution crosses the copyright threshold those instruments exist
 manage.[^gcc-ai-policy] It does adopt the kernel's rule that only a human may sign off, and adds one
 nobody else states: *"An LLM may not commit code to the project repository"* — a constraint on
 **agents with write access**, not on generated text.[^gcc-ai-policy]
+
+## Vendors govern their staff, not your contribution
+
+The `vendors/` records are the one category where the policy **does not bind the reader**. A vendor's
+open-source policy tells its own employees what they may do; it says nothing about what a project
+will accept from you.
+
+[SUSE](vendors/suse.md) states it outright — *"The policy applies to SUSE
+employees"*[^suse-policy-html] — and [Red Hat](vendors/red-hat.md)'s published position defers
+explicitly to *"standards and practices of each unique community"*[^redhat-ai-assisted-dev], which
+resolves the question back to the receiving project. [Canonical](vendors/canonical.md) publishes
+nothing on AI at all, while requiring a CLA that is also silent on it.[^canonical-cla]
+
+**Where a vendor also runs a community — Fedora, openSUSE, Ubuntu — the community's policy is the one
+that binds a contributor**, and it is a separate document with a separate adoption process. Reading a
+vendor's stance as its communities' policy gets both wrong.
+
+SUSE also supplies the sharpest caution in the bundle about trusting any single source: **two
+SUSE-published versions of one policy disagree** on whether AI pair programming is prohibited — the
+2024 PDF forbids it, the live web policy does not mention it.[^suse-policy-pdf][^suse-policy-html]
 
 ## Foundations are floors, not answers
 
@@ -266,5 +298,9 @@ never that the content arrived. Check for the text you came for.
 [^zig-coc]: [Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)](https://ziglang.org/code-of-conduct/)
 [^curl-contribute]: [Contribute to curl — on AI use in curl](https://curl.se/dev/contribute.html)
 [^gcc-ai-policy]: [GNU Compiler Collection - AI Policy](https://gcc.gnu.org/ai-policy.html)
+[^suse-policy-html]: [SUSE Open Source Policy (live web version)](https://opensource.suse.com/legal/policy)
+[^suse-policy-pdf]: [SUSE Open Source Policy, effective 2024-04 (PDF)](https://www.suse.com/siteassets/suse_open_source_policy2.pdf)
+[^redhat-ai-assisted-dev]: [AI-assisted development: Supercharging the open source way (Red Hat blog)](https://www.redhat.com/en/blog/ai-assisted-development-supercharging-open-source-way)
+[^canonical-cla]: [Contributor Licence Agreement — Ubuntu and Canonical Legal](https://canonical.com/legal/contributors)
 [^policy-index]: [open-source-ai-contribution-policies (third-party index; lead list only)](https://github.com/melissawm/open-source-ai-contribution-policies)
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)

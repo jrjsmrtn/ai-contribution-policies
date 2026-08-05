@@ -17,4 +17,5 @@ Bundle root.
 - [distributions/](distributions/index.md)
 - [foundations/](foundations/index.md)
 - [projects/](projects/index.md)
+- [vendors/](vendors/index.md)
 
