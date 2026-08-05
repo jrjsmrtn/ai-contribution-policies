@@ -7,6 +7,7 @@ Directory: `projects/`
 | Title | Type | Description |
 |-------|------|-------------|
 | [Ansible](ansible.md) | Organization | Permits AI-assisted contributions org-wide under a published community policy... |
+| [GCC](gcc.md) | Organization | Declines legally significant LLM contributions — a copyright threshold rath... |
 | [Git](git.md) | Organization | Rejects contributions that look AI-generated while explicitly recommending ca... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under a merged in-tree policy that bars AI ... |
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |

@@ -57,10 +57,15 @@ primary has been read here.
 
 ## Some primary sources are not machine-retrievable
 
-Fedora's council policy and its source repository both sit behind an **Anubis proof-of-work
-challenge**. `curl` receives **HTTP 200 with a challenge page**, not the document — so a status
-code proves the server answered, never that the content arrived. Check for the text you came for,
-not for `200`.
+Some sites sit behind an **Anubis proof-of-work challenge**, answering **HTTP 200 with a challenge
+page** rather than the document. A status code proves the server answered, never that the content
+arrived. Check for the text you came for, not for `200`.
+
+**And it proves nothing about existence either.** Anubis serves that same challenge for *any* path,
+including ones that do not exist — so a 200 from such a host cannot distinguish "blocked" from
+"wrong URL". Both Fedora and GCC were once logged here as *located, retrieval blocked*; both URLs
+were simply wrong. Before recording a source as unreachable, confirm the URL from a page that
+actually resolves.
 
 When a source cannot be fetched:
 

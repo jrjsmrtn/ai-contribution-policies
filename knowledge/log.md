@@ -11,6 +11,39 @@ with a copied directory.
 **Releases**, newest first: *(none yet — the bundle is a skeleton)*.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases.
 
+## 2026-08-05
+
+* **Correction — "located, retrieval blocked" was wrong for both Fedora and GCC.** Those entries
+  rested on HTTP 200 responses from Anubis-protected hosts. **Anubis serves a challenge page for any
+  path, including ones that do not exist**, so a 200 never confirmed the pages were real. Both URLs
+  were simply wrong: `gcc.gnu.org/wiki/AIpolicy` does not exist (the policy is at
+  `gcc.gnu.org/ai-policy.html`), and neither did the Fedora council path recorded here. The earlier
+  caution — *a status code proves the server answered, never that the content arrived* — was applied
+  to **content** and not to **existence**, which is the same error one level up.
+* **Creation**: [GCC](projects/gcc.md), read in full from `ai-policy.html` (dated 2026-07-29). Its
+  threshold is **legal significance** — the copyright test that already decides whether a
+  contribution needs an assignment — and nothing else in this bundle draws its line there. That
+  makes the policy an extension of existing legal machinery rather than a new regime.
+* Three exceptions, each doing distinct work: legally insignificant LLM content is acceptable *if
+  clearly marked*; **test cases are exempt even when legally significant** (the only such carve-out
+  here, and coherent with the threshold logic); and imported code such as `libsanitizer` is out of
+  scope, so GCC declines to impose its rule on upstreams it merely vendors.
+* **The accessibility carve-out is the clause most worth copying.** Screen readers, text-to-speech,
+  direct translation and spelling/grammar assistance are outside the policy entirely, provided the
+  contributor verifies the output. A blanket "no AI" rule silently taxes contributors who rely on
+  assistive technology, and non-native speakers through translation; GCC names both.
+* It is also the only policy here whose **first section is about people** — contributors *"should be
+  treated with respect and kindness"*, presumed to act in good faith, and **guided** rather than
+  rejected if they have not yet followed the policy. That is an explicit hedge against the
+  enforcement failure mode Rust's draft concedes: an unverifiable rule turns into suspicion.
+* GCC is the **fourth** adopter of `Assisted-by:` with no shared specification, and joins the kernel
+  in reserving `Signed-off-by:` to humans — going further with *"An LLM may not commit code to the
+  project repository"*, a rule about agents with write access rather than about generated text.
+* The policy is **CC0 1.0** — the only one here released for reuse, so a project wanting a
+  copyright-threshold rule can adopt the text outright.
+* `stale_after` is **2027-01-15** because the source named its own review date: *"At the latest the
+  policy will be reviewed at the start of 2027."*
+
 ## 2026-08-04
 
 * **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
@@ -53,11 +86,7 @@ with a copied directory.
   convention". OpenInfra shows they are not unsettled so much as *partial* — each project adopted
   the tag for one degree and left the other unnamed. The ASF record now points at OpenInfra rather
   than leaving the weaker claim standing.
-* **GCC blocked.** `gcc.gnu.org/wiki/AIpolicy` returns an Anubis challenge, the same wall as Fedora.
-  Secondary reporting says the Steering Committee declined legally-significant AI contributions with
-  a carve-out for test cases; **not recorded**, because the primary was not read. The test-case
-  carve-out would be novel if it verifies — worth prioritising when a browser is available, together
-  with Fedora.
+* **GCC recorded** — see the 2026-08-05 entry. The URL logged here was wrong, not blocked.
 * **Creation**: [Apache Software Foundation](foundations/apache-software-foundation.md). Its
   conditions are near-identical to the Linux Foundation's, but it **bounds the contributor's duty**:
   *"Don't second guess vendor's terms of use … you are not expected to go outside of the TOU text
