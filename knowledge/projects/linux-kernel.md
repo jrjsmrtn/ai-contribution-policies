@@ -25,6 +25,9 @@ sources:
   - id: kernel-coding-assistants-src
     title: Documentation/process/coding-assistants.rst (torvalds/linux, master)
     resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/coding-assistants.rst
+  - id: kernel-submitting-patches
+    title: Documentation/process/submitting-patches.rst (torvalds/linux, master)
+    resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst
 ---
 
 **Stance: permitted, with mandatory attribution and a human on the hook.** The kernel has a merged,
@@ -66,6 +69,20 @@ The stated purpose is not credit but measurement — attribution *"helps track t
 in the development process."*[^kernel-coding-assistants-src] A project adopting this tag is
 building a dataset about itself.
 
+**It is required, not encouraged, and that is stated in the main submission document** rather than
+only in the AI-specific one. `submitting-patches.rst` carries a *"Using Assisted-by:"* section:
+*"If you used any sort of advanced coding tool in the creation of your patch, you need to
+acknowledge that use by adding an Assisted-by tag. Failure to do so may impede the acceptance of
+your work."*[^kernel-submitting-patches] A contributor following the ordinary process meets the
+requirement without ever opening the AI policy.
+
+**Why a new token rather than `Co-developed-by:`.** The kernel's existing vocabulary makes the
+obvious choice incoherent: `Co-developed-by:` denotes authorship, and every one *"must be
+immediately followed by a Signed-off-by: of the associated co-author"*[^kernel-submitting-patches]
+— a sign-off this policy forbids an agent from adding. `Assisted-by:` is the only shape consistent
+with both rules. Guidance recommending `Co-developed-by:` for AI attribution, which circulated
+widely before this policy landed, asks for a structurally invalid trailer block.
+
 ## Everything else is the ordinary process
 
 Contributions must follow `development-process.rst`, `coding-style.rst` and
@@ -89,3 +106,4 @@ matches the spec is worse than none.
 
 [^kernel-coding-assistants]: [AI Coding Assistants — The Linux Kernel documentation](https://docs.kernel.org/process/coding-assistants.html)
 [^kernel-coding-assistants-src]: [Documentation/process/coding-assistants.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/coding-assistants.rst)
+[^kernel-submitting-patches]: [Documentation/process/submitting-patches.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst)

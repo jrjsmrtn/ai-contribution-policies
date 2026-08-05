@@ -27,6 +27,17 @@ with a copied directory.
   so the overview would have asserted as fact something the bundle deliberately declined to record.
   Removed. A summary page is exactly where an unsourced claim survives longest, because it reads as
   a conclusion drawn from the records rather than as a claim of its own.
+* **Strengthened**: [Linux Kernel](projects/linux-kernel.md) gains a second primary,
+  `submitting-patches.rst`, found while writing the landscape's commit-trailers concept. The
+  `Assisted-by:` tag is **required, not encouraged**, and the requirement sits in the *main*
+  submission document — *"Failure to do so may impede the acceptance of your work"* — so a
+  contributor following the ordinary process meets it without opening the AI policy. The record
+  previously cited only `coding-assistants.rst` and understated this.
+* Also records **why the kernel invented a token** instead of reusing `Co-developed-by:`: that tag
+  denotes authorship and each one *"must be immediately followed by a Signed-off-by: of the
+  associated co-author"* — a sign-off the AI policy forbids an agent from adding. `Assisted-by:` is
+  the only shape consistent with both rules. The retired 27-project survey recommended
+  `Co-developed-by:` for AI attribution, which asks for a structurally invalid trailer block.
 * **Creation**: [OpenInfra](foundations/openinfra.md), [curl](projects/curl.md),
   [Zig](projects/zig.md) — chosen for novel reasoning under the amended scope, and between them they
   bracket the whole spectrum. **OpenInfra settles the tag question**: it uses `Assisted-By:` for
