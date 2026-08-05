@@ -42,6 +42,15 @@ wrong.**
 
 ### Changed
 
+- **[`overview.md`](knowledge/overview.md) restructured, not merely extended.** **Six shapes became
+  seven** — GCC's *copyright-threshold rule* is genuinely new — and Fedora forced a **fourth state**
+  alongside prohibited, permitted and undecided: **a rule in force that cannot be read**
+  - The axes gained **"who the rule taxes"**: a blanket no-AI rule falls hardest on contributors who
+    use AI to work at all. Every project that considered translation permits it; only GCC extends the
+    reasoning to accessibility. *A policy that does not carve this out has excluded people without
+    deciding to*
+  - The DCO section records that GCC accepts **either** an FSF assignment **or** a DCO and its AI
+    policy turns on neither — further evidence the instrument is not the unit of choice
 - **[Linux kernel](knowledge/projects/linux-kernel.md) strengthened with a second primary.**
   `submitting-patches.rst` makes `Assisted-by:` **required, not encouraged** — *"Failure to do so may
   impede the acceptance of your work"* — in the *main* submission document, so a contributor
