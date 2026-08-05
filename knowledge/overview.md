@@ -42,6 +42,9 @@ sources:
   - id: curl-contribute
     title: Contribute to curl — on AI use in curl
     resource: https://curl.se/dev/contribute.html
+  - id: gcc-ai-policy
+    title: GNU Compiler Collection - AI Policy
+    resource: https://gcc.gnu.org/ai-policy.html
   - id: policy-index
     title: open-source-ai-contribution-policies (third-party index; lead list only)
     resource: https://github.com/melissawm/open-source-ai-contribution-policies
@@ -60,7 +63,7 @@ reasoning, and projects that share reasoning frequently reach opposite verdicts.
 > **Read the project's own page.** This map is for orientation. Every record here exists because a
 > summary of that project was wrong in a way that mattered — see *Why summaries fail*, below.
 
-## Six shapes
+## Seven shapes
 
 Almost every policy read so far is one of these. The shape predicts what a contributor must *do*
 far better than the stance label does.
@@ -73,9 +76,20 @@ far better than the stance label does.
 | **Declaration rule** | whether you *said so* | [Rust](projects/rust.md) (draft), [OpenInfra](foundations/openinfra.md) |
 | **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md) |
 | **Licence-compatibility rule** | rights in the output | [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md) |
+| **Copyright-threshold rule** | whether the contribution is *legally significant* | [GCC](projects/gcc.md) |
 
-Two are undecided rather than shaped: [Debian](distributions/debian.md) is mid-vote, and
-[FreeBSD](distributions/freebsd.md) has a reported intention and no published rule.
+GCC's is the newest shape and the most reusable. Its line is the **copyright threshold** — the same
+test that already decides whether a contribution needs an assignment — so the policy extends existing
+legal machinery instead of creating a new regime, and *"is this AI-generated?"* becomes subordinate
+to *"is this legally significant?"*. It is also the only policy here released **CC0**, so the text can
+be adopted outright.
+
+Three are unshaped rather than shaped: [Debian](distributions/debian.md) is mid-vote,
+[FreeBSD](distributions/freebsd.md) has a reported intention and no published rule, and
+**[Fedora](distributions/fedora.md) has a policy in force whose text is not published anywhere
+reachable** — approved by a minuted unanimous vote, effective immediately, and nine months later
+absent from the Council Policies page. A rule nobody can read is a fourth state, distinct from
+prohibited, permitted and undecided.
 
 ## Detection and declaration fail differently
 
@@ -116,6 +130,13 @@ Four organisations reason from the **Developer Certificate of Origin** and reach
 So *"they require a DCO"* predicts nothing about a project's stance. Any summary organised around
 that fact is organised around noise.
 
+[GCC](projects/gcc.md) shows the instrument is not even the unit of choice: it accepts **either** an
+FSF copyright assignment **or** a DCO sign-off, and its AI policy turns on neither — it turns on
+whether the contribution crosses the copyright threshold those instruments exist to
+manage.[^gcc-ai-policy] It does adopt the kernel's rule that only a human may sign off, and adds one
+nobody else states: *"An LLM may not commit code to the project repository"* — a constraint on
+**agents with write access**, not on generated text.[^gcc-ai-policy]
+
 ## Foundations are floors, not answers
 
 The [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md)
@@ -141,9 +162,15 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 
 | Field | Used by |
 |---|---|
-| `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`AGENT_NAME:MODEL_VERSION [TOOLS]`), [Ansible](projects/ansible.md) (`[tool name/version]`) |
+| `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`AGENT_NAME:MODEL_VERSION [TOOLS]`), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
+
+**Do not reach for `Co-developed-by:`.** It was widely recommended for AI attribution before project
+policies landed, and it is structurally invalid for a tool: it denotes *authorship*, so the kernel
+requires each one be immediately followed by a `Signed-off-by:` from that co-author — which the same
+project's policy forbids an AI agent from adding. The trailer demands a sign-off no tool may give,
+and that constraint is why a distinct token was coined rather than an existing one reused.
 
 Two consequences. **Value grammars differ even where the field matches** — a trailer formatted for
 the kernel is not a valid Ansible one, so emit what the target project asks for. And OpenInfra's
@@ -171,9 +198,15 @@ same questions.[^debian-gr-2026-002] Adding what the other records surface, a po
 
 A policy silent on any of these has a gap someone will find. Two more decisions sit underneath:
 **where the rule lives** (Zig's ban is a Code of Conduct clause, so a violation is misconduct rather
-than a bad patch), and **whether translation is permitted** — every project that considered it
-permits machine translation so as not to tax non-native speakers, except Zig, which refuses and
-moves the translation to the reader.[^zig-coc]
+than a bad patch), and **who the rule taxes**.
+
+That last one is the least considered and the most consequential. A blanket "no AI" rule falls
+hardest on contributors who use AI to work at all. Every project that thought about **translation**
+permits it so as not to tax non-native speakers — except Zig, which refuses and moves the translation
+to the reader.[^zig-coc] Only [GCC](projects/gcc.md) extends the reasoning to **accessibility**,
+putting screen readers, text-to-speech, direct translation and spelling assistance outside the policy
+entirely, provided the contributor verifies the output.[^gcc-ai-policy] A policy that does not carve
+this out has excluded people without deciding to.
 
 ## Why summaries fail
 
@@ -189,6 +222,12 @@ consistent direction: **they dropped the qualifier that determines what a contri
 
 All five were filed as "complete ban". The pattern is not carelessness; it is what compression does
 to this subject. **The exceptions are the operative part** — whether a route exists, and who decides.
+
+[Fedora](distributions/fedora.md) shows the failure can start earlier than any summary. Its policy
+was adopted properly — open proposal, weeks of public discussion, revisions from feedback, a recorded
+unanimous vote — and then never published where a contributor can read it. **A rule in force that
+cannot be read is not a rule anyone can follow**, and every downstream summary of it, including a
+careful one, is then unverifiable by construction.
 
 ## What this bundle does not do
 
@@ -226,5 +265,6 @@ never that the content arrived. Check for the text you came for.
 [^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)](https://github.com/rust-lang/rust-forge/pull/1040)
 [^zig-coc]: [Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)](https://ziglang.org/code-of-conduct/)
 [^curl-contribute]: [Contribute to curl — on AI use in curl](https://curl.se/dev/contribute.html)
+[^gcc-ai-policy]: [GNU Compiler Collection - AI Policy](https://gcc.gnu.org/ai-policy.html)
 [^policy-index]: [open-source-ai-contribution-policies (third-party index; lead list only)](https://github.com/melissawm/open-source-ai-contribution-policies)
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)

@@ -20,6 +20,26 @@ with a copied directory.
   `gcc.gnu.org/ai-policy.html`), and neither did the Fedora council path recorded here. The earlier
   caution — *a status code proves the server answered, never that the content arrived* — was applied
   to **content** and not to **existence**, which is the same error one level up.
+* **`overview.md` updated for both new records**, and it needed a structural change rather than two
+  more rows. **Six shapes became seven**: GCC's copyright-threshold rule is genuinely new — its line
+  is the test that already decides whether a contribution needs an assignment, so *"is this
+  AI-generated?"* is subordinate to *"is this legally significant?"*.
+* **A fourth state was added alongside prohibited / permitted / undecided: a rule in force that
+  cannot be read.** Fedora's policy is adopted and effective and its text is unpublished, which no
+  existing category described.
+* The axes section gained **"who the rule taxes"**, the least considered and most consequential of
+  them. A blanket "no AI" rule falls hardest on contributors who need AI to work at all; every
+  project that thought about translation permits it, and only GCC extends the reasoning to
+  accessibility. *A policy that does not carve this out has excluded people without deciding to.*
+* The DCO section now notes GCC accepts **either** an FSF assignment **or** a DCO, and its AI policy
+  turns on neither — further evidence the instrument is not the unit of choice. Plus the one rule
+  nobody else states: *"An LLM may not commit code to the project repository"*, a constraint on
+  agents with write access rather than on generated text.
+* The attribution table gained GCC as a **fourth** `Assisted-by:` adopter, and the
+  `Co-developed-by:` trap that explains why a new token was coined instead of an existing one reused.
+* **The gate caught a real defect in this edit**: `[^gcc-ai-policy]` was cited three times with no
+  `sources` entry and no definition. A summary page is exactly where an uncited claim survives,
+  because it reads as a conclusion drawn from records rather than as a claim of its own.
 * **Creation**: [Fedora](distributions/fedora.md) — **a status record, not a content record.** The
   Council approved the AI-Assisted Contributions policy on 2025-10-22 by a minuted **+7, 0, 0** vote,
   effective immediately. Nine months on it is **not on the Council Policies page**, against an
