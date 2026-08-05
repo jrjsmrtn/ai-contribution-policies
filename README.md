@@ -4,10 +4,20 @@ How open-source organisations treat **AI-authored contributions**, as an OKF bun
 only — the gates that check it and the decisions that shaped it live in the meta-project this
 sits in.
 
-> **Status: skeleton.** One verified record. The 27-entry survey named in ADR-0011 has *not* been
-> imported, deliberately: those entries were last reviewed 2025-09-04 and importing them would
-> fill the bundle with claims nobody has checked in eleven months. Extraction and re-verification
-> are one piece of work.
+> **Curated, not exhaustive — and that is deliberate.** 190+ organisations have published AI
+> contribution policies. Enumerating them is not the goal and completeness is not claimed. Records
+> are chosen for **foundations first** (they set defaults for many projects at once), then
+> **novel reasoning**, then **what the consuming tools actually encounter**.
+>
+> Nothing here was imported from a prior survey. Every record was read from the organisation's own
+> page, because the survey this replaces was consistently wrong in one direction — it dropped the
+> qualifier that decides what a contributor should do. Five projects it filed as "complete ban"
+> each turn out to carry a route: a revisitable decision, a named approver, a documented exceptions
+> process. **The exceptions are the operative part.**
+
+Run `okf list knowledge` for what is actually in here. This file deliberately quotes no count —
+a hand-written total is the kind of claim that goes stale silently, which is the failure the
+bundle exists to prevent.
 
 ## What is in here
 
