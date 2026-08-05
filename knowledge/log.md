@@ -20,6 +20,15 @@ with a copied directory.
   `gcc.gnu.org/ai-policy.html`), and neither did the Fedora council path recorded here. The earlier
   caution — *a status code proves the server answered, never that the content arrived* — was applied
   to **content** and not to **existence**, which is the same error one level up.
+* **Re-verified [Debian](distributions/debian.md)** three days before its discussion period closes.
+  Still *In Discussion* to 2026-08-08; **voting period not yet announced**. Three material changes
+  since first recorded: Proposal **B** amended twice, **C** amended once, and **A** is now framed as
+  an amendment to the **Social Contract**.
+* That last one changes the ballot's arithmetic. The Social Contract is a **Foundation Document**
+  (Constitution §4.1(5.2)) and superseding one requires a **3:1 majority** (§4.1(5.3)) — so the
+  prohibition option must clear a supermajority its five rivals do not. **The vote page states no
+  majority requirement**, so this is read from the Constitution and the record says so. A six-way
+  list looks like an even contest and is not one.
 * **`overview.md` updated for both new records**, and it needed a structural change rather than two
   more rows. **Six shapes became seven**: GCC's copyright-threshold rule is genuinely new — its line
   is the test that already decides whether a contribution needs an assignment, so *"is this

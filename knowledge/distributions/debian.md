@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Debian
-description: Has no LLM policy; six competing General Resolution proposals ranging from prohibition to permissive were in discussion until 2026-08-08, with the vote still to come.
+description: Has no LLM policy; six competing General Resolution proposals in discussion until 2026-08-08 — and the prohibition option amends the Social Contract, so it needs a 3:1 majority the other five do not.
 resource: https://www.debian.org/vote/2026/vote_002
 tags:
   - ai-contribution
@@ -16,11 +16,16 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-04T23:10:00Z'
+  - by: claude/opus-5
+    at: '2026-08-05T07:25:00Z'
 stale_after: 2026-09-15
 sources:
   - id: debian-gr-2026-002
     title: 'General Resolution: LLM usage in Debian (2026 vote_002)'
     resource: https://www.debian.org/vote/2026/vote_002
+  - id: debian-constitution
+    title: Debian Constitution §4.1 — Foundation Documents and majority requirements
+    resource: https://www.debian.org/devel/constitution
 ---
 
 **Stance: undecided, and actively being decided.** Debian has **no policy on LLM-assisted
@@ -30,6 +35,10 @@ discussion period **2026-07-23 to 2026-08-08**, with the ballot to follow.[^debi
 > ⚠ **This record has a short shelf life by construction.** `stale_after` is 2026-09-15, not the
 > bundle's usual six months, because the subject is a vote in progress. Re-read the GR page rather
 > than trusting this record after the ballot closes.
+>
+> **Re-checked 2026-08-05**: still *In Discussion*, closing **2026-08-08**; the **voting period is
+> not yet announced**. Since first recorded, Proposal B has been amended twice and Proposal C once,
+> and Proposal A is now framed as a Social Contract amendment — see below.
 
 ## Six proposals, not two
 
@@ -39,16 +48,32 @@ noticed.[^debian-gr-2026-002]
 
 | | Proposer | Position |
 |---|---|---|
-| **A** | Matthias Geiger | Forbid LLM-assisted contributions to Debian |
-| **B** | Lucas Nussbaum | Allow, with conditions |
-| **C** | Ian Jackson | Reject LLMs as far as practical |
+| **A** | Matthias Geiger | Forbid — **by amending the Social Contract** |
+| **B** | Lucas Nussbaum | Allow, with conditions *(amended twice)* |
+| **C** | Ian Jackson | Reject LLMs as far as practical *(amended once)* |
 | **D** | Pierre-Elliott Bécue | Accept, for Debian-specific work |
 | **E** | Marc Haber | Responsible use — neither endorse nor prohibit |
 | **F** | Tobias Frost | A cautious approach — discourage, trust judgement |
 
-**A** covers *"packaging, native Debian software like lintian, documentation and translations"* but
-**excludes upstream projects** — Debian would keep packaging software written with AI while barring
-it from its own work. That carve-out is what makes a distribution-level ban tractable at all.
+**A is not an ordinary ballot option.** It adds a clause to the **Social Contract**:
+
+> **6. Works Created through the use of Large Language Models (LLMs)**
+>
+> We will not allow direct contributions to Debian written with the use or assistance of large
+> language models (LLMs) or other generative AI tools.[^debian-gr-2026-002]
+
+*"Direct contributions"* means *"packaging, native Debian software like lintian, documentation and
+translations written by Debian contributors, and official Debian web
+resources"*[^debian-gr-2026-002] — **excluding upstream projects**, so Debian would keep packaging
+software written with AI while barring it from its own work. That carve-out is what makes a
+distribution-level ban tractable at all.
+
+**The Social Contract is a Foundation Document, and the Constitution requires a 3:1 majority to
+supersede one** (§4.1(5.2) names it; §4.1(5.3) sets the threshold).[^debian-constitution] The vote
+page states no majority requirement for any option, so this is read from the Constitution rather
+than from the ballot — but it means **A must clear a supermajority the other five do not**. A ballot
+where one option needs 3:1 and its rivals need a simple majority is not the even contest a
+six-way list suggests, and any reading of the outcome has to account for it.
 
 **C** contains the requirement no other project in this bundle has: *"messages to humans … must be
 drafted solely by humans without LLM assistance."* Every other policy here governs **code**. Debian
@@ -90,3 +115,4 @@ Discussion** is always on the ballot — a "no decision" outcome is a real possi
 leave this record's stance unchanged rather than superseded.
 
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
+[^debian-constitution]: [Debian Constitution §4.1 — Foundation Documents and majority requirements](https://www.debian.org/devel/constitution)
