@@ -8,6 +8,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-08-05
+
+**All four categories are now populated.** `vendors/` was an empty promise; filling it produced the
+finding that justifies the category existing at all.
+
+### Added
+
+- **[SUSE](knowledge/vendors/suse.md)**, **[Red Hat](knowledge/vendors/red-hat.md)** and
+  **[Canonical](knowledge/vendors/canonical.md)** — and with them the rule that **a vendor's policy
+  governs its own staff, not your contribution**. That inverts every other category here: a
+  distribution, project or foundation policy tells *you* what you may submit; a vendor policy tells
+  its employees what *they* may do
+  - Where a vendor also runs a community — Fedora, openSUSE, Ubuntu — **the community's policy is
+    what binds a contributor**, and it is a separate document with a separate adoption process
+  - **SUSE contradicts itself across two published versions.** The `2024-04` PDF states *"AI pair
+    programming must not be used"*; the live web policy contains **no AI clause at all**. Verified by
+    counting occurrences, and confirmed complete because the page carries the four sections that
+    *bracket* the AI clause in the PDF. Which is current is not established — "SUSE bans AI pair
+    programming" is widely repeated, traces to the PDF, and may no longer be true
+  - **Red Hat publishes a disposition, not a policy**, deferring explicitly to each community's own
+    rules. A widely-repeated claim that it has staff guidelines *"based on 3 principles"* is **named
+    and declined** — no such enumeration appears in either post read
+  - **Canonical's absence is verified across eighteen sections** of contributor documentation,
+    including the sponsorship queue where such a rule would sit. It requires a Harmony-based **CLA**
+    that licenses rather than assigns and is itself silent on AI
+
+### Changed
+
+- **[`overview.md`](knowledge/overview.md)** gains a vendors section stating the
+  staff-not-contributor rule, and SUSE as the bundle's sharpest caution against trusting a single
+  published source
+- **[Debian](knowledge/distributions/debian.md) re-verified** three days before its discussion period
+  closes. Still *In Discussion* to 2026-08-08, voting period unannounced. Proposal **B** amended
+  twice, **C** once, and **A** is now framed as an amendment to the **Social Contract** — a
+  Foundation Document, which the Constitution requires a **3:1 majority** to supersede. **A must
+  clear a supermajority its five rivals do not**, and the vote page states no majority requirement,
+  so this is read from the Constitution and cited as such
+
 ## [0.2.0] - 2026-08-05
 
 The two sources v0.1.0 shipped as unread are both recorded. **Neither was blocked; both URLs were
