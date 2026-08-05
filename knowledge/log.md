@@ -20,6 +20,22 @@ with a copied directory.
   `gcc.gnu.org/ai-policy.html`), and neither did the Fedora council path recorded here. The earlier
   caution — *a status code proves the server answered, never that the content arrived* — was applied
   to **content** and not to **existence**, which is the same error one level up.
+* **Creation**: [Fedora](distributions/fedora.md) — **a status record, not a content record.** The
+  Council approved the AI-Assisted Contributions policy on 2025-10-22 by a minuted **+7, 0, 0** vote,
+  effective immediately. Nine months on it is **not on the Council Policies page**, against an
+  assigned action to put it there, and the agreed text exists only as a comment on Pagure ticket
+  #542 — which was unreachable from two networks at the time of writing.
+* The record therefore states that a policy exists and binds, and **deliberately does not state what
+  it says**. Fedora did the governance well — open proposal, weeks of public discussion, revisions
+  from feedback, a recorded unanimous vote — and failed at the last step, which is the one a
+  contributor needs. A rule in force that cannot be read is not a rule anyone can follow.
+* The Community Blog carries a full policy text and it is the **proposal**, superseded by *"the
+  latest revision"* the Council actually approved. Quoting it would reproduce precisely the error
+  this bundle exists to correct: a plausible, well-formatted, out-of-date text presented as an
+  organisation's current position.
+* `CONTRIBUTING.md` gains a narrowly-drawn exception for status records, because this one would
+  otherwise contradict the stated rule. The rule is unchanged where it counts — no claim about what
+  a policy *says* without reading the text.
 * **Creation**: [GCC](projects/gcc.md), read in full from `ai-policy.html` (dated 2026-07-29). Its
   threshold is **legal significance** — the copyright test that already decides whether a
   contribution needs an assignment — and nothing else in this bundle draws its line there. That

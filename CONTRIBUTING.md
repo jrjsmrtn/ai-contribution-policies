@@ -11,6 +11,16 @@ a news article, not an aggregator entry, not another bundle. This is the whole p
 that preceded this bundle was assembled from secondary readings and was consistently wrong in one
 direction — it dropped the qualifier that determines what a contributor should actually do.
 
+**One exception, narrowly drawn.** A record may document a policy's *status* — that it exists, when
+it was adopted, whether it is in force, where it is published — on primary sources about **those**
+facts, while explicitly declining to say what the policy *contains*. `distributions/fedora.md` is the
+worked example: a unanimous Council vote is minuted, so the policy's existence and effect are
+established, while its adopted text has no reachable publication. Such a record must say plainly that
+it does not state the policy's content, and must not paraphrase a superseded draft in its place.
+
+The rule is unchanged where it counts: **no claim about what a policy says, without reading the
+text.** A status record makes different claims and needs different sources, not weaker ones.
+
 If the primary source cannot be retrieved, **say so and stop**. Several policies sit behind
 proof-of-work bot challenges that return HTTP 200 with a challenge page rather than the document; a
 status code proves the server answered, never that the content arrived. A record saying *"located,
