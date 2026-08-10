@@ -1,85 +1,96 @@
 ---
 type: Organization
 title: CTAN
-description: No discoverable AI-contribution policy, despite TeX Live's policy asserting that CTAN has one — the upload conditions are silent across every documented location.
-resource: https://ctan.org/help/upload-pkg
+description: No formal AI-contribution policy, confirmed on the record by a CTAN team member — but an operating practice exists, in which authors disclose AI involvement and packages where AI produced poor work are rejected on review.
+resource: https://tug.org/pipermail/tex-live/2026-May/052424.html
 tags:
   - ai-contribution
   - policy
   - archive
   - no-policy
+  - informal-practice
+  - disclosure
 status: stable
 generated:
   by: claude/opus-5
   at: '2026-08-10T20:05:00Z'
 verified:
   - by: claude/opus-5
-    at: '2026-08-10T20:05:00Z'
+    at: '2026-08-10T20:40:00Z'
 stale_after: 2026-11-10
 sources:
+  - id: lotz-ctan
+    title: Manfred Lotz (CTAN team) on the tex-live list, 2026-05-21
+    resource: https://tug.org/pipermail/tex-live/2026-May/052424.html
+  - id: berry-separate
+    title: Karl Berry — TeX Live and CTAN are separate; write ctan@ctan.org, 2026-05-20
+    resource: https://tug.org/pipermail/tex-live/2026-May/052423.html
   - id: ctan-upload-pkg
     title: CTAN — How can I upload a package?
     resource: https://ctan.org/help/upload-pkg
   - id: ctan-addendum
     title: Additional Information for CTAN Uploaders (upload addendum)
     resource: https://ctan.org/file/help/ctan/CTAN-upload-addendum
-  - id: ctan-help
-    title: CTAN help index
-    resource: https://ctan.org/help
-  - id: tl-aipolicy
-    title: Policy on AI-assisted contributions for TeX Live — scope clause
-    resource: https://tug.org/texlive/aipolicy.html
+  - id: clawxiv
+    title: clawxiv — the package cited as disclosing AI involvement well
+    resource: https://www.ctan.org/pkg/clawxiv
 ---
 
-**Stance: none published, as of 2026-08-10 — and the absence is in tension with a claim made
-elsewhere in the TeX world.**
+**Stance: no formal policy, stated as such by the CTAN team — with an informal practice that is
+already being applied to submissions.**
 
-# The absence is verified, and the search path is wide
+# On the record, from CTAN
 
-Checked on 2026-08-10:
+Asked directly on the `tex-live` list whether CTAN had a policy on AI-generated packages, Manfred
+Lotz replied **"from the CTAN team"** on 2026-05-21:[^lotz-ctan]
 
-| Location | Result |
-|---|---|
-| Upload instructions[^ctan-upload-pkg] | no mention of AI, authorship attestation or originality |
-| **Upload addendum**[^ctan-addendum] — the fullest conditions document, 26,125 characters of plain text | **zero** matches for AI, artificial intelligence, LLM, generative, machine-generated, ChatGPT |
-| Help index[^ctan-help] — every help entry enumerated | no policy, guidelines or conduct entry on the subject |
-| `/aipolicy`, `/help/ai`, `/ai-policy`, `/help/aipolicy` | all HTTP 404 |
-| Upload form | no declaration or checkbox beyond licence and entitlement to upload |
+> For CTAN, also no official policy is in place. We are in discussion here.
 
-The addendum is the document where such a condition would live: it carries the naming rules, the
-licensing expectations and the "more aspects we ask you keep in mind when preparing your upload".
-The one authorship-adjacent requirement anywhere is the README licence statement.[^ctan-upload-pkg]
+He then gave a personal view carrying three operative points:[^lotz-ctan]
 
-# The tension worth recording
+1. Agreement with TeX Live's position that a human takes full technical and legal responsibility.
+2. **"A package author should mention if a package was created in collaboration with an AI"**,
+   citing [`clawxiv`](https://www.ctan.org/pkg/clawxiv) as an example done well.[^clawxiv]
+3. **"Currently, we reject a new package if the author of a new package used AI and created stupid
+   stuff. Fortunately, in most cases this can relatively easy be recognized."**
 
-TeX Live's policy states that "Other parts of the TeX world, notably CTAN, as well as individual
-package and program maintainers, have their own policies. Their policies must also be complied with;
-TeX Live's policy does not override anyone else's."[^tl-aipolicy]
+His recommendation to the asker: "go ahead and mention openly that AI was involved."
 
-That asserts a CTAN policy exists. None is discoverable at any documented location. Three readings
-fit the evidence and this record does not choose between them:
+Point 3 is the substantive finding. There is no written rule, but there **is** an enforced quality
+bar applied at review time, and AI-assisted submissions are already being judged against it. The
+absence of a policy does not mean the absence of a practice.
 
-1. the sentence is aspirational or anticipatory, written to disclaim scope rather than to describe a
-   published document;
-2. a CTAN position exists but is unpublished — held by the team and applied case by case;
-3. "policies" means CTAN's general conditions (licensing, entitlement to upload), which do apply to
-   AI-assisted work without naming it.
+# CTAN and TeX Live are separate, and CTAN has no public discussion list
 
-**Resolving this needs a direct answer from the CTAN team**, not more searching. Absence of a page
-is evidence about publication, not about the existence of a position.
+Karl Berry, answering the same question the day before: "TeX Live and CTAN are two different things,
+with different people involved. For an answer about CTAN, you should write
+ctan at ctan.org."[^berry-separate]
 
-# What applies in the meantime
+That routing matters, because **CTAN has no public mailing list**. Of the 63 public lists on
+`lists.tug.org`, none is `ctan` or `ctan-ann`; `ctan.org/ctan-ann` is a web announcement feed, not a
+discussion forum. So there is no CTAN archive to search — questions of this kind surface on
+`tex-live`, as this one did, or go privately to `ctan@ctan.org`.
 
-CTAN's stated conditions are licence-based: an uploader must state the licence and must be entitled
-to upload.[^ctan-upload-pkg] Those bind AI-assisted work exactly as they bind any other — an
-AI-assisted package whose provenance is clean and whose licence is stated meets the published bar.
-The unresolved part is whether CTAN wants **disclosure**, and in what form, for the catalogue.
+# The published documents remain silent
 
-Contrast [TeX Live](tex-live.md), which publishes a detailed policy and reaches the same practical
-place by a different route: permitted, human responsible, disclose when third-party material was
-copied.
+Checked 2026-08-10: the upload instructions,[^ctan-upload-pkg] the upload
+addendum[^ctan-addendum] (26,125 characters of plain text; **zero** matches for AI, artificial
+intelligence, LLM, generative, machine-generated or ChatGPT), the full help index, and the candidate
+URLs `/aipolicy`, `/help/ai`, `/ai-policy`, `/help/aipolicy` (all HTTP 404). CTAN's published
+conditions are licence-based: state the licence, be entitled to upload.
 
+# What a submitter should do
+
+Disclose AI involvement in the package documentation, and expect the work to be reviewed on merit.
+That satisfies the practice Lotz describes without waiting for a document that does not yet exist.
+"We are in discussion here" also dates this record: a formal policy may appear, which is why it
+carries a three-month expiry rather than the usual six.
+
+Compare [TeX Live](tex-live.md), which reached a written policy from the same conversation — the
+question in this thread is what prompted it.
+
+[^lotz-ctan]: Manfred Lotz (CTAN team), tex-live list, 2026-05-21 — https://tug.org/pipermail/tex-live/2026-May/052424.html
+[^berry-separate]: Karl Berry, tex-live list, 2026-05-20 — https://tug.org/pipermail/tex-live/2026-May/052423.html
 [^ctan-upload-pkg]: CTAN — How can I upload a package? — https://ctan.org/help/upload-pkg
 [^ctan-addendum]: Additional Information for CTAN Uploaders — https://ctan.org/file/help/ctan/CTAN-upload-addendum
-[^ctan-help]: CTAN help index — https://ctan.org/help
-[^tl-aipolicy]: Policy on AI-assisted contributions for TeX Live — https://tug.org/texlive/aipolicy.html
+[^clawxiv]: clawxiv on CTAN — https://www.ctan.org/pkg/clawxiv
