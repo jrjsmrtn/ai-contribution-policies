@@ -11,6 +11,26 @@ with a copied directory.
 **Releases**, newest first: **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases.
 
+## 2026-08-10
+
+* **Added `distributions/tex-live` and `distributions/ctan`** — the TeX ecosystem, prompted by a
+  concrete need: `mmd2tex` is an AI-assisted package heading for a CTAN upload, and its release
+  runbook gates that step on knowing the position.
+
+* **TeX Live has a well-formed policy**; it separates legal exposure from disclosure etiquette,
+  names its exemptions (autocompletion, spelling, grammar), and uniquely covers *communication* —
+  no AI-generated mailing-list or maintainer email unless clearly delimited.
+
+* **CTAN publishes none**, verified across the upload instructions, the 26,125-character upload
+  addendum, the full help index and four candidate URLs. Recorded as a verified absence rather
+  than left unwritten.
+
+* **The two records are in tension, deliberately left unresolved.** TeX Live's scope clause asserts
+  CTAN "ha[s] their own policies"; no such policy is discoverable. The CTAN record lists three
+  readings that fit the evidence and picks none, because absence of a page is evidence about
+  publication, not about the existence of a position. Resolving it needs a direct answer from the
+  CTAN team.
+
 ## 2026-08-05
 
 * **Correction — "located, retrieval blocked" was wrong for both Fedora and GCC.** Those entries

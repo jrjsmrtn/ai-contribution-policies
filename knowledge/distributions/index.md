@@ -11,4 +11,5 @@ Directory: `distributions/`
 | [FreeBSD](freebsd.md) | Organization | Has no formal AI policy — verified absent from the Committer's Guide; Core ... |
 | [Gentoo](gentoo.md) | Organization | Source-based Linux distribution whose Council voted an express ban on contrib... |
 | [NetBSD](netbsd.md) | Organization | BSD operating system whose commit guidelines presume LLM-generated code to be... |
-
+* [CTAN](ctan.md) - No discoverable AI-contribution policy, despite TeX Live's policy asserting that CTAN has one.
+* [TeX Live](tex-live.md) - Accepts AI-assisted contributions on a responsibility-first framing, with disclosure required when AI copied third-party material.
