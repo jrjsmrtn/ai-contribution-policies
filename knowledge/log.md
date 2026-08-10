@@ -9,7 +9,7 @@ still names its version: OKF has no in-band content-version field, and a git tag
 with a copied directory.
 
 **Releases**, newest first: **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
-[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases.
+[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
 ## 2026-08-10
 
@@ -134,7 +134,7 @@ with a copied directory.
 
 ## 2026-08-04
 
-* **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 — structure,
+* **Initialization**: Created the bundle per `supplychain-workspace` ADR-0011 <!-- audience-ok: dated historical entry; rewriting it to conceal the charter would falsify the record --> — structure,
   categories filed by organisation type, and one verified exemplar record.
 * **`overview.md` written.** It was held as a skeleton on the rule that a map drawn before the
   territory is surveyed describes the surveyor. Fifteen records now span every shape encountered, so
