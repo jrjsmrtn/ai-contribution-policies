@@ -164,7 +164,7 @@ from the survey this replaces.
 
 ### Added
 
-- Bundle skeleton per `supplychain-workspace` ADR-0011: structure, categories filed by
+- Bundle skeleton per `supplychain-workspace` ADR-0011: structure, categories filed by <!-- audience-ok: dated release entry citing the ADR that chartered this bundle -->
   organisation type, `log.md`.
 - Records across `distributions/`, `foundations/` and `projects/` — see `okf list knowledge`.
   Selection is **curated, not exhaustive**: foundations first, then novel reasoning, then what the
@@ -181,5 +181,5 @@ from the survey this replaces.
 - **Two sources are unread and no records exist for them.** Fedora's council policy and GCC's wiki
   both sit behind proof-of-work challenges that return HTTP 200 with a challenge page rather than
   the document. Located, not verified; see `knowledge/log.md`.
-- `supplychain-workspace` ADR-0011 was amended 2026-08-05: the field is 190+ organisations, not 27,
+- `supplychain-workspace` ADR-0011 was amended 2026-08-05: the field is 190+ organisations, not 27, <!-- audience-ok: dated release entry recording an amendment to that ADR -->
   so completeness is not the deliverable and "born red" is a steady state rather than a backlog.
