@@ -8,6 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-08-13
+
+**Tooling only — no concept changed.** Within `knowledge/` the only difference from v0.4.0 is the
+one line of `log.md`'s release map. Verified: `git diff v0.4.0..HEAD -- knowledge/` was empty before
+this release commit.
+
+### Changed
+
+- **The shared bundle checkers moved up one level**, to the outer meta-project, joining the link and
+  ADR-index checkers as the single copy every workspace calls. Nothing about what they check
+  changed; a second workspace needed them, and copying would have created the drift the promotion
+  rule exists to prevent. This repository's hook now distinguishes what its own workspace owns from
+  what every workspace shares
+- **The audience checker now reads `README` and `CHANGELOG`**, not only `knowledge/`. A repository's
+  most published-facing file had been audited by nothing. It flagged this `CHANGELOG` on its first
+  run — every finding a dated release entry or a quotation, all legitimate, each now carrying a
+  marker with its reason. History is not rewritten to satisfy a gate
+
 ## [0.4.0] - 2026-08-13
 
 **A new category, and an absence that got an answer.** `distributions/` opens with the TeX
