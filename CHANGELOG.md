@@ -8,6 +8,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-08-13
+
+**A new category, and an absence that got an answer.** `distributions/` opens with the TeX
+ecosystem, driven by a concrete need rather than survey completeness: `mmd2tex` is an AI-assisted
+package heading for a CTAN upload, and its release runbook gates that step on knowing the position.
+
+### Added
+
+- **[TeX Live](knowledge/distributions/tex-live.md)** — a well-formed policy, unusual in three ways.
+  It **separates legal exposure from disclosure etiquette**, so the mandatory part stays small and
+  the advisory part is honest about being advisory; it **names its exemptions** (autocompletion,
+  spelling, grammar) instead of leaving contributors to guess; and it uniquely covers
+  **communication** — no AI-generated mailing-list or maintainer email unless clearly delimited
+- **[CTAN](knowledge/distributions/ctan.md)** — recorded first as a **verified absence**, checked
+  across the upload instructions, the 26,125-character upload addendum, the full help index and four
+  candidate URLs. An absence written down is worth more than a gap left unwritten, but it is a claim
+  about *publication*, not about whether a position exists
+- **`.okf-types`** — this bundle's type vocabulary, in the file the gate reads.
+  `check-bundle-types.py` checks it in both directions, since `okf` requires the `type` field (§4.1)
+  but accepts any value
+- **A documentation-link gate** over this repository's own `README`, `CLAUDE.md` and `CHANGELOG`,
+  run **here against this repository's history** — the dead-filename set is repo-scoped, and names
+  that died in the meta-project when this corpus was extracted are alive and correct here. Clean on
+  first run
+
+### Changed
+
+- **The CTAN absence is now sourced.** Manfred Lotz, writing *"from the CTAN team"* on the tex-live
+  list, 2026-05-21: *"For CTAN, also no official policy is in place. We are in discussion here."*
+  That settles the tension TeX Live's scope clause created — it disclaims scope rather than
+  describing a policy that exists — and upgrades the record from an unsourced absence to a sourced
+  one, which is a different kind of claim. *"We are in discussion here"* dates it: a formal policy
+  may appear
+- **The footnote gate is `okf-gate`**, an installed command rather than a script reached through the
+  meta-project. Three rules rather than two — measuring against `okf` v0.3.0 surfaced
+  `okf/sources/footnote-unmatched`, a footnote label with no matching `sources[].id`, which had gone
+  unenforced
+
+### Fixed
+
+- **`knowledge/log.md` said the CTAN question was still open**, three days after it closed. The
+  concept was rewritten when the answer arrived and the log was not. Every gate was clean throughout
+  — `okf validate`, `okf lint`, `okf-gate`, and the audience and type checks — because all of them
+  verify structure and none reads for sense. Found while cutting this release, by reading
+
 ## [0.3.0] - 2026-08-05
 
 **All four categories are now populated.** `vendors/` was an empty promise; filling it produced the

@@ -8,7 +8,7 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
 ## 2026-08-10
@@ -25,11 +25,27 @@ with a copied directory.
   addendum, the full help index and four candidate URLs. Recorded as a verified absence rather
   than left unwritten.
 
-* **The two records are in tension, deliberately left unresolved.** TeX Live's scope clause asserts
-  CTAN "ha[s] their own policies"; no such policy is discoverable. The CTAN record lists three
-  readings that fit the evidence and picks none, because absence of a page is evidence about
-  publication, not about the existence of a position. Resolving it needs a direct answer from the
-  CTAN team.
+* **The two records were left in tension, and the tension resolved the same day.** TeX Live's scope
+  clause asserts CTAN "ha[s] their own policies"; no such policy was discoverable, so the CTAN
+  record listed three readings that fit the evidence and picked none — absence of a page is evidence
+  about publication, not about the existence of a position.
+
+  **The CTAN team answered on the record.** Manfred Lotz, writing "from the CTAN team" on the
+  tex-live list on 2026-05-21: *"For CTAN, also no official policy is in place. We are in discussion
+  here."* That selects reading (1) — the scope clause disclaims scope rather than describing a
+  policy that exists — and converts an unsourced absence into a **sourced** one, which is a
+  different kind of claim: a mailing-list answer from the team is positive evidence, where four
+  fruitless URL checks were only evidence about publication.
+
+  *"We are in discussion here"* also dates the record. A formal policy may appear, which is why the
+  concept says so rather than presenting the absence as settled.
+
+  **This entry was itself corrected on 2026-08-13**, while cutting v0.4.0. The concept was rewritten
+  when the answer arrived and the log was not, so this file went on saying the question was open for
+  three days after it closed. Nothing could have caught it: `okf validate`, `okf lint`, `okf-gate`
+  and the audience and type gates were all clean throughout, because every one of them checks
+  structure and none of them reads for sense. `CLAUDE.md` says exactly that — *"the gates verify
+  structure, not sense"* — and this is what it looks like in practice.
 
 ## 2026-08-05
 
