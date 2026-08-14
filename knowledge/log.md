@@ -11,6 +11,28 @@ with a copied directory.
 **Releases**, newest first: **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-08-14
+
+* **`distributions/debian.md` re-verified, and four claims had gone stale in nine days.** The
+  General Resolution moved from *In Discussion* to *Voting*; the discussion period was **extended to
+  2026-08-13**, a week past the date this record carried; the ballot is open **2026-08-15 to
+  2026-08-28**; and **two further proposals were added, G and H — eight, not six.**
+* **A caveat could be dropped rather than corrected.** The record derived Proposal A's 3:1
+  requirement from the Constitution and said explicitly that the vote page stated no requirement.
+  The page now states it in as many words. The derivation was right and is now sourced, which is the
+  good outcome of writing down *where* a claim came from.
+* **The shape of the disagreement changed, not just its size.** G puts human communication in scope
+  alongside C, so that is now the position of two independent proposals rather than one. H argues
+  from **environmental cost** — a ground no other option in this ballot, and no other organisation in
+  this bundle, reasons from. A seventh axis was added to the list a policy must decide.
+* **A count was replaced with a shape.** The disclosure argument had rested on "five of six ballot
+  options"; it now describes which options ask for disclosure and why the two prohibitions make it
+  moot, so the reasoning survives the ballot growing again.
+* **All eight quotations were re-confirmed**, not only the three added. Five had been carried
+  forward from the 2026-08-05 check — sourced-looking claims resting on an earlier session.
+* `stale_after` moved **2026-09-15 → 2026-08-29**, the day after the ballot closes, so the record
+  demands a re-read when the result exists rather than two weeks later.
+
 ## 2026-08-10
 
 * **Added `distributions/tex-live` and `distributions/ctan`** — the TeX ecosystem, prompted by a
