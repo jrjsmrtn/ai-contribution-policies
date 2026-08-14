@@ -8,6 +8,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-08-14
+
+**The first release driven by an expiry rather than by new material.** `distributions/debian.md`
+carried a deliberately short `stale_after` because its subject is a vote in progress. It came due,
+and four of its claims had gone stale in nine days.
+
+### Changed
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) re-verified against the vote
+  page.** The General Resolution moved from *In Discussion* to **Voting**; the discussion period was
+  **extended to 2026-08-13**, a week past the date this record carried; the ballot is open
+  **2026-08-15 to 2026-08-28**; and **two further proposals were added — G and H, making eight, not
+  six**. Their operative text was read, not inferred from their titles
+- **The disagreement changed shape, not only size.** **G** puts human communication in scope
+  alongside **C**, so that is the position of two independent proposals rather than one project's
+  outlier. **H** argues from **environmental cost** — a ground no other option in this ballot, and no
+  other organisation in this bundle, reasons from
+- **A seventh axis** was added to the list a policy must decide: *on what grounds?* A project could
+  adopt H's position while agreeing entirely about quality, which none of the first six axes
+  distinguishes
+- **A count became a shape.** The disclosure argument rested on *"five of six ballot options"* — a
+  figure the ballot growing to eight would have falsified. It now names which options ask for
+  disclosure and why the two prohibitions make it moot, so the reasoning survives the next amendment
+- `stale_after` **2026-09-15 → 2026-08-29**, the day after the ballot closes, so the record demands
+  a re-read when the result exists rather than a fortnight later
+
+### Removed
+
+- **A caveat, rather than a correction.** The record derived Proposal A's 3:1 supermajority from the
+  Constitution and stated plainly that the vote page gave no majority requirement. The page now
+  states it — *"Proposal A needs a 3:1 majority, the other proposals need a simple majority"* — so
+  the derivation was right and is now sourced. **Recording where a claim came from is what let this
+  retire cleanly instead of reading as a contradiction**
+
+### Notes
+
+**All eight quotations in the record were re-confirmed against the page, not only the three added.**
+Five had been carried forward from the 2026-08-05 check. A quotation nobody has re-read presents as
+sourced while resting on an earlier session, and the gap was closed rather than written up as a
+known limitation — one further fetch was cheaper than the caveat.
+
+**Nothing else in the bundle was touched.** The remaining twenty-two concepts are 82 days or more
+from expiry; working the list in date order is the point of the triage step, not a shortcut.
+
 ## [0.5.0] - 2026-08-13
 
 **Tooling only — no concept changed.** Within `knowledge/` the only difference from v0.4.0 is the
