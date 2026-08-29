@@ -13,6 +13,45 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Second GNOME sweep: the policy count nearly doubled, and the first sweep's blind spot was the
+  filename.** `README` and `HACKING` were read across all 321 modules — 342 such files — after the
+  record itself flagged them as unsurveyed. **Seventeen modules now state an AI policy: nine in
+  `CONTRIBUTING`, eight in `README`/`HACKING`, and the two sets do not overlap at all.**
+* **Not one module puts the policy in both places.** Reading only `CONTRIBUTING` — the file a
+  contributor is told to read — misses almost half. *Where a federation keeps its rules is not
+  standardised, so a single-filename survey systematically under-reports*, which is a caution about
+  method rather than about GNOME.
+* **The boilerplate's origin is documented and dated.** Written for **Loupe** and announced on GNOME
+  Discourse **2025-02-26** by `sophieherold`: *"I just merged an addition to Loupe's contribution
+  guidelines that bans the use of AI generated content … I'm in favor of adopting a similar policy for
+  all official GNOME software."* `console`, `dia` and `gitg` carry *"Adopted from Loupe"* in place,
+  and `gitg` links back to that thread.
+* **This is policy diffusion across a federation, observable, dated — and it bypassed the centre.**
+  One maintainer wrote a text, proposed it fleet-wide on a forum, and a dozen modules copied it. The
+  handbook was never amended and still says nothing. **The mechanism that spread the rule was social,
+  not institutional.**
+* **The drift is now explained rather than merely observed.** The original Loupe text does not name
+  Ollama; `libadwaita` added it 2025-07-11 and five later copies carry it. The copies diverge on
+  exactly the detail a contributor needs — whether their tool is named.
+* **Two modules reject the boilerplate's own carve-out, on the axis this bundle treats as the most
+  consequential.** The shared text exempts *"purely translating texts for issues and comments to
+  English"*. `libxml2` refuses it — *"No LLMs for comments on the bug tracker, **including
+  translation**"* — and substitutes a human accommodation: *"You are welcome to post in your native
+  language and rely on others."* **The accessibility carve-out GCC treats as the clause most worth
+  copying is being decided both ways inside one federation.**
+* **`vte` frames the ban as licensing rather than quality**, and broader than the boilerplate: *"You
+  may not contribute any code that was written, whether wholly or partly, by using AI in any form."*
+  The boilerplate bans generated contributions; this bans AI's involvement in authorship at all.
+* **The shortest policy in the bundle is here** — `showtime`, entire: *"We do not accept AI-generated
+  contributions."* And `dia` cross-references from `HACKING.md` under *"So-called 'AI'"*: *"All
+  hallucinations in Dia are purely organic in origin."*
+* **Detection was two-part and proved on three fixtures first.** An AI term alone is worthless in a
+  README, so a hit required an AI term **and** policy language within three lines. Proved to fire on a
+  real ban, and to stay silent both on an innocent *"targets AI workloads"* README and on policy
+  language with no AI in it. **All nine candidates turned out to be genuine** — no false positives to
+  discard, which the CONTRIBUTING sweep's looser filter could not have promised.
+
+
 * **Creation: [GTK](projects/gtk.md), and [GNOME](projects/gnome.md) rewritten around a survey of all
   321 modules in the group.** 45 carry a `CONTRIBUTING`; **nine state an AI policy**, in three
   incompatible positions. The survey was run because the previous version of the GNOME record had

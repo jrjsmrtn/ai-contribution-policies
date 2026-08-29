@@ -99,6 +99,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
   Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
   bullet list outside the table with CTAN's pre-correction description
+- **A second GNOME sweep read `README` and `HACKING` across all 321 modules**, after the record
+  flagged them unsurveyed. **Seventeen modules state an AI policy — nine in `CONTRIBUTING`, eight in
+  `README`/`HACKING`, with zero overlap.** Reading only `CONTRIBUTING` misses almost half, which is a
+  caution about survey method as much as about GNOME
+- **The boilerplate ban's origin is now documented**: written for Loupe, announced on GNOME Discourse
+  **2025-02-26** with an explicit call to adopt it *"for all official GNOME software"*, and credited
+  in place by `console`, `dia` and `gitg`. **Policy diffusion across a federation, dated and
+  observable — and it bypassed the handbook entirely**, which was never amended
+- **`libxml2` rejects the boilerplate's translation exception** — *"No LLMs for comments on the bug
+  tracker, including translation"* — offering native-language posting instead. The accessibility
+  carve-out GCC calls the clause most worth copying is decided **both ways inside one federation**.
+  `vte` frames its ban as licensing and broader: *"wholly or partly, by using AI in any form"*
 - **[`projects/gnome.md`](knowledge/projects/gnome.md) rewritten around a survey of all 321 modules**
   in the GNOME group: 45 carry a `CONTRIBUTING`, **nine state an AI policy**, in three incompatible
   positions — a seven-module named-vendor ban (the first here), `gnome-commander`'s argued ban on

@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: GNOME
-description: Rejects AI-authored Shell extensions at review while permitting AI as a development tool, and is the only record here that names the artifacts it looks for — imaginary API usage and comments serving as LLM prompts. The rule governs the third-party extension channel; the project handbook carries no AI policy at all, and the modules disagree — of 321 surveyed, nine state a policy, ranging from a named-vendor ban to GTK's conditional permission.
+description: Rejects AI-authored Shell extensions at review while permitting AI as a development tool, and is the only record here that names the artifacts it looks for — imaginary API usage and comments serving as LLM prompts. The rule governs the third-party extension channel; the project handbook carries no AI policy at all, and the modules disagree — of 321 surveyed, seventeen state a policy, and the nine in CONTRIBUTING and eight in README/HACKING are disjoint sets.
 resource: https://gjs.guide/extensions/review-guidelines/review-guidelines.html
 tags:
   - ai-contribution
@@ -32,6 +32,15 @@ sources:
   - id: gnome-commander-contributing
     title: 'CONTRIBUTING.md — why we don''t want "AI" contributions (gnome-commander, main)'
     resource: https://gitlab.gnome.org/GNOME/gnome-commander/-/raw/main/CONTRIBUTING.md
+  - id: gnome-loupe-discourse
+    title: 'Loupe no longer allows generative AI contributions — GNOME Discourse, 2025-02-26'
+    resource: https://discourse.gnome.org/t/loupe-no-longer-allows-generative-ai-contributions/27327
+  - id: gnome-libxml2-readme
+    title: 'README.md — Strict No LLM / No AI Policy (libxml2, main)'
+    resource: https://gitlab.gnome.org/GNOME/libxml2/-/raw/master/README.md
+  - id: gnome-vte-readme
+    title: 'README.md — contribution licensing and AI (vte, main)'
+    resource: https://gitlab.gnome.org/GNOME/vte/-/raw/master/README.md
 ---
 
 **Stance: AI as a tool is permitted, an AI-authored extension is rejected — and what this governs is
@@ -124,8 +133,16 @@ Also none across the six `maintainers/` pages, the seven `issues/` pages, or any
 ## The modules disagree, and nothing above them decides
 
 The handbook's silence is not the end of the story. **All 321 non-archived projects in the `GNOME`
-group were surveyed on 2026-08-29**: 45 carry a `CONTRIBUTING` file, and **nine of those state an AI
-policy**. They fall into three incompatible positions.
+group were surveyed on 2026-08-29**, in two passes — `CONTRIBUTING` files first, then `README` and
+`HACKING`. **Seventeen modules state an AI policy.**
+
+**The two passes found disjoint sets: nine modules keep the policy in `CONTRIBUTING`, eight in
+`README` or `HACKING`, and not one module does both.** Reading only `CONTRIBUTING` — the file a
+contributor is told to read, and the obvious place to look — would have missed **almost half** of
+GNOME's AI policies. That is a methodological finding as much as a GNOME one: *where a federation
+keeps its rules is not standardised, so a single-filename survey systematically under-reports.*
+
+They fall into three incompatible positions.
 
 **A shared ban, in seven modules** — `glycin`, `libadwaita`, `loupe`, `libshumate`, `gnome-maps`,
 `gnome-calendar`, `libmanette`:
@@ -141,10 +158,24 @@ accessibility instinct [GCC](gcc.md) writes as a carve-out. It also states a con
 here does: *"we cannot supply support on anything referencing AI
 output."*[^gnome-libadwaita-contributing]
 
-**The shared text has already drifted.** `libadwaita` added Ollama to the banned list on 2025-07-11
-and `libmanette` carries it too; the other five do not. **A policy propagated by copy-paste diverges
-on exactly the detail a contributor needs** — whether their tool is named — and no mechanism
-reconciles the copies.
+**The boilerplate has a traceable origin, and the diffusion is documented.** It was written for
+[Loupe](https://gitlab.gnome.org/GNOME/loupe) and announced on GNOME Discourse on **2025-02-26** by
+`sophieherold`: *"I just merged an addition to Loupe's contribution guidelines that bans the use of
+AI generated content in contributions. For now, I came up with the following text. **I'm in favor of
+adopting a similar policy for all official GNOME software.**"*[^gnome-loupe-discourse] Several
+adopters credit it in place — `console`, `dia` and `gitg` all carry *"Adopted from Loupe"*, and
+`gitg` links back to that very thread.
+
+**This is policy diffusion across a federation, observable and dated — and it bypassed the centre
+entirely.** One maintainer wrote a text, proposed it fleet-wide on a forum, and a dozen modules
+copied it. The GNOME handbook was not amended and still says nothing. **The mechanism that actually
+spread a rule here was social, not institutional**, which is worth knowing for anyone expecting a
+project's policy to arrive through its governance documents.
+
+**The copies have already drifted.** The original Loupe text does not name Ollama; `libadwaita` added
+it on 2025-07-11, and `libmanette`, `console`, `dia`, `gitg` and `gnome-software` carry it, while the
+rest do not. **A policy propagated by copy-paste diverges on exactly the detail a contributor
+needs** — whether their tool is named — and nothing reconciles the copies.
 
 **An argued ban, in `gnome-commander`**: *"only contributions that are 100% human-made"*, with a
 section explaining why. Maintenance requires understanding the code, and *"an LLM can only fake
@@ -159,6 +190,25 @@ It also rejects the assist-only compromise on evidence rather than principle —
 for assistance grow increasingly reliant on them and stop questioning the
 results"*.[^gnome-commander-contributing]
 
+**Two modules reject the boilerplate's own carve-out.** The shared text exempts *"purely translating
+texts for issues and comments to English"*. `libxml2` refuses that exception under a heading of its
+own, **Strict No LLM / No AI Policy**: *"No LLMs for issues. No LLMs for patches / pull requests. No
+LLMs for comments on the bug tracker, **including translation**."* It substitutes a human
+accommodation instead — *"English is encouraged, but not required. You are welcome to post in your
+native language and rely on others to have their own translation tools of
+choice."*[^gnome-libxml2-readme] **That is the accessibility axis being decided the other way**, and
+by a project inside the same federation as the modules granting the exception.
+
+`vte` frames its ban as a licensing condition rather than a quality one, sitting in the paragraph
+about contributing code under a compatible licence: *"You may not contribute any code that was
+written, whether wholly or partly, by using AI in any form."*[^gnome-vte-readme] **"Wholly or partly"
+and "in any form" are broader than the boilerplate**, which bans generated *contributions*; this bans
+AI's involvement in authorship at all.
+
+The shortest policy in this bundle is also here — `showtime`, in full: *"We do not accept AI-generated
+contributions."* And `dia` puts the policy in `README.md` with a cross-reference from `HACKING.md`,
+under the heading *"So-called 'AI'"*: *"All hallucinations in Dia are purely organic in origin."*
+
 **A conditional permission, in [GTK](gtk.md)**, which has its own record. It permits AI use under six
 requirements, requires disclosure in the merge request, and **forbids the `Assisted-by:` trailer the
 Linux kernel requires** — on the same anti-vendor-advertising ground the kernel used to narrow it.
@@ -166,9 +216,10 @@ Linux kernel requires** — on the same anti-vendor-advertising ground the kerne
 ## What the survey establishes
 
 **"GNOME's AI policy" does not exist as a single thing.** A contributor to `libadwaita` is banned
-from using an LLM at all; a contributor to GTK may use one under conditions; a contributor to a module
-with no `CONTRIBUTING` has no rule to follow. The handbook that covers change submission, commit
-messages and legal requirements for the whole project is silent on all of it.
+from using an LLM at all; a contributor to `libxml2` is banned even from using one to translate a bug
+comment; a contributor to GTK may use one under conditions and must not tag it; a contributor to one
+of the 304 modules with no policy has no rule to follow. The handbook that covers change submission,
+commit messages and legal requirements for the whole project is silent on all of it.
 
 That is the finding worth carrying, and it generalises past GNOME: **for a federated project, the
 umbrella's documentation may not be where the rule lives, and sibling modules may contradict each
@@ -214,3 +265,6 @@ between them is the kind of thing a contributor complaint tends to close.
 [^gnome-handbook]: [GNOME Project Handbook](https://handbook.gnome.org/)
 [^gnome-libadwaita-contributing]: [CONTRIBUTING.md — Use of Generative AI (libadwaita, main)](https://gitlab.gnome.org/GNOME/libadwaita/-/raw/main/CONTRIBUTING.md)
 [^gnome-commander-contributing]: [CONTRIBUTING.md — why we don't want "AI" contributions (gnome-commander, main)](https://gitlab.gnome.org/GNOME/gnome-commander/-/raw/main/CONTRIBUTING.md)
+[^gnome-loupe-discourse]: [Loupe no longer allows generative AI contributions — GNOME Discourse, 2025-02-26](https://discourse.gnome.org/t/loupe-no-longer-allows-generative-ai-contributions/27327)
+[^gnome-libxml2-readme]: [README.md — Strict No LLM / No AI Policy (libxml2, main)](https://gitlab.gnome.org/GNOME/libxml2/-/raw/master/README.md)
+[^gnome-vte-readme]: [README.md — contribution licensing and AI (vte, main)](https://gitlab.gnome.org/GNOME/vte/-/raw/master/README.md)
