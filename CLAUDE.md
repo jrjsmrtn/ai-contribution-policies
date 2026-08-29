@@ -96,5 +96,20 @@ Dates are ISO 8601 everywhere, including prose (`2026-08-04`, never `August 4, 2
 
 ## Current Development Status
 
-**Skeleton.** One verified record. The 27-entry survey is not imported; doing so would fill the
-bundle with unchecked claims. Extraction and re-verification are one piece of work.
+**Populated, and maintained by expiry rather than by coverage.** Releases v0.1.0 to v0.6.0 shipped
+between 2026-08-05 and 2026-08-14, and v0.6.0 was the first driven by a `stale_after` coming due
+rather than by new material. That is the expected shape from here: the weekly agent reports a due
+record, the primary is re-read, the release follows.
+
+**The record count is derived — ask `okf list knowledge` — and is deliberately not written here.**
+Until 2026-08-29 this section read *"Skeleton. One verified record"*, and stayed that way for weeks
+after both halves stopped being true. A hand-written count is the first thing in this file to rot,
+and no gate reads for sense.
+
+**Verification coverage, audited 2026-08-20: every record carried a verification block.** That is
+recorded as a dated event because nothing enforces it — removing a record's `verified:` block
+produces no `okf lint` finding, checked 2026-08-29 against a planted copy. A record can arrive
+unverified and every gate will pass it.
+
+The import rule is unchanged: **never populate from the retired 27-entry survey, or from any other
+secondary source.** Extraction and re-verification are one piece of work.

@@ -1,3 +1,6 @@
 # OKF bundle
 *.bak
 .DS_Store
+
+# Local tmux session layout — not part of the bundle.
+.tmuxp.yml
