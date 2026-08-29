@@ -16,6 +16,12 @@
 #
 # Three limits to know about:
 #
+# check-bundle-index.py closes the gap that `index.md` is DERIVED and nothing regenerated it.
+# `okf index` generates those files from concept frontmatter; no gate compared them against it, so
+# on 2026-08-29 the category index still described Debian's ballot as "six competing proposals in
+# discussion" fifteen days after the record said eight, with CTAN and TeX Live in a stale bullet
+# list beside the table. It regenerates into a temp copy and diffs -- it never writes to the tree.
+#
 #   - okf is a hard requirement. If it is absent the hook FAILS rather than skipping — a gate that
 #     quietly does nothing is the failure mode this arrangement risks, and silence makes it
 #     dangerous. A publishable bundle passing an unrun gate is worse than a blocked commit.
@@ -73,4 +79,5 @@ pre-commit:
         fi
         okf-gate knowledge &&
         python3 "$G/check-dates.py" . &&
-        python3 "$S/check-bundle-types.py" knowledge
+        python3 "$S/check-bundle-types.py" knowledge &&
+        python3 "$S/check-bundle-index.py" knowledge

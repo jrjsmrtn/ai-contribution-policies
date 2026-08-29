@@ -46,6 +46,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **`CLAUDE.md`'s status section** rewritten: the record count is now derived (`okf list knowledge`)
   rather than written out, and verification coverage is stated as a dated audit event, because a
   probe confirmed that removing a `verified:` block produces no `okf lint` finding
+- **An index-freshness gate**, `check-bundle-index.py`, wired into `.lefthook.yml`. `index.md` is
+  **derived** — `okf index` generates it from concept frontmatter — and nothing ever compared the
+  two, which is how three drifts survived every hook and every weekly sweep until 2026-08-29. It
+  regenerates into a temporary copy and diffs; it never writes to the working tree. The script is
+  format-generic and lives with the other shared bundle checkers, so every bundle can call it
+- **The gate was proved against planted faults in both directions it reports** — a reverted index
+  row and a deleted index file each fail it, and a missing `okf` errors rather than skipping. A
+  third direction, *orphaned*, was implemented and **removed as unreachable**: regeneration happens
+  over a copy that already contains the orphan, so the branch could never fire. A branch that cannot
+  fire is decoration
 
 ### Fixed
 
