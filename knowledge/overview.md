@@ -66,6 +66,9 @@ sources:
   - id: nm-contributing
     title: 'CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)'
     resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
+  - id: kernel-wireless-syzbot
+    title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
+    resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -149,6 +152,17 @@ produce Git's false positive against a careful non-native speaker. Its cost is t
 review time, so it scales with reviewer attention rather than saving it — which is why the same
 policy closes *"Large machine-generated Merge Requests that no human has reviewed line by line"*
 before review begins.[^nm-contributing]
+
+**The best argument for disclosure comes from someone refusing the contributions.** When the Linux
+wireless maintainer announced he would ignore syzbot's AI-generated patches, syzkaller stopped sending
+them — and he immediately named the cost: *"now that I say this (and you disabled it) I guess I'll
+just see the patches pasted into an email manually instead, and I've lost the signal that I could use
+to just ignore them entirely."*[^kernel-wireless-syzbot] Everywhere else here, disclosure is argued as
+an obligation on the contributor, for honesty or legal hygiene. **From the receiving end it is a
+filter**, and driving a declared channel underground does not reduce the patches, only the
+maintainer's ability to triage them. Any project weighing a disclosure rule against the objection that
+*it is unenforceable* should read that: the value is not in catching liars, it is in the label that
+honest submitters attach.
 
 ## The DCO settles nothing
 
@@ -338,3 +352,4 @@ never that the content arrived. Check for the text you came for.
 [^policy-index]: [open-source-ai-contribution-policies (third-party index; lead list only)](https://github.com/melissawm/open-source-ai-contribution-policies)
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
 [^nm-contributing]: [CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)
+[^kernel-wireless-syzbot]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)

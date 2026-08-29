@@ -26,6 +26,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   creation, not drift — it predated the record by seven months
 - **The kernel's nine-step mandatory procedure for AI bug-hunting** (commit `3d7c44f7`), including
   that the assistant *"must never send anything itself"*
+- **The wireless subsystem exchange of 2026-08-06**, in
+  [`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md) — the enumerated maintainer
+  discretion exercised in public. syzbot's AI-generated patches were **fully compliant** (human
+  `From:` and `Signed-off-by:`, pre-reviewed by a named engineer) and were refused anyway, because
+  *"clearly nobody actually even bothers to look at the semantics of the code"*. **Formal compliance
+  with an AI policy does not deliver what the policy exists for.** It resolved in three hours with
+  syzkaller withdrawing, and no rule broken or amended
+- **The strongest argument for disclosure here now comes from someone refusing the contributions**
+  (also in [`overview.md`](knowledge/overview.md)): losing the labelled channel does not stop the
+  patches, only the ability to triage them. From the receiving end disclosure is **a filter**, which
+  answers the objection that such rules are unenforceable
 - **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
   Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
   as an **excluded neighbour**, not as a record. It is model licensing, not contribution policy;

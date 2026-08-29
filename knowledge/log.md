@@ -13,6 +13,39 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **`projects/linux-kernel.md` gains the wireless subsystem exchange of 2026-08-06** — the enumerated
+  maintainer discretion recorded earlier the same day, exercised in public three days before the
+  bug-finding procedure was merged. Read from the `linux-wireless` thread, not from the reporting.
+* **The patches complied with the kernel's policy, and that is the finding.** syzbot's AI-generated
+  fixes carried a human's `From:` and `Signed-off-by:`, pre-reviewed and approved by a named engineer
+  — precisely what `coding-assistants.rst` requires. The maintainer refused them anyway: *"the
+  experience still seems to be one of me effectively consuming pure LLM output, just via an
+  intermediary"*, and *"clearly nobody actually even bothers to look at the semantics of the code
+  before or during the patching."* **Formal compliance with an AI policy does not deliver what the
+  policy exists for**, and no other record here shows that gap directly.
+* **The objection is about where the cost falls, not about provenance.** An LLM asked for a targeted
+  fix produces one; the human in the loop *"should actually take a step back … and ask what the
+  semantics of the code should be"*. Otherwise the judgement lands on the maintainer, who cannot
+  supply it per-issue: *"if I could … I could be doing all of this myself. Need the contributors to do
+  that."*
+* **It resolved in under three hours and amended nothing.** syzkaller: *"We'll stop sending AI-assisted
+  patches to the wireless subsystem."* No rule was broken and no policy changed — a subsystem is
+  simply closed to a class of contribution the project permits, which is what enumerated discretion
+  means in practice.
+* **The strongest argument for disclosure in this bundle now comes from someone refusing the
+  contributions**, and it is recorded in `overview.md` as well. Losing the labelled channel does not
+  stop the patches: *"I'll just see the patches pasted into an email manually instead, and I've lost
+  the signal that I could use to just ignore them entirely."* Everywhere else disclosure is an
+  obligation on the contributor; **from the receiving end it is a filter**, which answers the standard
+  objection that a disclosure rule is unenforceable — its value is the label honest submitters attach,
+  not the liars it catches.
+* **`lore.kernel.org` is Anubis-protected**, answering HTTP 200 with *"Making sure you're not a bot!"*
+  to `curl` on both the message and `/raw` paths. The message-id was correct throughout and only
+  retrieval was blocked; a browser clears the challenge. Recorded in the record's re-verification
+  notes, with the working method: **take the URL from the lore search results, which do answer, rather
+  than assembling a message-id by hand.**
+
+
 * **Creation: [NetworkManager](projects/networkmanager.md)** — a policy added 2026-08-07 that is nine
   sentences long, **requires no disclosure of any kind**, and is still among the more demanding here.
   Read from `CONTRIBUTING.md` in the repository; found via a news sweep, recorded from the primary.

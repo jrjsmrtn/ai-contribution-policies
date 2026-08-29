@@ -40,6 +40,9 @@ sources:
   - id: kernel-docs-rendered
     title: AI Coding Assistants — The Linux Kernel documentation (rendered, lags the tree)
     resource: https://docs.kernel.org/process/coding-assistants.html
+  - id: kernel-wireless-syzbot
+    title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
+    resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
 ---
 
 **Stance: permitted, with mandatory disclosure and a human on the hook.** The kernel governs this in
@@ -150,6 +153,66 @@ patches outright is exercising a discretion the policy grants, not contradicting
 kernel permits this"* is true at project level and may be false for the tree you are actually
 sending to.
 
+## The discretion exercised: wireless, 2026-08-06
+
+Three days before those steps were merged, the wireless maintainer used the discretion above in
+public, and the exchange is the most useful thing in this record for anyone drafting a
+policy.[^kernel-wireless-syzbot]
+
+**syzbot had begun sending AI-generated fixes.** Johannes Berg's reply:
+
+> I'm going to state, for the record, that I'm going to make judicious use of ability to ignore
+> patches, and apply it to pretty much all syzbot-AI-generated patches unless a 3-second review says
+> "obviously right".
+>
+> In particular, I will absolutely *not* "comment on the patches as usual" and argue with an LLM that
+> can bullshit out code faster than another computer can even deliver it to me by
+> email.[^kernel-wireless-syzbot]
+
+**The patches were fully compliant with the policy above, and that is the point.** syzkaller's
+Aleksandr Nogikh replied within the hour: *"Every AI-generated patch sent by syzbot has been
+pre-reviewed and approved by a human engineer. The person who approved the patch is listed in the
+From: and Signed-off-by: fields"*, and no LLM handles the follow-ups — *"so you have not been
+interacting with an LLM."*[^kernel-wireless-syzbot] A human signed off, having reviewed, which is
+exactly what `coding-assistants.rst` requires.
+
+**Berg's objection is that compliance did not deliver what the rule exists for:**
+
+> the experience still seems to be one of me effectively consuming pure LLM output, just via an
+> intermediary.[^kernel-wireless-syzbot]
+
+> This is why I'm refusing these patches, because clearly nobody actually even bothers to look at the
+> semantics of the code before or during the patching.[^kernel-wireless-syzbot]
+
+His complaint is not about provenance but about **what the intermediary failed to do**: an LLM asked
+for a targeted fix produces a targeted fix, and *"the human in the loop should actually take a step
+back from that and ask what the semantics of the code should be"*. The cost falls in the wrong place
+— *"I really cannot make that judgement call myself for every single issue like that, if I could …
+I could be doing all of this myself. Need the contributors to do that."* And it does not scale *"both
+in terms of long-term maintenance (sprinkling checks all over the code disregarding the architecture)
+and also in terms of review bandwidth"*.[^kernel-wireless-syzbot]
+
+**syzkaller stopped, within three hours**: *"We'll stop sending AI-assisted patches to the wireless
+subsystem."*[^kernel-wireless-syzbot] No policy was amended and no rule was broken. This is the
+enumerated discretion working exactly as `generated-content.rst` describes it, which is why a
+subsystem can be closed to a class of contribution the project as a whole permits.
+
+**The finding worth carrying, though, is about disclosure — argued from the receiving end.** Berg
+notes that refusing the labelled channel does not stop the patches arriving:
+
+> now that I say this (and you disabled it) I guess I'll just see the patches pasted into an email
+> manually instead, and I've lost the signal that I could use to just ignore them
+> entirely.[^kernel-wireless-syzbot]
+
+Everywhere else in this bundle disclosure is argued as an obligation on the contributor, for honesty
+or for legal hygiene. Here it is **a filter the maintainer wants to keep**: a declared AI channel is
+more useful to the person receiving it than an undeclared one, and the cost of driving it underground
+falls on review. That is the strongest practical argument for a disclosure requirement recorded here,
+and it comes from someone refusing the contributions.
+
+He also names the human cost plainly, to the two contributors caught in it: *"I'm sorry you're
+effectively the two first victims of this new process."*[^kernel-wireless-syzbot]
+
 ## A mandatory procedure for AI bug-hunting
 
 Added 2026-08-04 by commit `3d7c44f7`, prompted by report quality: *"the quality of reports
@@ -208,6 +271,11 @@ the lag itself. `git.kernel.org` is authoritative; `raw.githubusercontent.com/to
 was verified byte-identical to it on 2026-08-29 and is an acceptable mirror. **A quotation taken
 from the rendered site can be stale while looking perfectly sourced.**
 
+**`lore.kernel.org` sits behind an Anubis proof-of-work challenge**, answering HTTP 200 with
+*"Making sure you're not a bot!"* to `curl` on both the message and `/raw` paths. The message-id was
+correct throughout; only the retrieval was blocked, and a real browser clears it. Confirm the URL
+from the lore *search* results, which do answer, rather than assembling a message-id by hand.
+
 The audit trail is `git log --follow Documentation/process/coding-assistants.rst` and the same for
 `generated-content.rst`. Watch for the two documents diverging: the tool-generic one sets the
 threshold and the AI-specific one sets the tag, so a change to either moves the rule.
@@ -218,3 +286,4 @@ threshold and the AI-specific one sets the tag, so a change to either moves the 
 [^kernel-commit-simplify-attribution]: [commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
 [^kernel-commit-bug-procedure]: [commit 3d7c44f7 — docs: coding-assistant: explain important steps when looking for bugs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=3d7c44f73765d98665fb97a4fb89c002c88ba1b9)
 [^kernel-docs-rendered]: [AI Coding Assistants — The Linux Kernel documentation (rendered, lags the tree)](https://docs.kernel.org/process/coding-assistants.html)
+[^kernel-wireless-syzbot]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
