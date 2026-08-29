@@ -13,6 +13,29 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Correction to [GNOME](projects/gnome.md), hours after it shipped: the handbook is not
+  client-side and the absence is now verified.** The record said GNOME's rules for its own modules
+  *"were not established"* because the handbook *"renders client-side, so it resists the retrieval
+  method used here"*. **That was false.** `handbook.gnome.org` is a Sphinx site serving static HTML,
+  and every page reads with a plain fetch.
+* **An untested assumption about a source's retrievability became a reason not to look** — which is
+  the same failure as trusting a status code, one step earlier and worse, because it produced a
+  recorded non-claim rather than a wrong claim. The check that settled it was 76 ordinary HTTP
+  requests.
+* **The absence is now recorded properly: no AI policy anywhere in the GNOME Project Handbook**,
+  across all 76 pages, reading each page's article body rather than its navigation. It holds on
+  exactly the pages where such a rule would sit — `development/change-submission`,
+  `development/commit-messages` and `development/legal` — and across the six `maintainers/` and seven
+  `issues/` pages.
+* **The absence is bounded and says so.** Individual GNOME modules keep their own `CONTRIBUTING`
+  files and those were not surveyed, so the defensible claim is *no project-level policy in the
+  handbook*, not *no policy anywhere in GNOME*.
+* **The corrected fact is more interesting than the one it replaces.** GNOME polices a submission
+  channel it curates — third-party extensions — while its own contributor documentation says nothing
+  about AI at all. **A project can gate the channel long before it says anything about its own
+  codebase**, and reading only the extension rule would suggest the opposite.
+
+
 * **Creation: [GNOME](projects/gnome.md)** — the AI rule in the Shell extension review guidelines,
   added **2025-11-30**. Read from the Markdown source in `World/javascript/gjs-guide`, with the commit
   history for the date and the rationale.

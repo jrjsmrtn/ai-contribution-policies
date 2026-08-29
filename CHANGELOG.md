@@ -95,6 +95,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`projects/gnome.md`](knowledge/projects/gnome.md) asserted something false about its own
+  sources.** It said GNOME's rules for its own modules were *"not established"* because the handbook
+  *"renders client-side"*. The handbook is a **Sphinx site serving static HTML**, fully retrievable.
+  **An untested assumption about a source became a reason not to look.** Replaced with a verified
+  absence: **no AI policy anywhere in the GNOME Project Handbook**, across all 76 pages, including
+  `development/change-submission`, `development/commit-messages` and `development/legal`. The absence
+  is bounded — per-module `CONTRIBUTING` files were not surveyed — and the corrected fact is the more
+  interesting one: GNOME gates the extension channel it curates while its own contributor
+  documentation is silent
 - **The kernel record's `resource:` served superseded text.** `docs.kernel.org` renders a released
   kernel (7.2.0) and still showed the old tag format after mainline dropped it. Sources now point at
   `git.kernel.org`; the rendered page is demoted to a citation for the lag itself. **A quotation from

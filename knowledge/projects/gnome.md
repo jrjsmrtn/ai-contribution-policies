@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: GNOME
-description: Rejects AI-authored Shell extensions at review while permitting AI as a development tool, and is the only record here that names the artifacts it looks for — imaginary API usage and comments serving as LLM prompts. The rule governs the third-party extension channel, not contributions to GNOME's own modules.
+description: Rejects AI-authored Shell extensions at review while permitting AI as a development tool, and is the only record here that names the artifacts it looks for — imaginary API usage and comments serving as LLM prompts. The rule governs the third-party extension channel; the project handbook carries no AI policy at all, verified across all 76 of its pages.
 resource: https://gjs.guide/extensions/review-guidelines/review-guidelines.html
 tags:
   - ai-contribution
@@ -23,6 +23,9 @@ sources:
   - id: gnome-ai-guideline-commit
     title: 'commit dd6429b2 — review-guidelines: add guideline prohibited AI-generated code'
     resource: https://gitlab.gnome.org/World/javascript/gjs-guide/-/commit/dd6429b20e3b
+  - id: gnome-handbook
+    title: GNOME Project Handbook
+    resource: https://handbook.gnome.org/
 ---
 
 **Stance: AI as a tool is permitted, an AI-authored extension is rejected — and what this governs is
@@ -100,13 +103,27 @@ review submissions from outside the project. It is closer to an app-store review
 contribution policy, and its subject is a *submitted artifact* rather than a patch to GNOME's own
 code.
 
-**GNOME's rules for contributions to its own modules were not established in this pass**, and this
-record deliberately does not claim they are absent. The GNOME handbook renders client-side, so it
-resists the retrieval method used here, and *"no AI policy was found"* is not the same claim as
-*"there is no AI policy"* — a distinction this bundle exists to keep. Treat that as open work.
+**The GNOME Project Handbook carries no AI policy at all**, checked 2026-08-29 across **all 76 of
+its pages**, reading each page's article body rather than its navigation. The absence holds on
+precisely the pages where such a rule would sit:[^gnome-handbook]
+
+| Page | What it covers | AI mentions |
+|---|---|---|
+| `development/change-submission` | *"how to submit code changes to projects … hosted on gitlab.gnome.org"* | none |
+| `development/commit-messages` | commit conventions — where a trailer would be documented | none |
+| `development/legal` | *"GNOME's legal guidelines and requirements for development projects"* | none |
+
+Also none across the six `maintainers/` pages, the seven `issues/` pages, or anywhere else.
+
+**This is a bounded absence, not a global one.** The handbook is GNOME's project-wide documentation;
+individual modules keep their own `CONTRIBUTING` files, and those were **not** surveyed. So the
+defensible claim is *no project-level AI policy in the handbook*, and a given module may still have
+one.
 
 That boundary matters for the same reason the vendor boundary does: *"GNOME rejects AI-generated
-code"* is true of the extension channel and unestablished for the platform.
+code"* is true of the extension channel, and **the platform's own documentation is silent** — which
+is a different and more interesting fact than the one the extension rule alone suggests. A project
+can police a submission channel it curates long before it says anything about its own codebase.
 
 ## What a contributor must do
 
@@ -124,6 +141,12 @@ source, not the rendered page** — and note that the GitLab *blob* view renders
 answers HTTP 200 with the file text absent, exactly as
 [NetworkManager](networkmanager.md)'s does. `git log` on that path dates every rule.
 
+**The handbook, by contrast, is static HTML and fully machine-retrievable** — a Sphinx site, every
+page readable with a plain fetch. The first version of this record asserted the opposite, that it
+*"renders client-side"*, and used that to excuse not checking. It was wrong: the absence above was
+established with 76 ordinary HTTP requests. **An untested assumption about a source's retrievability
+became a reason not to look**, which is the same failure as trusting a status code, one step earlier.
+
 **The news lead that surfaced this was nine months out of date on the fact.** It ran 2026-08-03 about
 GNOME establishing an RFC process, with AI-generated extensions as context; the guideline itself
 landed 2025-11-30. **A report about a project is not evidence about when its rule changed** — the
@@ -135,3 +158,4 @@ between them is the kind of thing a contributor complaint tends to close.
 
 [^gnome-review-guidelines]: [GNOME Shell Extensions — Review Guidelines (gjs-guide, main)](https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md)
 [^gnome-ai-guideline-commit]: [commit dd6429b2 — review-guidelines: add guideline prohibited AI-generated code](https://gitlab.gnome.org/World/javascript/gjs-guide/-/commit/dd6429b20e3b)
+[^gnome-handbook]: [GNOME Project Handbook](https://handbook.gnome.org/)
