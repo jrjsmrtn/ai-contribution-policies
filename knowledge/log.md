@@ -13,6 +13,43 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Creation: [GNOME](projects/gnome.md)** — the AI rule in the Shell extension review guidelines,
+  added **2025-11-30**. Read from the Markdown source in `World/javascript/gjs-guide`, with the commit
+  history for the date and the rationale.
+* **It is the only detection rule here that names the artifacts it looks for**, and that is what makes
+  it better than the one it resembles. Git tests **prose** — *"overly formal or bloated"*, *"AI
+  slop"* — and inherits the false positive against careful non-native speakers. GNOME tests **code**:
+  *"large amounts of unnecessary code, inconsistent code style, imaginary API usage, comments serving
+  as LLM prompts"*. **The last two cannot be produced by a competent human writing carefully** — a
+  hallucinated API call either resolves against the platform or it does not, and prompt text left in a
+  comment is not a stylistic tell. Same mechanism as Git's rule with the false-positive surface
+  removed.
+* **The same rule states its scope three times at three strengths**, and the operative one is the
+  mildest: the heading says *"Extensions must not be AI-generated"*, the body permits AI as *"a
+  learning aid or a development tool"* and rejects on *"indications"*, and the commit message scopes
+  it to extensions that are *"predominately AI-generated"*. Recorded rather than smoothed, because a
+  submitter reads the heading and a reviewer applies the body. **Same shape as NetworkManager**, whose
+  commit describes a prohibition its text writes as an instruction — in both, the stricter statement
+  is the one that is not operative.
+* **The ground is reviewer strain, for the third time today**: *"to reduce the strain on volunteer
+  reviewers."* Not licensing, not copyright, not quality in the abstract. GNOME, the Linux wireless
+  maintainer and the kernel's `generated-content.rst` all open on the same motive — **maintainer
+  attention is the scarce resource and generation is cheap on the other side.**
+* *"Within reason"* qualifies the explainability fallback, and nothing else here has that qualifier.
+  It concedes a reviewer cannot demand unbounded justification, which is what makes the test usable by
+  volunteers.
+* **The scope is narrower than the organisation name suggests, and the record says so.** This governs
+  `extensions.gnome.org`, a third-party submission channel — closer to an app-store review policy than
+  to a contribution policy. **GNOME's rules for its own modules were not established**, and the record
+  declines to claim they are absent: the handbook renders client-side and resists this retrieval
+  method, and *"no policy was found"* is not *"there is no policy"*.
+* **The news lead was nine months out of date on the fact.** It ran 2026-08-03 about GNOME
+  establishing an RFC process, with AI-generated extensions as context; the guideline itself landed
+  2025-11-30. **A report about a project is not evidence about when its rule changed** — checking the
+  commit history moved the date by three quarters of a year, and the lead would have dated the record
+  wrong.
+
+
 * **`projects/linux-kernel.md` gains the wireless subsystem exchange of 2026-08-06** — the enumerated
   maintainer discretion recorded earlier the same day, exercised in public three days before the
   bug-finding procedure was merged. Read from the `linux-wireless` thread, not from the reporting.

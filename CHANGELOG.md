@@ -16,6 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   *"Respond to review comments yourself. If you cannot discuss your own patch with a reviewer, it
   will not be merged."* The reviewer never decides how the patch was produced, only whether the
   sender can defend it — the question the other two are proxies for
+- **[`projects/gnome.md`](knowledge/projects/gnome.md)** — the AI rule in the GNOME Shell extension
+  review guidelines, added 2025-11-30. **The only detection rule here that names its artifacts**:
+  *"large amounts of unnecessary code, inconsistent code style, imaginary API usage, comments serving
+  as LLM prompts"*. The last two cannot be produced by a careful human, so it is Git's detection rule
+  with the false-positive surface removed. Its ground is **reviewer strain**, the third policy today
+  to say so. Scope is the third-party extension channel, not GNOME's own modules — the record states
+  that boundary and declines to claim an absence it did not establish
 - **A fourth DCO destination: abolish the instrument.** NetworkManager — *"Do not use
   "Signed-off-by:" lines in commits … It has no meaning."* Certification attaches to a licensing
   commitment instead. With the kernel, QEMU and the Linux Foundation, the bundle now shows four

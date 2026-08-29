@@ -69,6 +69,9 @@ sources:
   - id: kernel-wireless-syzbot
     title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
     resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
+  - id: gnome-review-guidelines
+    title: 'GNOME Shell Extensions — Review Guidelines (gjs-guide, main)'
+    resource: https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -141,6 +144,14 @@ it."*[^rust-forge-1040] It cites anti-money-laundering compliance as the model, 
 curl shows the two are one observable seen from opposite ends. *"If someone can spot that the
 contribution was made with the help of AI, you have more work to do."*[^curl-contribute] Git tells
 maintainers what to reject; curl tells contributors what to fix.
+
+**[GNOME](projects/gnome.md) shows detection does not have to be a prose test.** Git looks at how
+the writing sounds; GNOME's extension review guidelines look at code artifacts and name them —
+*"large amounts of unnecessary code, inconsistent code style, imaginary API usage, comments serving
+as LLM prompts"*.[^gnome-review-guidelines] **The last two cannot be produced by a careful human**: a
+hallucinated API call either resolves against the platform or it does not, and prompt text left in a
+comment is not something a non-native speaker does. That is the same mechanism as Git's rule with the
+false-positive surface removed, and it is the version worth copying.
 
 **[NetworkManager](projects/networkmanager.md) writes a third kind: a demonstration rule.** It asks
 for no disclosure at all and no detection — the check runs in review, on the contributor: *"Respond
@@ -353,3 +364,4 @@ never that the content arrived. Check for the text you came for.
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
 [^nm-contributing]: [CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)
 [^kernel-wireless-syzbot]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
+[^gnome-review-guidelines]: [GNOME Shell Extensions — Review Guidelines (gjs-guide, main)](https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md)

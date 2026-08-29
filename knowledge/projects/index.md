@@ -8,6 +8,7 @@ Directory: `projects/`
 |-------|------|-------------|
 | [Ansible](ansible.md) | Organization | Permits AI-assisted contributions org-wide under a published community policy... |
 | [GCC](gcc.md) | Organization | Declines legally significant LLM contributions — a copyright threshold rath... |
+| [GNOME](gnome.md) | Organization | Rejects AI-authored Shell extensions at review while permitting AI as a devel... |
 | [Git](git.md) | Organization | Rejects contributions that look AI-generated while explicitly recommending ca... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance and requires no disclosure of it at all — no tag, no ... |
