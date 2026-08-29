@@ -4,3 +4,6 @@
 
 # Local tmux session layout — not part of the bundle.
 .tmuxp.yml
+
+# Playwright MCP scratch output (console logs, page snapshots) — never part of the bundle.
+.playwright-mcp/

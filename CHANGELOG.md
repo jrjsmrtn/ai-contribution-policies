@@ -30,6 +30,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
   Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
   bullet list outside the table with CTAN's pre-correction description
+- **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md) rewritten.** The `Assisted-by:`
+  tag stopped naming the model on 2026-08-03 (commit `816d9992`): `AGENT_NAME:MODEL_VERSION` became
+  the bare literal `LLM`, because identifying it *"provides free advertising to proprietary software
+  companies"*. The **requirement is unchanged** — a narrower change than the reporting suggested —
+  but it establishes a new axis, attribution *granularity*, that no other record here decides
+- **A second kernel policy document is now recorded**, `generated-content.rst`, in tree since
+  2026-01-20 and never cited. It is **tool-generic** rather than AI-specific, asks for **prompts** to
+  be disclosed, and **enumerates maintainer discretion** including outright rejection. Its absence
+  was a miss at creation, not drift — it predated the record by seven months
+- **A nine-step mandatory procedure for AI bug-hunting** (commit `3d7c44f7`), including that the
+  assistant *"must never send anything itself"*
+- `stale_after` for that record drops from six months to **three**, since three substantive commits
+  landed in this policy during August alone
+
+### Fixed
+
+- **The kernel record's `resource:` served superseded text.** `docs.kernel.org` renders a released
+  kernel (7.2.0) and still showed the old tag format after mainline had dropped it. Sources now point
+  at `git.kernel.org`; the rendered page is demoted to a citation for the lag itself. **A quotation
+  from a rendered docs site can be stale while looking perfectly sourced**
+- **The same stale format was asserted in three other files** — `overview.md`,
+  `foundations/apache-software-foundation.md` and `projects/ansible.md` — because it had been copied
+  into comparison tables. All corrected. The Ansible comparison is now sharper than before: the two
+  projects share the field name and encode opposite intentions with it
 
 ### Added
 
@@ -57,9 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   over a copy that already contains the orphan, so the branch could never fire. A branch that cannot
   fire is decoration
 
-### Fixed
-
-- **Where the record said to look for the result was wrong.** It named the vote page; hours after the
+- **Where the Debian record said to look for the result was wrong.** It named the vote page; hours after the
   ballot closed that page had no outcome section, no tally sheet and no quorum log, while the result
   was already published on the `debian-vote` list. **The list publishes first**, and the record now
   says so

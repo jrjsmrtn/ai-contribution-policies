@@ -13,6 +13,51 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **`projects/linux-kernel.md` rewritten: the kernel's attribution tag stopped naming the model, and
+  the record had missed half the policy.** Found by chasing a news lead to the source tree; nothing
+  from the lead is recorded, and every claim below comes from `git.kernel.org` or a commit diff.
+* **The tag changed on 2026-08-03** — commit `816d9992`, *"coding-assistants: simplify attribution"*.
+  `Assisted-by: AGENT_NAME:MODEL_VERSION` became the bare literal `Assisted-by: LLM`. The
+  **requirement did not go away**; the model identification did, which is a narrower change than the
+  reporting around it suggested.
+* **The ground is an axis nothing else in this bundle argues from.** Identifying the model *"provides
+  free advertising to proprietary software companies while adding little or no useful information"*.
+  Every other policy decides *whether* to disclose; the kernel has now decided **how precisely**, and
+  resolved it against specificity on anti-marketing grounds rather than privacy or practicality.
+* **A second policy document was never cited, and that was a miss rather than drift.**
+  `generated-content.rst` has been in tree since **2026-01-20** — seven months before this record was
+  written — and linked from the AI document since 2026-07-22. It is **tool-generic**, triggering on
+  content *"not written by a person in the Signed-off-by chain"* whether a chatbot, Coccinelle or
+  `checkpatch.pl --fix` produced it. Reading the AI-specific file and stopping produced a record that
+  was accurate about half a policy.
+* **Two findings come only from that document.** It asks contributors to **disclose the prompts**,
+  not merely the fact of tool use — nothing else here does. And it **enumerates maintainer
+  discretion**, explicitly permitting *"Reject it outright"* and review *"at a lower priority than
+  human-generated content"*, which means a subsystem stricter than the kernel is exercising a granted
+  power rather than contradicting policy.
+* **A mandatory nine-step procedure for AI bug-hunting** was added 2026-08-04 (`3d7c44f7`), including
+  that the assistant *"must never send anything itself"* — the kernel's counterpart to GCC's rule
+  that an LLM may not commit.
+* **The rendered documentation site is the stale source, and it was this record's `resource:`.**
+  `docs.kernel.org` builds a released kernel — 7.2.0 at this check — and still served the superseded
+  format and example after mainline dropped both. It is demoted to a citation for the lag itself;
+  `git.kernel.org` is now the primary, with the GitHub mirror verified byte-identical to it today.
+  **A quotation taken from a rendered docs site can be stale while looking perfectly sourced.**
+* **The previous version predicted this failure and could not act on it.** Its closing note said to
+  *"Watch specifically for the tag format changing"* — which had already happened the day before that
+  sentence was written. A correct prediction is worth nothing without a cadence short enough to catch
+  it, so `stale_after` drops from six months to **three**: three substantive commits landed in this
+  policy during August alone.
+* **One upstream change falsified the same claim in three places.** The old tag format had been
+  copied into comparison tables in `overview.md`, `foundations/apache-software-foundation.md` and
+  `projects/ansible.md`. All three are corrected. **A fact restated across records has as many places
+  to rot as it has copies** — the cross-reference was fixed, but no `verified:` entry was added to
+  those three, because their own primaries were not re-read today.
+* The Ansible comparison got sharper rather than merely corrected: the two projects share the field
+  name and now encode **opposite intentions** with it — Ansible asks which tool, the kernel has
+  decided it does not want to know.
+
+
 * **Debian decided, and `distributions/debian.md` is rewritten around the result.** The General
   Resolution closed 2026-08-28 23:59:59 UTC and **Option 5, "Responsible Use of Generative AI"**
   (Proposal **E**) won outright — sole member of the Schwartz set, beating *None of the above*

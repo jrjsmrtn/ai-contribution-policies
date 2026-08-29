@@ -71,11 +71,17 @@ volume.
 Contributors may use `Assisted-by: [tool name/version]` in commit messages or contribution
 preambles.[^ansible-ai-policy]
 
-**Two independent projects converged on `Assisted-by:`** — the [Linux kernel](linux-kernel.md)
-specifies `Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1] [TOOL2]`. The *field name* matches; the
-*value grammar* does not. Anyone building tooling to emit or parse this should treat the tag as a
-loose convention rather than a format, and anyone adopting it should copy the target project's
-grammar rather than assume one.
+**Two independent projects converged on `Assisted-by:`, then diverged on what it carries.** The
+[Linux kernel](linux-kernel.md) once specified `Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]
+[TOOL2]`, and on 2026-08-03 **deliberately dropped the tool and model**, leaving the bare literal
+`Assisted-by: LLM`, on the ground that naming them advertised proprietary vendors. Ansible still
+asks for `[tool name/version]`.
+
+So the same field name now encodes **opposite intentions**: Ansible wants to know which tool, the
+kernel has decided it does not. The *value grammar* never matched and the gap has widened. Anyone
+building tooling to emit or parse this should treat the tag as a loose convention rather than a
+format, and anyone adopting it should copy the target project's grammar — and its reasoning — rather
+than assume one.
 
 ## Enforcement has an address
 

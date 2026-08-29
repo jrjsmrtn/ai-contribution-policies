@@ -207,7 +207,7 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 
 | Field | Used by |
 |---|---|
-| `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`AGENT_NAME:MODEL_VERSION [TOOLS]`), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
+| `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`LLM [TOOLS]` — the model was deliberately dropped 2026-08-03), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
 

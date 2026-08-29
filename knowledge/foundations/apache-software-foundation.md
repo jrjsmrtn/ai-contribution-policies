@@ -70,7 +70,7 @@ That makes **three field names across five organisations** for the same job:
 
 | Field | Used by |
 |---|---|
-| `Assisted-by:` | [Linux kernel](../projects/linux-kernel.md) (`AGENT_NAME:MODEL_VERSION [TOOLS]`), [Ansible](../projects/ansible.md) (`[tool name/version]`) |
+| `Assisted-by:` | [Linux kernel](../projects/linux-kernel.md) (`LLM [TOOLS]`), [Ansible](../projects/ansible.md) (`[tool name/version]`) |
 | `Generated-by:` | Apache Software Foundation |
 
 The semantics differ too, not only the spelling — *assisted* and *generated* describe different
