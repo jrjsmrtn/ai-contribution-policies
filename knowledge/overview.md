@@ -63,6 +63,9 @@ sources:
   - id: debian-gr-2026-002
     title: 'General Resolution: LLM usage in Debian (2026 vote_002)'
     resource: https://www.debian.org/vote/2026/vote_002
+  - id: nm-contributing
+    title: 'CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)'
+    resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -86,7 +89,7 @@ far better than the stance label does.
 | **Provenance prohibition** | inability to certify origin | [QEMU](projects/qemu.md), [NetBSD](distributions/netbsd.md), [Gentoo](distributions/gentoo.md) |
 | **Detection rule** | how the submission *looks* | [Git](projects/git.md) |
 | **Declaration rule** | whether you *said so* | [Rust](projects/rust.md) (draft), [OpenInfra](foundations/openinfra.md) |
-| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md), [Debian](distributions/debian.md) |
+| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md), [Debian](distributions/debian.md), [NetworkManager](projects/networkmanager.md) |
 | **Licence-compatibility rule** | rights in the output | [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md) |
 | **Copyright-threshold rule** | whether the contribution is *legally significant* | [GCC](projects/gcc.md) |
 
@@ -136,6 +139,17 @@ curl shows the two are one observable seen from opposite ends. *"If someone can 
 contribution was made with the help of AI, you have more work to do."*[^curl-contribute] Git tells
 maintainers what to reject; curl tells contributors what to fix.
 
+**[NetworkManager](projects/networkmanager.md) writes a third kind: a demonstration rule.** It asks
+for no disclosure at all and no detection — the check runs in review, on the contributor: *"Respond
+to review comments yourself. If you cannot discuss your own patch with a reviewer, it will not be
+merged."*[^nm-contributing] The reviewer never has to decide how the patch was produced, only whether
+the person sending it can defend it, **which is the question the other two are proxies for**. It has
+the enforcement property Rust's draft wants without asking anyone to self-report, and it cannot
+produce Git's false positive against a careful non-native speaker. Its cost is that it only fires at
+review time, so it scales with reviewer attention rather than saving it — which is why the same
+policy closes *"Large machine-generated Merge Requests that no human has reviewed line by line"*
+before review begins.[^nm-contributing]
+
 ## The DCO settles nothing
 
 Four organisations reason from the **Developer Certificate of Origin** and reach four destinations:
@@ -151,6 +165,10 @@ Four organisations reason from the **Developer Certificate of Origin** and reach
 - **Linux Foundation → not invoked at all.** Its policy contains zero occurrences of `DCO`,
   `Developer Certificate of Origin` or `Signed-off-by`, and reaches permission via licence
   compatibility instead.[^lf-generative-ai]
+- **NetworkManager → the instrument is abolished.** *"Do not use "Signed-off-by:" lines in commits
+  for NetworkManager. It has no meaning."*[^nm-contributing] Certification attaches instead to a
+  licensing commitment — every contribution must be releasable under LGPL-2.1-or-later, and *"A tool
+  cannot certify that for you."*[^nm-contributing]
 
 So *"they require a DCO"* predicts nothing about a project's stance. Any summary organised around
 that fact is organised around noise.
@@ -319,3 +337,4 @@ never that the content arrived. Check for the text you came for.
 [^canonical-cla]: [Contributor Licence Agreement — Ubuntu and Canonical Legal](https://canonical.com/legal/contributors)
 [^policy-index]: [open-source-ai-contribution-policies (third-party index; lead list only)](https://github.com/melissawm/open-source-ai-contribution-policies)
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
+[^nm-contributing]: [CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)

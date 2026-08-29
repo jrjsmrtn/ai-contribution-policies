@@ -8,111 +8,84 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/networkmanager.md`](knowledge/projects/networkmanager.md)** — a policy added
+  2026-08-07, nine sentences long, that **requires no disclosure at all** and is still among the more
+  demanding here. It answers detection-versus-declaration with a third thing, **demonstration**:
+  *"Respond to review comments yourself. If you cannot discuss your own patch with a reviewer, it
+  will not be merged."* The reviewer never decides how the patch was produced, only whether the
+  sender can defend it — the question the other two are proxies for
+- **A fourth DCO destination: abolish the instrument.** NetworkManager — *"Do not use
+  "Signed-off-by:" lines in commits … It has no meaning."* Certification attaches to a licensing
+  commitment instead. With the kernel, QEMU and the Linux Foundation, the bundle now shows four
+  positions on the DCO and one constant: the contributor carries the legal risk either way
+- **A second kernel policy document**, `generated-content.rst`, in tree since 2026-01-20 and never
+  cited. **Tool-generic** rather than AI-specific, it asks for **prompts** to be disclosed and
+  **enumerates maintainer discretion** including outright rejection. Its absence was a miss at
+  creation, not drift — it predated the record by seven months
+- **The kernel's nine-step mandatory procedure for AI bug-hunting** (commit `3d7c44f7`), including
+  that the assistant *"must never send anything itself"*
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
+  Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
+  as an **excluded neighbour**, not as a record. It is model licensing, not contribution policy;
+  naming it makes the scope boundary legible, since otherwise a reader cannot tell a subject this
+  bundle excluded from one it missed. Both primaries were read, including the proposer's withdrawal
+  message of 2025-05-08
+- **An index-freshness gate**, `check-bundle-index.py`, wired into `.lefthook.yml`. `index.md` is
+  **derived** — `okf index` generates it from concept frontmatter — and nothing compared the two,
+  which is how three drifts survived every hook. It regenerates into a temporary copy and diffs, and
+  was proved against planted faults in both directions it reports
+
 ### Changed
 
-- **[`distributions/debian.md`](knowledge/distributions/debian.md) rewritten around the result.**
-  The General Resolution closed 2026-08-28 and **Option 5, "Responsible Use of Generative AI"**
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) rewritten around the result.** The
+  General Resolution closed 2026-08-28 and **Option 5, "Responsible Use of Generative AI"**
   (Proposal E) won outright — sole member of the Schwartz set, beating *None of the above* 281–126.
-  Debian **permits** generative AI under the standards that already applied: same bar regardless of
-  tools, responsibility undiminished, review before submission, and disclosure **encouraged but
-  explicitly not required**
+  Debian **permits** generative AI under the standards that already applied, with disclosure
+  **encouraged but explicitly not required**
 - **The record's own derived claim was confirmed by the tally.** On 2026-08-05 it read the
   Constitution and concluded Proposal A needed a **3:1** majority its rivals did not, when the vote
-  page stated no requirement. The tally dropped that option at **0.560 < 3**. This is the first time
-  a claim this bundle *derived* rather than read has been checked against the primary and held
+  page stated no requirement. The tally dropped that option at **0.560 < 3**. First time a claim this
+  bundle *derived* rather than read has been checked against the primary and held
 - **Recorded from the automated tally and labelled as such** — the Devotee publication states it is
-  *"an automated, unofficial publication of vote results"*. `stale_after` is **two weeks**, and the
-  next read is triggered by the Secretary's declaration rather than by the date
-- **[`overview.md`](knowledge/overview.md)**: Debian joins the **responsibility rule** row. A draft
-  that filed it as an eighth shape, "the deliberate non-rule", was withdrawn before shipping — the
-  adopted text is the same shape Python, curl and the kernel hold. What is new is how it was reached,
-  by project-wide ballot over eight alternatives rather than by maintainer decision
-- **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
-  Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
-  bullet list outside the table with CTAN's pre-correction description
+  *"an automated, unofficial publication of vote results"*. `stale_after` is two weeks, and the next
+  read is triggered by the Secretary's declaration rather than by a date
 - **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md) rewritten.** The `Assisted-by:`
   tag stopped naming the model on 2026-08-03 (commit `816d9992`): `AGENT_NAME:MODEL_VERSION` became
   the bare literal `LLM`, because identifying it *"provides free advertising to proprietary software
-  companies"*. The **requirement is unchanged** — a narrower change than the reporting suggested —
-  but it establishes a new axis, attribution *granularity*, that no other record here decides
-- **A second kernel policy document is now recorded**, `generated-content.rst`, in tree since
-  2026-01-20 and never cited. It is **tool-generic** rather than AI-specific, asks for **prompts** to
-  be disclosed, and **enumerates maintainer discretion** including outright rejection. Its absence
-  was a miss at creation, not drift — it predated the record by seven months
-- **A nine-step mandatory procedure for AI bug-hunting** (commit `3d7c44f7`), including that the
-  assistant *"must never send anything itself"*
-- `stale_after` for that record drops from six months to **three**, since three substantive commits
-  landed in this policy during August alone
+  companies"*. The **requirement is unchanged** — narrower than the reporting suggested — but it
+  establishes a new axis, attribution *granularity*. Its `stale_after` drops from six months to three
+- **[`overview.md`](knowledge/overview.md)**: Debian joins the **responsibility rule** row, as does
+  NetworkManager, which also adds the demonstration case and a fourth DCO destination. A draft that
+  filed Debian as an eighth shape, "the deliberate non-rule", was withdrawn before shipping — the
+  adopted text is the same shape Python, curl and the kernel hold
+- **`CLAUDE.md`'s status section**: the record count is now derived (`okf list knowledge`) rather than
+  written out, and verification coverage is stated as a dated audit event, because a probe confirmed
+  that removing a `verified:` block produces no `okf lint` finding
+- **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
+  Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
+  bullet list outside the table with CTAN's pre-correction description
 
 ### Fixed
 
 - **The kernel record's `resource:` served superseded text.** `docs.kernel.org` renders a released
-  kernel (7.2.0) and still showed the old tag format after mainline had dropped it. Sources now point
-  at `git.kernel.org`; the rendered page is demoted to a citation for the lag itself. **A quotation
-  from a rendered docs site can be stale while looking perfectly sourced**
+  kernel (7.2.0) and still showed the old tag format after mainline dropped it. Sources now point at
+  `git.kernel.org`; the rendered page is demoted to a citation for the lag itself. **A quotation from
+  a rendered docs site can be stale while looking perfectly sourced**
 - **The same stale format was asserted in three other files** — `overview.md`,
   `foundations/apache-software-foundation.md` and `projects/ansible.md` — because it had been copied
-  into comparison tables. All corrected. The Ansible comparison is now sharper than before: the two
-  projects share the field name and encode opposite intentions with it
-
-### Added
-
-- **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
-  Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
-  as an **excluded neighbour**, not as a record. It is about whether an AI model may ship in `main`,
-  which is model licensing rather than contribution policy. Naming it makes the scope boundary
-  legible: without the note, a reader cannot tell a subject this bundle excluded from one it missed
-- **Both primaries were read** — the vote page and the proposer's withdrawal message of 2025-05-08 —
-  rather than the withdrawal being inferred from the vote index's status label
-- **A process finding worth more than either subject.** The 2025 GR was withdrawn partly because it
-  was a one-option ballot — *"The lack of other options can make the result less convincing"* — and
-  the 2026 LLM ballot carried eight
-- **`CLAUDE.md`'s status section** rewritten: the record count is now derived (`okf list knowledge`)
-  rather than written out, and verification coverage is stated as a dated audit event, because a
-  probe confirmed that removing a `verified:` block produces no `okf lint` finding
-- **An index-freshness gate**, `check-bundle-index.py`, wired into `.lefthook.yml`. `index.md` is
-  **derived** — `okf index` generates it from concept frontmatter — and nothing ever compared the
-  two, which is how three drifts survived every hook and every weekly sweep until 2026-08-29. It
-  regenerates into a temporary copy and diffs; it never writes to the working tree. The script is
-  format-generic and lives with the other shared bundle checkers, so every bundle can call it
-- **The gate was proved against planted faults in both directions it reports** — a reverted index
-  row and a deleted index file each fail it, and a missing `okf` errors rather than skipping. A
-  third direction, *orphaned*, was implemented and **removed as unreachable**: regeneration happens
-  over a copy that already contains the orphan, so the branch could never fire. A branch that cannot
-  fire is decoration
-
-- **Where the Debian record said to look for the result was wrong.** It named the vote page; hours after the
-  ballot closed that page had no outcome section, no tally sheet and no quorum log, while the result
-  was already published on the `debian-vote` list. **The list publishes first**, and the record now
-  says so
-
-### Added
-
-- **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
-  Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
-  as an **excluded neighbour**, not as a record. It is about whether an AI model may ship in `main`,
-  which is model licensing rather than contribution policy. Naming it makes the scope boundary
-  legible: without the note, a reader cannot tell a subject this bundle excluded from one it missed
-- **Both primaries were read** — the vote page and the proposer's withdrawal message of 2025-05-08 —
-  rather than the withdrawal being inferred from the vote index's status label, which was the only
-  evidence available when the GR was first noticed
-- **A process finding worth more than either subject.** The 2025 GR was withdrawn partly because it
-  was a one-option ballot — *"The lack of other options can make the result less convincing"* — and
-  the 2026 LLM ballot carries eight. A crowded ballot is the repaired condition in this project, not
-  evidence of disarray
-
-### Changed
-
-- **`CLAUDE.md`'s status section**, which still read *"Skeleton. One verified record."* The record
-  count is now derived (`okf list knowledge`) rather than written out, and verification coverage is
-  stated as a dated audit event, because a probe confirmed that removing a `verified:` block
-  produces no `okf lint` finding — nothing enforces it
-
-### Notes
-
-- `distributions/debian.md` is **deliberately left expired**. Its `stale_after` of 2026-08-29 marks
-  the day after the ballot closed; the tally was not published when this was written, so no
-  `verified:` entry was stamped. Re-verification is the next release, not this one
+  into comparison tables. All corrected; the Ansible comparison is sharper than before, since the two
+  projects share the field name and now encode opposite intentions with it
+- **Where the Debian record said to look for the result was wrong.** It named the vote page; hours
+  after the ballot closed that page had no outcome section, no tally sheet and no quorum log, while
+  the result was already on the `debian-vote` list. **The list publishes first**
+- **This section had duplicated itself.** `[Unreleased]` carried two `### Added` blocks, two
+  `### Changed` blocks, and a `### Notes` entry stating `distributions/debian.md` was *"deliberately
+  left expired"* — which the same day's later work made false. Consolidated. **No gate reads a
+  changelog for sense**, which is the same failure mode as every other item in this release
+- **Scratch output no longer trips `reuse lint`**: `.playwright-mcp/` (browser-tooling console logs
+  and page snapshots) and `.tmuxp.yml` are ignored
 
 ## [0.6.0] - 2026-08-14
 

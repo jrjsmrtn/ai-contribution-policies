@@ -13,6 +13,41 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Creation: [NetworkManager](projects/networkmanager.md)** — a policy added 2026-08-07 that is nine
+  sentences long, **requires no disclosure of any kind**, and is still among the more demanding here.
+  Read from `CONTRIBUTING.md` in the repository; found via a news sweep, recorded from the primary.
+* **It answers the detection-versus-declaration problem with a third thing: demonstration.**
+  *"Respond to review comments yourself. If you cannot discuss your own patch with a reviewer, it will
+  not be merged."* The reviewer never has to decide how the patch was produced, only whether the
+  person sending it can defend it — **which is the question detection and declaration are both
+  proxies for.** It has the enforcement property Rust's draft says it cannot get, without asking
+  anyone to self-report, and it cannot produce Git's false positive against a careful non-native
+  speaker. Its cost is that it fires only at review time, which is why the same policy closes large
+  unreviewed machine-generated merge requests before review begins.
+* **The prose restriction is argued rather than asserted**, which is what makes it worth copying:
+  *"Write your own commit messages and Merge Request descriptions. Those explain why you are making
+  the change, which is the part a tool cannot know."* Debian's Proposals C and G, TeX Live and Zig all
+  restrict communication; none of them says why in one line.
+* **The commit message is stronger than the adopted text, and both are recorded.** The commit says the
+  policy states *"AI assistance is prohibited in communication"*; `CONTRIBUTING.md` is written as an
+  instruction rather than a prohibition. The file is what binds a contributor, so the file is quoted —
+  but the gap between intent and text is the kind of thing that decides a borderline review.
+* **A fourth DCO destination: abolish the instrument.** *"Do not use "Signed-off-by:" lines in commits
+  for NetworkManager. It has no meaning."* Certification attaches to a **licensing commitment**
+  instead — every contribution must be releasable under LGPL-2.1-or-later, and *"A tool cannot certify
+  that for you."* The bundle now has bar-the-agent (kernel), unsatisfiable (QEMU), not-invoked (Linux
+  Foundation) and abolished (here) — **the instrument varies and the placement of responsibility does
+  not**, which is the finding.
+* `overview.md` updated in three places: the shapes table, the detection/declaration section, and the
+  DCO list.
+* **Two retrieval traps hit in one record, both worth carrying.** GitLab renders file content
+  client-side, so the `/-/blob/` URL returns HTTP 200 with the file text **absent** from the body; and
+  the `/-/raw/` path once returned a GitLab *"404: Page not found"* body under HTTP 200, transiently,
+  before serving correctly. Recording it as *"located, retrieval blocked"* on that first response
+  would have been wrong. **Check for the text you came for, never for the status code** — the rule
+  this bundle already states for Anubis hosts, now with a second, unrelated instance.
+
+
 * **`projects/linux-kernel.md` rewritten: the kernel's attribution tag stopped naming the model, and
   the record had missed half the policy.** Found by chasing a news lead to the source tree; nothing
   from the lead is recorded, and every claim below comes from `git.kernel.org` or a commit diff.
