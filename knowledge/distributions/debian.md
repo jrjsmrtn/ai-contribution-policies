@@ -1,14 +1,14 @@
 ---
 type: Organization
 title: Debian
-description: Has no LLM policy; eight competing General Resolution proposals go to a ballot open 2026-08-15 to 2026-08-28 — and the prohibition option amends the Social Contract, so it needs a 3:1 majority the other seven do not.
+description: Adopted "Responsible Use of Generative AI" — neither endorses nor prohibits, holds AI-assisted work to the same standards, encourages but does not require disclosure. The prohibition option was dropped for missing the 3:1 majority this record derived from the Constitution. Result is the automated tally; the Secretary's official declaration is still pending.
 resource: https://www.debian.org/vote/2026/vote_002
 tags:
   - ai-contribution
   - policy
   - distribution
-  - undecided
-  - in-progress
+  - decided
+  - permitted
 status: stable
 generated:
   by: claude/opus-5
@@ -20,7 +20,9 @@ verified:
     at: '2026-08-05T07:25:00Z'
   - by: claude/opus-5
     at: '2026-08-14T22:40:00Z'
-stale_after: 2026-08-29
+  - by: claude/opus-5
+    at: '2026-08-29T02:45:00Z'
+stale_after: 2026-09-12
 sources:
   - id: debian-gr-2026-002
     title: 'General Resolution: LLM usage in Debian (2026 vote_002)'
@@ -34,26 +36,102 @@ sources:
   - id: debian-gr-2025-002-withdrawal
     title: 'withdrawing Proposal A — Interpretation of DFSG on Artificial Intelligence (AI) Models'
     resource: https://lists.debian.org/debian-vote/2025/05/msg00105.html
+  - id: debian-gr-2026-002-results
+    title: 'Results for LLM usage in Debian (automated publication, Devotee)'
+    resource: https://lists.debian.org/debian-vote/2026/08/msg00360.html
 ---
 
-**Stance: undecided, and about to be decided.** Debian has **no policy on LLM-assisted
-contributions**. A General Resolution — *"LLM usage in Debian"*, 2026 `vote_002` — is now in its
-**voting period, 2026-08-15 00:00:00 UTC to 2026-08-28 23:59:59 UTC**.[^debian-gr-2026-002]
+**Stance: decided — generative AI is permitted, under the standards that already applied.** The
+General Resolution *"LLM usage in Debian"*, 2026 `vote_002`, closed on 2026-08-28 23:59:59 UTC and
+**Option 5, "Responsible Use of Generative AI"** — Proposal **E** below — won outright: it is the
+sole member of the Schwartz set, and it defeats *None of the above* by 281 to
+126.[^debian-gr-2026-002-results]
 
-> ⚠ **This record has a short shelf life by construction.** `stale_after` is set to the day after
-> the ballot closes, not the bundle's usual six months, because the subject is a vote. Re-read the
-> GR page rather than trusting this record once the result exists.
->
-> **Re-checked 2026-08-14**, and four things had changed in nine days. The discussion period was
-> **extended to 2026-08-13**, a week past the date this record carried. The voting period is now
-> announced. **Two further proposals were added — G and H — making eight, not six.** And the vote
-> page now **states the majority requirement itself**, which it did not before.
+> ⚠ **The result recorded here is the automated tally, not the official declaration.** It was
+> published by `devotee@vote.debian.org` at 2026-08-29 00:01:45 UTC and says so of itself: *"This
+> message is an automated, unofficial publication of vote results. Official results shall follow,
+> sent in by the vote taker, namely Debian Project Secretary"*, and *"This email is just a
+> convenience for the impatient."*[^debian-gr-2026-002-results] As of 2026-08-29 the vote page
+> carries no outcome section and no tally sheet. **Nothing here is expected to change** — Devotee
+> computes the result the Secretary then certifies — but the distinction between a computed result
+> and a declared one is exactly the sort this bundle exists to keep, so `stale_after` is two weeks,
+> not six months, and the trigger for the next read is the Secretary's declaration.
+
+## What Debian adopted
+
+The adopted text is a **statement of position under Constitution §4.1(5)**, not a rule added to a
+foundation document — and it says so, reserving the right to evolve *"as time passes without the
+need to resort to future general resolutions."*[^debian-gr-2026-002]
+
+> Debian neither endorses nor prohibits the use of generative AI tools in the development,
+> maintenance, or documentation of software, packaging, documentation, and other media published
+> within the Debian Project.[^debian-gr-2026-002]
+
+**The operative move is that it adds no new rule.** Contributions must meet *"the same standards of
+quality, correctness, maintainability, and legal compliance"* regardless of the tools used, and
+*"The use of a generative AI tool does not diminish the contributor's responsibility for the work
+they submit."* Contributors are expected to *"understand, review, test, and, where appropriate,
+modify AI-assisted output"*, because *"Blindly accepting or uploading AI-generated material without
+appropriate human review is inconsistent with Debian's established development
+practices."*[^debian-gr-2026-002] It closes by affirming that generative AI is *"neither exempt from
+nor subject to special rules beyond the standards already expected of Debian
+contributors."*[^debian-gr-2026-002]
+
+**Disclosure is encouraged and explicitly not required**, which puts Debian on the opposite side of
+this axis from the kernel's required `Assisted-by:` trailer:
+
+> We enourage our contributors to disclose whether a contribution was made with AI assitance, but do
+> not require them to do so.[^debian-gr-2026-002]
+
+*(Both misspellings — "enourage", "assitance" — are in the adopted text as published. They are
+reproduced rather than silently corrected, because this is the operative wording of the position
+Debian voted for.)*
+
+Two concrete obligations sit underneath the general one:
+
+- **Non-public material must not reach third-party AI services.** Confidential information, private
+  communications, embargoed security information, cryptographic keys and credentials relating to the
+  project, its infrastructure or its community may not be disclosed *"unless such disclosure has
+  been explicitly authorized"*.[^debian-gr-2026-002]
+- **Scale still needs consent.** Mass bug filing, large-scale code modification and other automated
+  changes affecting many packages *"should seek prior discussion and consensus"* first, and *"Any
+  such automated process should be overseen by a human who remains accountable for its behavior and
+  output."*[^debian-gr-2026-002]
+
+**It declines the legal question deliberately.** Debian *"does not seek to resolve these unsettled
+legal questions through this General Resolution, nor does it adopt a position on whether AI-generated
+output is, in whole or in part, copyrightable or derived from copyrighted works"* — leaving existing
+licensing and copyright policy to apply unchanged.[^debian-gr-2026-002] That is the mirror image of
+GCC, whose whole rule turns on the copyright threshold.
+
+## The result, and the arithmetic this record predicted
+
+The ballot carried nine options — the eight proposals below plus *None of the above*. All eight
+reached quorum (47.244). Two were then dropped for failing their majority
+requirement:[^debian-gr-2026-002-results]
+
+```
+Dropping option 1 because of majority. 0.560 (144/257) < 3
+Dropping option 3 because of majority. 0.765 (176/230) < 1
+```
+
+**Option 1 is Proposal A, the prohibition, and the `3` it failed against is the supermajority this
+record derived from the Constitution before the vote page stated any requirement at all.** It
+finished at 0.56 against a threshold of 3 — not close. The reasoning recorded on 2026-08-05, that a
+ballot where one option needs 3:1 and its rivals need a simple majority is not the even contest a
+flat list suggests, is what the tally then confirmed.[^debian-constitution]
+
+Option 3 (Proposal **C**, reject as far as practical) failed even a simple majority against *None of
+the above*, at 0.765. Options 2, 4, 5, 6, 7 and 8 all passed theirs, and Option 5 beat each of them
+head to head — Option 2 by 203–148, Option 6 by 210–130, Option 4 by 232–115.
+
 
 ## Eight proposals, not two
 
-The interesting fact is the **shape of the disagreement**. This is not ban-versus-allow; it is eight
-distinct positions, and the middle ones differ on questions most projects have not yet
-noticed.[^debian-gr-2026-002]
+The interesting fact is the **shape of the disagreement**, and it survives the vote: this was not
+ban-versus-allow but eight distinct positions, differing on questions most projects have not yet
+noticed.[^debian-gr-2026-002] The ballot is kept here in full because a project drafting its own
+policy learns more from the options Debian declined than from the one it adopted.
 
 | | Proposer | Position |
 |---|---|---|
@@ -61,7 +139,7 @@ noticed.[^debian-gr-2026-002]
 | **B** | Lucas Nussbaum | Allow, with conditions *(amended twice)* |
 | **C** | Ian Jackson | Reject LLMs as far as practical *(amended once)* |
 | **D** | Pierre-Elliott Bécue | Accept, for Debian-specific work |
-| **E** | Marc Haber | Responsible use — neither endorse nor prohibit |
+| **E** ✅ | Marc Haber | Responsible use — neither endorse nor prohibit — **adopted** |
 | **F** | Tobias Frost | A cautious approach — discourage, trust judgement |
 | **G** | Gard Spreemann | *"we disallow the output of generative AI as direct contributions"* — including messages, bug reports and patches |
 | **H** | Holger Levsen | Encourage avoidance **on environmental grounds** — a position statement, not a rule |
@@ -126,13 +204,23 @@ which coalition it can be argued to.
 
 ## What a contributor must do
 
-Until the vote resolves, **no rule binds**, and that is precisely when caution is cheapest — a
-contribution made now may be judged under a rule adopted this month. Disclose AI assistance
-voluntarily. Every option that permits any use asks for disclosure in some form: **B** and **D**
-require it, **E**, **F** and **H** encourage or appreciate it, and **C** goes further by requiring
-human-drafted messages. The two that would disallow the contribution outright, **A** and **G**, make
-disclosure moot rather than unwelcome. **Volunteering it is the only choice that is safe under every
-outcome**, which was true of the six-option ballot and remains true of the eight.
+**You may use generative AI, and you own the result.** Debian added no gate, no tag and no
+declaration — what it added is an explicit statement that the existing bar applies unchanged. In
+practice that means: review, test and understand anything a tool produced before you submit it, and
+be ready to answer for its quality and licensing as if you had typed it.
+
+Three things are firmer than the general permission, and they are where a contributor can actually
+get this wrong:
+
+1. **Do not paste non-public project material into third-party AI services** — embargoed security
+   information, credentials, keys and private communications — without explicit authorisation.
+2. **Do not run anything at scale without asking first.** Mass filing, mass patching and automated
+   changes across many packages need prior discussion and consensus, and a named human accountable
+   for the output.
+3. **Disclosure is your choice.** Debian encourages it and does not require it, so omitting it
+   breaks no rule here — but the projects Debian ships from may differ, and the kernel's
+   `Assisted-by:` trailer *is* required by the document that governs ordinary patch submission.
+   **A Debian contributor forwarding work upstream is bound by the upstream rule, not this one.**
 
 ## A prior AI vote, withdrawn — and why it is not recorded here
 
@@ -180,12 +268,29 @@ only the three added today. That distinction was worth closing rather than notin
 carried forward from the 2026-08-05 check, and a quotation nobody has re-read is exactly the kind of
 claim that reads as sourced while resting on an earlier session.
 
-`https://www.debian.org/vote/2026/vote_002` carries the result once the ballot closes; Debian votes
-are preferential, so the outcome may be a ranked result rather than a single winner, and **Further
-Discussion** is always on the ballot — a "no decision" outcome is a real possibility, and would
-leave this record's stance unchanged rather than superseded.
+**Checked 2026-08-29**, hours after the ballot closed. The result was read from the automated tally
+on `debian-vote`, and Proposal E's operative text was read in full from the vote page — the adopted
+wording is quoted here from that text, not from the summaries circulating in the press within the
+hour.
+
+**A prediction this record made was confirmed, which is worth more than the result.** The 3:1
+supermajority for Proposal A was derived from the Constitution on 2026-08-05, at a time when the
+vote page stated no majority requirement; the tally dropped Option 1 at 0.560 against exactly that
+threshold. A derived claim that later matches the primary is the strongest evidence a record can
+offer that its reasoning was sound.
+
+**The next read is triggered by the Secretary's declaration**, not by a date. Two corrections to
+where this record previously said to look:
+
+- **The vote page was not where the result appeared first.** This record said
+  `https://www.debian.org/vote/2026/vote_002` *"carries the result once the ballot closes"*. Hours
+  after closing it carried no outcome section, no tally sheet and no quorum log, while the result
+  had been published on the `debian-vote` list. **Watch the list, then the page.**
+- **The preferential-outcome caution did not apply.** The Schwartz set resolved to a single option,
+  so there is no ranked result to interpret and *None of the above* placed last among the survivors.
 
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
 [^debian-constitution]: [Debian Constitution §4.1 — Foundation Documents and majority requirements](https://www.debian.org/devel/constitution)
 [^debian-gr-2025-002]: [General Resolution: Interpretation of DFSG on Artificial Intelligence (AI) Models (2025 vote_002)](https://www.debian.org/vote/2025/vote_002)
 [^debian-gr-2025-002-withdrawal]: [withdrawing Proposal A — Interpretation of DFSG on Artificial Intelligence (AI) Models](https://lists.debian.org/debian-vote/2025/05/msg00105.html)
+[^debian-gr-2026-002-results]: [Results for LLM usage in Debian (automated publication, Devotee)](https://lists.debian.org/debian-vote/2026/08/msg00360.html)

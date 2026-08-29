@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: How open source treats AI-authored contributions
-description: The read-through map — the six shapes a policy takes, the seven axes each one decides, and the cross-cutting findings that only appear when the primary texts are read side by side.
+description: The read-through map — the shapes a policy takes, the axes each one decides, and the cross-cutting findings that only appear when the primary texts are read side by side.
 tags:
   - ai-contribution
   - policy
@@ -86,7 +86,7 @@ far better than the stance label does.
 | **Provenance prohibition** | inability to certify origin | [QEMU](projects/qemu.md), [NetBSD](distributions/netbsd.md), [Gentoo](distributions/gentoo.md) |
 | **Detection rule** | how the submission *looks* | [Git](projects/git.md) |
 | **Declaration rule** | whether you *said so* | [Rust](projects/rust.md) (draft), [OpenInfra](foundations/openinfra.md) |
-| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md) |
+| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md), [Debian](distributions/debian.md) |
 | **Licence-compatibility rule** | rights in the output | [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md) |
 | **Copyright-threshold rule** | whether the contribution is *legally significant* | [GCC](projects/gcc.md) |
 
@@ -96,11 +96,24 @@ legal machinery instead of creating a new regime, and *"is this AI-generated?"* 
 to *"is this legally significant?"*. It is also the only policy here released **CC0**, so the text can
 be adopted outright.
 
-Three are unshaped rather than shaped: [Debian](distributions/debian.md) is mid-vote,
-[FreeBSD](distributions/freebsd.md) has a reported intention and no published rule, and
-**[Fedora](distributions/fedora.md) has a policy in force whose text is not published anywhere
-reachable** — approved by a minuted unanimous vote, effective immediately, and nine months later
-absent from the Council Policies page. A rule nobody can read is a fourth state, distinct from
+**[Debian](distributions/debian.md) adopted a responsibility rule on 2026-08-28, and added no
+eighth shape** — which is the finding. Having put eight competing options to a General Resolution,
+including two prohibitions, it chose the one that creates no new obligation: generative AI is
+*"neither exempt from nor subject to special rules beyond the standards already expected of Debian
+contributors"*.[^debian-gr-2026-002] The prohibition that would have amended the Social Contract was
+dropped for missing its 3:1 majority, at 0.560.
+
+What is new is not the shape but **how it was reached**. Every other responsibility rule here was
+written by maintainers; Debian's was selected by a project-wide preferential ballot over eight
+drafted alternatives, and *None of the above* placed behind every surviving option. **A project that
+has argued the question to a vote and concluded its existing bar suffices is not in the same position
+as one that never asked**, even though neither ends up with a rule specific to AI — which is a
+caution about reading "no AI-specific rule" off a policy page as indifference.
+
+Two remain unshaped: [FreeBSD](distributions/freebsd.md) has a reported intention and no published
+rule, and **[Fedora](distributions/fedora.md) has a policy in force whose text is not published
+anywhere reachable** — approved by a minuted unanimous vote, effective immediately, and nine months
+later absent from the Council Policies page. A rule nobody can read is a fourth state, distinct from
 prohibited, permitted and undecided.
 
 ## Detection and declaration fail differently
@@ -213,8 +226,10 @@ mutable history-tag is just an inaccurate one.
 
 ## The seven axes
 
-Six people drafting [Debian](distributions/debian.md)'s competing ballot options converged on the
-same questions.[^debian-gr-2026-002] Adding what the other records surface, a policy has to decide:
+Eight people drafting [Debian](distributions/debian.md)'s competing ballot options converged on the
+same questions — and the list below is what a policy must decide whichever option it lands on, so
+Debian's having since adopted Proposal E does not retire the ones it
+declined.[^debian-gr-2026-002] Adding what the other records surface, a policy has to decide:
 
 1. **Prohibit, discourage, or regulate?**
 2. **Disclosure — mandatory, encouraged, or silent?** And above what threshold: any use, or

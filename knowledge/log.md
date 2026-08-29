@@ -13,6 +13,49 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Debian decided, and `distributions/debian.md` is rewritten around the result.** The General
+  Resolution closed 2026-08-28 23:59:59 UTC and **Option 5, "Responsible Use of Generative AI"**
+  (Proposal **E**) won outright — sole member of the Schwartz set, beating *None of the above*
+  281–126. Debian now **permits** generative AI under the standards that already applied.
+* **The record's own derived claim was confirmed by the tally.** On 2026-08-05 this record read the
+  Constitution and concluded that Proposal A, amending the Social Contract, needed a **3:1**
+  majority its rivals did not — at a time when the vote page stated no requirement at all. The tally
+  dropped Option 1 at **0.560 (144/257) < 3**. A derived claim later matching the primary is the
+  strongest evidence a record can give that its reasoning was sound, and it is why the derivation was
+  written down instead of being left as background.
+* **Recorded from the automated tally, and labelled as such.** The result was published by
+  `devotee@vote.debian.org`, which states of itself that it is *"an automated, unofficial publication
+  of vote results"* and that official results follow from the Secretary. `stale_after` is **two
+  weeks**, not the bundle's six months, and the next read is triggered by the Secretary's
+  declaration rather than by the date.
+* **The adopted text was read in full, not summarised from the press.** Its operative move is that it
+  **adds no new rule**: same standards regardless of tools, responsibility undiminished, review before
+  submission, and a closing affirmation that AI is *"neither exempt from nor subject to special rules
+  beyond the standards already expected"*. Disclosure is **encouraged and explicitly not required** —
+  the opposite of the kernel's required trailer. Two firmer obligations sit underneath: no non-public
+  project material to third-party AI services, and no automated action at scale without prior
+  consensus and an accountable human.
+* **Both misspellings in the disclosure sentence are reproduced verbatim** — *"enourage"*,
+  *"assitance"* — because that is the operative wording of the adopted position.
+* **Where this record said to look was wrong, and is corrected.** It said the vote page *"carries the
+  result once the ballot closes"*. Hours after closing the page had no outcome section, no tally sheet
+  and no quorum log, while the result was already on the `debian-vote` list. **The list publishes
+  first.** The preferential-outcome caution also lapsed: the Schwartz set resolved to one option, so
+  there is no ranked result to interpret.
+* **`overview.md` corrected, and a taxonomy claim withdrawn before it shipped.** The first draft filed
+  Debian as an *eighth shape*, "the deliberate non-rule". Checked against the shapes table, that is
+  wrong: same standards, undiminished responsibility and review-before-submission is a
+  **responsibility rule**, the shape Python, curl and the kernel already hold. Debian joins that row.
+  What is genuinely new is **how it was reached** — every other responsibility rule here was written
+  by maintainers, Debian's was selected by project-wide preferential ballot over eight alternatives.
+* **The category index had drifted three ways, and nothing was watching it.** Running `okf index`
+  showed Debian's row still describing *"six competing proposals in discussion"* — never regenerated
+  after the v0.6.0 re-verification — and CTAN and TeX Live sitting in a **bullet list** rather than
+  the table, with CTAN's pre-correction description still in place. Regeneration is not wired into
+  any gate, so an index can contradict the records it indexes and every check stays green.
+* **Found via Phoronix, resolved against the primary.** A news feed carried the result first; nothing
+  from it is recorded here. The tally and the adopted text were read from `debian-vote` and the vote
+  page.
 * **Recorded the 2025 AI General Resolution that Debian withdrew, as an excluded neighbour rather
   than as a record.** `vote_002` of 2025, *"Interpretation of DFSG on Artificial Intelligence (AI)
   Models"*, asked whether a model released under a DFSG-compatible licence but **without its training
@@ -27,9 +70,12 @@ with a copied directory.
   Fifteen months later the LLM ballot carried **eight**. The defect named in 2025 is exactly what
   the 2026 ballot does not have, so its eight-way split reads as a repaired condition rather than
   as disarray — a caution against reading a crowded ballot as a project failing to agree.
-* **No `verified:` entry was added and `stale_after` was not moved.** Two sources were read today;
-  the record's claims about the 2026 ballot were not re-checked, and stamping the record verified
-  would have asserted a pass that did not happen. The record stays expired, awaiting the tally.
+* **No `verified:` entry was added and `stale_after` was not moved** *(superseded hours later, same
+  day, by the result entry above)*. When this was written the tally did not exist; two sources had
+  been read and the record's claims about the 2026 ballot had not been re-checked, so stamping it
+  verified would have asserted a pass that did not happen. Left standing rather than rewritten,
+  because the sequence is the point: the record was correctly held expired right up to the moment
+  the primary appeared.
 
 ## 2026-08-14
 

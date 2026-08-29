@@ -8,6 +8,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) rewritten around the result.**
+  The General Resolution closed 2026-08-28 and **Option 5, "Responsible Use of Generative AI"**
+  (Proposal E) won outright — sole member of the Schwartz set, beating *None of the above* 281–126.
+  Debian **permits** generative AI under the standards that already applied: same bar regardless of
+  tools, responsibility undiminished, review before submission, and disclosure **encouraged but
+  explicitly not required**
+- **The record's own derived claim was confirmed by the tally.** On 2026-08-05 it read the
+  Constitution and concluded Proposal A needed a **3:1** majority its rivals did not, when the vote
+  page stated no requirement. The tally dropped that option at **0.560 < 3**. This is the first time
+  a claim this bundle *derived* rather than read has been checked against the primary and held
+- **Recorded from the automated tally and labelled as such** — the Devotee publication states it is
+  *"an automated, unofficial publication of vote results"*. `stale_after` is **two weeks**, and the
+  next read is triggered by the Secretary's declaration rather than by the date
+- **[`overview.md`](knowledge/overview.md)**: Debian joins the **responsibility rule** row. A draft
+  that filed it as an eighth shape, "the deliberate non-rule", was withdrawn before shipping — the
+  adopted text is the same shape Python, curl and the kernel hold. What is new is how it was reached,
+  by project-wide ballot over eight alternatives rather than by maintainer decision
+- **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
+  Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
+  bullet list outside the table with CTAN's pre-correction description
+
+### Added
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
+  Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
+  as an **excluded neighbour**, not as a record. It is about whether an AI model may ship in `main`,
+  which is model licensing rather than contribution policy. Naming it makes the scope boundary
+  legible: without the note, a reader cannot tell a subject this bundle excluded from one it missed
+- **Both primaries were read** — the vote page and the proposer's withdrawal message of 2025-05-08 —
+  rather than the withdrawal being inferred from the vote index's status label
+- **A process finding worth more than either subject.** The 2025 GR was withdrawn partly because it
+  was a one-option ballot — *"The lack of other options can make the result less convincing"* — and
+  the 2026 LLM ballot carried eight
+- **`CLAUDE.md`'s status section** rewritten: the record count is now derived (`okf list knowledge`)
+  rather than written out, and verification coverage is stated as a dated audit event, because a
+  probe confirmed that removing a `verified:` block produces no `okf lint` finding
+
+### Fixed
+
+- **Where the record said to look for the result was wrong.** It named the vote page; hours after the
+  ballot closed that page had no outcome section, no tally sheet and no quorum log, while the result
+  was already published on the `debian-vote` list. **The list publishes first**, and the record now
+  says so
+
 ### Added
 
 - **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General

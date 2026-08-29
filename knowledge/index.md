@@ -10,7 +10,7 @@ Bundle root.
 
 | Title | Type | Description |
 |-------|------|-------------|
-| [How open source treats AI-authored contributions](overview.md) | Practice | The read-through map — the six shapes a policy takes, the seven axes each o... |
+| [How open source treats AI-authored contributions](overview.md) | Practice | The read-through map — the shapes a policy takes, the axes each one decides... |
 
 ## Subdirectories
 
