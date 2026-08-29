@@ -28,6 +28,12 @@ sources:
   - id: debian-constitution
     title: Debian Constitution §4.1 — Foundation Documents and majority requirements
     resource: https://www.debian.org/devel/constitution
+  - id: debian-gr-2025-002
+    title: 'General Resolution: Interpretation of DFSG on Artificial Intelligence (AI) Models (2025 vote_002)'
+    resource: https://www.debian.org/vote/2025/vote_002
+  - id: debian-gr-2025-002-withdrawal
+    title: 'withdrawing Proposal A — Interpretation of DFSG on Artificial Intelligence (AI) Models'
+    resource: https://lists.debian.org/debian-vote/2025/05/msg00105.html
 ---
 
 **Stance: undecided, and about to be decided.** Debian has **no policy on LLM-assisted
@@ -128,6 +134,39 @@ human-drafted messages. The two that would disallow the contribution outright, *
 disclosure moot rather than unwelcome. **Volunteering it is the only choice that is safe under every
 outcome**, which was true of the six-option ballot and remains true of the eight.
 
+## A prior AI vote, withdrawn — and why it is not recorded here
+
+Debian put a different AI question to a General Resolution in 2025, `vote_002`, *"Interpretation of
+DFSG on Artificial Intelligence (AI) Models"*, proposed by Mo Zhou with eight seconds and a
+discussion period opening 2025-04-21.[^debian-gr-2025-002] Its single option asked whether models
+released under a DFSG-compatible licence **without the original training data or program** are
+DFSG-compliant, and answered no — such files *"can not be included in the "main" section of the
+Debian archive"*, with the question of `non-free` left explicitly open.[^debian-gr-2025-002]
+
+**It is out of scope for this bundle, and the omission is deliberate rather than an oversight.** The
+subject is the licensing of AI models *as distributed artifacts* — whether a model may ship in
+`main` — not how the project treats AI-authored *contributions*. Filing it here would widen the
+bundle from contribution policy to model licensing, which the landscape bundle's territory adjoins.
+
+**It was withdrawn by its proposer on 2025-05-08**, before reaching a ballot, and conditionally:
+*"if the other proposals suddenly get enough sponsors in the last minute, the proposal A has to be
+there. So this is a "conditional" withdraw, and I'm expecting the GR to be
+canceled."*[^debian-gr-2025-002-withdrawal] The stated ground was readiness, not the merits:
+*"Based on the overall discussions and feedbacks, we as a community is underprepared to vote on
+this. Even if we vote, it is leading to a less convincing
+result."*[^debian-gr-2025-002-withdrawal]
+
+**What transfers is about process, not about either subject.** One of the proposer's reasons for
+withdrawing was that his was the only option on the ballot — *"The lack of other options can make
+the result less convincing"* — with an offer to coordinate the start so rival proposals could be
+drafted without rushing.[^debian-gr-2025-002-withdrawal] Fifteen months later the LLM ballot carried
+**eight** competing proposals. The defect named in 2025 is precisely the one the 2026 ballot does not
+have, which is worth knowing for anyone reading that eight-way split as mere disagreement: in this
+project a crowded ballot is the repaired condition, not the broken one.
+
+*The two sources in this section were read 2026-08-29. That is not a re-verification of this
+record's claims about the 2026 ballot, which remain as checked on 2026-08-14.*
+
 ## Re-verification notes
 
 **Checked 2026-08-14.** What this pass confirmed directly: the status is *Voting*; the discussion
@@ -148,3 +187,5 @@ leave this record's stance unchanged rather than superseded.
 
 [^debian-gr-2026-002]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)
 [^debian-constitution]: [Debian Constitution §4.1 — Foundation Documents and majority requirements](https://www.debian.org/devel/constitution)
+[^debian-gr-2025-002]: [General Resolution: Interpretation of DFSG on Artificial Intelligence (AI) Models (2025 vote_002)](https://www.debian.org/vote/2025/vote_002)
+[^debian-gr-2025-002-withdrawal]: [withdrawing Proposal A — Interpretation of DFSG on Artificial Intelligence (AI) Models](https://lists.debian.org/debian-vote/2025/05/msg00105.html)

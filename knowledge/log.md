@@ -11,6 +11,26 @@ with a copied directory.
 **Releases**, newest first: **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-08-29
+
+* **Recorded the 2025 AI General Resolution that Debian withdrew, as an excluded neighbour rather
+  than as a record.** `vote_002` of 2025, *"Interpretation of DFSG on Artificial Intelligence (AI)
+  Models"*, asked whether a model released under a DFSG-compatible licence but **without its training
+  data or program** may ship in `main`. That is model licensing, not contribution policy, so it earns
+  no record here — but a reader who finds it and no mention of it cannot tell an excluded subject
+  from a missed one. **A scope boundary is only legible if the near misses are named.**
+* **It was withdrawn on 2025-05-08 by its own proposer, on readiness rather than merits** — *"we as
+  a community is underprepared to vote on this"* — and conditionally, expecting cancellation unless
+  a rival proposal found sponsors at the last minute.
+* **The transferable finding is about process.** One stated reason for withdrawing was that the
+  ballot had only one option: *"The lack of other options can make the result less convincing."*
+  Fifteen months later the LLM ballot carried **eight**. The defect named in 2025 is exactly what
+  the 2026 ballot does not have, so its eight-way split reads as a repaired condition rather than
+  as disarray — a caution against reading a crowded ballot as a project failing to agree.
+* **No `verified:` entry was added and `stale_after` was not moved.** Two sources were read today;
+  the record's claims about the 2026 ballot were not re-checked, and stamping the record verified
+  would have asserted a pass that did not happen. The record stays expired, awaiting the tally.
+
 ## 2026-08-14
 
 * **`distributions/debian.md` re-verified, and four claims had gone stale in nine days.** The

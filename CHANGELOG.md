@@ -8,6 +8,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md) records the 2025 AI General
+  Resolution Debian withdrew** — *"Interpretation of DFSG on Artificial Intelligence (AI) Models"* —
+  as an **excluded neighbour**, not as a record. It is about whether an AI model may ship in `main`,
+  which is model licensing rather than contribution policy. Naming it makes the scope boundary
+  legible: without the note, a reader cannot tell a subject this bundle excluded from one it missed
+- **Both primaries were read** — the vote page and the proposer's withdrawal message of 2025-05-08 —
+  rather than the withdrawal being inferred from the vote index's status label, which was the only
+  evidence available when the GR was first noticed
+- **A process finding worth more than either subject.** The 2025 GR was withdrawn partly because it
+  was a one-option ballot — *"The lack of other options can make the result less convincing"* — and
+  the 2026 LLM ballot carries eight. A crowded ballot is the repaired condition in this project, not
+  evidence of disarray
+
+### Changed
+
+- **`CLAUDE.md`'s status section**, which still read *"Skeleton. One verified record."* The record
+  count is now derived (`okf list knowledge`) rather than written out, and verification coverage is
+  stated as a dated audit event, because a probe confirmed that removing a `verified:` block
+  produces no `okf lint` finding — nothing enforces it
+
+### Notes
+
+- `distributions/debian.md` is **deliberately left expired**. Its `stale_after` of 2026-08-29 marks
+  the day after the ballot closed; the tally was not published when this was written, so no
+  `verified:` entry was stamped. Re-verification is the next release, not this one
+
 ## [0.6.0] - 2026-08-14
 
 **The first release driven by an expiry rather than by new material.** `distributions/debian.md`
