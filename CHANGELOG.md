@@ -16,6 +16,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   *"Respond to review comments yourself. If you cannot discuss your own patch with a reviewer, it
   will not be merged."* The reviewer never decides how the patch was produced, only whether the
   sender can defend it — the question the other two are proxies for
+- **[`projects/nerves.md`](knowledge/projects/nerves.md)** — permits AI, reserves human-facing writing
+  to humans with the sharpest line in the corpus (*"Using AI to translate or tighten your own writing
+  is fine. Using it to write in your place is not"*), and requires `Assisted-by:` **naming the model**
+  — the format the kernel retired eleven days earlier. Only record here governing agent-config files
+  (`AGENTS.md`, `CLAUDE.md`), and a fifth DCO position: no `Signed-off-by` at all
+- **[`projects/macports.md`](knowledge/projects/macports.md)** — a **proposal, not a rule**: PR #420 is
+  open and contested. It matters because it **documents a hazard the bundle could previously only
+  describe**: it adopts the trailer *"in the format recommended by the Linux kernel developers"*,
+  **citing `docs.kernel.org`** — which still serves the retired format — in a PR opened **one day
+  after** mainline changed it. A stale rendered page is exporting a superseded rule to other projects
+- **One trailer, three mutually exclusive live rules**: kernel requires it without the model, Nerves
+  requires it with the model, GTK forbids it. MacPorts' PR calls it *"the emerging de facto
+  standard"*; **the corpus is now direct evidence that no such standard exists**
 - **[`projects/gtk.md`](knowledge/projects/gtk.md)** — and the finding of the release. GTK **forbids
   the `Assisted-by:` trailer the Linux kernel requires**, citing the same reason: it is *"free
   advertising for AI companies"*. Identical premise, opposite instrument — the kernel deleted the

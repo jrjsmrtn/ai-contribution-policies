@@ -12,6 +12,8 @@ Directory: `projects/`
 | [GTK](gtk.md) | Organization | Permits AI assistance under six named requirements, requires disclosure in th... |
 | [Git](git.md) | Organization | Rejects contributions that look AI-generated while explicitly recommending ca... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
+| [MacPorts](macports.md) | Organization | Has no adopted AI policy. An open, contested pull request would require an As... |
+| [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance and requires no disclosure of it at all — no tag, no ... |
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
 | [QEMU](qemu.md) | Organization | Machine emulator whose code-provenance policy requires contributors to refrai... |

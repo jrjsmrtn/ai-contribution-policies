@@ -78,6 +78,12 @@ sources:
   - id: kernel-commit-simplify-attribution
     title: 'commit 816d9992 — coding-assistants: simplify attribution'
     resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
+  - id: nerves-contributing
+    title: 'CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)'
+    resource: https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md
+  - id: macports-pr-420-diff
+    title: 'macports-base PR #420 — proposed CONTRIBUTING.md, diff'
+    resource: https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -258,6 +264,7 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 |---|---|
 | `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`LLM [TOOLS]` — the model was deliberately dropped 2026-08-03), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
 | **forbidden** | [GTK](projects/gtk.md) — *"Do not include trailers like "Co-authored-by:" or "Assisted-by:" … since they serve as free advertising for AI companies"*[^gtk-contributing] |
+| `Assisted-by:` **with the model** | [Nerves](projects/nerves.md) — `AGENT_NAME:MODEL_VERSION`, adopted 2026-08-14, eleven days **after** the kernel retired that exact form[^nerves-contributing] |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
 
@@ -270,9 +277,26 @@ reasoning; one project deleted the vendor from the tag, the other deleted the ta
 landed 2026-04-03 and the kernel's 2026-08-03 — recorded because the dates are checkable, with **no
 claim of influence** in either direction.
 
+**A third project makes it a genuine three-way split.** [Nerves](projects/nerves.md) requires
+`Assisted-by: AGENT_NAME:MODEL_VERSION` — *naming the model* — adopted 2026-08-14, eleven days after
+the kernel retired that exact grammar for the opposite reason.[^nerves-contributing] So one trailer
+carries three mutually exclusive rules: **required without the model, required with the model,
+forbidden.**
+
 The practical consequence outranks the curiosity: **the trailer is not portable.** A contributor who
 learned `Assisted-by:` in the kernel and applies it to GTK is breaking GTK's policy by following the
-kernel's. Anyone building tooling to emit these tags must key it to the destination project.
+kernel's, and the form Nerves mandates is the one the kernel abandoned. Anyone building tooling to
+emit these tags must key it to the destination project — there is no convention to follow, only
+per-project rules.
+
+**One retrieval hazard is worth carrying with this, and it is documented rather than hypothetical.**
+`docs.kernel.org` renders a released kernel and still served the retired `AGENT_NAME:MODEL_VERSION`
+format weeks after mainline dropped it. [MacPorts](projects/macports.md) then proposed adopting the
+trailer *"in the format recommended by the Linux kernel developers"*, **citing that exact page** and
+reproducing the retired form — in a pull request opened **one day after** the kernel
+changed it.[^macports-pr-420-diff] **A stale rendered page propagated a superseded rule into another
+project's draft policy**, and nobody in that thread has noticed. The mechanism is evidenced; intent
+is not claimed.
 
 **Do not reach for `Co-developed-by:`.** It was widely recommended for AI attribution before project
 policies landed, and it is structurally invalid for a tool: it denotes *authorship*, so the kernel
@@ -387,3 +411,5 @@ never that the content arrived. Check for the text you came for.
 [^gnome-review-guidelines]: [GNOME Shell Extensions — Review Guidelines (gjs-guide, main)](https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md)
 [^gtk-contributing]: [CONTRIBUTING.md — AI Contribution Policy (GTK, main)](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)
 [^kernel-commit-simplify-attribution]: [commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
+[^nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
+[^macports-pr-420-diff]: [macports-base PR #420 — proposed CONTRIBUTING.md, diff](https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff)

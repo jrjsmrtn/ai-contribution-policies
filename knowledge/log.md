@@ -13,6 +13,57 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Creation: [Nerves](projects/nerves.md) and [MacPorts](projects/macports.md), and together they
+  turn a hypothetical hazard into a documented one.** Nerves was found in a newsletter; MacPorts came
+  from a pull request the maintainer pointed at after this bundle had wrongly concluded MacPorts had
+  nothing.
+* **A rendered documentation site is exporting a superseded rule to other projects.**
+  `docs.kernel.org` renders a released kernel and still serves the retired
+  `Assisted-by: AGENT_NAME:MODEL_VERSION`. **MacPorts PR #420 proposes exactly that format,
+  explicitly *"in the format recommended by the Linux kernel developers"*, citing that page — in a PR
+  opened 2026-08-04, one day after mainline changed it.** The PR is still open and nobody in its
+  thread has noticed. This was recorded this morning as a re-verification trap for this bundle; it is
+  now evidence about the ecosystem. **The mechanism is evidenced; intent is not claimed.**
+* **Nerves adopted the same retired format on 2026-08-14 and cites no authority at all**, so the same
+  inference cannot be drawn about it — the two cases look alike and only one is evidenced. The
+  distinction is kept deliberately rather than collapsed into a tidier story.
+* **One trailer, three mutually exclusive rules, all live**: the kernel requires it *without* the
+  model, Nerves requires it *with* the model, [GTK](projects/gtk.md) forbids it. MacPorts' PR body
+  calls the trailer *"what appears to be the emerging de facto standard"* — **the corpus is now
+  direct evidence that no such standard exists**, which is the most useful thing this bundle has said
+  about attribution.
+* **A MacPorts reviewer reached the kernel's conclusion independently**, without knowing the kernel
+  had reached it: the trailer *"looks a bit hacked together, eg. mentioning Claude twice, and I don't
+  see what the format of `MODEL_VERSION` is supposed to be"*. That is a precise reading of the retired
+  example `Claude:claude-3-opus`, where agent and model name one vendor — **some evidence the format
+  was the problem, not its documentation.**
+* **Two positions appear that no adopted policy here holds.** Move disclosure from the commit trailer
+  to the PR review checklist — which is GTK's arrangement, arrived at separately. And drop disclosure
+  as uninformative: *"we can mostly just assume that everything is AI assisted. The important part …
+  is that a human is responsible."*
+* **Nerves draws the sharpest line on communication in the bundle**: *"Using AI to translate or
+  tighten your own writing is fine. Using it to write in your place is not."* Several projects
+  restrict AI in communication; none splits *assist* from *substitute* this cleanly, and the split is
+  what answers the non-native-speaker objection.
+* **Nerves is the only record here governing agent-instruction files** — *"Don't add AI tool
+  configuration such as `AGENTS.md` or `CLAUDE.md` without asking first"* — and the only one asking a
+  contributor to *"Comment on an open issue before pointing a coding agent at it"*, which prevents
+  duplicated agent effort rather than reviewing it after the fact.
+* **Review bandwidth is now the most common stated motive in this bundle**, ahead of licensing,
+  copyright and output quality: GNOME, the Linux wireless maintainer, the kernel's
+  `generated-content.rst`, Nerves (*"Friction is kind of the point"*) and now MacPorts (*"creating
+  work for human beings"*) — **five independent projects.**
+* **A source that cannot be fetched is labelled as such.** The Nerves rationale comes from an emailed
+  newsletter with no per-issue public archive; every claim about what the policy *says* is taken from
+  the public `CONTRIBUTING.md`, and the record states the limitation in place.
+* **The project's own announcement overstates its rollout, checkably.** It says a copy sits *"in every
+  official nerves repo"*; three of four sampled carry it and `nerves_system_br` has no `CONTRIBUTING.md`
+  at all.
+* **MacPorts is recorded as a proposal, not a rule**, with a warning that nothing in it is in force —
+  the treatment [Rust](projects/rust.md)'s draft gets. Its `stale_after` is three months because an
+  open PR's state is the thing most likely to change.
+
+
 * **Second GNOME sweep: the policy count nearly doubled, and the first sweep's blind spot was the
   filename.** `README` and `HACKING` were read across all 321 modules — 342 such files — after the
   record itself flagged them as unsurveyed. **Seventeen modules now state an AI policy: nine in

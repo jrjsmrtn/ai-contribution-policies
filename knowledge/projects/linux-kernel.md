@@ -271,6 +271,14 @@ the lag itself. `git.kernel.org` is authoritative; `raw.githubusercontent.com/to
 was verified byte-identical to it on 2026-08-29 and is an acceptable mirror. **A quotation taken
 from the rendered site can be stale while looking perfectly sourced.**
 
+**The lag has already propagated.** [MacPorts](macports.md) opened a pull request on 2026-08-04 —
+one day after the format changed — proposing the `Assisted-by:` trailer *"in the format recommended
+by the Linux kernel developers"*, citing
+`docs.kernel.org/process/coding-assistants.html#attribution` and reproducing the **retired**
+`AGENT_NAME:MODEL_VERSION` form. As of 2026-08-29 that PR is open and nobody in its thread has
+noticed. **A stale rendered page is not merely a re-verification trap for this bundle; it is
+exporting a superseded rule to other projects.**
+
 **`lore.kernel.org` sits behind an Anubis proof-of-work challenge**, answering HTTP 200 with
 *"Making sure you're not a bot!"* to `curl` on both the message and `/raw` paths. The message-id was
 correct throughout; only the retrieval was blocked, and a real browser clears it. Confirm the URL
