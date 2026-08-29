@@ -72,6 +72,12 @@ sources:
   - id: gnome-review-guidelines
     title: 'GNOME Shell Extensions — Review Guidelines (gjs-guide, main)'
     resource: https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md
+  - id: gtk-contributing
+    title: 'CONTRIBUTING.md — AI Contribution Policy (GTK, main)'
+    resource: https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md
+  - id: kernel-commit-simplify-attribution
+    title: 'commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -251,8 +257,22 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 | Field | Used by |
 |---|---|
 | `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`LLM [TOOLS]` — the model was deliberately dropped 2026-08-03), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
+| **forbidden** | [GTK](projects/gtk.md) — *"Do not include trailers like "Co-authored-by:" or "Assisted-by:" … since they serve as free advertising for AI companies"*[^gtk-contributing] |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
+
+**One argument, two incompatible rules — the clearest case in this bundle that a premise does not
+determine a mechanism.** GTK forbids the `Assisted-by:` trailer *"since they serve as free
+advertising for AI companies"*.[^gtk-contributing] The Linux kernel **requires** that trailer, and
+narrowed it from naming the model to the bare literal `LLM` because identifying models *"provides
+free advertising to proprietary software companies"*.[^kernel-commit-simplify-attribution] Identical
+reasoning; one project deleted the vendor from the tag, the other deleted the tag. GTK's wording
+landed 2026-04-03 and the kernel's 2026-08-03 — recorded because the dates are checkable, with **no
+claim of influence** in either direction.
+
+The practical consequence outranks the curiosity: **the trailer is not portable.** A contributor who
+learned `Assisted-by:` in the kernel and applies it to GTK is breaking GTK's policy by following the
+kernel's. Anyone building tooling to emit these tags must key it to the destination project.
 
 **Do not reach for `Co-developed-by:`.** It was widely recommended for AI attribution before project
 policies landed, and it is structurally invalid for a tool: it denotes *authorship*, so the kernel
@@ -365,3 +385,5 @@ never that the content arrived. Check for the text you came for.
 [^nm-contributing]: [CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)
 [^kernel-wireless-syzbot]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
 [^gnome-review-guidelines]: [GNOME Shell Extensions — Review Guidelines (gjs-guide, main)](https://gitlab.gnome.org/World/javascript/gjs-guide/-/raw/main/docs/extensions/review-guidelines/review-guidelines.md)
+[^gtk-contributing]: [CONTRIBUTING.md — AI Contribution Policy (GTK, main)](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)
+[^kernel-commit-simplify-attribution]: [commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)

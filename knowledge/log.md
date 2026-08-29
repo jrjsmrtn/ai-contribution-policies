@@ -13,6 +13,48 @@ with a copied directory.
 
 ## 2026-08-29
 
+* **Creation: [GTK](projects/gtk.md), and [GNOME](projects/gnome.md) rewritten around a survey of all
+  321 modules in the group.** 45 carry a `CONTRIBUTING`; **nine state an AI policy**, in three
+  incompatible positions. The survey was run because the previous version of the GNOME record had
+  called per-module files unsurveyed.
+* **GTK forbids the trailer the Linux kernel requires, and both argue it the same way.** GTK: *"Do
+  not include trailers like "Co-authored-by:" or "Assisted-by:" in commit messages, since they serve
+  as free advertising for AI companies."* The kernel narrowed the same trailer to the bare literal
+  `LLM` because naming models *"provides free advertising to proprietary software companies"*.
+  **Identical premise, opposite instrument** — one deleted the vendor from the tag, the other deleted
+  the tag. GTK's wording landed 2026-04-03, the kernel's 2026-08-03; the dates are recorded because
+  they are checkable and **no influence is claimed in either direction**.
+* **The practical consequence outranks the curiosity: the trailer is not portable.** A contributor
+  who learned `Assisted-by:` in the kernel breaks GTK's policy by applying it. Tooling that emits
+  these tags must key on the destination project.
+* **GTK also binds maintainers**, which almost nothing else here does — *"Review LLM/GenAI-assisted
+  contributions more strictly"*, *"Reject comments and feedback that appear to be LLM/GenAI output"*.
+  The kernel **enumerates** maintainer discretion; GTK **instructs**. Under one wording a strict
+  maintainer is exercising a choice; under the other a lenient one is departing from policy.
+* **Two GTK rules have no counterpart in the bundle.** It caps the *shape* of a change rather than its
+  volume — no *"broad rewrites, large refactorings, or style changes"* — which targets the failure the
+  wireless maintainer named as sprinkling checks across the code. And it bans **fabricated evidence**:
+  *"Do NOT fabricate benchmarks, bug reports, test results, code samples, or reproducers"* — the
+  artifacts a reviewer uses to check the code, rather than the code.
+* **It closes the review loop from the contributor's side**: *"Do NOT feed the review feedback to an
+  LLM/GenAI tool."* That is the counterpart to the wireless maintainer's refusal to argue with one —
+  the same failure seen from opposite chairs, and GTK is the only policy here that closes it by rule.
+* **The seven-module ban is the first named-vendor prohibition here** — ChatGPT, Claude, Copilot,
+  DeepSeek, Devin AI — covering *"code, documentation, issues, and artworks"*, with a translation
+  exception and a support-refusal clause: *"we cannot supply support on anything referencing AI
+  output."*
+* **The shared text has already drifted.** `libadwaita` added Ollama on 2025-07-11 and `libmanette`
+  carries it; the other five copies do not. **A policy propagated by copy-paste diverges on exactly
+  the detail a contributor needs** — whether their tool is named — and nothing reconciles the copies.
+* **`gnome-commander` supplies a ground no other record states: deskilling.** *"people never improving
+  their coding skills because they rely on LLMs instead is going to make the situation much worse"* —
+  and it rejects the assist-only compromise on evidence rather than principle.
+* **The generalisable finding: for a federated project, the umbrella's documentation may not be where
+  the rule lives, and sibling modules may contradict each other.** GNOME's handbook is silent on AI
+  while its modules ban it, permit it conditionally, or say nothing. **Checking the organisation is
+  not checking the repository you are sending to.**
+
+
 * **Correction to [GNOME](projects/gnome.md), hours after it shipped: the handbook is not
   client-side and the absence is now verified.** The record said GNOME's rules for its own modules
   *"were not established"* because the handbook *"renders client-side, so it resists the retrieval

@@ -16,6 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   *"Respond to review comments yourself. If you cannot discuss your own patch with a reviewer, it
   will not be merged."* The reviewer never decides how the patch was produced, only whether the
   sender can defend it — the question the other two are proxies for
+- **[`projects/gtk.md`](knowledge/projects/gtk.md)** — and the finding of the release. GTK **forbids
+  the `Assisted-by:` trailer the Linux kernel requires**, citing the same reason: it is *"free
+  advertising for AI companies"*. Identical premise, opposite instrument — the kernel deleted the
+  vendor from the tag, GTK deleted the tag. **The trailer is therefore not portable**, and tooling
+  must key on the destination project. GTK also binds *maintainers*, caps the **shape** of a change
+  rather than its volume, bans **fabricated** benchmarks and reproducers, and forbids feeding review
+  feedback to a tool
 - **[`projects/gnome.md`](knowledge/projects/gnome.md)** — the AI rule in the GNOME Shell extension
   review guidelines, added 2025-11-30. **The only detection rule here that names its artifacts**:
   *"large amounts of unnecessary code, inconsistent code style, imaginary API usage, comments serving
@@ -92,6 +99,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **Category index regenerated** with `okf index`, correcting three drifts no gate was watching:
   Debian's row still said *"six competing proposals in discussion"*, and CTAN and TeX Live sat in a
   bullet list outside the table with CTAN's pre-correction description
+- **[`projects/gnome.md`](knowledge/projects/gnome.md) rewritten around a survey of all 321 modules**
+  in the GNOME group: 45 carry a `CONTRIBUTING`, **nine state an AI policy**, in three incompatible
+  positions — a seven-module named-vendor ban (the first here), `gnome-commander`'s argued ban on
+  **deskilling** grounds, and GTK's conditional permission. The shared ban text **has already
+  drifted**: two copies name Ollama and five do not. The generalisable finding is that **for a
+  federated project the umbrella's documentation may not be where the rule lives, and sibling modules
+  may contradict each other**
 
 ### Fixed
 
