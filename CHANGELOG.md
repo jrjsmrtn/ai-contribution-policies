@@ -50,6 +50,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   naming it makes the scope boundary legible, since otherwise a reader cannot tell a subject this
   bundle excluded from one it missed. Both primaries were read, including the proposer's withdrawal
   message of 2025-05-08
+- **A changelog-structure gate**, `check-changelog.py`, wired into `.lefthook.yml`. It catches
+  duplicated sections within a release, duplicate or misordered versions, malformed headings, a
+  misplaced `[Unreleased]`, and empty sections — the shape faults, which are checkable even though the
+  prose is not. It exists because `[Unreleased]` duplicated itself in this very release and nothing
+  saw it. **Its `empty-section` check was wrong on first run** and flagged a valid prose-only `Notes`
+  section; it now counts content rather than bullets, which is why it was run against the real file
+  before being trusted. Deliberately does **not** police the section vocabulary (this corpus uses
+  `Notes` legitimately) or re-implement ISO date checking, which `check-dates.py` owns
 - **An index-freshness gate**, `check-bundle-index.py`, wired into `.lefthook.yml`. `index.md` is
   **derived** — `okf index` generates it from concept frontmatter — and nothing compared the two,
   which is how three drifts survived every hook. It regenerates into a temporary copy and diffs, and

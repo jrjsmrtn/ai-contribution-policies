@@ -44,6 +44,14 @@ pre-commit:
     doc-links:
       run: python3 ../../workspace/scripts/check-doc-links.py README.md CLAUDE.md CHANGELOG.md
 
+    # A changelog has a SHAPE, and that shape is checkable even though its prose is not.
+    # On 2026-08-29 [Unreleased] was found carrying two `### Added` blocks, two `### Changed`
+    # blocks and a stale `### Notes` entry -- committed twice and pushed to two remotes. okf never
+    # sees this file, and doc-links and check-dates both passed throughout, because a duplicated
+    # heading is neither a broken link nor a malformed date.
+    changelog:
+      run: python3 ../../workspace/scripts/check-changelog.py CHANGELOG.md
+
     gitleaks:
       run: gitleaks protect --staged --verbose
     reuse:
