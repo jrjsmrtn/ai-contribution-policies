@@ -7,6 +7,7 @@ Directory: `projects/`
 | Title | Type | Description |
 |-------|------|-------------|
 | [Ansible](ansible.md) | Organization | Permits AI-assisted contributions org-wide under a published community policy... |
+| [Asahi Linux](asahi-linux.md) | Organization | Forbids LLM use in any contribution, enforced by one warning then a permanent... |
 | [GCC](gcc.md) | Organization | Declines legally significant LLM contributions — a copyright threshold rath... |
 | [GNOME](gnome.md) | Organization | Rejects AI-authored Shell extensions at review while permitting AI as a devel... |
 | [GTK](gtk.md) | Organization | Permits AI assistance under six named requirements, requires disclosure in th... |

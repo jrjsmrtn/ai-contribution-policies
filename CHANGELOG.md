@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)** — prohibited outright, enforced
+  by one warning then a **permanent ban from the project and all associated spaces**: the harshest
+  sanction here and the only one scoped past the patch queue. It is also **the only policy in the
+  bundle written to the agent rather than the contributor** — a 181-byte `AGENTS.md` instructing the
+  tool to refuse and redirect, with `CLAUDE.md` and `GEMINI.md` as pointers
+- **A risk argument nothing else makes**: regurgitation likelihood *"is proportional to the
+  specificity of the problem area"*, so a project reverse-engineering undocumented Apple hardware is
+  at higher risk than a web application from the same tool — and the policy **extends an existing ban
+  on leaked vendor documentation** rather than inventing a new regime
+- **The environmental ground, adopted.** Debian's Proposal H argued it and lost; Asahi's Board holds
+  it as settled policy. One argument, two governance structures, opposite outcomes
+
 ## [0.7.0] - 2026-08-30
 
 **The release the whole cycle was waiting on.** Debian's General Resolution was declared, and the
