@@ -87,6 +87,12 @@ sources:
   - id: qemu-relax-proposal
     title: '[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)'
     resource: https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html
+  - id: k8s-maintainership-blog
+    title: 'Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)'
+    resource: https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/
+  - id: k8s-ai-guidance
+    title: 'contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)'
+    resource: https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -199,6 +205,22 @@ maintainer's ability to triage them. Any project weighing a disclosure rule agai
 *it is unenforceable* should read that: the value is not in catching liars, it is in the label that
 honest submitters attach.
 
+## Enforcement is almost always a maintainer noticing — with one exception
+
+Every policy in this bundle is enforced by review: someone reads, judges and refuses. That is why so
+many of them worry about detection, and why [NetworkManager](projects/networkmanager.md) and
+[GTK](projects/gtk.md) fall back on *can you explain this?* rather than *how was this made?*
+
+[Kubernetes](projects/kubernetes.md) found the one mechanical hook recorded here. The CNCF's CLA
+check was **enabled for co-authors**, and *"AI agents are not able to solve these contributor license
+agreements"*[^k8s-maintainership-blog] — so listing an AI as co-author fails an automated check
+before a human looks. **It repurposes an existing legal instrument as a gate**, and it enforces the
+prohibition without anyone having to detect anything.
+
+Note the inversion. Other projects ask whether an AI *can* satisfy a certification and reason from
+the answer — [QEMU](projects/qemu.md) concluded it cannot and prohibited AI content outright.
+Kubernetes takes the same fact and makes it the enforcement mechanism.
+
 ## The DCO settles nothing
 
 Four organisations reason from the **Developer Certificate of Origin** and reach four destinations:
@@ -278,6 +300,7 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 | **forbidden** | [GTK](projects/gtk.md) — *"Do not include trailers like "Co-authored-by:" or "Assisted-by:" … since they serve as free advertising for AI companies"*[^gtk-contributing] |
 | `Assisted-by:` **with the model** | [Nerves](projects/nerves.md) — `AGENT_NAME:MODEL_VERSION`, adopted 2026-08-14, eleven days **after** the kernel retired that exact form[^nerves-contributing] |
 | `AI-used-for:` *(proposed)* | [QEMU](projects/qemu.md) — records **where** AI was used rather than that it was; explicitly distinguished from `Assisted-by`, *"which doubles as a check that the author has read the policy"*[^qemu-relax-proposal] |
+| **forbidden**, on accountability grounds | [Kubernetes](projects/kubernetes.md) — *"Listing AI tooling as a co-author, co-signing commits using an AI tool, or using the `assisted-by`, `co-developed` or similar commit trailer is not allowed"*[^k8s-ai-guidance] |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
 
@@ -301,6 +324,13 @@ learned `Assisted-by:` in the kernel and applies it to GTK is breaking GTK's pol
 kernel's, and the form Nerves mandates is the one the kernel abandoned. Anyone building tooling to
 emit these tags must key it to the destination project — there is no convention to follow, only
 per-project rules.
+
+**Two projects forbid the same trailer for incompatible reasons**, which is the clearest sign that
+the tag is carrying more meaning than one field can hold. [GTK](projects/gtk.md) bans it because it
+is *"free advertising for AI companies"*; [Kubernetes](projects/kubernetes.md) bans it because it
+dilutes accountability — *"If something breaks, there needs to be a human who understands why and
+can fix it."*[^k8s-ai-guidance] Neither argument implies the other, and a project persuaded by one
+would not necessarily accept the other's scope.
 
 **A fourth position reframes what the trailer is for.** QEMU's pending patch would add
 `AI-used-for:`, recording *where* AI was used, and says why that differs from the usual tag:
@@ -434,3 +464,5 @@ never that the content arrived. Check for the text you came for.
 [^nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
 [^macports-pr-420-diff]: [macports-base PR #420 — proposed CONTRIBUTING.md, diff](https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff)
 [^qemu-relax-proposal]: [[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)](https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html)
+[^k8s-ai-guidance]: [contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)](https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md)
+[^k8s-maintainership-blog]: [Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)

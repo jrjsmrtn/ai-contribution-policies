@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-08-30
+
+**The release the whole cycle was waiting on.** Debian's General Resolution was declared, and the
+corpus grew from 23 records to 29 while waiting — the largest single release so far, and the first
+where cross-record findings outweigh any individual record.
+
 ### Added
 
 - **[`projects/networkmanager.md`](knowledge/projects/networkmanager.md)** — a policy added
@@ -78,6 +84,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   section; it now counts content rather than bullets, which is why it was run against the real file
   before being trusted. Deliberately does **not** police the section vocabulary (this corpus uses
   `Notes` legitimately) or re-implement ISO date checking, which `check-dates.py` owns
+- **[`projects/kubernetes.md`](knowledge/projects/kubernetes.md)** — policy dated to **2025-11-08**,
+  making it one of the oldest here. It is the **second project to forbid the `Assisted-by:` trailer,
+  for the opposite reason to GTK's**: accountability rather than vendor advertising — five positions
+  now on one tag. And it holds the **only mechanical enforcement in the bundle**: the CNCF CLA check
+  enabled for co-authors, which an AI cannot satisfy, so the prohibition enforces itself before a
+  maintainer looks. Also notable for stating sanctions in advance, supplying disclosure wording, and
+  giving a motive nothing else does — the policy exists partly to stop the argument recurring
 - **[`projects/qemu.md`](knowledge/projects/qemu.md) re-verified and extended.** The prohibition
   **stands** (checked against `master` 2026-08-30), but a **relaxation patch has been pending since
   2026-05-28** that would permit AI in revert-cheap areas and add an **`AI-used-for:`** trailer — a
@@ -93,6 +106,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   was proved against planted faults in both directions it reports
 
 ### Changed
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md): the result is official.** The
+  Secretary's declaration, quorum arithmetic and a **425-vote tally sheet** were published 2026-08-30,
+  ~36 hours after the ballot closed. **Option 5, "Responsible Use of Generative AI"** is the declared
+  winner. The record had carried Devotee's automated tally for a day, labelled as unofficial; every
+  figure matched **except quorum**, which was 47.244 unofficially and **48.4897** in the declaration.
+  `stale_after` returns to six months
 
 - **[`distributions/debian.md`](knowledge/distributions/debian.md) rewritten around the result.** The
   General Resolution closed 2026-08-28 and **Option 5, "Responsible Use of Generative AI"**

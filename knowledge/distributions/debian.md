@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Debian
-description: Adopted "Responsible Use of Generative AI" — neither endorses nor prohibits, holds AI-assisted work to the same standards, encourages but does not require disclosure. The prohibition option was dropped for missing the 3:1 majority this record derived from the Constitution. Result is the automated tally; the Secretary's official declaration is still pending.
+description: Adopted "Responsible Use of Generative AI" — neither endorses nor prohibits, holds AI-assisted work to the same standards, encourages but does not require disclosure. The prohibition option was dropped for missing the 3:1 majority this record derived from the Constitution before the vote page stated any. Officially declared 2026-08-30 with a 425-vote tally sheet.
 resource: https://www.debian.org/vote/2026/vote_002
 tags:
   - ai-contribution
@@ -22,7 +22,9 @@ verified:
     at: '2026-08-14T22:40:00Z'
   - by: claude/opus-5
     at: '2026-08-29T02:45:00Z'
-stale_after: 2026-09-12
+  - by: claude/opus-5
+    at: '2026-08-30T12:00:00Z'
+stale_after: 2027-02-28
 sources:
   - id: debian-gr-2026-002
     title: 'General Resolution: LLM usage in Debian (2026 vote_002)'
@@ -39,23 +41,34 @@ sources:
   - id: debian-gr-2026-002-results
     title: 'Results for LLM usage in Debian (automated publication, Devotee)'
     resource: https://lists.debian.org/debian-vote/2026/08/msg00360.html
+  - id: debian-gr-2026-002-tally
+    title: 'Tally sheet for the votes cast, GR 2026 vote_002 (425 votes)'
+    resource: https://www.debian.org/vote/2026/vote_002_tally.txt
 ---
 
-**Stance: decided — generative AI is permitted, under the standards that already applied.** The
-General Resolution *"LLM usage in Debian"*, 2026 `vote_002`, closed on 2026-08-28 23:59:59 UTC and
-**Option 5, "Responsible Use of Generative AI"** — Proposal **E** below — won outright: it is the
-sole member of the Schwartz set, and it defeats *None of the above* by 281 to
-126.[^debian-gr-2026-002-results]
+**Stance: decided and officially declared — generative AI is permitted, under the standards that
+already applied.** The General Resolution *"LLM usage in Debian"*, 2026 `vote_002`, closed on
+2026-08-28 23:59:59 UTC. **Option 5, "Responsible Use of Generative AI"** — Proposal **E** below — is
+the sole member of the Schwartz set and **the declared winner**, defeating *None of the above* by 281
+to 126.[^debian-gr-2026-002]
 
-> ⚠ **The result recorded here is the automated tally, not the official declaration.** It was
-> published by `devotee@vote.debian.org` at 2026-08-29 00:01:45 UTC and says so of itself: *"This
-> message is an automated, unofficial publication of vote results. Official results shall follow,
-> sent in by the vote taker, namely Debian Project Secretary"*, and *"This email is just a
-> convenience for the impatient."*[^debian-gr-2026-002-results] As of 2026-08-29 the vote page
-> carries no outcome section and no tally sheet. **Nothing here is expected to change** — Devotee
-> computes the result the Secretary then certifies — but the distinction between a computed result
-> and a declared one is exactly the sort this bundle exists to keep, so `stale_after` is two weeks,
-> not six months, and the trigger for the next read is the Secretary's declaration.
+The official outcome, quorum arithmetic and the **tally sheet of 425 votes** were published on the
+vote page on **2026-08-30**, roughly 36 hours after the ballot
+closed.[^debian-gr-2026-002][^debian-gr-2026-002-tally] Quorum was **48.4897** — `Q = sqrt(1045)/2 =
+16.163`, quorum `= 3Q` — against a current developer count of 1,045; **all eight proposals cleared
+it**.[^debian-gr-2026-002]
+
+> **This record carried the automated result for a day before the official one existed, and said so
+> in place.** Devotee published the computed tally at 2026-08-29 00:01:45 UTC, describing itself as
+> *"an automated, unofficial publication of vote results"* with official results *"to follow, sent in
+> by the vote taker"*.[^debian-gr-2026-002-results] **Every figure in it matched the declaration**,
+> which is the expected outcome — Devotee computes what the Secretary certifies — but the two were
+> recorded as different kinds of claim while only one existed. The distinction cost nothing and would
+> have mattered had they diverged.
+>
+> One figure did change: the unofficial message gave quorum as **47.244**, the declaration gives
+> **48.4897**, computed against a slightly different developer count. The numbers above are the
+> official ones.
 
 ## What Debian adopted
 
@@ -279,8 +292,14 @@ vote page stated no majority requirement; the tally dropped Option 1 at 0.560 ag
 threshold. A derived claim that later matches the primary is the strongest evidence a record can
 offer that its reasoning was sound.
 
-**The next read is triggered by the Secretary's declaration**, not by a date. Two corrections to
-where this record previously said to look:
+**The declaration arrived on 2026-08-30 and this record was updated against it.** `stale_after`
+returns to the bundle's six months, since the subject is now a settled decision rather than a vote in
+progress. What would reopen it is Debian amending or superseding the statement, which Proposal E
+explicitly contemplates — it reserves the right to evolve *"without the need to resort to future
+general resolutions"*, so a change need not arrive through another GR and will not announce itself on
+the vote page.
+
+**Two corrections to where this record previously said to look**, both still worth keeping:
 
 - **The vote page was not where the result appeared first.** This record said
   `https://www.debian.org/vote/2026/vote_002` *"carries the result once the ballot closes"*. Hours
@@ -294,3 +313,4 @@ where this record previously said to look:
 [^debian-gr-2025-002]: [General Resolution: Interpretation of DFSG on Artificial Intelligence (AI) Models (2025 vote_002)](https://www.debian.org/vote/2025/vote_002)
 [^debian-gr-2025-002-withdrawal]: [withdrawing Proposal A — Interpretation of DFSG on Artificial Intelligence (AI) Models](https://lists.debian.org/debian-vote/2025/05/msg00105.html)
 [^debian-gr-2026-002-results]: [Results for LLM usage in Debian (automated publication, Devotee)](https://lists.debian.org/debian-vote/2026/08/msg00360.html)
+[^debian-gr-2026-002-tally]: [Tally sheet for the votes cast, GR 2026 vote_002 (425 votes)](https://www.debian.org/vote/2026/vote_002_tally.txt)

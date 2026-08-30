@@ -11,6 +11,7 @@ Directory: `projects/`
 | [GNOME](gnome.md) | Organization | Rejects AI-authored Shell extensions at review while permitting AI as a devel... |
 | [GTK](gtk.md) | Organization | Permits AI assistance under six named requirements, requires disclosure in th... |
 | [Git](git.md) | Organization | Rejects contributions that look AI-generated while explicitly recommending ca... |
+| [Kubernetes](kubernetes.md) | Organization | Permits AI assistance, requires disclosure in the PR description, and forbids... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
 | [MacPorts](macports.md) | Organization | Has no adopted AI policy. An open, contested pull request would require an As... |
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |

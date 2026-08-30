@@ -8,10 +8,69 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
 ## 2026-08-30
+
+* **The Debian result is official, and every figure the record carried was right.** The Secretary's
+  declaration, the quorum arithmetic and a **425-vote tally sheet** were published on the vote page on
+  2026-08-30, about 36 hours after the ballot closed. **Option 5, "Responsible Use of Generative AI"**
+  is the declared winner and the sole member of the Schwartz set.
+* **The record held an unofficial result for a day and labelled it as one.** Devotee's automated tally
+  matched the declaration in every particular — as expected, since Devotee computes what the Secretary
+  certifies — but the two were recorded as different kinds of claim while only one existed. **That
+  cost nothing and would have mattered had they diverged.**
+* **One figure did change: quorum was 47.244 in the automated message and 48.4897 in the
+  declaration**, computed against a different developer count (1,045 developers; `Q = sqrt(1045)/2`,
+  quorum `= 3Q`). The record now carries the official numbers. **A result that "matches" can still
+  differ in its arithmetic**, which is an argument for re-reading rather than promoting a provisional
+  record in place.
+* **`stale_after` returns to six months.** The two-week expiry existed because the subject was a vote
+  in progress; it is now a settled decision. What would reopen it is Debian amending the statement,
+  which Proposal E explicitly permits *"without the need to resort to future general resolutions"* —
+  **so a change need not arrive through another GR, and will not announce itself on the vote page.**
+* **The adopted text closes on a line the tally never showed**: *"Please keep being excellent to each
+  other and the only planet we have."* That is a nod to Proposal H's environmental argument — the
+  option that lost, folded into the winner's last sentence.
+
+
+* **Creation: [Kubernetes](projects/kubernetes.md)** — chased from a lead a MacPorts reviewer left in
+  PR #420. Read from `kubernetes/community`, not the rendered site, so it could be dated: policy added
+  **2025-11-08**, revised **2026-04-01**, worked example added **2026-04-15**. **One of the oldest AI
+  policies here**, predating most of the projects that later reached the same conclusions
+  independently.
+* **The second prohibition of `Assisted-by:`, for the opposite reason to GTK's.** GTK bans it as
+  *"free advertising for AI companies"*; Kubernetes bans it because it dilutes accountability — *"If
+  something breaks, there needs to be a human who understands why and can fix it."* **Two projects,
+  one rule, incompatible arguments, neither implying the other.** That takes commit-message
+  attribution to **five positions**: required-without-model (kernel), required-with-model (Nerves),
+  forbidden-as-advertising (GTK), forbidden-as-accountability (Kubernetes), and a different field
+  proposed (QEMU).
+* **The only mechanical enforcement in this bundle.** The CNCF CLA check was **enabled for
+  co-authors**, and *"AI agents are not able to solve these contributor license agreements"* — so
+  naming an AI co-author fails an automated check before a human looks. **It repurposes an existing
+  legal instrument as a gate.** Everything else here is enforced by a maintainer noticing.
+* **It inverts the DCO argument rather than repeating it.** QEMU reasons that an AI cannot satisfy a
+  certification and therefore prohibits AI content; Kubernetes takes the same fact — that an AI
+  cannot sign — and makes it the enforcement mechanism.
+* **Sanctions are stated in advance, twice**: the PR is closed if you cannot explain a change, and
+  closed if you route review replies through a tool. Elsewhere the same rules are expectations
+  without a named consequence.
+* **A motive nothing else states.** The policy exists partly to stop the meta-argument recurring —
+  *"there were many PRs that derailed into discussions around AI usage"*. **The cost avoided is the
+  debate, not the content**, which is an argument for writing a policy down before holding a strong
+  opinion.
+* **Disclosure comes with a template**, which is rarer than it should be: *"This PR was written in
+  part with the assistance of generative AI"*. Most disclosure rules here are obligations with no
+  worked example, and a contributor unsure what compliance looks like either over-discloses or skips
+  it.
+* **It restricts AI in contribution while adopting it in review** — Copilot via CNCF maintainer
+  access, CodeRabbit rolled out during 2026, and a documented process for evaluating new AI
+  review tools. Recorded plainly rather than as hypocrisy: the rules bind accountability for submitted work,
+  and a review bot advises a maintainer who still owns the merge. It is the only record here doing
+  both.
+
 
 * **`projects/qemu.md` re-verified and extended: the prohibition stands, but it is under active
   challenge.** Found by mining Phoronix further back than the first sweep. The record's stance was
