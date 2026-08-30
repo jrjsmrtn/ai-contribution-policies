@@ -11,6 +11,46 @@ with a copied directory.
 **Releases**, newest first: **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-08-30
+
+* **`projects/qemu.md` re-verified and extended: the prohibition stands, but it is under active
+  challenge.** Found by mining Phoronix further back than the first sweep. The record's stance was
+  checked against `master` and **holds** — *"Current QEMU project policy is to DECLINE any
+  contributions which are believed to include or derive from AI generated content."*
+* **A relaxation patch has been pending since 2026-05-28** — Paolo Bonzini, *"[PATCH] docs/devel:
+  relax policy on AI-generated contributions"*. `code-provenance.rst` last changed 2026-05-22, before
+  the patch, so it has not landed after three months. Recorded as a pending proposal, not a stance
+  change.
+* **It concedes the legal question rather than answering it**: *"The copyright and license status of
+  LLM output remains unsettled, so that question is still open. What has shifted is the balance of
+  risk."* Two grounds — no serious legal trouble observed elsewhere, and Red Hat's own risk
+  assessment — with the qualification that matters: *"a community of individual developers does not
+  have the legal backing of a company."* **A Red Hat engineer citing Red Hat and then saying it does
+  not transfer is the vendor/community boundary argued from the inside.**
+* **A third axis for "where is AI acceptable".** QEMU would scope by **blast radius** — *"easy to
+  revert and unlikely to spread: tests, documentation, mechanical changes, and small bug fixes"*,
+  with core code off-limits. GCC scopes by legal significance, GTK by the shape of the change. Same
+  question, three incompatible cuts.
+* **The sharpest statement in this bundle of why review cost is the problem**, and the only one that
+  names the mechanism rather than the symptom: *"AI lowers the cost of producing a patch but does
+  nothing to lower the cost of understanding and reviewing one; if anything it raises it, since **a
+  reviewer can no longer assume that the submitter has reasoned through every line**."* Six projects
+  now give reviewer bandwidth as their ground. This one explains why volume caps and
+  "be-able-to-explain-it" clauses keep arriving together — both restore the prior the reviewer lost.
+* **A fourth trailer, and it reframes what a trailer is for.** `AI-used-for:` would record *where* AI
+  was used, and the patch says why that differs: `Assisted-by` *"doubles as a check that the author
+  has read the policy"*. **Compliance signal versus reviewer guidance** — two jobs the same field has
+  been asked to do, which is part of why no convention has settled. Four positions now: kernel
+  (`LLM`), Nerves (`AGENT:MODEL`), GTK (forbidden), QEMU (`AI-used-for`, proposed).
+* **`stale_after` shortened 2027-02-04 → 2026-11-30.** A live proposal to reverse a stance is exactly
+  the condition a six-month expiry handles badly; had this not been re-checked opportunistically, a
+  merge would have gone unnoticed for five months. **The record was right and nearly stale for the
+  wrong reason** — its claim was accurate, its cadence was not.
+* **The Phoronix listing misdates articles, and the sweep nearly inherited it.** The archive page
+  attributed this story to 2026-06-10 and the Debian result to 2026-03-30; the real dates are
+  2026-05-28 and 2026-08-29. The date is assigned from the nearest preceding date marker, which
+  sidebar blocks break. **Every date here came from the article or the git history, not the listing.**
+
 ## 2026-08-29
 
 * **Creation: [Nerves](projects/nerves.md) and [MacPorts](projects/macports.md), and together they

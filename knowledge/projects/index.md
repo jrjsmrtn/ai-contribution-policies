@@ -16,7 +16,7 @@ Directory: `projects/`
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance and requires no disclosure of it at all — no tag, no ... |
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
-| [QEMU](qemu.md) | Organization | Machine emulator whose code-provenance policy requires contributors to refrai... |
+| [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
 | [Rust](rust.md) | Organization | Has no adopted policy; an unusually developed draft for rust-lang/rust is ope... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |
 | [curl](curl.md) | Organization | Accepts AI-assisted code that meets normal standards, but requires disclosure... |

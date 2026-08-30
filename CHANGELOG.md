@@ -78,6 +78,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   section; it now counts content rather than bullets, which is why it was run against the real file
   before being trusted. Deliberately does **not** police the section vocabulary (this corpus uses
   `Notes` legitimately) or re-implement ISO date checking, which `check-dates.py` owns
+- **[`projects/qemu.md`](knowledge/projects/qemu.md) re-verified and extended.** The prohibition
+  **stands** (checked against `master` 2026-08-30), but a **relaxation patch has been pending since
+  2026-05-28** that would permit AI in revert-cheap areas and add an **`AI-used-for:`** trailer — a
+  fourth position on attribution, and one that reframes the question: `Assisted-by` *"doubles as a
+  check that the author has read the policy"*, whereas `AI-used-for` is guidance for the reviewer.
+  It also carries the corpus's sharpest statement of why review cost is the real constraint —
+  *"a reviewer can no longer assume that the submitter has reasoned through every line"* — and its
+  `stale_after` drops to 2026-11-30, because a live proposal to reverse a stance outruns a six-month
+  cadence
 - **An index-freshness gate**, `check-bundle-index.py`, wired into `.lefthook.yml`. `index.md` is
   **derived** — `okf index` generates it from concept frontmatter — and nothing compared the two,
   which is how three drifts survived every hook. It regenerates into a temporary copy and diffs, and

@@ -84,6 +84,9 @@ sources:
   - id: macports-pr-420-diff
     title: 'macports-base PR #420 — proposed CONTRIBUTING.md, diff'
     resource: https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff
+  - id: qemu-relax-proposal
+    title: '[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)'
+    resource: https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -176,6 +179,15 @@ review time, so it scales with reviewer attention rather than saving it — whic
 policy closes *"Large machine-generated Merge Requests that no human has reviewed line by line"*
 before review begins.[^nm-contributing]
 
+**Why review cost keeps appearing as the motive, stated most precisely by QEMU:** *"AI lowers the
+cost of producing a patch but does nothing to lower the cost of understanding and reviewing one; if
+anything it raises it, since **a reviewer can no longer assume that the submitter has reasoned
+through every line**."*[^qemu-relax-proposal] Six projects here give reviewer bandwidth as their
+ground — GNOME, the Linux wireless maintainer, the kernel's `generated-content.rst`, Nerves,
+MacPorts and QEMU — and this is the one that names the mechanism rather than the symptom. It also
+explains why volume caps and "be able to explain it" clauses keep arriving together: both are
+attempts to restore the prior the reviewer lost.
+
 **The best argument for disclosure comes from someone refusing the contributions.** When the Linux
 wireless maintainer announced he would ignore syzbot's AI-generated patches, syzkaller stopped sending
 them — and he immediately named the cost: *"now that I say this (and you disabled it) I guess I'll
@@ -265,6 +277,7 @@ states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `
 | `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`LLM [TOOLS]` — the model was deliberately dropped 2026-08-03), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
 | **forbidden** | [GTK](projects/gtk.md) — *"Do not include trailers like "Co-authored-by:" or "Assisted-by:" … since they serve as free advertising for AI companies"*[^gtk-contributing] |
 | `Assisted-by:` **with the model** | [Nerves](projects/nerves.md) — `AGENT_NAME:MODEL_VERSION`, adopted 2026-08-14, eleven days **after** the kernel retired that exact form[^nerves-contributing] |
+| `AI-used-for:` *(proposed)* | [QEMU](projects/qemu.md) — records **where** AI was used rather than that it was; explicitly distinguished from `Assisted-by`, *"which doubles as a check that the author has read the policy"*[^qemu-relax-proposal] |
 | `Generated-by:` | ASF |
 | **both, distinguished** | OpenInfra |
 
@@ -288,6 +301,13 @@ learned `Assisted-by:` in the kernel and applies it to GTK is breaking GTK's pol
 kernel's, and the form Nerves mandates is the one the kernel abandoned. Anyone building tooling to
 emit these tags must key it to the destination project — there is no convention to follow, only
 per-project rules.
+
+**A fourth position reframes what the trailer is for.** QEMU's pending patch would add
+`AI-used-for:`, recording *where* AI was used, and says why that differs from the usual tag:
+`Assisted-by` *"doubles as a check that the author has read the policy"*.[^qemu-relax-proposal] So a
+project choosing a trailer is choosing between **proving compliance** and **directing the reviewer's
+attention** — two different jobs that the same field has been asked to do, which is part of why no
+convention has settled.
 
 **One retrieval hazard is worth carrying with this, and it is documented rather than hypothetical.**
 `docs.kernel.org` renders a released kernel and still served the retired `AGENT_NAME:MODEL_VERSION`
@@ -413,3 +433,4 @@ never that the content arrived. Check for the text you came for.
 [^kernel-commit-simplify-attribution]: [commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
 [^nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
 [^macports-pr-420-diff]: [macports-base PR #420 — proposed CONTRIBUTING.md, diff](https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff)
+[^qemu-relax-proposal]: [[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)](https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html)
