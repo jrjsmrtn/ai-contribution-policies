@@ -43,10 +43,19 @@ pre-commit:
   commands:
     # Relative links, anchors, and a sweep for filenames git says no longer exist.
     #
-    # Run HERE, against THIS repository's history -- not from the workspace. The dead-name
-    # set is repo-scoped: `purl.md`, `index.md` and friends died in the workspace's history
-    # when ADR-0005 extracted this corpus, and are alive and correct here. Sweeping siblings
-    # with the workspace's set reports live files as dead, by construction.
+    # Run HERE, against THIS repository's history -- not from the workspace. The dead-name set is
+    # repo-scoped, and sweeping a sibling with the workspace's set reports live files as dead by
+    # construction: `index.md` died there many times over when ADR-0005 extracted the LANDSCAPE
+    # corpus, and this repository has five live ones.
+    #
+    # This comment used to say those names died `when ADR-0005 extracted this corpus`, and to cite
+    # `purl.md` as the example. Both were inherited verbatim with this config from the landscape
+    # sibling, where they are true. This bundle was never in the workspace corpus and `purl.md`
+    # has never existed here -- checked against the history, not assumed. Corrected 2026-09-04.
+    #
+    # This repository's OWN dead-name set is currently empty: nothing has been renamed or deleted
+    # in its history. The sweep therefore costs nothing today and starts earning its place the
+    # first time something is.
     doc-links:
       run: python3 ../../workspace/scripts/check-doc-links.py knowledge README.md CLAUDE.md CHANGELOG.md
 
