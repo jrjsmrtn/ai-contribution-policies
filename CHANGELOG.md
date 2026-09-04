@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **Bundle-relative links were checked by nothing.** `.lefthook.yml` had retired
+  `check-doc-links.py` for `knowledge/` on the stated grounds that `okf` resolves bundle links. It
+  does not: measured in the landscape sibling on 2026-09-04, a planted missing target left `okf
+  validate` and `okf lint` both reporting `valid: true` at exit 0. The checker is wired back in over
+  `knowledge/` (249 links across 36 files, previously unchecked). Re-wiring it needed a fix in the
+  shared checker, whose reference-style guard matched OKF footnote definitions (`[^id]:`) and so
+  fired on every concept file.
+- **The `okf` version is now an asserted floor of 0.4.0, not prose.** The hook said `v0.2.1`,
+  `run-gates.sh` said `v0.3.0`, the installed tool was `0.4.0`, and nothing compared them.
+
 ### Added
 
 - **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)** — prohibited outright, enforced
