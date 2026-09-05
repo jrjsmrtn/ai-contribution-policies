@@ -22,6 +22,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — the first record here that is not a
+  policy. cdxgen has no `CONTRIBUTING.md` and no `CODE_OF_CONDUCT.md`, and asks nothing of a
+  contributor about AI; it publishes an `AI-DECLARATION.md` grading **its own** AI usage per source
+  path against the external six-level `ai-declaration.md` v0.1.2 scale
+  (`none · hint · assist · pair · copilot · auto`). **The only disclosure in the bundle that is a
+  parseable artifact rather than prose, and the only one describing the project rather than
+  governing the contributor.** It is maintained — a 2026-08-06 commit carries the paths through a
+  `lib/helpers/*` → `lib/inventory/*` refactor, changing no fact — which is what separates a
+  declaration from a badge. Its 36 KB `AGENTS.md` is a codebase guide with no policy content: the
+  same filename as Asahi Linux's refusal directive, the opposite artifact.
+
 - **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)** — prohibited outright, enforced
   by one warning then a **permanent ban from the project and all associated spaces**: the harshest
   sanction here and the only one scoped past the patch queue. It is also **the only policy in the

@@ -21,5 +21,6 @@ Directory: `projects/`
 | [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
 | [Rust](rust.md) | Organization | Has no adopted policy; an unusually developed draft for rust-lang/rust is ope... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |
+| [cdxgen](cdxgen.md) | Organization | Has no contribution policy at all — no CONTRIBUTING file and no code of con... |
 | [curl](curl.md) | Organization | Accepts AI-assisted code that meets normal standards, but requires disclosure... |
 

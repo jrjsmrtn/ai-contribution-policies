@@ -11,6 +11,49 @@ with a copied directory.
 **Releases**, newest first: **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-09-06
+
+* **Creation: [cdxgen](projects/cdxgen.md)** — the first record here that is not a policy. cdxgen
+  has **no `CONTRIBUTING.md` and no `CODE_OF_CONDUCT.md`** (absent across 2,326 tree entries, and
+  reported absent by GitHub's community profile), so it asks nothing of a contributor about AI. What
+  it publishes instead is an `AI-DECLARATION.md` grading **its own** AI usage per source path.
+* **The direction is inverted, and that is the finding.** Every other record answers *what the
+  project demands of you*; this answers *what the project did* — `level: pair` globally, with
+  `lib/inventory/ciParsers` and `lib/inventory/table.js` at `pair` and `lib`, `test`, `bin` at
+  `assist`, naming Gemini, Qwen 3.5, GPT-5 and Claude Sonnet/Opus. It is also the only disclosure in
+  the bundle that is a **parseable artifact** rather than prose.
+* **A six-level scale, defined outside the project.** `ai-declaration.md` v0.1.2 supplies
+  `none · hint · assist · pair · copilot · auto` plus six process axes, with the global level
+  required to be the highest present. That is far finer than any trailer here, which records *that*
+  AI was used and at most *which tool*. The spec argues disclosure as **review triage** — *"a skeptic
+  can immediately look into just those parts"* — a fourth job for a provenance signal.
+* **It is maintained, which is what separates it from a badge.** Three commits: added 2026-04-15,
+  extended 2026-04-22, and on 2026-08-06 both paths rewritten `lib/helpers/*` → `lib/inventory/*`
+  following a refactor. **That last commit changes no fact — it keeps the claim attached to the
+  code.** This is the bundle's only evidence of an AI-provenance claim being maintained against the
+  tree it describes.
+* **`AGENTS.md` is a codebase guide here, not a policy** — 36 KB of purl-construction and
+  secret-hygiene rules, with no permission, prohibition, disclosure or trailer rule. **Same filename
+  as [Asahi Linux](projects/asahi-linux.md)'s 181-byte refusal directive, opposite artifact**, which
+  is a caution now worth stating plainly: the filename predicts nothing about whether a repository
+  carries a policy. One clause inverts [GTK](projects/gtk.md), [Kubernetes](projects/kubernetes.md)
+  and [Nerves](projects/nerves.md) — it *instructs* the agent to act on automated review feedback,
+  where they forbid routing review replies through a tool. The subject differs (automated output vs.
+  a human reviewer) and no document draws that line.
+* **No floor above it either.** cdxgen left the CycloneDX org for its own `cdxgen` org (*OWASP
+  cdxgen*, created 2025-12-09), so CycloneDX's DCO-requiring, AI-silent `CONTRIBUTING.md` no longer
+  governs it. **OWASP is not a foundation of the kind `foundations/` records**: the OWASP Developer
+  Guide has a declaration rule but scopes it to itself — *"actively harmful to **this project**"* —
+  and claims no reach over sibling projects. Two OWASP projects, opposite arrangements.
+* **Checked and recorded as absent: [osquery](https://github.com/osquery/osquery)** has no AI
+  policy — no `AGENTS.md`-family file across 2,559 tree entries, zero AI-policy terms across 89
+  markdown files (positive control: 14 files match `contribut`), and zero across the 86-file
+  `osquery/foundation` governance repository (positive control: 81 files match `osquery`). **No
+  record was written**, per the curated-not-exhaustive rule. Noted here so the negative is not
+  re-derived. Its office-hours minutes stop at 2022-06-07 and Discussions are disabled, so there is
+  no forum record a later decision would have appeared in — the silence is in the artifacts, and is
+  not evidence that nobody discussed it.
+
 ## 2026-08-30
 
 * **Creation: [Asahi Linux](projects/asahi-linux.md)** — the last lead from the Phoronix and mail
