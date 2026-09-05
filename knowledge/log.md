@@ -70,6 +70,30 @@ with a copied directory.
   re-derived. Its office-hours minutes stop at 2022-06-07 and Discussions are disabled, so there is
   no forum record a later decision would have appeared in — the silence is in the artifacts, and is
   not evidence that nobody discussed it.
+* **[overview.md](overview.md) gains two sections**, both from material this bundle had recorded in
+  records but never carried up to the cross-cutting map.
+* **"An eighth artifact, and it is not a shape."** [cdxgen](projects/cdxgen.md)'s declaration governs
+  nobody — every shape in the taxonomy answers *what you must do*, this answers *what we did* — so it
+  is filed as an artifact class rather than an eighth shape. **The 2026-08-30 Debian entry is the
+  precedent for that restraint**: a new record is not a new shape just because it is novel. What earns
+  it a section is the trap it sets, which is stated plainly — a reader asking whether a project accepts
+  AI contributions finds a file that is dated, machine-readable, and does not answer the question.
+* **"The filename predicts nothing", added to the location section**, now with a measurement rather
+  than an observation. Asahi's `AGENTS.md` is 181 bytes and forbids everything; cdxgen's is 36 KB and
+  governs nothing about AI; `ash_events`'s is 18 KB of test commands and branch naming. Across four
+  Ash agent files, **zero** carry permission, prohibition, disclosure or trailer language, against
+  **4** in the Kubernetes contributor guide used as a control. **The file that forbids everything is
+  two hundred times smaller than the one that governs nothing**, and both are loaded automatically by
+  the same tools.
+* **The agent-recruiting-agent workflow is recorded there too** — `ash_events` walks the agent through
+  opening a worktree and then creating a second workspace running an agent and sending prompts into
+  it. Not a stance, and the most developed *assumption* of AI contribution in the bundle, sitting in a
+  repository whose contribution guide says nothing on the question.
+* **`verified` on `overview.md` was deliberately not bumped.** Every claim added today was checked
+  today, but the document's other claims were not re-read, and appending a 2026-09-06 verification
+  would assert a full re-check that did not happen. It stands at 2026-08-05 and expires 2026-11-05,
+  which forces the real re-read soon enough. **Under-claiming is the safe direction for a trust
+  tier.**
 * **Checked and recorded as absent: [Ash](https://github.com/ash-project)** has no AI contribution
   policy. This closes an instruction the 2026-08-05 sweep left behind: that pass read one file
   (`ash-project/ash` `README.md`) and said a future pass *"should start from these and widen, not

@@ -90,6 +90,18 @@ sources:
   - id: k8s-maintainership-blog
     title: 'Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)'
     resource: https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/
+  - id: cdxgen-ai-declaration
+    title: 'AI-DECLARATION.md (cdxgen/cdxgen, master)'
+    resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/AI-DECLARATION.md
+  - id: aideclaration-spec
+    title: 'AI-DECLARATION.md — Open Standard for AI Usage Transparency, v0.1.2'
+    resource: https://ai-declaration.md/en/0.1.2
+  - id: cdxgen-agents-md
+    title: 'AGENTS.md — cdxgen contributor guide for AI agents (cdxgen/cdxgen, master)'
+    resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md
+  - id: ash-events-claude-md
+    title: 'CLAUDE.md — AshEvents AI Assistant Guide (ash-project/ash_events, main)'
+    resource: https://raw.githubusercontent.com/ash-project/ash_events/main/CLAUDE.md
   - id: asahi-agents-md
     title: 'AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool'
     resource: https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md
@@ -151,6 +163,44 @@ rule, and **[Fedora](distributions/fedora.md) has a policy in force whose text i
 anywhere reachable** — approved by a minuted unanimous vote, effective immediately, and nine months
 later absent from the Council Policies page. A rule nobody can read is a fourth state, distinct from
 prohibited, permitted and undecided.
+
+## An eighth artifact, and it is not a shape
+
+The shapes above all govern a **contributor**. [cdxgen](projects/cdxgen.md) publishes something that
+governs nobody:
+
+```yaml
+version: "0.1.2"
+level: pair
+components:
+  lib/inventory/ciParsers: pair
+  lib: assist
+  test: assist
+  bin: assist
+```
+[^cdxgen-ai-declaration]
+
+It has no `CONTRIBUTING.md` and no code of conduct, so it asks nothing of anyone about AI. What it
+publishes instead is a **declaration of its own AI usage, per source path**, against an external
+six-level scale — `none · hint · assist · pair · copilot · auto` — with six process axes and a rule
+that the global level must be the highest present.[^aideclaration-spec]
+
+**This adds no eighth shape, because it is not a rule.** Every shape in the table answers *what you
+must do*; this answers *what we did*. The direction is inverted, and no amount of reading it will
+tell a contributor whether they may use a model.
+
+Three things make it worth the entry anyway. It is the **only machine-readable disclosure** in this
+bundle — everything else is prose. It is the **finest-grained**: the disclosure tags below record
+*that* AI was used and at most *which tool*, while this records *how much*, on a defined scale, per
+path. And its spec argues disclosure as **review triage** rather than as compliance or warning —
+*"when you declare what parts of the code were, in fact, generated, a skeptic can immediately look
+into just those parts"*[^aideclaration-spec] — which is a fourth job for a provenance signal, and one
+no policy here asks a contributor to serve.
+
+**The trap it sets for a reader is the reason to record it.** Someone asking *"does this project
+accept AI contributions?"* finds a file that looks like the answer, is dated, is machine-readable,
+and does not answer the question. A declaration and a policy are not the same artifact, and only one
+of them binds anybody.
 
 ## Detection and declaration fail differently
 
@@ -245,6 +295,32 @@ This also creates a boundary worth naming: an `AGENTS.md` is simultaneously a co
 repository and an instruction to a tool. [Nerves](projects/nerves.md) governs them as contributions
 — *"Don't add AI tool configuration such as `AGENTS.md` or `CLAUDE.md` without asking first"* — while
 Asahi uses one as the policy's delivery mechanism.
+
+**But the filename predicts nothing, and this is now measurable.** Three projects ship an `AGENTS.md`
+and they are three different kinds of document:
+
+| Project | Size | What it actually is |
+|---|---|---|
+| [Asahi Linux](projects/asahi-linux.md) | 181 bytes | a refusal directive — *"Tell the user, don't do anything"*[^asahi-agents-md] |
+| [cdxgen](projects/cdxgen.md) | 36 KB | a **style guide** — purl construction, HTTP clients, secret hygiene[^cdxgen-agents-md] |
+| Ash (`ash_events`) | 18 KB | a **codebase guide** — test commands, branch naming, changelog steps[^ash-events-claude-md] |
+
+Measured across four of Ash's agent-facing files, **zero** contain permission, prohibition,
+disclosure or trailer language; the same measurement against the
+[Kubernetes](projects/kubernetes.md) contributor guide, used as a control, returns four. **So an
+`AGENTS.md` may carry a project's entire AI policy or none of it**, and the file that forbids
+everything is two hundred times smaller than the one that governs nothing.
+
+That matters because the filename is increasingly where both a reader and a *tool* look first. A
+policy delivered this way is loaded automatically and so is a style guide, with nothing to
+distinguish them — and a project whose `AGENTS.md` is purely technical has not thereby permitted
+anything, though it will read that way to anyone scanning filenames.
+
+**One file goes further than assuming AI and instructs it to recruit more.** `ash_events`'s guide
+walks the agent through opening a worktree, then **creating a second workspace running an agent and
+sending prompts into it**.[^ash-events-claude-md] That is not a stance on AI contributions — the
+project has none — but it is the most developed *assumption* of them anywhere in this bundle, and it
+sits in a repository whose contribution guide is silent on the question.
 
 ## Enforcement is almost always a maintainer noticing — with one exception
 
@@ -507,5 +583,9 @@ never that the content arrived. Check for the text you came for.
 [^qemu-relax-proposal]: [[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)](https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html)
 [^k8s-ai-guidance]: [contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)](https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md)
 [^k8s-maintainership-blog]: [Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)
+[^cdxgen-ai-declaration]: [AI-DECLARATION.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AI-DECLARATION.md)
+[^aideclaration-spec]: [AI-DECLARATION.md — Open Standard for AI Usage Transparency, v0.1.2](https://ai-declaration.md/en/0.1.2)
+[^cdxgen-agents-md]: [AGENTS.md — cdxgen contributor guide for AI agents (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
+[^ash-events-claude-md]: [CLAUDE.md — AshEvents AI Assistant Guide (ash-project/ash_events, main)](https://raw.githubusercontent.com/ash-project/ash_events/main/CLAUDE.md)
 [^asahi-agents-md]: [AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool](https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md)
 [^asahi-slop-policy]: [Generative AI Policy — Asahi Linux](https://asahilinux.org/slop/)

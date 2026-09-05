@@ -22,6 +22,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- **[`overview.md`](knowledge/overview.md)** — two additions carrying record-level findings up to the
+  cross-cutting map. **"An eighth artifact, and it is not a shape"**: cdxgen's self-declaration
+  governs nobody, so it is an artifact class rather than a shape, and the section states the trap —
+  a reader asking whether a project accepts AI contributions finds a dated, machine-readable file
+  that does not answer. **"The filename predicts nothing"**, added to the location section with a
+  measurement: across four Ash agent files, zero carry permission, prohibition, disclosure or
+  trailer language against 4 in the Kubernetes control, and the 181-byte `AGENTS.md` that forbids
+  everything is two hundred times smaller than the 36 KB one that governs nothing. `verified` was
+  deliberately not bumped — the new claims were checked today, the rest was not re-read.
+
+
+
 - **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — corrected and extended with the agent
   artifact surface, which the first draft understated as one file. It is **24 paths**: 5 skills in
   `.agents/skills/`, 14 in the Claude Code plugin, 1 at the repository root describing cdxgen to
