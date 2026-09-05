@@ -45,6 +45,23 @@ with a copied directory.
   governs it. **OWASP is not a foundation of the kind `foundations/` records**: the OWASP Developer
   Guide has a declaration rule but scopes it to itself — *"actively harmful to **this project**"* —
   and claims no reach over sibling projects. Two OWASP projects, opposite arrangements.
+* **Correction and extension: [cdxgen](projects/cdxgen.md)** — the record as first written
+  understated the agent-facing surface as a single `AGENTS.md`. Counting every `SKILL.md` plus the
+  four named instruction files gives **24 paths**: 5 skills in `.agents/skills/`, **14** in the Claude
+  Code plugin, 1 at the repository root describing cdxgen itself to consumers, plus `AGENTS.md`,
+  `.github/copilot-instructions.md`, `.agents/README.md` and the marketplace manifest. **Two counts in
+  the first draft of this correction were also wrong** — "twelve" plugin skills and "33 paths", both
+  written before being measured and both fixed by counting.
+* **What earns the record is the tiering, not the total.** `.agents/README.md` states that two skills
+  are mirrored into the plugin and that the three **contributor-facing** ones are *"intentionally not
+  shipped"*, because the plugin's audience runs cdxgen rather than develops it. **No other
+  organisation here separates instructions for users from instructions for contributors and delivers
+  them by different channels** — everywhere else contributor guidance is prose anyone can read.
+* **The consequence is referenced, not restated.** Claude Code does not read `.agents/skills/`, so the
+  three contributor skills are unreachable to a Claude Code contributor while the two user-facing ones
+  arrive by plugin. Those mechanics are a distribution question and are tracked in a separate,
+  private corpus; what stays here is the organisational fact, which survives any change to cdxgen's AI
+  stance — the boundary test applied to a real case.
 * **Checked and recorded as absent: [osquery](https://github.com/osquery/osquery)** has no AI
   policy — no `AGENTS.md`-family file across 2,559 tree entries, zero AI-policy terms across 89
   markdown files (positive control: 14 files match `contribut`), and zero across the 86-file

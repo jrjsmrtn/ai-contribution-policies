@@ -34,6 +34,12 @@ sources:
   - id: owasp-devguide-contributing
     title: 'Providing content — OWASP Developer Guide (Use of AI)'
     resource: https://devguide.owasp.org/contributing/
+  - id: cdxgen-agents-readme
+    title: 'Project Agent Customizations (.agents/README.md, cdxgen/cdxgen, master)'
+    resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/.agents/README.md
+  - id: cdxgen-plugin-marketplace
+    title: 'marketplace.json (.claude-plugin/, cdxgen/cdxgen, master)'
+    resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/.claude-plugin/marketplace.json
 ---
 
 **Stance: no contributor-facing rule of any kind, and a published self-declaration instead.** Every
@@ -152,6 +158,55 @@ infer it.
 A second agent-facing file, `.github/copilot-instructions.md` (4.4 KB), covers similar ground with
 **different text**. Two agent-facing documents that can drift, with nothing asserting they agree.
 
+## It ships skills, and decides who gets which
+
+The record above understated the surface. Counting every `SKILL.md` plus the four named instruction
+files gives **24 agent-facing paths**, not one:
+
+| Artifact | Count | What it is |
+|---|---|---|
+| `AGENTS.md` | 1 | the 36 KB codebase guide above |
+| `.github/copilot-instructions.md` | 1 | 4.4 KB, different text |
+| `.agents/README.md` | 1 | the skills index and the mirroring rule[^cdxgen-agents-readme] |
+| `.agents/skills/*/SKILL.md` | **5** | in the cross-client location |
+| `claude-plugin/skills/*/SKILL.md` | **14** | the Claude Code plugin's set |
+| `.claude-plugin/marketplace.json` | 1 | the manifest that distributes it[^cdxgen-plugin-marketplace] |
+| `SKILL.md` (repository root) | 1 | a skill describing **cdxgen itself**, for consumers |
+
+That last one is its own small finding: the repository root carries a skill whose subject is the tool,
+so the project publishes an agent-readable description of its own capabilities alongside the code.
+
+`.agents/README.md` states the convention and cites the Agent Skills standard: skills live under
+`skills/<skill-name>/` with trigger frontmatter, and are *"discovered by Agent Skills-compatible
+tools (GitHub Copilot, opencode, Claude Code, and others) from
+`.agents/skills/`"*.[^cdxgen-agents-readme]
+
+**The interesting part is the split, which is stated and reasoned:**
+
+> Two skills are mirrored into that plugin: **BOM Slimmer** and **SBOM Fidelity Loop**. This
+> directory remains their source of truth — change them here first, then copy into
+> `claude-plugin/skills/`. The contributor-facing skills (**Ecosystem Onboarding**, **Custom Property
+> Author**, **CycloneDX Spec Reviewer**) are **intentionally not shipped in the plugin**, since its
+> audience runs cdxgen against their own projects rather than developing cdxgen
+> itself.[^cdxgen-agents-readme]
+
+So the project has drawn a line this bundle has not seen elsewhere: **between instructions for people
+who *use* the software and instructions for people who *contribute* to it**, with the two delivered
+by different channels. Every other record here addresses contributors in prose that anyone can read;
+this one packages contributor guidance as executable units and routes them separately from the
+user-facing ones.
+
+**And the routing has a consequence the project does not appear to have noticed.** Of the three
+clients its README names, Claude Code does not read `.agents/skills/` — so the three skills written
+for contributors are precisely the three a Claude Code contributor cannot reach, while the two
+user-facing ones arrive through the plugin. The mechanics of that gap — which client scans which
+directory, and why the format does not settle it — are a distribution question rather than a policy
+one, and are deliberately not developed here.
+
+**What belongs in this record is narrower**: cdxgen is the only organisation here whose agent-facing
+material is **tiered by audience**, and the tiering is deliberate and documented. That is a fact about
+how this organisation treats contributors, and it survives any change to its AI stance.
+
 ## No floor above it, either
 
 cdxgen left the CycloneDX organisation for its own **`cdxgen`** GitHub org (styled *OWASP cdxgen*,
@@ -180,14 +235,22 @@ guide: it will tell you how to construct a purl and nothing about whether you ma
 write it. The declaration at the root describes the **maintainer's** work, not yours, and there is no
 documented mechanism for a contributor to extend it to their own.
 
+**Do read the skills, and do not assume your tool found them.** Three of them — Ecosystem Onboarding,
+Custom Property Author, CycloneDX Spec Reviewer — are written for exactly the work a contributor does,
+and they live in `.agents/skills/`, which not every agent scans. Open them from the repository rather
+than waiting for a tool to surface them.
+
 ## Re-verification notes
 
 **Fetch under `cdxgen/cdxgen`, not `CycloneDX/cdxgen`.** The old path still resolves by redirect, and
 every URL in this record was re-fetched canonically and confirmed byte-identical. A future move would
 break silently the same way.
 
-Four artifacts move independently: the declaration, the spec it cites, `AGENTS.md`, and
-`.github/copilot-instructions.md`. `git log -- AI-DECLARATION.md` is the cheapest check and the most
+Six artifacts move independently: the declaration, the spec it cites, `AGENTS.md`,
+`.github/copilot-instructions.md`, the five skills under `.agents/skills/`, and the plugin's twelve
+under `claude-plugin/skills/`. `.agents/README.md` names which two are mirrored and calls
+`.agents/` their source of truth, so **a drift between a mirrored skill and its copy is a defect the
+project has defined for itself** and is worth diffing. `git log -- AI-DECLARATION.md` is the cheapest check and the most
 informative — **if the paths in it stop tracking the tree, the declaration has become a badge**, and
 that transition is the finding to watch for.
 
@@ -204,3 +267,5 @@ consequential thing to re-check.
 [^cdxgen-agents]: [AGENTS.md — cdxgen contributor guide for AI agents (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
 [^cdxgen-readme]: [README.md (cdxgen/cdxgen, master) — the declaration badge and the OWASP production-project statement](https://raw.githubusercontent.com/cdxgen/cdxgen/master/README.md)
 [^owasp-devguide-contributing]: [Providing content — OWASP Developer Guide (Use of AI)](https://devguide.owasp.org/contributing/)
+[^cdxgen-agents-readme]: [Project Agent Customizations (.agents/README.md, cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/.agents/README.md)
+[^cdxgen-plugin-marketplace]: [marketplace.json (.claude-plugin/, cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/.claude-plugin/marketplace.json)

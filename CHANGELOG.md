@@ -20,6 +20,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **The `okf` version is now an asserted floor of 0.4.0, not prose.** The hook said `v0.2.1`,
   `run-gates.sh` said `v0.3.0`, the installed tool was `0.4.0`, and nothing compared them.
 
+### Changed
+
+- **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — corrected and extended with the agent
+  artifact surface, which the first draft understated as one file. It is **24 paths**: 5 skills in
+  `.agents/skills/`, 14 in the Claude Code plugin, 1 at the repository root describing cdxgen to
+  consumers, plus three instruction files and the marketplace manifest. The finding is the
+  **tiering** — `.agents/README.md` mirrors two skills into the plugin and withholds the three
+  contributor-facing ones by design, making cdxgen the only organisation here that routes contributor
+  guidance and user guidance through different channels.
+
 ### Added
 
 - **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — the first record here that is not a
