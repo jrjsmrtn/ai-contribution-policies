@@ -70,6 +70,57 @@ with a copied directory.
   re-derived. Its office-hours minutes stop at 2022-06-07 and Discussions are disabled, so there is
   no forum record a later decision would have appeared in — the silence is in the artifacts, and is
   not evidence that nobody discussed it.
+* **Checked and recorded as absent: [Ash](https://github.com/ash-project)** has no AI contribution
+  policy. This closes an instruction the 2026-08-05 sweep left behind: that pass read one file
+  (`ash-project/ash` `README.md`) and said a future pass *"should start from these and widen, not
+  repeat them"*. Widened to **all 61 repositories** in the organisation. Eleven policy-shaped files
+  exist — `CONTRIBUTING.md`, `.github/CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`,
+  `CODE_OF_CONDUCT.md` — and **none carries AI-contribution-policy language**.
+* **The checker was proven before the zero was believed.** Positive controls fired on three known
+  policy texts (Kubernetes 10 matches, Nerves 8, the OWASP Developer Guide 10); the negative control
+  — `ash_ai/AGENTS.md`, which is dense with the word *AI* — produced **0**, so the pattern separates
+  policy language from product prose. A sweep that has only ever returned zero is an unproven sweep.
+* **The false positive the 2026-08-05 entry warned about held.** `ash_ai`'s AI mentions are all
+  product-feature prose — Spark DSL extensions, LangChain tool calling, prompt-backed actions. The
+  hit rate really is highest exactly where the subject matter overlaps, and the earlier note to
+  confirm what a match *is* before recording a stance did its job.
+* **The org-level `CONTRIBUTING.md` is substantive and still silent.** 7.2 KB with a `## Rules`
+  section, covering documentation protocol, local development and testing — and it says nothing about
+  AI. It also says nothing about **provenance, copyright, licensing or origin**, which is the more
+  telling absence: the projects here that reached an AI position by extending existing machinery
+  ([GCC](projects/gcc.md) via the copyright threshold,
+  [Asahi Linux](projects/asahi-linux.md) via an existing ban on leaked material) had that machinery
+  to extend. Ash has no such hook to hang a policy on, so *"no policy"* here is a different state
+  from a project that has one and chose not to use it.
+* **Ash writes a great deal for AI agents, in two distinct directions, and neither is a policy.**
+  Outward: 18 of 61 repositories ship a `usage-rules.md` addressed to an agent building software
+  **with** Ash in a consumer's codebase — `ash/usage-rules.md` in full is *"Rules for working with Ash
+  … Read documentation **before** attempting to use its features. Do not assume that you have prior
+  knowledge of the framework."* Across all 18, **zero** mention contributing, pull requests, upstream
+  or maintainers.
+* **Inward: the `AGENTS.md` and `CLAUDE.md` files are contributor-facing codebase guides**, for the
+  repository they sit in — `ash_typescript` 36 KB, `ash_events` 18 KB, plus `reactor`, `ash_ai` and
+  `ash_rate_limiter`. They cover `mix test`, `mix check`, credo and dialyzer, *"this repo's test
+  suite"*, branch naming and changelog updates. **A first pass of this entry mis-described them as
+  consumer-facing and was corrected before release**; the tell was a worktree workflow beginning at
+  `gh issue list`, which only makes sense for someone developing the project.
+* **They are still not a policy, and the reason is the one [cdxgen](projects/cdxgen.md) already
+  establishes: a codebase guide is not a policy.** Measured across all four — `ash_typescript`,
+  `ash_events`, `reactor`, `ash_ai` — **zero** matches for permission, prohibition, disclosure or
+  trailer language, against **4** in the Kubernetes contributor guide used as the positive control.
+  They tell an agent *how to work in the tree*, never *whether it may* or *what must be said*.
+* **One workflow is worth recording on its own.** `ash_events/CLAUDE.md` instructs the agent to open a
+  worktree, then **create a second workspace running `claude` and send prompts into it** — an agent
+  directed to spawn and drive another agent, committed to the repository. That is not a stance on AI
+  contributions, and it is the most developed *assumption* of them anywhere in this bundle.
+* **So Ash has said nothing on the bundle's actual question** — whether an agent may write a patch,
+  and what must be disclosed if one does — while investing heavily in agents on both sides of the
+  boundary. **Recorded as an observation, not filed as a stance.**
+* **The `usage-rules.md` mechanism itself is a supply-chain question, not a policy one** — a package
+  ships rules, a tool folds every dependency's copy into the consuming repository. That is tracked in
+  a separate, private corpus. Also present: one repository ships `.claude/skills/*/SKILL.md` and two
+  commit a `.claude/settings.json` carrying hooks. **No record was written here**, per the
+  curated-not-exhaustive rule.
 
 ## 2026-08-30
 
