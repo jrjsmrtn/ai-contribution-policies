@@ -27,6 +27,9 @@ sources:
   - id: lf-generative-ai
     title: Policy Guidance Regarding Use of Generative AI Tools for Open Source Software Development
     resource: https://www.linuxfoundation.org/legal/generative-ai
+  - id: owasp-projects-policy
+    title: 'Project Policy — OWASP Foundation (operational/projects.md, www-policy)'
+    resource: https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md
   - id: asf-generative-tooling
     title: Generative Tooling Guidance — The Apache Software Foundation
     resource: https://www.apache.org/legal/generative-tooling.html
@@ -405,6 +408,21 @@ expected to go outside of the TOU text for further clarifications."*[^asf-genera
 ASF also makes the obligation satisfiable at all: nobody can audit training data, so the **tool's own
 similarity reporting** is what discharges the third-party-material check.[^asf-generative-tooling]
 
+**A fourth foundation sets no AI baseline at all, and that is the more common case.**
+[OWASP](foundations/owasp.md) mandates the DCO across its projects and requires contributions be a
+contributor's *"original work"*, with any substitute agreement covering *"the risks of plagiarized
+code"* — a provenance floor written in **2021** and not revisited since.[^owasp-projects-policy]
+Original work and plagiarism risk are the two concepts every provenance-based position here is built
+from, so the machinery is present and unused: [GCC](projects/gcc.md) reached its policy by extending
+a copyright threshold it already applied, and [Asahi Linux](projects/asahi-linux.md) by extending a
+ban on leaked vendor material.
+
+The consequence is visible under one umbrella. [Dependency-Track](projects/dependency-track.md)
+forbids every trace of a tool in the commit; [cdxgen](projects/cdxgen.md) asks contributors nothing
+and publishes its own AI usage as a badge; the OWASP Developer Guide requires declaration and scopes
+the rule to itself. **Three projects, three answers, and no rule for any of them to contradict** — so
+*foundations are floors* holds only where a foundation has poured one.
+
 ## Disclosure tags name degrees, not preferences
 
 Three field names are in use, and they are not competing spellings. OpenInfra uses **both** and
@@ -561,6 +579,7 @@ never that the content arrived. Check for the text you came for.
 [^kernel-coding-assistants-src]: [Documentation/process/coding-assistants.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/coding-assistants.rst)
 [^qemu-code-provenance]: [Code provenance — QEMU developer documentation](https://www.qemu.org/docs/master/devel/code-provenance.html)
 [^lf-generative-ai]: [Policy Guidance Regarding Use of Generative AI Tools for Open Source Software Development](https://www.linuxfoundation.org/legal/generative-ai)
+[^owasp-projects-policy]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
 [^asf-generative-tooling]: [Generative Tooling Guidance — The Apache Software Foundation](https://www.apache.org/legal/generative-tooling.html)
 [^openinfra-ai-policy]: [AI Generated Content Policy — OpenInfra Foundation](https://openinfra.org/legal/ai-policy)
 [^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)](https://github.com/rust-lang/rust-forge/pull/1040)

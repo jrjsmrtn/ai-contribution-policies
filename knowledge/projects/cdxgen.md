@@ -220,11 +220,13 @@ or even deleted"*, and *"AI slop drains maintainers' time and is actively harmfu
 project**"*[^owasp-devguide-contributing] — but that text scopes itself to the Developer Guide and
 claims no reach over other OWASP projects.
 
-**So OWASP is not a foundation of the kind this bundle records under `foundations/`.** The
-[Linux Foundation](../foundations/linux-foundation.md) and its peers publish floors their projects
-inherit; OWASP's projects each answer for themselves, and two of them have reached opposite
-arrangements — one requiring declaration from contributors, one declaring on its own behalf and
-requiring nothing.
+**What OWASP does set is a provenance floor with no AI clause** — its projects policy mandates the
+DCO and requires contributions be a contributor's original work, language written in 2021 and never
+revisited; see [OWASP Foundation](../foundations/owasp.md). That is unlike the
+[Linux Foundation](../foundations/linux-foundation.md) and its peers, whose published positions a
+project inherits and may narrow. Here each OWASP project answers for itself, and they disagree —
+[Dependency-Track](dependency-track.md) forbids every trace of a tool in the commit, the Developer
+Guide requires declaration, and this project asks nothing and declares on its own behalf.
 
 ## What a contributor must do
 

@@ -8,6 +8,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`foundations/owasp.md`](knowledge/foundations/owasp.md)** — the fourth foundation record and the
+  first that sets **no AI baseline**. OWASP mandates the DCO and requires contributions be a
+  contributor's "original work", with any substitute agreement covering "the risks of plagiarized
+  code" — a provenance floor written **2021-09-30** and never revisited. Those are the two concepts
+  every provenance-based position in this bundle is built from, so the machinery is present and
+  unused. The absence is established, not unfound: zero AI terms across all 60 files of
+  `OWASP/www-policy`, positive control at 56, and the checker proven able to fail on a planted
+  positive.
+
+### Changed
+
+- **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — its claim that "OWASP is not a
+  foundation of the kind this bundle records under `foundations/`" was true when written and false
+  once the record existed; rewritten to point at it.
+- **[`overview.md`](knowledge/overview.md)** — the foundations section enumerated three foundations
+  that "each set a permissive baseline". It now carries the fourth that sets none, and the qualifier
+  that *foundations are floors* holds only where a foundation has poured one.
+
+
+
 ## [0.8.0] - 2026-09-07
 
 ### Fixed

@@ -53,6 +53,42 @@ with a copied directory.
   per source path; Dependency-Track requires that usage be invisible. Neither inherits a foundation
   rule, which is the [2026-09-05 finding](projects/cdxgen.md) that OWASP sets no floor.
 
+* **Creation: [OWASP Foundation](foundations/owasp.md)** — the fourth foundation record and the
+  first that sets **no AI baseline**. Its projects policy mandates the DCO and requires contributions
+  be a contributor's *"original work"*, with any substitute agreement covering *"the risks of
+  plagiarized code"*. Original work and plagiarism risk are the two concepts every provenance-based
+  position in this bundle is built from — **the machinery is present and has not been pointed at the
+  question**, the way [GCC](projects/gcc.md) pointed a copyright threshold and
+  [Asahi](projects/asahi-linux.md) a leaked-material ban.
+* **The clause dates to 2021-09-30 and has not been revisited**; the file changed twice in 2025, both
+  times to fix broken links. So this is not a foundation that considered generative AI and declined
+  to legislate — it is a floor poured before the question arrived, which happens to be made of the
+  right material. That distinction is stated and **the reason for the silence is not inferred**.
+* **The absence is established rather than unfound**, which is what makes the record admissible.
+  Across all 60 markdown files of `OWASP/www-policy` there is **not one** occurrence of *AI*, *LLM*,
+  *generative AI*, *artificial intelligence*, *machine-generated*, *Copilot* or *large language
+  model*. Positive control: *OWASP* matched 56 of 60 files. **And the checker was proven able to
+  fail** — a copy of `operational/projects.md` with one sentence appended (*"Contributions generated
+  by generative AI must be disclosed"*) matched.
+* **A first pass returned three hits and all three were `insta`llm`ents`.** A bare `LLM` inside a
+  word, which is the "pattern matches more than you think" failure written into the record's
+  re-verification notes so the next sweep word-bounds it.
+* **Two corrections follow from the new record.** [cdxgen](projects/cdxgen.md) said *"OWASP is not a
+  foundation of the kind this bundle records under `foundations/`"* — true when written, false the
+  moment the record existed, and now rewritten to point at it.
+  [overview.md](overview.md)'s foundations section enumerated three foundations that *"each set a
+  permissive baseline"*; it now carries the fourth that sets none, and the qualifier that
+  **"foundations are floors" holds only where a foundation has poured one**.
+* **Three OWASP entities, three answers, none derived from a shared rule** —
+  [Dependency-Track](projects/dependency-track.md) forbids every trace of a tool in the commit,
+  [cdxgen](projects/cdxgen.md) asks nothing and declares on its own behalf, and the Developer Guide
+  requires declaration while scoping the rule to *"this project"*. They are not in tension with any
+  rule because there is none to be in tension with.
+* **One thing checked and left open**: the projects policy mandates a contributor agreement, and
+  cdxgen publishes no `CONTRIBUTING.md`, no code of conduct, and ran no DCO check on a merged pull
+  request examined 2026-09-05. Whether it qualifies under the *"existing contributor agreement"*
+  exemption is **not established, and no claim of non-compliance is made**.
+
 
 ## 2026-09-06
 
