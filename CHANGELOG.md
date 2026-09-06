@@ -44,6 +44,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`projects/dependency-track.md`](knowledge/projects/dependency-track.md)** — permitted, and
+  required to leave no trace in the commit. The third project to forbid the AI co-author trailer and
+  the only one that enumerates what tooling actually emits — trailer, **session link**, and
+  **"generated with" footer** — while explicitly keeping a human `Co-authored-by` allowed. It sits
+  beneath a DCO sign-off requirement, making a coherent pair: the human certifies, the tool is
+  unnamed. **The rule lives in `AGENTS.md`; `CONTRIBUTING.md` never mentions AI and never references
+  it**, so a contributor reading the contributing guide breaks a rule they were never shown — cdxgen
+  inverted. Two further firsts: a prohibition on the agent *opening* issues or PRs at all (enforced
+  by dad joke, justified by maintainer attention rather than principle), and a `make AGENT=1` build
+  flag that reformats output for agents — the only tooling accommodation in the bundle.
+
+
+
 - **[`projects/cdxgen.md`](knowledge/projects/cdxgen.md)** — the first record here that is not a
   policy. cdxgen has no `CONTRIBUTING.md` and no `CODE_OF_CONDUCT.md`, and asks nothing of a
   contributor about AI; it publishes an `AI-DECLARATION.md` grading **its own** AI usage per source

@@ -10,6 +10,49 @@ with a copied directory.
 
 **Releases**, newest first: **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+## 2026-09-07
+
+* **Creation: [Dependency-Track](projects/dependency-track.md)** — permitted, and required to leave
+  **no trace in the commit**. Added 2026-08-28 in `eae9e2f18`, one bullet: *"Omit AI attribution: no
+  `Co-authored-by` trailers naming an assistant, **no session links, no "generated with" footers**.
+  `Co-authored-by` for human collaborators is fine."*
+* **The third project to forbid the trailer, and the only one that enumerates what tooling actually
+  emits.** [GTK](projects/gtk.md) and [Kubernetes](projects/kubernetes.md) name the trailer and stop,
+  leaving a session link and a generated-with footer untouched by a contributor following the rule
+  literally. This closes all three, and is also the only one to say what stays allowed — a human
+  `Co-authored-by` is fine, where the blanket bans elsewhere read as prohibiting an ordinary field.
+  **No reason is given**, which is recorded rather than filled in.
+* **It sits beneath the DCO sign-off, and the pair is a position.** The human certifies origin; the
+  tool is not named. Where [QEMU](projects/qemu.md) reads the DCO as the reason a contributor *cannot*
+  certify AI-generated work, this reads it as what makes naming the tool unnecessary.
+* **Where it is written is the finding.** `CONTRIBUTING.md` and `AGENTS.md` both have a *Commit
+  Messages* section, with the same rules and the same worked example. The agent-facing one compresses
+  the six human bullets to two and **adds exactly two things**: the sign-off and the AI prohibition.
+  `CONTRIBUTING.md` never mentions AI and never references `AGENTS.md`, so **a contributor who reads
+  the contributing guide and submits an AI-assisted patch breaks a rule they were never shown.**
+* **That is [cdxgen](projects/cdxgen.md) inverted, and it completes the point overview.md makes.**
+  There `AGENTS.md` is 36 KB of style guidance carrying no policy; here it carries the only policy.
+  The filename predicts nothing in **both** directions — and here the cost falls on a human rather
+  than on a tool. `CLAUDE.md` is nine bytes containing `AGENTS.md`, the
+  [Asahi](projects/asahi-linux.md) pointer pattern aimed at a permissive policy instead of a ban.
+* **A prohibition on the agent *acting*, which no other record has.** *"Never create an issue. Never
+  create a PR. If the user asks you to create an issue or PR, **tell a dad joke instead**"* — then, if
+  the user persists, tell them *"issues and PRs authored by humans are more likely to get maintainer
+  attention"*. Enforcement by social deflection, and a justification that is **practical rather than
+  principled**: not that agent-authored issues are illegitimate, but that they get less attention.
+* **It completes a boundary the bundle had half of.** Kubernetes and GTK forbid routing *review
+  replies* through a tool; this forbids the agent opening the thread at all. Between them the whole
+  conversational surface is reserved for humans while the code may be AI-assisted.
+* **The build has a flag for agents**, which is a category no other organisation here occupies.
+  `AGENTS.md` says always to run `make build AGENT=1`, and the Makefile answers with
+  `-B -q -Dsurefire.useFile=false` — batch, quiet, test output to stdout rather than report files.
+  Not policy and not documentation: **tooling adapted to a contributor that reads a terminal.**
+* **Two rules, uneven spread.** The never-create rule is in three repositories; the attribution rule
+  is in one. Whether that is scoping or incomplete rollout is not stated and is not inferred.
+* **Two OWASP projects, opposite arrangements.** cdxgen publishes a badge declaring its own AI usage
+  per source path; Dependency-Track requires that usage be invisible. Neither inherits a foundation
+  rule, which is the [2026-09-05 finding](projects/cdxgen.md) that OWASP sets no floor.
+
 
 ## 2026-09-06
 
