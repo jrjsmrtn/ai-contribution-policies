@@ -53,6 +53,38 @@ with a copied directory.
   per source path; Dependency-Track requires that usage be invisible. Neither inherits a foundation
   rule, which is the [2026-09-05 finding](projects/cdxgen.md) that OWASP sets no floor.
 
+* **Creation: [osquery](projects/osquery.md)** — reversing the 2026-09-06 decision not to write it,
+  because checking the foundation question turned a bare absence into a record. osquery is *"a Series
+  of LF Projects, LLC"*, so unlike the other silent projects here it sits under a foundation that
+  **has** published on AI — which makes it the bundle's cleanest test of what inheritance delivers.
+* **What it inherits is weaker than it looks.** The charter binds contributors to *"the policies of LF
+  Projects … listed at https://lfprojects.org/policies/"*, and **that list has no AI policy** — it is
+  Antitrust, General Rules of Operation, Privacy, Telemetry, Trademark, plus a tools review policy.
+  The [Linux Foundation](foundations/linux-foundation.md) generative-AI text sits on a different site,
+  reads as *should* rather than must, and closes by inviting projects to write their own. **A
+  contributor asking what they are bound to and one asking what guidance exists get different
+  answers**, and the record says plainly that this is an observation about two documents rather than
+  a suggestion the guidance is meant to be optional.
+* **It keeps the overview's own warning honest.** [overview.md](overview.md) says *"checking only the
+  foundation is a reliable way to be wrong about the project"*, reasoning that active projects write
+  their own rules. osquery is large (23,549 stars), funded, TSC-governed and steadily maintained, and
+  has written nothing — so for this one the foundation really is the whole answer. **A heuristic with
+  a recorded counter-example is more useful than one without.**
+* **The asymmetry is the part no other record has.** Two open issues propose `ai_agent_skills` (#9044)
+  and `ai_assistant_chats` (#9040) — tables that inventory AI artifacts on an endpoint. **The project
+  is being extended to report which agents and skills are installed across a fleet while saying
+  nothing about whether an agent may write its own code.** Not a contradiction, and the only case here
+  where a project's subject matter is the artifact class it declines to govern in itself.
+* **A mechanism noted and deliberately not claimed.** Pull requests run **EasyCLA**, the same class of
+  check [Kubernetes](projects/kubernetes.md) turned into the bundle's only mechanical AI enforcement
+  by enabling it for co-authors. **Whether osquery's is configured that way was not tested**, and the
+  record says so rather than letting the Kubernetes property transfer by association.
+* **A claim caught before release.** The first draft said *"commits landing daily"*. Thirty commits
+  span 2026-06-24 to 2026-08-25 across fourteen distinct days, and the newest was twelve days old —
+  the repository's `updated_at` reflects issue activity, not commits. Replaced with the measurement.
+* **The limit on the negative is restated**: the foundation's office-hours minutes stop at
+  `20220607` and Discussions are disabled, so no public forum record exists in which a 2025 or 2026
+  decision would have appeared. The silence is in the written artifacts.
 * **Creation: [OWASP Foundation](foundations/owasp.md)** — the fourth foundation record and the
   first that sets **no AI baseline**. Its projects policy mandates the DCO and requires contributions
   be a contributor's *"original work"*, with any substitute agreement covering *"the risks of

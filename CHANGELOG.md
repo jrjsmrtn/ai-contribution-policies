@@ -10,6 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`projects/osquery.md`](knowledge/projects/osquery.md)** — reversing the 2026-09-06 decision not
+  to record it. osquery is a Series of LF Projects, LLC, so unlike the other silent projects here it
+  sits under a foundation that has published on AI — and **what it inherits is weaker than it looks**:
+  the charter binds contributors to the `lfprojects.org` policy list, which has no AI policy, while
+  the LF's generative-AI text sits elsewhere, reads as *should*, and invites projects to write their
+  own. It also keeps the overview's "checking only the foundation is a reliable way to be wrong"
+  warning honest, as a large, funded, actively maintained counter-example. **The asymmetry no other
+  record has**: two open issues propose tables inventorying AI agents and skills on an endpoint, so
+  the project is being extended to report which agents run across a fleet while saying nothing about
+  whether one may write its own code.
+
 - **[`foundations/owasp.md`](knowledge/foundations/owasp.md)** — the fourth foundation record and the
   first that sets **no AI baseline**. OWASP mandates the DCO and requires contributions be a
   contributor's "original work", with any substitute agreement covering "the risks of plagiarized
