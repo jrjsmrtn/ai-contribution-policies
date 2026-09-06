@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-09-07
+
 ### Added
 
 - **[`projects/perl.md`](knowledge/projects/perl.md)** — `AI_POLICY.md`, added 2026-07-30, the only
