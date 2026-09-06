@@ -96,10 +96,12 @@ Dates are ISO 8601 everywhere, including prose (`2026-08-04`, never `August 4, 2
 
 ## Current Development Status
 
-**Populated, and maintained by expiry rather than by coverage.** Releases v0.1.0 to v0.6.0 shipped
-between 2026-08-05 and 2026-08-14, and v0.6.0 was the first driven by a `stale_after` coming due
-rather than by new material. That is the expected shape from here: the weekly agent reports a due
-record, the primary is re-read, the release follows.
+**Populated, and maintained by expiry rather than by coverage.** v0.6.0, on 2026-08-14, was the
+first release driven by a `stale_after` coming due rather than by new material, and that remains the
+expected shape: the weekly agent reports a due record, the primary is re-read, the release follows.
+**Which versions have shipped is derived — `git tag` and `CHANGELOG.md` — and is not enumerated
+here.** A hand-written range said *"v0.1.0 to v0.6.0"* and was false from v0.7.0 onward, sitting
+directly above the paragraph warning against exactly this.
 
 **The record count is derived — ask `okf list knowledge` — and is deliberately not written here.**
 Until 2026-08-29 this section read *"Skeleton. One verified record"*, and stayed that way for weeks
