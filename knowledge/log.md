@@ -53,6 +53,65 @@ with a copied directory.
   per source path; Dependency-Track requires that usage be invisible. Neither inherits a foundation
   rule, which is the [2026-09-05 finding](projects/cdxgen.md) that OWASP sets no floor.
 
+* **Creation: [Perl](projects/perl.md)** — `AI_POLICY.md`, added 2026-07-30 in a single commit, and
+  the only policy here that **draws its lines by artifact type**. Code *"may be accepted"*;
+  documentation *"will not be accepted"*; prose is *"grounds for dismissing a contribution out of
+  hand"*; reading the codebase is free and needs no disclosure; and agents are *"strictly prohibited"*
+  from issues, pull requests, the mailing list and every other channel.
+* **Documentation is governed more strictly than code, which inverts the usual premise.** Elsewhere
+  prose is treated as low-risk and code as where provenance bites. The unstated reasoning here is that
+  Perl's documentation is part of the deliverable, and a fluent-but-wrong page costs more than a patch
+  a reviewer can test.
+* **The competence bound is new to the bundle**: *"Do not use an LLM to write code that you could not
+  (with sufficient time available) have written yourself"*, plus a requirement to defend design
+  decisions in detail **and** *"be able to maintain your changes over the long run yourself"*. Every
+  other policy governs the moment of submission; this one asks about the year after it — a plausible
+  answer to the review-cost problem six projects here describe.
+* **Two exceptions exist nowhere else**: verified LLM security analysis, and translation of
+  human-written messages. The translation carve-out is the one projects are converging on
+  ([Nerves](projects/nerves.md), [Elixir](projects/elixir.md)) because refusing it excludes people
+  rather than protecting the project. **The security-analysis exception is unique** and concedes that
+  a model may find what a human would not, if a qualified human checks first.
+* **And a scope boundary drawn by ownership, not by repository** — dual-life modules *"owned by their
+  authors can make other decisions"*, with the core urging them to publish their own. The only place
+  in this bundle where a policy admits it does not cover everything it ships.
+* **Creation: [Elixir](projects/elixir.md)** — permitted with restraint, argued from a premise no
+  other project states: *"Elixir maintainers already have access to AI … if we need the feedback or
+  help of a coding agent, we can request so ourselves. For this reason, we often find the point of
+  view of the human behind the agent more valuable."* **Restraint from redundancy rather than from
+  cost, risk or provenance.** [Asahi](projects/asahi-linux.md) makes the identical observation and
+  reaches a ban; Elixir reaches a request for judgement.
+* **Two mechanisms nothing else here has.** Agent work is **gated by issue label** — *"Do not use
+  coding agents to tackle existing issues unless they have the 'Contributions Welcome' label"* — a
+  boundary built from machinery the project already ran. And automated changes to the compiler, type
+  system, security or performance must be **paired with adversarial agents** *"whose job is to argue
+  against and try to invalidate any proposed change"*, whose approval is *advisory* because *"a human
+  must still validate it"*. **No other policy requires a red team**, and treating agent agreement as
+  evidence rather than authority is the correct epistemics stated plainly.
+* **The DCO gets a third answer.** *"AI agents MUST NOT add `Signed-off-by` tags. Only humans can
+  legally certify the Developer Certificate of Origin."* Where [QEMU](projects/qemu.md) concludes a
+  contributor cannot certify AI-generated work and prohibits it, and
+  [Dependency-Track](projects/dependency-track.md) has the human sign while the tool goes unnamed,
+  Elixir separates the acts: **the agent may write, only the human may certify.**
+* **`AGENTS.md` is a git symlink to `CONTRIBUTING.md`** (mode `120000`, 2026-06-15) — the third
+  solution here to one problem. Asahi and Dependency-Track both write a nine-byte pointer file;
+  **a pointer can go stale and a symlink cannot**, so agents and humans are guaranteed identical text.
+  That is the strongest available answer to the divergence risk the other two carry.
+* **Four of the six checked have no policy, and no records were written for them.** Recorded here so
+  the negatives are not re-derived:
+  **Erlang/OTP** — 12,015 tree entries with no `AGENTS.md`-family file, and across **401** markdown
+  files exactly one match, a shell-completion guide mentioning an LLM as an example use (control:
+  *contribut* in 25 files). **The language and its platform have diverged** — Elixir runs on the BEAM
+  and has a detailed policy; Erlang/OTP has none.
+  **Phoenix** — `CONTRIBUTING.md` silent, but it **ships** `usage-rules/*.md` and a
+  `priv/templates/phx.gen.auth/AGENTS.md.eex`, so a generated Phoenix app arrives carrying agent
+  instructions. That is distribution, not policy, and belongs to the private tracking corpus alongside
+  the dependency-delivered instructions concept.
+  **Ecto** — 158 tree entries, no `CONTRIBUTING.md`, no code of conduct, nothing.
+  **PostgreSQL** — `.github/CONTRIBUTING.md` is a 94-byte pointer to `postgresql.org/developer`, and
+  the developer page, *Submitting a Patch* and the *Developer FAQ* carry **zero** AI mentions
+  (controls: 35, 41 and 152 occurrences of *postgres*). Its governance runs on `pgsql-hackers`, where
+  a discussion would not be a published policy; **no archive claim is made here.**
 * **Creation: [osquery](projects/osquery.md)** — reversing the 2026-09-06 decision not to write it,
   because checking the foundation question turned a bare absence into a record. osquery is *"a Series
   of LF Projects, LLC"*, so unlike the other silent projects here it sits under a foundation that

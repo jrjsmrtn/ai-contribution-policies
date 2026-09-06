@@ -10,6 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`projects/perl.md`](knowledge/projects/perl.md)** — `AI_POLICY.md`, added 2026-07-30, the only
+  policy here that draws its lines **by artifact type**: code may be accepted, documentation will
+  not, prose is grounds for dismissal, reading the codebase is free, and agents are barred from every
+  channel. **Documentation is governed more strictly than code**, inverting the usual premise. Adds a
+  competence bound (*"code that you could not … have written yourself"*) and a **maintenance
+  obligation** extending past the merge, plus a unique verified-security-analysis exception and a
+  scope boundary drawn by module ownership rather than repository.
+- **[`projects/elixir.md`](knowledge/projects/elixir.md)** — permitted with restraint, argued from
+  redundancy rather than risk: *"Elixir maintainers already have access to AI … we often find the
+  point of view of the human behind the agent more valuable."* Two mechanisms nothing else here has —
+  agent work **gated by issue label**, and automated compiler/type-system changes required to be
+  **paired with adversarial agents** whose approval is advisory. Gives the DCO a third answer: the
+  agent may write, only the human may certify. Its `AGENTS.md` is a **git symlink** to
+  `CONTRIBUTING.md`, so agent-facing and human-facing text cannot drift.
+
 - **[`projects/osquery.md`](knowledge/projects/osquery.md)** — reversing the 2026-09-06 decision not
   to record it. osquery is a Series of LF Projects, LLC, so unlike the other silent projects here it
   sits under a foundation that has published on AI — and **what it inherits is weaker than it looks**:
