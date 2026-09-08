@@ -9,7 +9,68 @@ still names its version: OKF has no in-band content-version field, and a git tag
 with a copied directory.
 
 **Releases**, newest first: **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
-[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->## 2026-09-08
+
+* **Correction: [NetworkManager](projects/networkmanager.md) — a published record had gone false.**
+  It described the project as requiring *"no disclosure of it at all"*. Between 2026-09-03 and
+  2026-09-04 NetworkManager added an agent-facing `AGENTS.md`, a **mandatory merge-request template
+  field** (*"How was AI used in this MR"*, with a checklist item asserting it was filled in
+  truthfully), a trailer ban covering `Signed-off-by:` as well, a refusal list, and CI that greps
+  contributor text for a planted marker. The 2026-08-07 `CONTRIBUTING.md` section is unmodified; three
+  layers now sit on it.
+* **The record predicted this and still went stale.** Its own re-verification note said to *"watch for
+  a disclosure requirement being added — its absence is the most distinctive thing here, and the
+  easiest thing to change."* Disclosure arrived 27 days later, and the record was wrong for five days
+  because nothing re-reads on a prediction. **`stale_after` is a floor, not a schedule.**
+* **New category: `mechanisms/`, and a first concept —
+  [the review canary](mechanisms/review-canary.md).** A recurring mechanism now has three
+  implementations across three projects, and no entity record can own it. The rule dividing the two
+  kinds: **a mechanism concept says how the thing works, who built it, how it spread and how it
+  fails; an entity record says what that organisation chose.** `type: Practice` was already in the
+  bundle's vocabulary via `overview.md`, so nothing new was admitted to enforce.
+* **Two designs, and the difference is what fires them.** [Zed](projects/zed.md)'s and
+  [systemd](projects/systemd.md)'s marker is planted on **every** AI-touched change, so its survival
+  proves nobody reviewed it — a *review* canary. [NetworkManager](projects/networkmanager.md)'s word
+  `biblioklept` is planted **only when the agent does something forbidden**, so its presence is
+  evidence of a breach — a *violation* watermark. Not competing implementations of one idea; they
+  answer different questions.
+* **Creation: [Zed](projects/zed.md)** — the origin. `.rules` carries the instruction and
+  `script/danger/dangerfile.ts` fails any pull request where the marker survives in the `README.md`
+  diff. Its policy welcomes LLM coding, **refuses autonomous agents** (*"closed, sometimes without
+  notice"*), and reserves maintainer-facing prose to humans on the redundancy argument — *"we'd like
+  to hear from you, not from a model (we have models at home)"*.
+* **It is the only record here whose policy cites its own source** — *"adapted from ripgrep's AI
+  policy"*. **The fourth documented case of a rule spreading by copying, and the first attributed**;
+  in [GNOME](projects/gnome.md)'s and [MacPorts](projects/macports.md)'s the copied text was stale and
+  unattributed, in systemd's the enforcement was left behind. Naming the lender is the difference
+  between a convention forming and a rumour propagating. **ripgrep's `AI_POLICY.md` is a strong lead
+  and is not yet a record.**
+* **Zed also has the most generous translation clause in the bundle** — machine translation in a
+  quote block *"and include the original text in your native language after it"*, the only place a
+  contributor's own language is treated as evidence rather than noise — and a three-part recipe for
+  sharing model output: quote it, label it AI-generated, say what you take from it.
+* **Creation: [systemd](projects/systemd.md)** — *"AI tools are treated the same as traditional
+  tooling like `sed`, `awk` or `coccinelle`"*, which refuses the premise that AI needs new rules. Two
+  consequences: **sequence** (all thinking and planning *"prior to using automated tooling to perform
+  the grunt work"*) and **no authorship credit of any kind**. Its sanction lands on the person —
+  *"loss of trust … which can then lead to exclusion from any further contribution"* — reaching
+  further than anything here except [Asahi](projects/asahi-linux.md).
+* **systemd copied Zed's canary instruction and not the check.** The marker string appears in exactly
+  one file in the repository, `AGENTS.md` itself; there is no Danger config, workflow or script
+  looking for it. Detection falls to whichever reviewer notices two unexplained lines atop
+  `README.md`. Possibly a deliberate trade, and nothing in the repository says it was considered.
+* **Two projects now govern their own agent-instruction files, and agree without contact.** systemd:
+  *"only add instructions to this file if you've seen an AI agent mess up that particular bit of logic
+  in practice"*. Zed: three admission criteria (non-obvious, repeatedly encountered, specific enough
+  to act on), no drive-by edits, and *"rules should be traps to avoid, not maps to follow"*. **Both
+  are answers to context cost** — a file read every session is a budget.
+* **Phoronix sweep, 2026-08-30 → 09-08**, closing the gap the previous pass left. RSS covers only four
+  days; the homepage listing reaches 61 articles and was read with a browser because the archive paths
+  return HTTP 403 to non-browser clients. Three relevant items, all followed to primaries before
+  anything was written. **A fourth is parked as a lead: LLVM is debating whether to adopt an
+  `AGENTS.md`**, with no canary in the proposal.
+
+
 ## 2026-09-07
 
 * **Creation: [Dependency-Track](projects/dependency-track.md)** — permitted, and required to leave

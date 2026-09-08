@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **`knowledge/mechanisms/` and [`review-canary.md`](knowledge/mechanisms/review-canary.md)** — a new
+  category for recurring mechanisms, and its first concept. A mechanism concept says how a thing
+  works, who built it, how it spread and how it fails; an entity record says what one organisation
+  chose. The canary now has **three implementations across three projects and two designs** — a
+  review canary planted on every AI-touched change, and a violation watermark planted only on a
+  breach — which no single entity record could own.
+- **[`projects/zed.md`](knowledge/projects/zed.md)** — the canary's origin, and the only record whose
+  policy cites its own source (*"adapted from ripgrep's AI policy"*). Welcomes LLM coding, refuses
+  autonomous agents, reserves maintainer-facing prose to humans, and carries the most generous
+  translation clause in the bundle.
+- **[`projects/systemd.md`](knowledge/projects/systemd.md)** — treats AI as equivalent to `sed`, `awk`
+  or `coccinelle`, requires all thinking to precede the tooling, bars authorship credit entirely, and
+  sanctions the contributor rather than the patch. Copied Zed's canary instruction **without** its
+  check.
+
+### Changed
+
+- **[`projects/networkmanager.md`](knowledge/projects/networkmanager.md)** — a published record had
+  gone false. It said the project required no disclosure; since 2026-09-03 disclosure is a mandatory
+  merge-request template field, alongside an `AGENTS.md`, a refusal list, an extended trailer ban and
+  CI enforcement of a `biblioklept` watermark. The record's own re-verification note had named this
+  as the likeliest change and it still went stale for five days.
+
+
+
 ## [0.9.0] - 2026-09-07
 
 ### Added
