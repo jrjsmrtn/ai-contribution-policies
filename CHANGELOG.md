@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-09-09
+
 ### Added
 
 - **[`vendors/astral.md`](knowledge/vendors/astral.md)** — the head of the four-hop lineage, and the
