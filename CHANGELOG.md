@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)** — the third
+  mechanism concept. Agents look for instructions under different filenames and no specification says
+  which; **every project here that solves it uses a git symlink**, and the one that duplicated the
+  content instead maintains two files that have already diverged.
+
+### Fixed
+
+- **A claim asserted in six records was wrong.** Asahi Linux's, Dependency-Track's and systemd's
+  `CLAUDE.md` were described as "nine-byte pointer files" and contrasted with the "symlinks" Elixir
+  and NetworkManager chose. **All of them are symlinks** (mode `120000`, verified via the git tree
+  API), so the distinction did not exist and *"a pointer can go stale and a symlink cannot"* was false
+  about every example it was attached to. Corrected in all six.
+- **The cause is recorded as a retrieval hazard.** `raw.githubusercontent.com` serves a symlink's
+  target path as its content, so a symlink fetches as a small file containing a filename and is
+  indistinguishable from a deliberate stub. **Check the mode, not the bytes.**
+
+
+
 ## [0.11.0] - 2026-09-09
 
 ### Added

@@ -98,9 +98,10 @@ its own maintenance that nothing else here does:
 answer to the way these files grow — every plausible rule added until the context cost outweighs the
 benefit — and it is the only maintenance policy for an agent-instruction file in this bundle.
 
-`CLAUDE.md` is nine bytes containing `AGENTS.md`, the pointer pattern
-[Asahi Linux](asahi-linux.md) and [Dependency-Track](dependency-track.md) also use, and weaker than
-the symlinks [Elixir](elixir.md) and [NetworkManager](networkmanager.md) chose.
+`CLAUDE.md` is a **git symlink** to `AGENTS.md`, the construction
+[Asahi Linux](asahi-linux.md), [Dependency-Track](dependency-track.md), [Elixir](elixir.md),
+[NetworkManager](networkmanager.md) and [Zed](zed.md) all use — see
+[agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 ## It restricts AI in contribution and runs it in review
 

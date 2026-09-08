@@ -234,9 +234,10 @@ re-verification that reads only the first will report the 2026-08-07 position an
 since.
 
 `CLAUDE.md` is a symlink to `AGENTS.md`, added 2026-09-04 in a commit titled *"AGENTS.md: add symlinks
-under the names other agents look for"* — the same drift-proof approach [Elixir](elixir.md) takes and
-a stronger one than the pointer files [Asahi Linux](asahi-linux.md) and
-[Dependency-Track](dependency-track.md) use.
+under the names other agents look for"* — the settled construction across this bundle, which
+[Asahi Linux](asahi-linux.md), [Dependency-Track](dependency-track.md), [systemd](systemd.md),
+[Elixir](elixir.md) and [Zed](zed.md) all use. See
+[agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 Watch three things. Whether the canary word changes — it is a single grep-able string in two scripts,
 and publishing it is what makes it work and also what makes it evadable. Whether the enforcement

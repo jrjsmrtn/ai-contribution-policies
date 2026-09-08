@@ -107,11 +107,12 @@ substitution.** The rule is a boundary rather than a ban, which is why it needs 
 The repository's `AGENTS.md` is a **git symlink** to `CONTRIBUTING.md` — mode `120000`, added
 2026-06-15 in a commit titled *"Symlink AGENTS.md to CONTRIBUTING.md"*.
 
-Three projects here solve the same problem three ways. [Asahi Linux](asahi-linux.md) writes a
-nine-byte `CLAUDE.md` containing `AGENTS.md`; [Dependency-Track](dependency-track.md) does the same;
-Elixir makes the agent-facing filename **the same file** as the human-facing one. **A pointer can go
-stale and a symlink cannot** — agents and humans are guaranteed to read identical text, which is the
-strongest available answer to the divergence risk two other records in this bundle carry.
+Symlinking is the settled construction — [Asahi Linux](asahi-linux.md),
+[Dependency-Track](dependency-track.md), [systemd](systemd.md), [NetworkManager](networkmanager.md)
+and [Zed](zed.md) all do it. **What is distinctive here is the target.** The others point one
+agent-facing filename at another; Elixir points the agent-facing filename at the **human-facing**
+document, so an agent and a contributor are guaranteed to read the same text and the project
+maintains one file rather than two. See [agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 ## What a contributor must do
 

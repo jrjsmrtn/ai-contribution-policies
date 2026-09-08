@@ -13,6 +13,40 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **Creation: [agent-file pointers](mechanisms/agent-file-pointers.md)** — the third mechanism
+  concept, and it **corrected a claim this bundle had made in six records.** Agents look for
+  instructions under different filenames and no specification says which, so a project either points
+  the extra names at one file or publishes the content more than once.
+* **Every project here that solves it uses a git symlink** — [Asahi Linux](projects/asahi-linux.md)
+  (`CLAUDE.md`, `GEMINI.md` → `AGENTS.md`), [Zed](projects/zed.md) (three names → `.rules`),
+  [Elixir](projects/elixir.md) (`AGENTS.md` → `CONTRIBUTING.md`), plus
+  [systemd](projects/systemd.md), [Dependency-Track](projects/dependency-track.md) and
+  [NetworkManager](projects/networkmanager.md), whose commit names the problem exactly: *"add symlinks
+  under the names other agents look for"*.
+* **⚠ Correction: there was never a "pointer file versus symlink" distinction.** Six records described
+  Asahi's, Dependency-Track's and systemd's `CLAUDE.md` as *"nine-byte pointer files"* and contrasted
+  them unfavourably with the symlinks Elixir and NetworkManager chose. **All of them are symlinks**,
+  mode `120000`, verified through the git tree API. The claim *"a pointer can go stale and a symlink
+  cannot"* was true in general and **false about every example it was attached to**. All six records
+  are corrected.
+* **The cause is a retrieval hazard worth its own paragraph.** `raw.githubusercontent.com` serves a
+  symlink by returning **its target path as the file's content**, so a `CLAUDE.md` symlinked to
+  `AGENTS.md` fetches as a 9-byte file containing the string `AGENTS.md` — indistinguishable from a
+  deliberately-written stub. **Check the mode, not the bytes**: `git ls-tree` returns `120000` for a
+  symlink and `100644` for a regular file. This joins the Anubis challenge served as HTTP 200 and the
+  stale `docs.kernel.org` render; **all three share a shape — the request succeeded, the bytes were
+  well-formed, and they did not mean what they appeared to mean.**
+* **The corrected finding is stronger than the one it replaced.** The ecosystem has converged on one
+  construction, and the single project that took the other route has already diverged:
+  [cdxgen](projects/cdxgen.md) maintains `AGENTS.md` at 36,710 bytes and
+  `.github/copilot-instructions.md` at 4,411, covering similar ground in different text, with nothing
+  asserting they agree. **The predicted cost of duplication, observed rather than hypothesised.**
+* **Two variants separate themselves.** Zed points three agent names at `.rules`, decoupling the
+  source of truth from any vendor's filename. Elixir points the agent name at the **human** document,
+  the only variant that reduces the number of documents rather than the number of copies.
+
+## 2026-09-09
+
 * **Creation: [the Assisted-by trailer](mechanisms/assisted-by-trailer.md)** — the second mechanism
   concept, and the one [overview.md](overview.md) had been carrying at 74 lines. **The reframing that
   earns it a concept: `Assisted-by:` is not an AI tag.** The kernel defines it for *"any sort of

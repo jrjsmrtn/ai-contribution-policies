@@ -95,9 +95,9 @@ they were never shown.** That is the counterpart to the pattern recorded in
 [cdxgen](cdxgen.md), where `AGENTS.md` is 36 KB of style guidance and carries no policy: the filename
 predicts nothing in either direction, and here the consequence falls on a human rather than a tool.
 
-`CLAUDE.md` in the same repository is nine bytes and contains the string `AGENTS.md` — the pointer
-pattern [Asahi Linux](asahi-linux.md) uses, here pointing at a permissive policy rather than a
-prohibition.
+`CLAUDE.md` is a **git symlink** to `AGENTS.md`, the same construction
+[Asahi Linux](asahi-linux.md) uses, here aimed at a permissive policy rather than a prohibition. See
+[agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 ## A prohibition on the agent acting, not on what it produces
 

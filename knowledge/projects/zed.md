@@ -127,8 +127,9 @@ up that particular bit of logic in practice"* — Zed's criterion 2, arrived at 
 answers to context cost: a file read at the start of every session is a budget, and anything
 speculative in it is spent for nothing.
 
-`AGENTS.md` and `CLAUDE.md` are each six bytes containing `.rules` — the pointer pattern, here aimed
-at a third filename rather than at `AGENTS.md`.
+`AGENTS.md`, `CLAUDE.md` and `GEMINI.md` are **git symlinks** to `.rules` — the same construction
+used elsewhere, here aimed at a third filename rather than at `AGENTS.md`. See
+[agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 ## What a contributor must do
 
