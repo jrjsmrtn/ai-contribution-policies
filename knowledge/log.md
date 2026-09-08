@@ -9,7 +9,47 @@ still names its version: OKF has no in-band content-version field, and a git tag
 with a copied directory.
 
 **Releases**, newest first: **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
-[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->## 2026-09-08
+[`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-09
+
+* **Creation: [the Assisted-by trailer](mechanisms/assisted-by-trailer.md)** — the second mechanism
+  concept, and the one [overview.md](overview.md) had been carrying at 74 lines. **The reframing that
+  earns it a concept: `Assisted-by:` is not an AI tag.** The kernel defines it for *"any sort of
+  advanced coding tool"*, its worked example lists a model beside `coccinelle` and `sparse`, and it
+  excludes *"basic development tools (git, gcc, make, editors)"*. Projects narrowed a general
+  instrument to a specific question, and most of the disagreement follows from that.
+* **Five mutually exclusive positions, enumerated rather than counted.** Required without the model
+  ([kernel](projects/linux-kernel.md)); required with it ([Nerves](projects/nerves.md),
+  [Ansible](projects/ansible.md)); required plainly ([GCC](projects/gcc.md)); forbidden
+  ([GTK](projects/gtk.md), [Kubernetes](projects/kubernetes.md),
+  [Dependency-Track](projects/dependency-track.md), [systemd](projects/systemd.md),
+  [NetworkManager](projects/networkmanager.md)); replaced
+  ([ASF](foundations/apache-software-foundation.md), [OpenInfra](foundations/openinfra.md),
+  [QEMU](projects/qemu.md)). [MacPorts](projects/macports.md)'s is a proposal quoting a retired form.
+  **A scripted stance-count over the records mis-classified three**, so the concept enumerates
+  verified positions rather than asserting a total.
+* **`Co-developed-by:` is structurally impossible for a tool, now sourced rather than asserted.** The
+  kernel: *"Since `Co-developed-by:` denotes authorship, every `Co-developed-by:` must be immediately
+  followed by a `Signed-off-by:` of the associated co-author."* Its own AI guidance says *"Do not add a
+  Signed-off-by tag."* **The trailer demands a certification the same project forbids the agent to
+  give.**
+* **Two failure modes no entity record states.** It is **unverifiable** — nothing checks a trailer is
+  present when required, and the only enforcement anywhere here is NetworkManager grepping for
+  trailers it *forbids*. And it **attributes at the wrong granularity** — a commit-level tag says a
+  tool touched the patch, not which hunk, which is the question a reviewer has.
+* **`overview.md` shrank from 74 lines to 46 on this topic**, applying the ADR-0012 anti-duplication
+  rule at creation rather than deferring it. The map keeps what carries beyond the field and the
+  documented `docs.kernel.org` retrieval hazard; the table, value grammars, mutability contradiction
+  and QEMU rationale moved to the concept.
+* **Defect found and fixed in this file, shipped in v0.10.0.** The `## 2026-09-08` heading had been
+  **concatenated onto the end of the preceding line** — a scripted insertion used an anchor beginning
+  with a newline while the inserted text did not, so the heading rendered as inline prose and that
+  day's entries were orphaned. ⚠ **`okf validate` passed it**: OKF §9 constrains the *form* of log
+  headings, so a heading that is not a heading is invisible to the check. The failure is a heading
+  that silently stopped existing, which nothing in the gate set detects.
+
+## 2026-09-08
 
 * **Creation: [Astral](vendors/astral.md)** — the head of the chain, and the cleanest example in this
   bundle of an inherited floor that is actually inherited. The policy lives in `astral-sh/.github`,

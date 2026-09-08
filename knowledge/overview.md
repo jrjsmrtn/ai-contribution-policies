@@ -431,76 +431,49 @@ the rule to itself. **Three projects, three answers, and no rule for any of them
 
 ## Disclosure tags name degrees, not preferences
 
-Three field names are in use, and they are not competing spellings. OpenInfra uses **both** and
-states the distinction: `Assisted-By:` for *predictive* tools (auto-complete), `Generated-By:` for
-*generative* ones.[^openinfra-ai-policy]
+**The detail lives in [the Assisted-by trailer](mechanisms/assisted-by-trailer.md)**; what belongs on
+the map is why the field is not the answer it looks like.
 
-| Field | Used by |
-|---|---|
-| `Assisted-by:` | [Linux kernel](projects/linux-kernel.md) (`LLM [TOOLS]` — the model was deliberately dropped 2026-08-03), [Ansible](projects/ansible.md) (`[tool name/version]`), [GCC](projects/gcc.md) |
-| **forbidden** | [GTK](projects/gtk.md) — *"Do not include trailers like "Co-authored-by:" or "Assisted-by:" … since they serve as free advertising for AI companies"*[^gtk-contributing] |
-| `Assisted-by:` **with the model** | [Nerves](projects/nerves.md) — `AGENT_NAME:MODEL_VERSION`, adopted 2026-08-14, eleven days **after** the kernel retired that exact form[^nerves-contributing] |
-| `AI-used-for:` *(proposed)* | [QEMU](projects/qemu.md) — records **where** AI was used rather than that it was; explicitly distinguished from `Assisted-by`, *"which doubles as a check that the author has read the policy"*[^qemu-relax-proposal] |
-| **forbidden**, on accountability grounds | [Kubernetes](projects/kubernetes.md) — *"Listing AI tooling as a co-author, co-signing commits using an AI tool, or using the `assisted-by`, `co-developed` or similar commit trailer is not allowed"*[^k8s-ai-guidance] |
-| `Generated-by:` | ASF |
-| **both, distinguished** | OpenInfra |
+`Assisted-by:` is **not an AI tag**. The kernel defines it for *"any sort of advanced coding tool"* and
+lists a model beside `coccinelle` and `sparse`. Projects narrowed a general instrument to a specific
+question, and most of the disagreement follows from that.
 
-**One argument, two incompatible rules — the clearest case in this bundle that a premise does not
-determine a mechanism.** GTK forbids the `Assisted-by:` trailer *"since they serve as free
-advertising for AI companies"*.[^gtk-contributing] The Linux kernel **requires** that trailer, and
-narrowed it from naming the model to the bare literal `LLM` because identifying models *"provides
-free advertising to proprietary software companies"*.[^kernel-commit-simplify-attribution] Identical
-reasoning; one project deleted the vendor from the tag, the other deleted the tag. GTK's wording
-landed 2026-04-03 and the kernel's 2026-08-03 — recorded because the dates are checkable, with **no
-claim of influence** in either direction.
+**There are five positions and they are mutually exclusive** — required without the model
+([kernel](projects/linux-kernel.md)), required with it ([Nerves](projects/nerves.md),
+[Ansible](projects/ansible.md)), required plainly ([GCC](projects/gcc.md)), forbidden
+([GTK](projects/gtk.md), [Kubernetes](projects/kubernetes.md),
+[Dependency-Track](projects/dependency-track.md), [systemd](projects/systemd.md),
+[NetworkManager](projects/networkmanager.md)), or replaced by a different field
+([ASF](foundations/apache-software-foundation.md), [OpenInfra](foundations/openinfra.md),
+[QEMU](projects/qemu.md)).
 
-**A third project makes it a genuine three-way split.** [Nerves](projects/nerves.md) requires
-`Assisted-by: AGENT_NAME:MODEL_VERSION` — *naming the model* — adopted 2026-08-14, eleven days after
-the kernel retired that exact grammar for the opposite reason.[^nerves-contributing] So one trailer
-carries three mutually exclusive rules: **required without the model, required with the model,
-forbidden.**
+Two findings carry beyond the field itself.
 
-The practical consequence outranks the curiosity: **the trailer is not portable.** A contributor who
-learned `Assisted-by:` in the kernel and applies it to GTK is breaking GTK's policy by following the
-kernel's, and the form Nerves mandates is the one the kernel abandoned. Anyone building tooling to
-emit these tags must key it to the destination project — there is no convention to follow, only
-per-project rules.
+**A shared premise does not determine a mechanism.** GTK forbids the trailer because it is *"free
+advertising for AI companies"*;[^gtk-contributing] the kernel **requires** it and narrowed it to the
+bare literal `LLM` because naming models *"provides free advertising to proprietary software
+companies"*.[^kernel-commit-simplify-attribution] Identical reasoning, opposite instruments — one
+deleted the vendor from the tag, the other deleted the tag. Kubernetes then bans the same field on
+unrelated grounds, that it dilutes accountability.[^k8s-ai-guidance]
 
-**Two projects forbid the same trailer for incompatible reasons**, which is the clearest sign that
-the tag is carrying more meaning than one field can hold. [GTK](projects/gtk.md) bans it because it
-is *"free advertising for AI companies"*; [Kubernetes](projects/kubernetes.md) bans it because it
-dilutes accountability — *"If something breaks, there needs to be a human who understands why and
-can fix it."*[^k8s-ai-guidance] Neither argument implies the other, and a project persuaded by one
-would not necessarily accept the other's scope.
+**The tag is not portable, and that is the practical consequence.** A contributor who learned it in
+the kernel breaks GTK's rule by applying it, and the form [Nerves](projects/nerves.md) mandates is the
+one the kernel abandoned eleven days earlier.[^nerves-contributing] Tooling that emits these tags must
+key on the destination project; there is no default that is safe.
 
-**A fourth position reframes what the trailer is for.** QEMU's pending patch would add
-`AI-used-for:`, recording *where* AI was used, and says why that differs from the usual tag:
-`Assisted-by` *"doubles as a check that the author has read the policy"*.[^qemu-relax-proposal] So a
-project choosing a trailer is choosing between **proving compliance** and **directing the reviewer's
-attention** — two different jobs that the same field has been asked to do, which is part of why no
-convention has settled.
+**One retrieval hazard is documented rather than hypothetical.** `docs.kernel.org` renders a released
+kernel and served the retired `AGENT_NAME:MODEL_VERSION` form for weeks after mainline dropped it.
+[MacPorts](projects/macports.md) then proposed adopting the trailer *"in the format recommended by the
+Linux kernel developers"*, citing that page and reproducing the retired form, in a pull request opened
+**one day after** the kernel changed it.[^macports-pr-420-diff] A stale rendered page propagated a
+superseded rule into another project's draft policy. The mechanism is evidenced; intent is not
+claimed.
 
-**One retrieval hazard is worth carrying with this, and it is documented rather than hypothetical.**
-`docs.kernel.org` renders a released kernel and still served the retired `AGENT_NAME:MODEL_VERSION`
-format weeks after mainline dropped it. [MacPorts](projects/macports.md) then proposed adopting the
-trailer *"in the format recommended by the Linux kernel developers"*, **citing that exact page** and
-reproducing the retired form — in a pull request opened **one day after** the kernel
-changed it.[^macports-pr-420-diff] **A stale rendered page propagated a superseded rule into another
-project's draft policy**, and nobody in that thread has noticed. The mechanism is evidenced; intent
-is not claimed.
-
-**Do not reach for `Co-developed-by:`.** It was widely recommended for AI attribution before project
-policies landed, and it is structurally invalid for a tool: it denotes *authorship*, so the kernel
-requires each one be immediately followed by a `Signed-off-by:` from that co-author — which the same
-project's policy forbids an AI agent from adding. The trailer demands a sign-off no tool may give,
-and that constraint is why a distinct token was coined rather than an existing one reused.
-
-Two consequences. **Value grammars differ even where the field matches** — a trailer formatted for
-the kernel is not a valid Ansible one, so emit what the target project asks for. And OpenInfra's
-labels are **mutable**: reviewers may remove one *"if substantial human reworking
-occurs"*.[^openinfra-ai-policy] Everywhere else the tag records history and is permanent. Those are
-incompatible readings of what a provenance tag *is*, and a project should pick one deliberately — a
-mutable history-tag is just an inaccurate one.
+**Where it is going**: disclosure in the pull request, which the three most recent adopters require
+instead. [OpenInfra](foundations/openinfra.md) is the one refinement worth knowing — `Assisted-By:`
+for *predictive* tools, `Generated-By:` for *generative* ones[^openinfra-ai-policy] — and
+[QEMU](projects/qemu.md)'s proposed `AI-used-for:` is the one attempt to record **where** AI was used
+rather than that it was.[^qemu-relax-proposal]
 
 ## The seven axes
 

@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`mechanisms/assisted-by-trailer.md`](knowledge/mechanisms/assisted-by-trailer.md)** — the second
+  mechanism concept. **`Assisted-by:` is not an AI tag**: the kernel defines it for "any sort of
+  advanced coding tool" and lists a model beside `coccinelle` and `sparse`, so projects narrowed a
+  general instrument to a specific question and most of the disagreement follows. Five mutually
+  exclusive positions across nine projects and foundations; `Co-developed-by:`'s structural
+  impossibility sourced from the kernel's own sign-off rule; and two failure modes no entity record
+  states — the field is **unverifiable**, and it **attributes at the wrong granularity**.
+
+### Changed
+
+- **[`overview.md`](knowledge/overview.md)** — its trailer section shrank from 74 lines to 46, applying
+  the ADR-0012 anti-duplication rule at creation rather than deferring it. The map keeps what carries
+  beyond the field and the documented `docs.kernel.org` retrieval hazard; the detail moved to the
+  concept.
+
+### Fixed
+
+- **A malformed heading in `knowledge/log.md`, shipped in v0.10.0.** The `## 2026-09-08` heading was
+  concatenated onto the preceding line by a scripted insertion whose anchor began with a newline while
+  the inserted text did not, so it rendered as inline prose and that day's entries were orphaned.
+  **`okf validate` passed it** — OKF §9 constrains the form of log headings, so a heading that is not
+  a heading is invisible to the check.
+
+
+
 ## [0.10.0] - 2026-09-09
 
 ### Added
