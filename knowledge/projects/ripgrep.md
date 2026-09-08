@@ -154,10 +154,11 @@ value as provenance depends on the pinned text remaining fetchable, and its valu
 depends on whether the upstream has since moved — verified identical on 2026-09-08, which will not
 stay true forever.
 
-**Astral's policy is an org-level default and is not yet a record here.** It binds contributors to
-uv, ruff and their siblings from a single `.github` repository, which makes it the closest thing in
-this bundle to a foundation floor published by a company. It is the obvious next record and the
-origin of this one.
+**Astral's policy is an org-level default and is now recorded** at
+[Astral](../vendors/astral.md). It binds contributors to uv, ruff and their siblings from a single
+`.github` repository, which makes it the closest thing in this bundle to a foundation floor published
+by a company — and the origin of this one. **If that file changes, this record's currency claim goes
+with it**, since the claim is that ripgrep's pinned text still matches upstream.
 
 Watch whether the chain grows a fifth hop, and whether any of them starts citing ripgrep rather than
 Astral — the point at which a lineage becomes a convention is when the borrowers stop agreeing on

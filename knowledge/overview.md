@@ -373,9 +373,15 @@ nobody else states: *"An LLM may not commit code to the project repository"* —
 
 ## Vendors govern their staff, not your contribution
 
-The `vendors/` records are the one category where the policy **does not bind the reader**. A vendor's
-open-source policy tells its own employees what they may do; it says nothing about what a project
-will accept from you.
+Most `vendors/` records are the one category where the policy **does not bind the reader**. A
+vendor's open-source policy tells its own employees what they may do; it says nothing about what a
+project will accept from you.
+
+**[Astral](vendors/astral.md) is the exception, and it is worth stating because it breaks the
+heuristic** — a company whose organisation-wide policy governs anyone opening a pull request against
+`uv` or `ruff`, employee or not. So the category holds two kinds of document, and the distinction a
+reader needs is not who published a policy but **who it binds**. Check that before assuming a vendor
+record is irrelevant to you.
 
 [SUSE](vendors/suse.md) states it outright — *"The policy applies to SUSE
 employees"*[^suse-policy-html] — and [Red Hat](vendors/red-hat.md)'s published position defers

@@ -11,6 +11,37 @@ with a copied directory.
 **Releases**, newest first: **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->## 2026-09-08
 
+* **Creation: [Astral](vendors/astral.md)** — the head of the chain, and the cleanest example in this
+  bundle of an inherited floor that is actually inherited. The policy lives in `astral-sh/.github`,
+  the organisation-defaults repository, added 2026-03-13 as its first commit. It is **one of three
+  files there**, beside the code of conduct and the security policy.
+* **No project overrides it, and there is only one copy.** Checked across `uv` (89,632★), `ruff`
+  (49,551★), `ty`, `rye` and `python-build-standalone`: **none carries its own `AI_POLICY.md`.** That
+  is the opposite of [OWASP](foundations/owasp.md), whose projects each answered separately and
+  disagree. ⚠ **Three of the five link to it from nowhere** — the org default still governs them, but
+  a contributor reading that repository's `CONTRIBUTING.md` would not learn the policy exists.
+* **The criticality argument is new here.** *"Due to the **foundational nature of our projects**, we
+  require a human in the loop."* Everyone else barring autonomous agents argues from review cost,
+  provenance or accountability; this argues from **what depends on the code** — a position that would
+  justify a different answer for a less load-bearing project and does not pretend otherwise.
+* **The chain's edits are now visible end to end.** ripgrep's adaptation kept the both-directions
+  responsibility clause, **dropped the criticality argument**, and added *"perhaps without notice"*.
+  It also copied the **`CONTRIBUTING.md` stub**, not just the policy — Astral's *"require all use of
+  AI … it will be closed"* becomes ripgrep's near-identical pointer. **The delivery pattern travelled
+  with the text.**
+* **A correction to [overview.md](overview.md).** It said `vendors/` is *"the one category where the
+  policy does not bind the reader"*. Astral falsifies that: its policy governs anyone opening a pull
+  request against `uv` or `ruff`, employee or not. The section now states the exception and the rule
+  a reader actually needs — **not who published a policy, but who it binds.**
+* **Filed under `vendors/` because the bundle files by what an organisation is**, and Astral is a
+  company. The category now holds two kinds of document, which is a fact about the world rather than
+  a filing error.
+* **Recorded because it is checkable, and no inference drawn**: Astral's own site leads with *"Astral
+  to join OpenAI as part of the Codex team"*, and its GitHub organisation describes itself as *"from
+  @OpenAI"*. **The author of the most-copied AI contribution policy here is being acquired by an AI
+  lab while forbidding autonomous agents in its own repositories.** The acquisition is an event, the
+  policy is a text, and the text was byte-identical to its 2026-03-13 original when checked. It is
+  noted as the likeliest reason this record will need re-reading, not as a prediction.
 * **Creation: [ripgrep](projects/ripgrep.md)** — the middle hop of the chain, and the record that
   turns three copies into a documented lineage. Its entire `CONTRIBUTING.md` is **213 bytes** pointing
   at `AI_POLICY.md` and stating the sanction: a 68,000-star project whose contributing guide contains

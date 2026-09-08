@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`vendors/astral.md`](knowledge/vendors/astral.md)** — the head of the four-hop lineage, and the
+  cleanest inherited floor here: one `AI_POLICY.md` in `astral-sh/.github`, **no project overrides
+  it**, verified across five repositories including `uv` and `ruff`. Argues its human-in-the-loop rule
+  from the **criticality** of what it maintains, which nobody else does. Recorded with a checkable
+  event and no inference: Astral is joining OpenAI while forbidding autonomous agents.
+
 - **[`projects/ripgrep.md`](knowledge/projects/ripgrep.md)** — the middle hop of the only attributed
   policy lineage here, which is now four dated hops: `astral-sh/.github` (2026-03-13, an org-level
   default) → ripgrep (2026-05-26) → Zed (2026-08-21) → systemd (2026-09-03, canary only,
@@ -34,6 +40,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   check.
 
 ### Changed
+
+- **[`overview.md`](knowledge/overview.md)** — its claim that `vendors/` is "the one category where
+  the policy does not bind the reader" was falsified by Astral, whose org-wide policy governs any
+  contributor to `uv` or `ruff`. The section now names the exception and the rule that actually
+  helps: not who published a policy, but **who it binds**.
+- **[`projects/ripgrep.md`](knowledge/projects/ripgrep.md)** — Astral is no longer "not yet a record".
+
 
 - **[`projects/networkmanager.md`](knowledge/projects/networkmanager.md)** — a published record had
   gone false. It said the project required no disclosure; since 2026-09-03 disclosure is a mandatory
