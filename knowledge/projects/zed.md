@@ -52,8 +52,9 @@ is stated and deliberately unceremonious: *closed, sometimes without notice.*
 
 > This policy was **adapted from [ripgrep's AI policy]**.[^zed-contributing]
 
-That single sentence makes Zed the only record in this bundle whose policy **cites its own source**.
-ripgrep's text carries the same three moves — a high bar with the maintainer remaining responsible,
+That single sentence makes Zed one of two records here whose policy **cites its own source** —
+[ripgrep](ripgrep.md)'s does the same, naming Astral's, so Zed is the third hop of a four-hop chain
+rather than the start of one. ripgrep's text carries the same three moves — a high bar with the maintainer remaining responsible,
 communication reserved to humans (*"Comments that are believed to be written by AI may be hidden
 without notice"*), and *"Autonomous agents are not allowed to be used for contributing to this
 project"*.[^ripgrep-ai-policy]
@@ -152,8 +153,9 @@ between. **Why it was removed and restored is not established here**, and is the
 unanswered question about this record: a canary that was briefly reverted may have met an objection
 worth knowing about.
 
-Watch whether the ripgrep attribution survives edits, since it is the only provenance line in this
-bundle and would be easy to lose in a rewrite. And watch the `.rules` admission criteria against the
+Watch whether the ripgrep attribution survives edits — provenance lines are rare here and easy to
+lose in a rewrite. Zed cites a *page*, where [ripgrep](ripgrep.md) cites a *commit*; the second
+survives an upstream edit and the first does not. And watch the `.rules` admission criteria against the
 file's actual growth — it is 12 KB already, and the discipline it describes is easier to write than
 to keep.
 

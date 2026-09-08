@@ -93,9 +93,11 @@ That may be a deliberate trade — a tripwire visible in the diff costs nothing 
 materially weaker mechanism than the one it was copied from, and nothing in the repository says the
 omission was considered.
 
-**This is the third case in this bundle of a rule spreading by copying rather than by governance**,
-after the boilerplate [GNOME](../projects/gnome.md) modules took from a Discourse post and the retired
-kernel trailer format [MacPorts](../projects/macports.md) reproduced from a stale rendered page. In
+**This is a case of a rule spreading by copying rather than by governance**, alongside the
+boilerplate [GNOME](../projects/gnome.md) modules took from a Discourse post and the retired kernel
+trailer format [MacPorts](../projects/macports.md) reproduced from a stale rendered page — and
+alongside the attributed chain running Astral → [ripgrep](../projects/ripgrep.md) →
+[Zed](../projects/zed.md), which is the same phenomenon done with citations. In
 the first two the copied text was stale; here the copied text is current and **the enforcement half
 was left behind**. The mechanism is evidenced by the identical marker string and the dates; **no
 claim of intent is made.**

@@ -28,5 +28,6 @@ Directory: `projects/`
 | [cdxgen](cdxgen.md) | Organization | Has no contribution policy at all — no CONTRIBUTING file and no code of con... |
 | [curl](curl.md) | Organization | Accepts AI-assisted code that meets normal standards, but requires disclosure... |
 | [osquery](osquery.md) | Organization | Has no AI policy of its own and inherits the Linux Foundation's, which is gui... |
+| [ripgrep](ripgrep.md) | Organization | Welcomes LLM-assisted coding, forbids autonomous agents, and reserves every w... |
 | [systemd](systemd.md) | Organization | Treats AI tools as equivalent to sed, awk or coccinelle — grunt work applie... |
 

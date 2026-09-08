@@ -11,6 +11,36 @@ with a copied directory.
 **Releases**, newest first: **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->## 2026-09-08
 
+* **Creation: [ripgrep](projects/ripgrep.md)** — the middle hop of the chain, and the record that
+  turns three copies into a documented lineage. Its entire `CONTRIBUTING.md` is **213 bytes** pointing
+  at `AI_POLICY.md` and stating the sanction: a 68,000-star project whose contributing guide contains
+  an AI policy reference and nothing else.
+* **The chain is four hops and now dated**: `astral-sh/.github` (2026-03-13, an **org-level default**
+  covering uv, ruff and siblings) → **ripgrep** (2026-05-26) → [Zed](projects/zed.md) (2026-08-21) →
+  [systemd](projects/systemd.md) (2026-09-03, the canary only, unattributed, without its check).
+  Three of the four hops cite their source.
+* **ripgrep pins its citation to a commit, and the pin was checked.** It names `astral-sh/.github` at
+  `c5187e20…` rather than a branch; the pinned text and the current file were fetched and compared on
+  2026-09-08 and are **byte-identical**, so nothing has drifted under the reference. **Zed cites a
+  page, ripgrep cites a commit** — the second survives an upstream edit and the first does not.
+* **The mechanics of adaptation are visible in one commit.** ripgrep landed the policy and, the same
+  day, committed *"s/our projects/this project in AI policy"* — the single edit converting an
+  organisation-wide text covering several repositories into one project's rule.
+* **Two things nobody else states.** Responsibility is named **in both directions** — *"the project
+  maintainers remain responsible for any code that is published as part of a release"* — which is the
+  argument for the high bar rather than a softening of it. And quoted model output has a **length
+  bound**, *"do not share long snippets"*, which follows from the sanction: generated comments *"may
+  be hidden without notice"*, so the objection is to reader attention spent, and a long snippet spends
+  more.
+* **Hiding is the only sanction here that operates on a belief about authorship** — no detection is
+  claimed and none offered, which is honest about what a maintainer is actually doing.
+* **Licensing is part of why it travels.** ripgrep is **Unlicense**, a public-domain dedication, so a
+  downstream project has no attribution obligation — and Zed attributed anyway. Same property as
+  [GCC](projects/gcc.md)'s CC0 policy: **the licence is what makes a policy text adoptable rather than
+  merely readable.**
+* **Astral's policy is the origin and is not yet a record.** It binds contributors to uv, ruff and
+  their siblings from a single `.github` repository, which makes it the closest thing here to a
+  foundation floor published by a company. It is the obvious next record.
 * **Correction: [NetworkManager](projects/networkmanager.md) — a published record had gone false.**
   It described the project as requiring *"no disclosure of it at all"*. Between 2026-09-03 and
   2026-09-04 NetworkManager added an agent-facing `AGENTS.md`, a **mandatory merge-request template

@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`projects/ripgrep.md`](knowledge/projects/ripgrep.md)** — the middle hop of the only attributed
+  policy lineage here, which is now four dated hops: `astral-sh/.github` (2026-03-13, an org-level
+  default) → ripgrep (2026-05-26) → Zed (2026-08-21) → systemd (2026-09-03, canary only,
+  unattributed). **ripgrep pins its citation to a commit and the pin was verified byte-identical to
+  upstream**, where Zed cites a page. Its whole `CONTRIBUTING.md` is 213 bytes pointing at the policy.
+  Two clauses nobody else has: responsibility named in **both** directions, and a **length bound** on
+  quoted model output, following from a sanction of hiding rather than closing.
+
 - **`knowledge/mechanisms/` and [`review-canary.md`](knowledge/mechanisms/review-canary.md)** — a new
   category for recurring mechanisms, and its first concept. A mechanism concept says how a thing
   works, who built it, how it spread and how it fails; an entity record says what one organisation
