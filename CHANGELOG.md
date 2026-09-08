@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-09-09
+
 ### Added
 
 - **[`mechanisms/assisted-by-trailer.md`](knowledge/mechanisms/assisted-by-trailer.md)** — the second
@@ -32,6 +34,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   the inserted text did not, so it rendered as inline prose and that day's entries were orphaned.
   **`okf validate` passed it** — OKF §9 constrains the form of log headings, so a heading that is not
   a heading is invisible to the check.
+- **A gate now covers that class.** `check-bundle-log.py` joins the shared checkers and is wired into
+  this bundle's pre-commit hook and the weekly sweep. It checks `glued-heading`, `bad-heading`,
+  `impossible-date` and `order`; `--self-test` plants each fault, and the decisive test is the actual
+  broken file recovered from the `v0.10.0` tag, which it reports at line 12. A `dup-date` rule was
+  written and **removed when it failed four correct logs** — repeating a date is a deliberate
+  tranche convention in this portfolio.
 
 
 
