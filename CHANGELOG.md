@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-09-09
+
 ### Added
 
 - **[`projects/django.md`](knowledge/projects/django.md)** — found while checking whether Django's
