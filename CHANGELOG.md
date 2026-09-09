@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/llvm.md`](knowledge/projects/llvm.md)** — the most theorised policy in the bundle,
+  reached from a parked lead about an `AGENTS.md` debate that turned out to be the delivery argument
+  for a policy in force since 2026-01-16. It **names the problem** — an *extractive contribution*,
+  quoted from Nadia Eghbal and attributed — states a **golden rule**, and **diagnoses what changed**:
+  a patch used to evidence a would-be contributor's interest, and generation destroyed that signal.
+  Enforcement is countable: a paste-ready refusal, escalation, and an `extractive` label carrying
+  **41** pull requests. Forbids AI on `good first issue`, inverting Elixir's label gating. Grants the
+  bundle's only named exception. And **copies attributed text from Fedora's policy**, which this
+  bundle records as in force but unpublished.
+
 ### Fixed
 
 - **[`projects/osquery.md`](knowledge/projects/osquery.md)** — the record said no agent-instruction

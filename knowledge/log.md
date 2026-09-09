@@ -13,6 +13,50 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **Creation: [LLVM](projects/llvm.md)** — chased from a parked Phoronix lead about an `AGENTS.md`
+  debate, which turned out to be the delivery argument for a policy that had been in force since
+  **2026-01-16**. It is **the most theorised policy in the bundle.**
+* **It names the problem and cites the name.** *"Sending the unreviewed output of an LLM … extracts
+  work from them"* — an **extractive contribution**, quoted from Nadia Eghbal's *Working in Public*
+  and attributed in place, with a **golden rule**: *"a contribution should be worth more to the
+  project than the time it takes to review it."* Six records here describe review cost; this one gives
+  it a name, a source and a decision rule.
+* **And it diagnoses what actually changed, which nothing else does.** *"Prior to the advent of LLMs …
+  posting a change for review was a sign of interest from a potential long-term contributor."* **The
+  submission used to carry information beyond its content**; generation made patches cheap and
+  destroyed the signal. That explains why the answer is a bar on *value* rather than a cap on volume.
+* **Enforcement that can be counted.** A paste-ready refusal template, escalation to lock
+  conversations, and an **`extractive` label** described as *"used for PRs which are extractive
+  according to our developer policy"* — **41 issues and pull requests carried it on 2026-09-09**.
+  [Kubernetes](projects/kubernetes.md)'s CLA check is the only other mechanical enforcement here and
+  its effect is invisible from outside; this is a number anyone can query.
+* **A label rule that inverts [Elixir](projects/elixir.md)'s.** LLVM forbids AI on issues labelled
+  `good first issue`, to protect a learning opportunity; Elixir forbids agents on existing issues
+  *unless* labelled `Contributions Welcome`. **Independent, opposite polarity** — a deny-list and an
+  allow-list over the same tracker machinery.
+* **The trailer's purpose is stated and disclaims provenance**: labelling is *"intended to facilitate
+  reviews, and not to track which parts of LLVM are generated"*. That is a **fourth stated purpose**
+  for [the Assisted-by trailer](mechanisms/assisted-by-trailer.md) and the first to rule provenance
+  out.
+* **The only granted exception in the bundle** — a Bazel-fixer bot, approved by the project council
+  via a linked RFC, with future exceptions judged on whether they extract work. Several policies admit
+  exceptions in principle; this one names one, its grantor and its decision.
+* **⚠ It copied text from a policy this bundle cannot read.** The References section attributes text
+  *"copied from the Fedora project policy proposal"* under CC BY 4.0.
+  [Fedora](distributions/fedora.md) is recorded here as **in force but unpublished** — so LLVM's
+  document is a **partial, attributed view of text otherwise unreachable**, and the licence is what
+  made it visible. Fifth attributed lineage, and the first whose source is itself unreadable.
+* **A stance expressed through `.gitignore`, which nothing else here does.** LLVM ignores every
+  agent-file convention under a block titled `# Coding assistants' stuff` — `.agents/`, `CLAUDE.md`,
+  `GEMINI.md`, `AGENTS.md`, `.claude/`, `.gemini/`, `.codex/`, `.cursor`. **Draft PR #220659** would
+  reverse two of those lines to add a two-line pointer at the policy. Its `CLAUDE.md` uses `@AGENTS.md`
+  — an **`@` import, a fourth pointer construction** beside the symlinks and duplication in
+  [agent-file pointers](mechanisms/agent-file-pointers.md).
+* **⚠ A sweep gap found and bounded.** LLVM carries `.github/instructions/*.instructions.md` with
+  `applyTo:` **glob frontmatter** — path-scoped review guidance, a convention none of my earlier
+  probes covered. Re-swept all recorded projects: **LLVM is the only one that has it**, so no further
+  corrections follow. It is also a **third staging mechanism**, after Agent Skills' progressive
+  disclosure and Cursor's `alwaysApply`, and the only one that scopes by path.
 * **⚠ Correction: [osquery](projects/osquery.md) does carry agent-instruction files.** The record said
   no `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules` or Copilot instructions existed in its
   2,559 tree entries. It carries **`.cursor/rules/build-format.mdc` and `.cursorignore`** — the first
