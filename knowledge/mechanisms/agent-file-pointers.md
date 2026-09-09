@@ -26,6 +26,9 @@ sources:
   - id: ptr-zed-tree
     title: 'Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md'
     resource: https://api.github.com/repos/zed-industries/zed/git/trees/main
+  - id: ptr-next-agents
+    title: 'AGENTS.md — Next.js Development Guide (vercel/next.js, canary), which documents its own symlink'
+    resource: https://raw.githubusercontent.com/vercel/next.js/canary/AGENTS.md
   - id: ptr-osquery-cursor
     title: '.cursor/rules/build-format.mdc (osquery/osquery, master)'
     resource: https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc
@@ -68,6 +71,12 @@ and the project maintains one file rather than a human one and a machine one.
 
 **NetworkManager's commit names the problem exactly**: *"AGENTS.md: add symlinks under the names other
 agents look for"* (2026-09-04).
+
+**Next.js documents its own**, which nothing else here does: the first lines of its `AGENTS.md` read
+*"**Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same file."*[^ptr-next-agents] Given
+that a symlink fetched over HTTP is indistinguishable from a small stub — the hazard below — a
+project stating the fact in prose is the only version of this construction that survives being read
+through an API.
 
 ## The counter-example, and it has already diverged
 
@@ -146,6 +155,7 @@ entire construction and is exactly the kind of change nothing in a repository wo
 [^ptr-asahi-tree]: [Repository tree, AsahiLinux/m1n1 at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/AsahiLinux/m1n1/git/trees/main)
 [^ptr-elixir-tree]: [Repository tree, elixir-lang/elixir at main — file mode for AGENTS.md](https://api.github.com/repos/elixir-lang/elixir/git/trees/main)
 [^ptr-zed-tree]: [Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/zed-industries/zed/git/trees/main)
+[^ptr-next-agents]: [AGENTS.md — Next.js Development Guide (vercel/next.js, canary), which documents its own symlink](https://raw.githubusercontent.com/vercel/next.js/canary/AGENTS.md)
 [^ptr-osquery-cursor]: [.cursor/rules/build-format.mdc (osquery/osquery, master)](https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc)
 [^ptr-cdxgen-agents]: [AGENTS.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
 [^ptr-cdxgen-copilot]: [.github/copilot-instructions.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/.github/copilot-instructions.md)

@@ -13,6 +13,12 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **[Agent-file pointers](mechanisms/agent-file-pointers.md): Next.js documents its own symlink.**
+  Its `AGENTS.md` opens *"**Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same file."*
+  Since a symlink fetched over HTTP returns its target path as content and is indistinguishable from a
+  hand-written stub — the hazard six records here got wrong — **a project stating the fact in prose is
+  the only version of the construction that survives being read through an API.** Found while checking
+  whether Rails and Next.js scaffold agent instructions into generated applications; neither does.
 * **Creation: [LLVM](projects/llvm.md)** — chased from a parked Phoronix lead about an `AGENTS.md`
   debate, which turned out to be the delivery argument for a policy that had been in force since
   **2026-01-16**. It is **the most theorised policy in the bundle.**

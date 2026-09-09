@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)** — Next.js
+  **documents its own symlink** in the first lines of its `AGENTS.md`. Since a symlink fetched over
+  HTTP is indistinguishable from a hand-written stub, that is the only version of the construction
+  which survives being read through an API — and it is the direct answer to the hazard that produced
+  wrong claims in six records here.
+
+
+
 ## [0.13.0] - 2026-09-09
 
 ### Added
