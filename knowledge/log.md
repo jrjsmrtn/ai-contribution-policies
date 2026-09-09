@@ -13,6 +13,27 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **Checked and recorded as absent: [osctrl](https://github.com/jmpsec/osctrl)** — no AI contribution
+  policy. **Zero** policy-language hits across `AGENTS.md` (9.6 KB), `CONTRIBUTING.md`, `MCP.md` and
+  three role files, against a control firing at 10 on the Kubernetes guide; the single apparent hit
+  was *"unintended disclosure"*, a security term. `CONTRIBUTING.md` never mentions AI. **No record
+  written**, per the curated-not-exhaustive rule. Its `AGENTS.md` is a codebase guide — structure,
+  build commands, coding style, testing — which is *"the filename predicts nothing"* again.
+* **⚠ But it carries an artifact class nothing else here has, and it is logged as a lead rather than
+  written up.** osctrl ships three **agent role profiles** at the repository root —
+  `senior_software_engineer.md`, `security_engineer.md`, `security-reviewer.md` — that define personas
+  an agent adopts, and cross-reference each other plus `AGENTS.md`, `ARCHITECTURE.md` and `MCP.md`.
+  The instruction surface is a **graph, not a file**.
+* **Selection is by subject matter, and enumerated.** `AGENTS.md` dispatches: the senior-engineer
+  profile by default; the security-engineer profile *"as an additional review lens"* for changes
+  touching authn/authz, osquery enroll and carve handlers, MCP transports, user-controlled input,
+  permissions, or release packaging; the reviewer profile for review-only work. **That is a fourth
+  staging mechanism** — not Agent Skills' progressive disclosure, Cursor's `alwaysApply` or Copilot's
+  `applyTo:` globs, but human-readable dispatch by what the change touches.
+* **It fails ADR-0012's admission test at n=1**, so no mechanism concept was written. **A second
+  independent implementation would change that**, and it is the most specific thing this bundle is now
+  watching for. (Naming is already inconsistent — one hyphen, two underscores — which is what organic
+  growth looks like before a convention forms.)
 * **Creation: [Django](projects/django.md)** — found while checking whether its scaffold generates
   agent instructions. It does not (13 template files, none), **but Django has a full AI contribution
   policy** that no earlier sweep had reached, because it lives in
