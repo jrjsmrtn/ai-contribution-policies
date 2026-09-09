@@ -133,6 +133,12 @@ speculative in it is spent for nothing.
 used elsewhere, here aimed at a third filename rather than at `AGENTS.md`. See
 [agent-file pointers](../mechanisms/agent-file-pointers.md).
 
+Zed also ships four skills under `.agents/skills/` — `gpui-bench`, `gpui-test`, `lint-creator` and
+`zed-cherry-pick` — all internal engineering tooling (benchmarks, custom dylint lints, cherry-picking
+to release branches) rather than policy. **Its whole agent-facing surface is contributor-facing**,
+which is the opposite arrangement to [cdxgen](cdxgen.md), whose user-facing skills ship in a plugin
+while its contributor-facing ones stay behind.
+
 ## What a contributor must do
 
 Use an LLM to write code if you like, but **stay in the loop**: understand what it produced, and do

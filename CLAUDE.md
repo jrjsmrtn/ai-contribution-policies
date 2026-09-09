@@ -76,6 +76,30 @@ When a source cannot be fetched:
   repeats an old claim.
 - Do not write a record at all until someone has read the primary text.
 
+## Surveying a project: use the tool, not a remembered filename list
+
+**Twice on 2026-09-08/09 a record said a project carried no agent-instruction files and was wrong**,
+both times because the probe used a filename list reconstructed from memory. osquery carries
+`.cursor/rules/build-format.mdc` and the probe looked for `.cursorrules`, the legacy single-file
+name. LLVM carries `.github/instructions/*.instructions.md`, a convention no probe had included.
+Same failure both times: **a pattern that matches less than you think, reported as an absence.**
+
+```bash
+../workspace/scripts/survey-agent-files.py <owner/repo>[:<ref>] ...   # what does it carry?
+../workspace/scripts/survey-agent-files.py --conventions             # the list, with provenance
+```
+
+The list lives in that script and nowhere else, so a sweep cannot quietly use a shorter one. Entries
+are marked `OBSERVED` (seen in a repository during a survey) or `GITIGNORE` (enumerated by
+`llvm/llvm-project`'s *"Coding assistants' stuff"* block — a major project's own list, used as
+evidence rather than recollection).
+
+**It reports the git file mode, and that matters.** `raw.githubusercontent.com` serves a symlink by
+returning its *target path* as the content, so a symlinked `CLAUDE.md` fetches as a 9-byte file
+containing the string `AGENTS.md` and looks exactly like a hand-written stub. **Six records described
+symlinks that way before it was caught.** Mode `120000` is a symlink; `100644` is a regular file.
+Check the mode, not the bytes.
+
 ## Scope boundaries (ADR-0011)
 
 - **Procedure** — how to check requirements before contributing — belongs to `analyze-project`.
