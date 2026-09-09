@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-09-09
+
+### Added
+
+- **[`mechanisms/extending-existing-machinery.md`](knowledge/mechanisms/extending-existing-machinery.md)**
+  — the fifth mechanism concept. **Seven records reach an AI policy by extending a rule the project
+  already ran** rather than building a new regime: a copyright threshold (GCC, LLVM), an existing ban
+  on leaked vendor material (Asahi Linux), the norms already governing `sed`/`awk`/`coccinelle`
+  (systemd), tracker labels (Elixir), the standards already expected of contributors (Debian), and a
+  DCO clause requiring *"original work"* that has **not** been extended (OWASP). The route works
+  because it inherits an answer to *who decides* and sidesteps the detection problem; it fails where a
+  project is too young to have anything suitable to extend.
+
+### Changed
+
+- **Five records shortened to a link.** `asahi-linux`, `elixir`, `llvm`, `owasp` and `debian` each
+  restated the pattern in its own words; each now points at the concept. Writing the same observation
+  four times is what prompted the concept, and removing those restatements is the test ADR-0012 sets
+  for whether a mechanism concept earns its place.
+
 ## [0.15.0] - 2026-09-09
 
 ### Added

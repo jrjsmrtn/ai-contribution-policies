@@ -143,8 +143,8 @@ and [Nerves](nerves.md) mandates.
 > ensuring they have the right to contribute code under the terms of our licence. **Using AI tools to
 > regenerate copyrighted material does not remove the copyright.**[^llvm-ai-policy]
 
-The same move [GCC](gcc.md) and [Asahi Linux](asahi-linux.md) make — point existing machinery at the
-new question rather than build a regime — and the third instance of it in this bundle.
+The same move [GCC](gcc.md) and [Asahi Linux](asahi-linux.md) make — see
+[extending existing machinery](../mechanisms/extending-existing-machinery.md).
 
 ## The only granted exception anywhere here
 

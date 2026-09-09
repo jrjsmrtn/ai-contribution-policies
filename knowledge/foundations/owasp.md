@@ -94,12 +94,11 @@ answer *"what does the foundation require of me about AI?"* by reading the found
 [Linux Foundation](linux-foundation.md) and [ASF](apache-software-foundation.md) cases, where the
 foundation text is the first thing to read and the project may narrow it.
 
-**And the hook is sitting there unused.** [GCC](../projects/gcc.md) reached its position by extending
-the copyright threshold it already applied; [Asahi Linux](../projects/asahi-linux.md) reached its by
-extending an existing ban on leaked vendor material. Both took machinery they already ran and pointed
-it at a new question. OWASP has the equivalent machinery — original work, plagiarism risk — in a
-mandatory clause, and has not pointed it anywhere. **Whether that is deliberate restraint or simply
-unexamined is not stated anywhere, and is not inferred here.**
+**And the hook is sitting there unused.** Seven records here reached a position by
+[extending existing machinery](../mechanisms/extending-existing-machinery.md) they already ran. OWASP
+has the equivalent machinery — original work, plagiarism risk — in a mandatory clause, and has not
+pointed it anywhere. **Whether that is deliberate restraint or simply unexamined is not stated
+anywhere, and is not inferred here.**
 
 ## What a contributor must do
 

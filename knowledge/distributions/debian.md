@@ -88,7 +88,9 @@ modify AI-assisted output"*, because *"Blindly accepting or uploading AI-generat
 appropriate human review is inconsistent with Debian's established development
 practices."*[^debian-gr-2026-002] It closes by affirming that generative AI is *"neither exempt from
 nor subject to special rules beyond the standards already expected of Debian
-contributors."*[^debian-gr-2026-002]
+contributors."*[^debian-gr-2026-002] That is the limit case of
+[extending existing machinery](../mechanisms/extending-existing-machinery.md): the extension is the
+empty one, available only to a project confident its existing bar already holds.
 
 **Disclosure is encouraged and explicitly not required**, which puts Debian on the opposite side of
 this axis from the kernel's required `Assisted-by:` trailer:

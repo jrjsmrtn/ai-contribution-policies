@@ -8,8 +8,27 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-09
+
+* **Added [`mechanisms/extending-existing-machinery.md`](mechanisms/extending-existing-machinery.md)**
+  — the fifth `type: Practice` concept, and the one written because the same observation had been
+  made four times in four records. **Seven records reach a policy by pointing a rule they already ran
+  at the new question**: GCC's copyright threshold, Asahi's ban on leaked vendor material, LLVM's
+  copyright policy, systemd's `sed`/`awk`/`coccinelle` norms, Elixir's tracker labels, Debian's
+  existing contributor standards, and OWASP's DCO clause — the last of which has the machinery and has
+  **not** extended it. Elixir's is the only non-legal instance. **Debian is the limit case**: it put
+  eight options to a project-wide vote and adopted the one creating no new obligation, so the
+  extension is the empty one. The concept records what the route buys (an inherited answer to *who
+  decides*, and no detection problem) and what it cannot do (a young project has nothing to extend;
+  an extension inherits the gaps of what it extends).
+* **Subtracted the five paragraphs it replaces**, in
+  [`asahi-linux`](projects/asahi-linux.md), [`elixir`](projects/elixir.md), [`llvm`](projects/llvm.md),
+  [`owasp`](foundations/owasp.md) and [`debian`](distributions/debian.md) — each now carries a link
+  instead of a restatement of the pattern. **That subtraction is the admission test for a mechanism
+  concept**: if it does not let records get shorter, it is duplication rather than extraction.
 
 ## 2026-09-09
 

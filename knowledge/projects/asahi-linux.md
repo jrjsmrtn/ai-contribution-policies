@@ -82,10 +82,8 @@ rather than inventing a new regime:
 > We already forbid the use of illegally acquired or leaked documentation and tooling (e.g. Apple's
 > internal repair diagnostic tools). **This also applies to regurgitated slop.**[^asahi-slop-policy]
 
-[GCC](gcc.md) attaches its rule to the copyright threshold that already governed contributions; this
-attaches to an existing ban on leaked vendor material. **Both projects reached a policy by extending
-machinery they already ran** — which is a cheaper and more defensible route than the projects that
-built something new.
+That is the cheapest route to a policy there is, and seven records here take it — see
+[extending existing machinery](../mechanisms/extending-existing-machinery.md).
 
 The generalisable claim is stated plainly: regurgitation likelihood *"is proportional to the
 specificity of the problem area."*[^asahi-slop-policy] A reverse-engineering project is therefore at

@@ -45,10 +45,10 @@ prohibition; Elixir reaches a request for judgement. **Same premise, opposite in
 > **Do not use coding agents to tackle existing issues unless they have the "Contributions Welcome"
 > label.**[^elixir-contributing]
 
-No other policy in this bundle scopes agent work by *where in the tracker* it happens. It is a
-mechanical boundary made of machinery the project already ran, in the way
-[GCC](gcc.md) reused a copyright threshold and [Asahi](asahi-linux.md) an existing ban — and it
-targets the specific failure of agents swarming open issues, without needing to detect anything.
+No other policy in this bundle scopes agent work by *where in the tracker* it happens, and it is
+the only non-legal instance of
+[extending existing machinery](../mechanisms/extending-existing-machinery.md) here. It targets the
+specific failure of agents swarming open issues, without needing to detect anything.
 
 The complement is stated too: if you propose a feature on the mailing list and it is accepted, *"you
 may use coding agents to implement it"*.[^elixir-contributing] **Agreement first, agent second** —
