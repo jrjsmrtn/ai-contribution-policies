@@ -121,7 +121,9 @@ And the file may not be edited during ordinary work: an agent that notices a pat
 under a *"Suggested `.rules` additions"* heading in the pull request description, with reviewers
 deciding — *"Rules emerge from validated patterns, not one-off observations."*[^zed-rules-file]
 
-**Two projects in this bundle now govern their agent-instruction files, and they agree.**
+**Two projects in this bundle now govern their agent-instruction files, and they agree** — the
+mechanism is recorded at
+[governing the instruction file](../mechanisms/instruction-file-governance.md).
 [systemd](systemd.md)'s rule is *"only add instructions to this file if you've seen an AI agent mess
 up that particular bit of logic in practice"* — Zed's criterion 2, arrived at separately. Both are
 answers to context cost: a file read at the start of every session is a budget, and anything

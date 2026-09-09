@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- **[`mechanisms/instruction-file-governance.md`](knowledge/mechanisms/instruction-file-governance.md)**
+  — the fourth mechanism concept, and the last candidate ADR-0012 named. An instruction file is a
+  **budget, not a document**, loaded whole every session. systemd admits a rule only after watching an
+  agent fail on it; Zed sets three criteria, bars the agent from editing `.rules` during ordinary
+  work, and scopes rules per crate. **No shared text** — arriving at the same principle separately is
+  the finding. Records what neither solves: both bound what enters and neither describes removal.
+
 - **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)** — the third
   mechanism concept. Agents look for instructions under different filenames and no specification says
   which; **every project here that solves it uses a git symlink**, and the one that duplicated the

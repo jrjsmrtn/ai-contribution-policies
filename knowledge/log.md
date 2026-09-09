@@ -13,6 +13,29 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **Creation: [governing the instruction file](mechanisms/instruction-file-governance.md)** — the
+  fourth mechanism concept, and the last candidate ADR-0012 named. **An instruction file is a budget,
+  not a document**: loaded whole at the start of every session, before anyone knows what the session
+  is for, and it grows the way checklists grow because the cost falls on a future session rather than
+  on the person adding the line.
+* **Two implementations, no shared text.** [systemd](projects/systemd.md) admits a rule only after
+  watching an agent fail on it; [Zed](projects/zed.md) sets three criteria — non-obvious, repeatedly
+  encountered, specific enough to act on — bars the agent from editing `.rules` during ordinary work
+  (propose in the PR, a human decides), and scopes per-crate rules away from the root. **Criterion 2
+  is systemd's whole rule.** Given how much else in this bundle spread by copying, arriving at the
+  same principle separately is the finding rather than the count.
+* **"Rules should be traps to avoid, not maps to follow"** is the line that generalises. A map goes
+  stale and duplicates what the code already says; a trap encodes what the code cannot tell you.
+* **⚠ Code search is not a population estimate, demonstrated rather than assumed.** The only GitHub
+  results for systemd's phrase *"Only add instructions to this file"* are **this bundle's own
+  records**, quoting it — systemd's `AGENTS.md` is not in the index. A search-derived count would have
+  reported one implementation and missed the other. Zed's *"High bar for new rules"* returns dozens of
+  repositories, but spot checks found most to be re-uploads of the Zed codebase under new names rather
+  than forks, and the genuinely different projects had taken the heading without Zed's phrasing.
+  **A rate limit stopped the check and no population figure is claimed.**
+* **The gap both rules share is stated rather than smoothed over**: they bound what *enters* and
+  neither describes removal, so both files ratchet. The private tracking bundle in this family prunes
+  on two consecutive expired review cycles; nothing equivalent exists in an instruction file here.
 * **Creation: [agent-file pointers](mechanisms/agent-file-pointers.md)** — the third mechanism
   concept, and it **corrected a claim this bundle had made in six records.** Agents look for
   instructions under different filenames and no specification says which, so a project either points

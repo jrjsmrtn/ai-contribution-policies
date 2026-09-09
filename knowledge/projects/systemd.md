@@ -94,7 +94,9 @@ its own maintenance that nothing else here does:
 > **Only add instructions to this file if you've seen an AI agent mess up that particular bit of
 > logic in practice.**[^systemd-agents-md]
 
-**An instruction file governed by observed failure rather than by anticipation.** It is a direct
+**An instruction file governed by observed failure rather than by anticipation** — see
+[governing the instruction file](../mechanisms/instruction-file-governance.md), where
+[Zed](zed.md) reaches the same principle in unrelated words. It is a direct
 answer to the way these files grow — every plausible rule added until the context cost outweighs the
 benefit — and it is the only maintenance policy for an agent-instruction file in this bundle.
 
