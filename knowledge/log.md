@@ -13,6 +13,43 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **Creation: [Django](projects/django.md)** — found while checking whether its scaffold generates
+  agent instructions. It does not (13 template files, none), **but Django has a full AI contribution
+  policy** that no earlier sweep had reached, because it lives in
+  `docs/internals/contributing/writing-code/submitting-patches.txt` rather than in any file a
+  filename probe looks for.
+* **Its diagnosis is a report, not a forecast**: *"the Django Project **has seen an increase** in
+  contributions generated partially or entirely using such tools. Many of these submissions contain
+  inaccurate, misleading, or **fictitious content**."* Where [LLVM](projects/llvm.md) theorises the
+  economics, Django states what arrived in its tracker.
+* **Disclosure is granular**: *which* tools **and what they were used for** — code, commit messages,
+  documentation. That is closer to [QEMU](projects/qemu.md)'s proposed `AI-used-for:` than to a
+  checkbox, achieved in prose without a new trailer.
+* **⚠ It refuses automated AI review, and the refusal is implemented.** Every other project here that
+  mentions review bots runs one — [Kubernetes](projects/kubernetes.md),
+  [Dependency-Track](projects/dependency-track.md), [systemd](projects/systemd.md). Django forbids it
+  in prose, then enforces it with a **316-byte `.github/copilot-instructions.md`** that uses the
+  vendor's own `applyTo:` globs against the vendor's own reviewer: *"Do not review this code … Your
+  only output must be exactly: 'Do not request a review from Copilot, do it in your own fork.'"*
+* **The prose rule and the machine enforcement carry the same sentence.** The documentation says *use
+  it in your own fork*; the instruction file makes the bot say it. **The only case in this bundle
+  where a written rule and its enforcement are the same words**, and the clearest instance of an
+  instruction file used as an **off switch** — every other one in this corpus adds capability.
+* **A section addressed to the tool**, like [Asahi](projects/asahi-linux.md) and
+  [NetworkManager](projects/networkmanager.md) but permissive, with six requirements. Two stand out:
+  *"Do not invent APIs, features, functions, or **citations** that do not exist"* — the only place here
+  where inventing citations is named a rejection criterion, following directly from the *fictitious
+  content* the diagnosis reports — and **a self-flagging obligation**, *"if any part of the output may
+  not comply with these rules, clearly call it out"*. That is
+  [the review canary](mechanisms/review-canary.md)'s instinct without its mechanism: no marker, no
+  check, nothing detects an agent that simply does not comply.
+* **The sanction escalates from patch to person** — closed without review, then *"restricted
+  participation in Django's development process"* — triggered by *"no evidence of manual
+  verification"*, a property of the submission rather than a judgement about how it was produced.
+* **⚠ A sweep lesson.** Django was swept earlier in this session as a scaffold question and the
+  filename probe found only `.github/copilot-instructions.md`. **The policy is in the contributing
+  docs**, which no agent-file convention list covers. `survey-agent-files.py` answers *what agent
+  files exist*; it does not answer *whether there is a policy*, and those are different questions.
 * **[Agent-file pointers](mechanisms/agent-file-pointers.md): Next.js documents its own symlink.**
   Its `AGENTS.md` opens *"**Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same file."*
   Since a symlink fetched over HTTP returns its target path as content and is indistinguishable from a

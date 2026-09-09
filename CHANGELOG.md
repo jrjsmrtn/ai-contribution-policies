@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/django.md`](knowledge/projects/django.md)** — found while checking whether Django's
+  scaffold generates agent instructions (it does not). **Django has a full AI contribution policy**
+  that lives in the contributing docs, where no filename probe looks. Its diagnosis is a report rather
+  than a forecast — *"has seen an increase… inaccurate, misleading, or fictitious content"*.
+  Disclosure is **granular**: which tools and what for. And it is the only project here that **refuses
+  automated AI review and implements the refusal** — a 316-byte `copilot-instructions.md` using the
+  vendor's own `applyTo:` globs against the vendor's own reviewer, **making the bot quote the policy
+  back**. The written rule and the machine enforcement are the same sentence.
+
+
+
 ## [0.14.0] - 2026-09-09
 
 ### Changed
