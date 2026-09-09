@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-09-09
+
 ### Added
 
 - **[`projects/llvm.md`](knowledge/projects/llvm.md)** — the most theorised policy in the bundle,
