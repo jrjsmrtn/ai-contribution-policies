@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-09-09
+
 ### Changed
 
 - **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)** — Next.js
