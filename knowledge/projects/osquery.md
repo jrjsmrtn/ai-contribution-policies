@@ -38,11 +38,24 @@ which makes it the cleanest test of what inheritance actually delivers.
 
 ## The absence is established
 
-No `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules` or Copilot instructions exist anywhere in
-the **2,559** entries of the repository tree. Across its **89** markdown files there is not one
-occurrence of *generative AI*, *LLM*, *GenAI*, *AI-generated*, *AI-assisted*, *machine-generated*,
-*Copilot* or *ChatGPT*; the positive control, *contribut*, matched **14** files, so the sweep was
-reading them. The same sweep across the 86 files of the `osquery/foundation` governance repository
+Across its **89** markdown files there is not one occurrence of *generative AI*, *LLM*, *GenAI*,
+*AI-generated*, *AI-assisted*, *machine-generated*, *Copilot* or *ChatGPT*; the positive control,
+*contribut*, matched **14** files, so the sweep was reading them.
+
+**It does carry agent-instruction files, and an earlier version of this record said it did not.** The
+first sweep looked for `.cursorrules`, the legacy single-file form, and missed
+`.cursor/rules/build-format.mdc` and `.cursorignore`, which are the current directory convention. The
+claim was narrowly true and broadly misleading; a re-sweep across every convention
+(`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.rules`, `.cursor/`, `.windsurf`, `.clinerules`,
+`.aider`, `.junie`, `.github/copilot-instructions.md`) found these two and nothing else.
+
+**Neither carries policy.** `build-format.mdc` is CMake guidance — build in `build/`, set `-j` to the
+core count, edit the right `CMakeLists.txt`, check formatting against `.clang-format` — and
+`.cursorignore` excludes `libraries/` and `build/` from the agent's view. So the conclusion is
+unchanged and its basis is now correct: osquery instructs agents about its **build system** and says
+nothing about whether one may write a patch. It is another instance of the finding in
+[agent-file pointers](../mechanisms/agent-file-pointers.md) that the filename predicts nothing about
+whether a repository carries a policy. The same sweep across the 86 files of the `osquery/foundation` governance repository
 returned zero, against a control of **81** files matching *osquery*.
 
 `CONTRIBUTING.md` is 12.7 KB covering blueprints, pull requests, labels, milestones, releases, the
@@ -124,8 +137,10 @@ is no disclosure requirement, no trailer, and no stated sanction.
 
 ## Re-verification notes
 
-**Sweep both repositories.** `osquery/osquery` holds the code and `CONTRIBUTING.md`;
-`osquery/foundation` holds the charter, the CLAs and the governance record. A policy could appear in
+**Sweep both repositories, and sweep every agent-file convention.** `osquery/osquery` holds the code
+and `CONTRIBUTING.md`; `osquery/foundation` holds the charter, the CLAs and the governance record.
+⚠ **A probe for `.cursorrules` will report a false absence here** — the file is
+`.cursor/rules/build-format.mdc`, and the legacy single-file name does not exist. A policy could appear in
 either, and the charter is the only place the binding-policy question is answerable.
 
 **A limit on the negative, stated because it bounds the claim.** The foundation's office-hours minutes

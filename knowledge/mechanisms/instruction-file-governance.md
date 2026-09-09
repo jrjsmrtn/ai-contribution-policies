@@ -33,8 +33,16 @@ The Agent Skills specification states the same economics for skills — metadata
 loaded for *every* skill at startup, full instructions only on activation, with a recommendation to
 keep a `SKILL.md` under 500 lines.[^gov-agentskills-progressive]
 
-Files like `AGENTS.md` have no such staging. They are loaded whole. And they grow the way checklists
-grow: every plausible rule gets added, nothing is ever removed, and the cost is invisible because it
+Files like `AGENTS.md` have no such staging. They are loaded whole.
+
+**One format does stage, which shows the problem is addressable in the format rather than only in
+the discipline.** Cursor's `.cursor/rules/*.mdc` carry frontmatter with `alwaysApply` — osquery's
+build rules set it `true`, and a field that can be true can be false — so a rule may be applied
+conditionally instead of every session. See
+[agent-file pointers](agent-file-pointers.md). Where that field exists, the governance rules below
+are a fallback for the always-applied case rather than the only available answer.
+
+`AGENTS.md` has no equivalent, and files in that convention grow the way checklists grow: every plausible rule gets added, nothing is ever removed, and the cost is invisible because it
 falls on a future session rather than on the person adding the line.
 
 **Two projects in this bundle wrote a rule about what may enter their own file.** They share no text

@@ -26,6 +26,9 @@ sources:
   - id: ptr-zed-tree
     title: 'Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md'
     resource: https://api.github.com/repos/zed-industries/zed/git/trees/main
+  - id: ptr-osquery-cursor
+    title: '.cursor/rules/build-format.mdc (osquery/osquery, master)'
+    resource: https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc
   - id: ptr-cdxgen-agents
     title: 'AGENTS.md (cdxgen/cdxgen, master)'
     resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md
@@ -98,6 +101,24 @@ challenge page instead of the document, and `docs.kernel.org` serving a released
 trailer format weeks after mainline changed it. **All three share a shape: the request succeeded, the
 bytes were well-formed, and they did not mean what they appeared to mean.**
 
+## One convention the construction does not reach
+
+`.cursor/rules/` is a **directory** of `.mdc` files, not a single file, so there is no name to
+symlink — [osquery](../projects/osquery.md) carries `.cursor/rules/build-format.mdc` alongside a
+`.cursorignore`,[^ptr-osquery-cursor] and no amount of symlinking `AGENTS.md` would produce it. A project wanting to
+answer that convention as well has to author separately, which is the duplication problem again in a
+form the symlink cannot fix.
+
+The format also does something none of the single-file conventions do. Its frontmatter carries
+`alwaysApply: true`, and a field that can be true can be false: **the rule is conditionally
+applied**, where `AGENTS.md` is loaded whole every time. That is the staging
+[governing the instruction file](instruction-file-governance.md) says the single-file conventions
+lack, present here as a format feature rather than as a discipline the maintainers have to keep.
+
+**`.cursorignore` is a different artifact class again** — it tells the agent what *not* to read
+(osquery excludes `libraries/` and `build/`). Every other file in this concept adds context; that one
+subtracts it, and nothing else in this bundle does.
+
 ## What the mechanism does not solve
 
 **Nothing obliges a tool to read any of these files.** The convention is that agents look for a name
@@ -125,5 +146,6 @@ entire construction and is exactly the kind of change nothing in a repository wo
 [^ptr-asahi-tree]: [Repository tree, AsahiLinux/m1n1 at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/AsahiLinux/m1n1/git/trees/main)
 [^ptr-elixir-tree]: [Repository tree, elixir-lang/elixir at main — file mode for AGENTS.md](https://api.github.com/repos/elixir-lang/elixir/git/trees/main)
 [^ptr-zed-tree]: [Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/zed-industries/zed/git/trees/main)
+[^ptr-osquery-cursor]: [.cursor/rules/build-format.mdc (osquery/osquery, master)](https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc)
 [^ptr-cdxgen-agents]: [AGENTS.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
 [^ptr-cdxgen-copilot]: [.github/copilot-instructions.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/.github/copilot-instructions.md)

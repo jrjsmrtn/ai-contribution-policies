@@ -8,6 +8,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **[`projects/osquery.md`](knowledge/projects/osquery.md)** — the record said no agent-instruction
+  files existed in its 2,559 tree entries. It carries **`.cursor/rules/build-format.mdc` and
+  `.cursorignore`**; the sweep probed for `.cursorrules`, the legacy single-file name, and missed the
+  current directory convention. A systematic re-sweep across eleven conventions confirmed **osquery is
+  the only affected record**. The conclusion is unchanged — both files are build guidance — and its
+  basis is now correct.
+
+### Changed
+
+- **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)** — records
+  that `.cursor/rules/` is a **directory**, so the symlink construction cannot reach it, and that
+  `.cursorignore` is a different artifact class: every other file there adds context, that one
+  subtracts it.
+- **[`mechanisms/instruction-file-governance.md`](knowledge/mechanisms/instruction-file-governance.md)**
+  — `.mdc` frontmatter carries `alwaysApply`, so a rule may be applied conditionally rather than every
+  session. **That is the staging `AGENTS.md` lacks, as a format feature rather than a discipline**,
+  and the admission rules are corrected to a fallback for the always-applied case.
+
+
+
 ## [0.12.0] - 2026-09-09
 
 ### Added

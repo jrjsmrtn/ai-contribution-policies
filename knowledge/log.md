@@ -13,6 +13,31 @@ with a copied directory.
 
 ## 2026-09-09
 
+* **⚠ Correction: [osquery](projects/osquery.md) does carry agent-instruction files.** The record said
+  no `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.cursorrules` or Copilot instructions existed in its
+  2,559 tree entries. It carries **`.cursor/rules/build-format.mdc` and `.cursorignore`** — the first
+  sweep probed for `.cursorrules`, the legacy single-file name, and missed the current **directory**
+  convention. Narrowly true, broadly misleading. **Same failure shape as the symlink error one entry
+  above: the pattern matched less than I thought, and an absence was reported.**
+* **A systematic re-sweep bounded the damage.** Every recorded project was re-checked across
+  `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.rules`, `.cursor/`, `.cursorrules`, `.cursorignore`,
+  `.windsurf`, `.clinerules`, `.aider`, `.junie` and `.github/copilot-instructions.md`. **osquery is
+  the only record affected**; Erlang/OTP, Phoenix, Ecto, PostgreSQL, Perl, ripgrep and Ash are
+  genuinely clean across all of them.
+* **The conclusion survived and its basis is now correct.** `build-format.mdc` is CMake guidance and
+  `.cursorignore` excludes `libraries/` and `build/` — osquery instructs agents about its **build
+  system** and says nothing about whether one may write a patch.
+* **Two findings follow, and both went into the mechanism concepts.**
+  [Agent-file pointers](mechanisms/agent-file-pointers.md) now records that `.cursor/rules/` is a
+  **directory**, so there is no name to symlink and the construction cannot reach it — duplication
+  again, in a form the symlink does not fix. And `.cursorignore` is a **different artifact class
+  entirely**: every other file in that concept adds context, that one subtracts it.
+* **One format already solved the problem the governance concept describes.** `.mdc` frontmatter
+  carries `alwaysApply`, set `true` in osquery's file — and a field that can be true can be false, so
+  a rule may be applied **conditionally** rather than every session. That is the staging
+  `AGENTS.md` lacks, present as a **format feature rather than a discipline maintainers must keep**.
+  [Governing the instruction file](mechanisms/instruction-file-governance.md) is corrected to say the
+  admission rules are a fallback for the always-applied case rather than the only answer available.
 * **Creation: [governing the instruction file](mechanisms/instruction-file-governance.md)** — the
   fourth mechanism concept, and the last candidate ADR-0012 named. **An instruction file is a budget,
   not a document**: loaded whole at the start of every session, before anyone knows what the session
