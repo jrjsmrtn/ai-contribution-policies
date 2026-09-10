@@ -8,6 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.20.0] - 2026-09-10
+
+### Added
+
+- **[`mechanisms/certifying-origin.md`](knowledge/mechanisms/certifying-origin.md)** — the ninth
+  mechanism concept. **The Developer Certificate of Origin has not changed since Version 1.1, and
+  eleven records reason from it or from a substitute to six incompatible destinations.** The
+  disagreement turns on clause (b) rather than on AI: QEMU is the only record naming a clause, the
+  kernel reaches the opposite conclusion naming none, and the two never meet. Kubernetes inverts
+  QEMU's premise into an enforcement gate. Whatever the instrument, every destination puts the legal
+  risk on the contributor — so requiring a DCO predicts nothing about a project's stance.
+
+### Changed
+
+- **Three rotting counts retired** — `networkmanager`'s *"three different positions"*,
+  `linux-foundation`'s *"four different destinations"* and `nerves`'s *"a fifth destination"*. Each
+  was true when written, which is the argument for the concept.
+
 ## [0.19.0] - 2026-09-10
 
 ### Added

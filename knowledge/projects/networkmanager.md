@@ -106,9 +106,9 @@ it was a ban.
 
 ## No DCO at all — the certification runs through relicensing
 
-Most records in this bundle turn on the Developer Certificate of Origin: the
-[kernel](linux-kernel.md) bars agents from signing it, [QEMU](qemu.md) reads it as excluding
-AI-generated content outright. NetworkManager removes the instrument from the board entirely:
+Most records in this bundle turn on the Developer Certificate of Origin, and they turn on it in
+incompatible directions — [certifying origin](../mechanisms/certifying-origin.md) lays out where the
+same unchanged text leads. NetworkManager removes the instrument from the board entirely:
 
 > Do not use "Signed-off-by:" lines in commits for NetworkManager. It has no
 > meaning.[^nm-contributing]
@@ -119,10 +119,9 @@ the project can relicense later.[^nm-contributing] The AI clause hooks directly 
 the one certifying that the contribution can be released under LGPL-2.1-or-later. A tool cannot
 certify that for you."*
 
-**So the DCO is not load-bearing for an AI policy.** Three projects here reach three different
-positions — bar the agent from signing, treat the certificate as unsatisfiable, or have no
-certificate — and all three still land on the contributor carrying the legal risk. The instrument
-varies; the placement of responsibility does not.
+**So the DCO is not load-bearing for an AI policy.** Whatever the instrument — required, abolished,
+replaced or never invoked — every position in this bundle still lands on the contributor carrying the
+legal risk. The instrument varies; the placement of responsibility does not.
 
 ## The 2026-09-03 layer: an agent-facing file that argues its case
 

@@ -67,9 +67,9 @@ nothing, so the same inference cannot be drawn about it** — the two cases look
 evidenced.
 
 **It also drops the other kernel instrument**: *"Do not add `Signed-off-by` tags. Nerves does not use
-them."*[^nerves-contributing] That is a **fifth** destination for the DCO in this bundle, alongside
-the kernel's bar-the-agent, QEMU's unsatisfiable, the Linux Foundation's not-invoked and
-[NetworkManager](networkmanager.md)'s abolition.
+them."*[^nerves-contributing] **Attribution without certification** — the inverse of what the kernel
+does with the same two tags, and one of the destinations tabulated in
+[certifying origin](../mechanisms/certifying-origin.md).
 
 ## The sharpest line on communication in this bundle
 

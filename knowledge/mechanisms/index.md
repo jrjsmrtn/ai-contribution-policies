@@ -7,6 +7,7 @@ Directory: `mechanisms/`
 | Title | Type | Description |
 |-------|------|-------------|
 | [Agent-file pointers](agent-file-pointers.md) | Practice | Agent tools look for instructions under different filenames, so projects publ... |
+| [Certifying origin](certifying-origin.md) | Practice | Eleven records reach a position on AI by reasoning about a certification inst... |
 | [Extending existing machinery](extending-existing-machinery.md) | Practice | The cheapest route to an AI policy is to point a rule the project already ran... |
 | [Governing the instruction file](instruction-file-governance.md) | Practice | An agent-instruction file is read at the start of every session, so it is a c... |
 | [Human in the loop](human-in-the-loop.md) | Practice | The most-copied phrase in these policies and the least defined. Nine records ... |

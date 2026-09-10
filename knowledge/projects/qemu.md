@@ -41,8 +41,10 @@ output is ill-defined with no generally accepted, settled legal foundation"*, so
 could comply with DCO terms (b) or (c) … is unclear"*, and the project *"is not willing or able to
 accept the legal risks of non-compliance."*[^qemu-code-provenance]
 
-The consequence: this policy is downstream of DCO mechanics, so any project requiring a DCO faces
-the same question whether or not it has written an answer.
+The consequence is that this policy is downstream of DCO mechanics, so any project requiring one
+faces the same question whether or not it has written an answer. **QEMU is also the only record here
+that names a clause** — which is why its argument and the kernel's opposite conclusion never actually
+meet ([certifying origin](../mechanisms/certifying-origin.md)).
 
 ## Scope and named tools
 

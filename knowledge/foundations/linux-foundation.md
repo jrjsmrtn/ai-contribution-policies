@@ -43,15 +43,14 @@ The page contains **zero occurrences** of *"Developer Certificate of Origin"*, *
 *"Signed-off-by"* (checked 2026-08-05 against the fetched page text, not inferred from
 reading).[^lf-generative-ai]
 
-That is the most consequential thing about this document, given the company it keeps.
-[QEMU](../projects/qemu.md) reasons from the DCO to a prohibition; [Git](../projects/git.md)
-reasons from it to a volume-scoped caution; the [Linux kernel](../projects/linux-kernel.md) reasons
-from it to a certification-relocation rule. The foundation hosting many of those projects reasons
-from **licence compatibility and third-party rights** instead, and arrives at permission.
+That is the most consequential thing about this document, given the company it keeps. The
+foundation hosting many of the projects that reason **from** the DCO — to prohibition, to a
+volume-scoped caution, to a certification-relocation rule — reasons from **licence compatibility and
+third-party rights** instead, and arrives at permission.
 
-Three projects and their foundation, one instrument, four different destinations. Any summary that
-explains a stance by *"they require a DCO"* is explaining nothing — and this record is the reason to
-stop using that shorthand.
+**Any summary that explains a stance by *"they require a DCO"* is explaining nothing**, and this
+record is the reason to stop using that shorthand. Where the same unchanged text actually leads is
+tabulated in [certifying origin](../mechanisms/certifying-origin.md).
 
 ## The two actual obligations
 

@@ -8,8 +8,40 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-10
+
+* **Added [`mechanisms/certifying-origin.md`](mechanisms/certifying-origin.md)** — the ninth
+  `type: Practice` concept, extracted because three records had each written the same observation
+  with a different count in it. **One unchanged text, the Developer Certificate of Origin at Version
+  1.1, leads eleven records to six destinations**: prohibition ([QEMU](projects/qemu.md)),
+  satisfiable-only-by-a-human ([Linux kernel](projects/linux-kernel.md),
+  [Elixir](projects/elixir.md)), a volume-scoped caution ([Git](projects/git.md)), never invoked at
+  all ([Linux Foundation](foundations/linux-foundation.md)), abolished and replaced by a relicensing
+  commitment ([NetworkManager](projects/networkmanager.md)) or by a trailer
+  ([Nerves](projects/nerves.md)), and mandated but never extended ([OWASP](foundations/owasp.md)).
+* **The finding: the disagreement is about clause (b), not about AI.** QEMU is the only record that
+  names a clause — *"how contributors could comply with DCO terms (b) or (c) … is unclear"* — while
+  the kernel reaches the opposite conclusion naming none, and its rule works under **(a)**,
+  *"created in whole or in part by me"*, with the model as an instrument. **Neither project argues
+  against the other, because neither addresses the clause the other is reading.** The ambiguity is
+  about any input of uncertain provenance; generative tools did not create it, they made it
+  unavoidable.
+* **[Kubernetes](projects/kubernetes.md) inverts QEMU's premise.** QEMU argues an AI cannot satisfy
+  the certification and bans; Kubernetes starts from the identical fact and enables the CLA check for
+  co-authors, turning the inability into the bundle's only enforcement that runs before a human looks.
+* **And the instrument predicts nothing about the stance.** Two projects requiring the same DCO land
+  on prohibition and permission; two with no DCO land on the same responsibility rule as one that has
+  it. What does not vary is who carries the legal risk.
+* **The DCO's clause text was transcribed from `developercertificate.org`**, not from memory, and the
+  document confirmed to be at Version 1.1.
+* **Retired three counts that were already rotting** — [`networkmanager`](projects/networkmanager.md)'s
+  *"three projects here reach three different positions"*,
+  [`linux-foundation`](foundations/linux-foundation.md)'s *"four different destinations"*, and
+  [`nerves`](projects/nerves.md)'s *"a fifth destination for the DCO"*. Each was written when it was
+  true. Retiring them is the point of the concept.
 
 ## 2026-09-10
 
