@@ -91,13 +91,11 @@ It is also, unusually, a rule whose sanction is stated: *"it will not be merged"
 > Write your own commit messages and Merge Request descriptions. Those explain why you are making the
 > change, which is the part a tool cannot know.[^nm-contributing]
 
-The *reason* is what makes this worth copying. Elsewhere the prose restriction is asserted rather
-than argued — [Debian](../distributions/debian.md)'s Proposal C would have required human-drafted
-messages and its Proposal G put communication in scope, neither adopted;
-[TeX Live](../distributions/tex-live.md) bars undelimited AI-written mail; [Zig](zig.md) goes furthest
-and forbids even discussing chatbot use. NetworkManager grounds it in what a commit message is *for*:
-the change is in the diff, the *why* is only in the author's head, so delegating the prose deletes
-the one thing the prose exists to carry.
+The *reason* is what makes this worth copying. Fifteen records reserve some conversational surface
+to humans and this is **the only one that says why** — see
+[prose reserved to humans](../mechanisms/prose-reserved-to-humans.md). NetworkManager grounds it in
+what a commit message is *for*: the change is in the diff, the *why* is only in the author's head, so
+delegating the prose deletes the one thing the prose exists to carry.
 
 **The author's own framing is stronger than the adopted text**, which is worth noting rather than
 smoothing over. The commit message says the policy states *"AI assistance is prohibited in

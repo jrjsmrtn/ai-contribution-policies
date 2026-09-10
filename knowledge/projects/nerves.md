@@ -77,11 +77,10 @@ the kernel's bar-the-agent, QEMU's unsatisfiable, the Linux Foundation's not-inv
 > written by the contributor. **Using AI to translate or tighten your own writing is fine. Using it to
 > write in your place is not.**[^nerves-contributing]
 
-Several projects restrict AI in communication — Debian's Proposals **C** and **G**,
-[TeX Live](../distributions/tex-live.md), [NetworkManager](networkmanager.md). **None of them splits
-*assist* from *substitute* this cleanly**, and the distinction is what makes the rule enforceable
-against the objection that non-native speakers need help: tightening your own sentence is explicitly
-allowed, and so is translation.
+Fifteen records restrict AI in communication and **none of them splits *assist* from *substitute*
+this cleanly** — see [prose reserved to humans](../mechanisms/prose-reserved-to-humans.md). The
+distinction is what makes the rule enforceable against the objection that non-native speakers need
+help: tightening your own sentence is explicitly allowed, and so is translation.
 
 It extends to volume as well as authorship, with a line that inverts the usual assumption about who
 should be talking to a model:

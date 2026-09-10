@@ -8,8 +8,36 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-10
+
+* **Added [`mechanisms/prose-reserved-to-humans.md`](mechanisms/prose-reserved-to-humans.md)** — the
+  sixth `type: Practice` concept, and **the most widely shared rule in the bundle**: fifteen records
+  permit AI in the patch and restrict it in the writing around the patch; Debian is a sixteenth that
+  put it to a vote and declined. The concept tabulates which of four surfaces each one reserves —
+  commit message, issue/PR text, review replies, lists and forums — and **review replies is the
+  near-universal cell**. Three findings the individual records did not carry: **NetworkManager is the
+  only one that states a reason** (*"the part a tool cannot know"*); **it is the one rule here that
+  needs no detection**, since asking a question in review is simultaneously the obligation and the
+  test; and **Git is the exception that tries to detect**, rejecting prose that *"sounds overly formal
+  or bloated"* — a register test that cannot distinguish a model from a careful non-native speaker.
+  **Translation is the carve-out six records grant**, and Nerves states the line the others reach for:
+  *"translate or tighten your own writing is fine … write in your place is not."*
+* **Two counter-observations recorded.** [Django](projects/django.md) names *"drafting commit
+  messages"* as a permitted-with-disclosure use, so the convergence is not unanimity. And the clause
+  **does not survive copying**: the Astral → ripgrep → Zed → [systemd](projects/systemd.md) lineage
+  reserves prose in its first three hops and not the fourth, so systemd inherited the review canary
+  and dropped the prose rule.
+* **Subtracted the five paragraphs it replaces**, in
+  [`networkmanager`](projects/networkmanager.md), [`nerves`](projects/nerves.md),
+  [`perl`](projects/perl.md), [`python`](projects/python.md) and
+  [`dependency-track`](projects/dependency-track.md) — each had enumerated a slice of the same set in
+  its own words.
+* **Corrected while subtracting**: the dependency-track record said it and Kubernetes/GTK between them
+  reserved *"the whole conversational surface"*. The table shows that is understated — fifteen records
+  do, across four surfaces.
 
 ## 2026-09-09
 

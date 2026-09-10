@@ -8,6 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.17.0] - 2026-09-10
+
+### Added
+
+- **[`mechanisms/prose-reserved-to-humans.md`](knowledge/mechanisms/prose-reserved-to-humans.md)** —
+  the sixth mechanism concept. **Fifteen records permit AI in the code and restrict it in the writing
+  around the code** — commit messages, issue and PR text, review replies, mailing lists — which runs
+  opposite to the risk arguments elsewhere, since copyright and correctness attach to the code and
+  none of them applies to the prose. A four-column table records which surface each one reserves.
+  NetworkManager is the only record that states a reason; Git is the only one that tries to detect,
+  by register, and cannot distinguish a model from a careful non-native speaker; translation is the
+  carve-out six records grant. Django is the counter-example, and the clause is the one the
+  Astral → ripgrep → Zed → systemd lineage silently dropped at its last hop.
+
+### Changed
+
+- **Five records shortened to a link** — `networkmanager`, `nerves`, `perl`, `python` and
+  `dependency-track` each enumerated a slice of the same set in its own words.
+- **`dependency-track` corrected.** It claimed that it, Kubernetes and GTK between them reserved
+  *"the whole conversational surface"*; the table shows fifteen records do, across four surfaces.
+
 ## [0.16.0] - 2026-09-09
 
 ### Added

@@ -49,10 +49,9 @@ is the same test [Git](git.md) reaches by a different route.
 of existing code"*, and *"Supplementing contributor knowledge for code, tests, and
 documentation."*[^python-devguide-ai-tools]
 
-The non-native-language allowance recurs — [FreeBSD](../distributions/freebsd.md) names translation
-as its clearest AI use, and Rust's draft grants machine translation conditional status. A policy
-that forbids generated prose outright taxes non-native speakers, and the projects that have thought
-about it say so.
+The non-native-language allowance recurs: six records grant it, and a policy that forbids generated
+prose outright taxes non-native speakers and nothing else — see
+[prose reserved to humans](../mechanisms/prose-reserved-to-humans.md).
 
 ## The one hard prohibition
 

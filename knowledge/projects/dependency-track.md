@@ -117,10 +117,10 @@ practical rather than principled**: not that agent-authored issues are illegitim
 *get less attention*. That is a claim about maintainer behaviour, offered to the contributor as a
 reason to act in their own interest.
 
-It also completes a boundary the bundle had only half of. [Kubernetes](kubernetes.md) and
-[GTK](gtk.md) forbid routing *review replies* through a tool; this forbids the agent opening the
-thread in the first place. **Between them the whole conversational surface is reserved for humans**,
-while the code itself may be AI-assisted.
+It also reserves the one surface most policies leave open. Others forbid routing *review replies*
+through a tool; this forbids the agent opening the thread in the first place — and it states the rule
+as an instruction to the agent rather than to the contributor, which no other record here does
+([prose reserved to humans](../mechanisms/prose-reserved-to-humans.md)).
 
 ## The build has a flag for agents
 

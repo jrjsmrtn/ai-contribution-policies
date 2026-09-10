@@ -90,9 +90,10 @@ Generated prose is separately disallowed, *"grounds for dismissing a contributio
    submission"*
 2. *"LLM use for translation of human-written messages"*[^perl-ai-policy]
 
-The translation carve-out matches [Nerves](nerves.md) and [Elixir](elixir.md), and is becoming the
-one exception projects converge on — it is the case where refusing AI excludes people rather than
-protecting the project. **The security-analysis exception is unique**, and notable for what it
+The translation carve-out is the one exception projects converge on — six grant it, and it is the
+case where refusing AI excludes people rather than protecting the project
+([prose reserved to humans](../mechanisms/prose-reserved-to-humans.md)).
+**The security-analysis exception is unique**, and notable for what it
 concedes: that a model may find something a human would not, provided a qualified human checks it
 first.
 
