@@ -91,17 +91,15 @@ The remaining clauses are the ones the lineage carried:
   own voice and ideas"* — recommending you write in your native language and quote the machine
   output.[^astral-policy]
 
-**This is the head of a four-hop chain**, three hops of which cite their source:
+**This is the head of a four-hop chain**, three hops of which cite their source, and the chain sits
+with the bundle's five other copying events in
+[policy by copying](../mechanisms/policy-by-copying.md). What
+[ripgrep](../projects/ripgrep.md) changed at the first hop: *"s/our projects/this project"*, added
+*"perhaps without notice"*, and **dropped the criticality argument** — the reason Astral gives for the
+rule did not travel with the rule.
 
-| | Date | Change made |
-|---|---|---|
-| **Astral** | 2026-03-13 | the original, organisation-scoped |
-| [ripgrep](../projects/ripgrep.md) | 2026-05-26 | *"s/our projects/this project"*; added *"perhaps without notice"*; **dropped the criticality argument** |
-| [Zed](../projects/zed.md) | 2026-08-21 | adapted again, cites ripgrep |
-| [systemd](../projects/systemd.md) | 2026-09-03 | the canary only, unattributed, without its check |
-
-ripgrep pinned its citation to a commit, and that pin was compared against this text on 2026-09-08
-and found **byte-identical** — the policy has not moved since it began being copied.
+ripgrep pinned its citation to a commit of this text, and that pin was compared against it again on
+2026-09-10 and found **byte-identical** — the policy has not moved since it began being copied.
 
 **ripgrep also copied the `CONTRIBUTING.md` stub**, not just the policy: Astral's *"require all use of
 AI … it will be closed"* becomes ripgrep's *"All use of AI in contributions must follow the AI Policy.

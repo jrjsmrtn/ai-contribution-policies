@@ -8,6 +8,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.18.0] - 2026-09-10
+
+### Added
+
+- **[`mechanisms/policy-by-copying.md`](knowledge/mechanisms/policy-by-copying.md)** — the seventh
+  mechanism concept. Six dated copying events, and **what a copy drops**: enforcement, then the
+  clauses that cost something, then currency. Collects the licensing dimension (CC0, Unlicense,
+  CC BY 4.0, and mostly nothing) and shows the diffusion is social or organisational and never
+  institutional. Argues that a policy is an artifact with a supply chain, exhibiting every failure
+  mode this bundle's neighbours document in software.
+
+### Fixed
+
+- **[`projects/zed.md`](knowledge/projects/zed.md) — its pinned policy citation points at a
+  superseded revision.** Zed pins ripgrep at `f0cec341`, which carried Astral's *"our projects"*
+  wording; ripgrep corrected it to *"this project"* 8 hours 33 minutes later at `4857d6fa`, three
+  months before Zed adopted. Measured 2026-09-10. Zed is also the second SHA-pinned citation in the
+  bundle, which the record had not recorded.
+
+### Changed
+
+- **Duplicated lineage tables subtracted** from `astral` and `ripgrep`, and two counts retired that
+  had begun to rot — `zed`'s *"four cases"* and `llvm`'s *"fifth attributed lineage"*.
+
 ## [0.17.0] - 2026-09-10
 
 ### Added

@@ -115,19 +115,14 @@ The policy closes by naming its source, pinned to an exact commit:
 the pinned text and the current `astral-sh/.github/AI_POLICY.md` were compared on 2026-09-08 and are
 **byte-identical**, so nothing has drifted under the reference.[^astral-ai-policy]
 
-That gives a dated, four-hop chain, three of them attributed:
+That makes ripgrep the middle hop of a dated four-hop chain — tabulated, with the five other copying
+events in this bundle, in [policy by copying](../mechanisms/policy-by-copying.md).
 
-| | Date | What moved |
-|---|---|---|
-| **astral-sh** (`.github` org default, covering uv, ruff and siblings) | 2026-03-13 | the original |
-| **ripgrep** | 2026-05-26 | adapted, pinned citation |
-| **[Zed](zed.md)** | 2026-08-21 | adapted, citation to ripgrep |
-| **[systemd](systemd.md)** | 2026-09-03 | the canary only, unattributed, without its check |
-
-**The adaptation is visible in the commits.** ripgrep landed the policy and, the same day, committed
-*"s/our projects/this project in AI policy"* — the single edit that turns an organisation-wide text
-covering several repositories into one project's rule. That is the whole mechanics of adaptation in
-one `sed` expression.
+**The adaptation is visible in the commits.** ripgrep landed the policy at `f0cec341`
+(`2026-05-26T04:02:44Z`) carrying Astral's *"our projects"* wording unedited, and corrected it to
+*"this project"* **8 hours 33 minutes later** at `4857d6fa` — the single edit that turns an
+organisation-wide text into one project's rule. That is the whole mechanics of adaptation in one
+`sed` expression, and [Zed](zed.md)'s pinned citation landed on the wrong side of it.
 
 And the reason it spreads is partly licensing: ripgrep is **Unlicense**, a public-domain dedication,
 so downstream projects face no attribution obligation. [Zed](zed.md) attributed anyway. That is the

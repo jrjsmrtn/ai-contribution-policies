@@ -59,11 +59,19 @@ communication reserved to humans (*"Comments that are believed to be written by 
 without notice"*), and *"Autonomous agents are not allowed to be used for contributing to this
 project"*.[^ripgrep-ai-policy]
 
-This bundle has now documented four cases of a rule spreading by copying. In
-[GNOME](gnome.md)'s and [MacPorts](macports.md)'s the copied text was stale and the copying
-unattributed; in [systemd](systemd.md)'s the text was current and the enforcement was left behind.
-**This is the first where the borrower names the lender**, which is the difference between a
-convention forming and a rumour propagating.
+Naming the lender is the uncommon part — most copying in this bundle is unattributed, stale, or
+both, which is the difference between a convention forming and a rumour propagating. The six copying
+events are tabulated in [policy by copying](../mechanisms/policy-by-copying.md).
+
+**And Zed pins the citation to an exact commit**, `BurntSushi/ripgrep` at
+`f0cec341ab95c25c691ad3d5754d4bd9eedde21f`[^zed-contributing] — the second SHA-pinned policy citation
+here, the practice inherited along with the policy. ⚠ **The pin resolves to a superseded revision.**
+ripgrep added `AI_POLICY.md` at that commit on `2026-05-26T04:02:44Z` still carrying Astral's
+organisation-wide *"our projects"* wording, and corrected it to *"this project"* 8 hours 33 minutes
+later at `4857d6fa`. Zed adopted on 2026-08-21, three months after the fix, and cited the pre-fix
+commit; the current ripgrep text and Zed's pinned text differ by those three words (compared
+2026-09-10). Nothing turns on the wording — **what the case shows is that a pin makes a citation
+reproducible, not correct**, and that no mechanism told Zed either way.
 
 ## The most generous translation clause here, and a disclosure recipe
 

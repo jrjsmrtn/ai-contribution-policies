@@ -170,9 +170,10 @@ by a minuted unanimous vote and absent from the Council Policies page. **LLVM's 
 a partial, attributed view of text this bundle could not otherwise reach**, and the licence is what
 made that possible, as with [GCC](gcc.md)'s CC0 and [ripgrep](ripgrep.md)'s Unlicense.
 
-It is also the **fifth attributed lineage** here, and the first where the borrower names a source that
-is itself unreachable. The other references are Rust's draft policy on burdensome pull requests and a
-post by Seth Larson.
+It is also the only copying event here where the borrower names a source that is **itself
+unreachable**, and the only one where attribution was *owed* rather than offered — see
+[policy by copying](../mechanisms/policy-by-copying.md). The other references are Rust's draft policy
+on burdensome pull requests and a post by Seth Larson.
 
 ## The delivery mechanism is still being argued
 

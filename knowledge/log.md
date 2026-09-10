@@ -8,8 +8,38 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-10
+
+* **Added [`mechanisms/policy-by-copying.md`](mechanisms/policy-by-copying.md)** — the seventh
+  `type: Practice` concept. **Six copying events in this bundle are dated and traceable**, and the
+  finding is what a copy drops: the enforcement first (systemd took Zed's review canary and left the
+  CI check), then the clauses that cost something (systemd dropped the prose rule), then currency
+  (MacPorts copied from a rendered kernel page a day out of date; the GNOME copies diverged on
+  whether Ollama is named). It also collects the **licensing** dimension the records only touched
+  individually — GCC's CC0 and ripgrep's Unlicense impose nothing, Fedora's CC BY 4.0 is the one case
+  where credit was **owed**, and most policies here state no licence for their text at all. The
+  diffusion is social (a GNOME forum post that bypassed the handbook) or organisational (Astral's
+  org-level default), **never institutional**.
+* **⚠ New finding, measured: [Zed](projects/zed.md)'s pinned policy citation resolves to a superseded
+  revision.** Zed pins `BurntSushi/ripgrep` at `f0cec341` — the commit that added `AI_POLICY.md` on
+  `2026-05-26T04:02:44Z` still carrying Astral's organisation-wide *"our projects"* wording. ripgrep
+  corrected it to *"this project"* **8 hours 33 minutes later** at `4857d6fa`. Zed adopted on
+  2026-08-21, three months after the fix, and cited the pre-fix commit; pinned and current text
+  compared 2026-09-10 and differ by those three words. **Nothing turns on the wording** — the case
+  establishes that a pin makes a citation reproducible and not correct, and that no mechanism told
+  Zed either way. **Zed is also the second SHA-pinned citation here**, which the record had not noted;
+  the practice was inherited along with the policy.
+* **Re-measured the other pin**: ripgrep's citation of `astral-sh/.github` at `c5187e20` is still
+  **byte-identical** to the current text (1671 bytes, compared 2026-09-10).
+* **Subtracted the duplicated lineage tables** from [`astral`](vendors/astral.md) and
+  [`ripgrep`](projects/ripgrep.md), which carried near-identical copies of the same four-row chain,
+  and **retired two counts that had already begun to rot** — [`zed`](projects/zed.md)'s *"four cases
+  of a rule spreading by copying"* and [`llvm`](projects/llvm.md)'s *"fifth attributed lineage"*.
+* **Corrected while writing**: the concept's source URL for ripgrep's policy was written as `AI.md`
+  from memory and is `AI_POLICY.md`. Caught by fetching it rather than by reading it over.
 
 ## 2026-09-10
 
