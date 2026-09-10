@@ -77,9 +77,10 @@ maintainers.**"*[^rg-ai-policy]
 > agents are not allowed to be used for contributing to this project.** Pull requests that appear in
 > violation of this will be closed, perhaps without notice.[^rg-ai-policy]
 
-[Zed](zed.md) carries this almost verbatim, and the reason is recorded below. Between them and
-[Perl](perl.md), three projects now bar the agent from operating rather than only bounding what it
-may produce.
+[Zed](zed.md) carries this almost verbatim, and the reason is recorded below. **What did not carry
+is Astral's justification** — the criticality argument is the clause dropped at this hop. Nine records
+constrain autonomous agents and they constrain five different things; see
+[human in the loop](../mechanisms/human-in-the-loop.md).
 
 ## Sharing model output, with a length limit nobody else states
 

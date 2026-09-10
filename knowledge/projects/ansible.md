@@ -64,7 +64,8 @@ you rewrote.
 
 The autonomous-agent clause is worth noting separately. It grants maintainers a veto *"without prior
 justification"* — no argument required, no appeal named. That is a deliberate asymmetry against
-volume.
+volume, and **the only rule of its kind here that needs no detection at all**, because a veto requires
+no finding of fact ([human in the loop](../mechanisms/human-in-the-loop.md)).
 
 ## The tag is the kernel's
 

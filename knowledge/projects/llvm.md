@@ -110,7 +110,9 @@ That is a sharper line than the projects that deploy review bots — [Kubernetes
 [Dependency-Track](dependency-track.md) and [systemd](systemd.md) all run one — and LLVM's own
 `.github/instructions/*.instructions.md` files are review guidance for exactly such a
 tool.[^llvm-copilot-instructions] **The rule is not against AI review; it is against publication
-without a human**, which those instructions do not violate.
+without a human**, which those instructions do not violate. Relocating the rule from the mode of work
+to the act of publishing is what makes it the **only fully observable version** of this constraint in
+the bundle — see [human in the loop](../mechanisms/human-in-the-loop.md).
 
 > **Using AI tools to fix issues labelled as "good first issues" is forbidden.** These issues are
 > generally not urgent, and are intended to be learning opportunities for new

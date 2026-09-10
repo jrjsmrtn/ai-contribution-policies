@@ -8,8 +8,39 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-10
+
+* **Added [`mechanisms/human-in-the-loop.md`](mechanisms/human-in-the-loop.md)** — the eighth
+  `type: Practice` concept. **The most-copied phrase in the bundle and the least defined**: nine
+  records use it or bar autonomous agents, and they constrain five different things — the mode of
+  work (Astral, ripgrep, Zed), the act of publishing ([LLVM](projects/llvm.md)), maintainer
+  discretion ([Ansible](projects/ansible.md)), where in the tracker ([Elixir](projects/elixir.md)),
+  the act of opening a thread (Perl, Dependency-Track), and **a level you declare**
+  ([cdxgen](projects/cdxgen.md), where `auto` is a disclosure value). The same mode of work is a
+  bannable offence in three projects and a disclosable attribute in a fourth.
+* **The finding: nobody forbids autonomy, because nobody can detect it.** All three outright
+  prohibitions hedge in the operative clause — *"we believe were created autonomously"* (Astral),
+  *"appear in violation"* (ripgrep), *"appear to violate"* (Zed) — and each record substitutes an
+  observable proxy for the fact it cannot establish. **LLVM's is the only fully observable version**,
+  reached by relocating the rule from the mode of work to publication without approval, which is also
+  why it can run review tooling while banning the GitHub `@claude` agent by name. **Ansible's needs no
+  detection at all**, being a veto rather than a prohibition.
+* **The counter-case is a Linux wireless maintainer who had a human in the loop.** *"the human in the
+  loop should actually take a step back from that and ask what the semantics of the code should
+  be"* — model and reviewer both did their job and the patch was still wrong. A human in the loop is a
+  necessary condition that eight of these records treat as a sufficient one.
+* **All seven primary quotations re-fetched and confirmed present** before the concept was written,
+  against `astral-sh/.github`, ripgrep, Zed, LLVM and the Ansible docs. Two initial greps reported
+  *not found* for text that was present — the phrases wrap across lines and `grep` is line-based, so
+  the check was wrong rather than the quote.
+* ⚠ **This concept did not shrink the records it draws on**, unlike the four before it — the four
+  edits added six lines net. The cross-record duplication here was thin: each record made its own
+  local comparison rather than restating the pattern. Recorded as an exception because ADR-0012 names
+  duplication as the risk and shrinkage as the test; what justifies this one is synthesis no record
+  held — the five-way table, the proxy table, the hedged verbs, and the counter-case.
 
 ## 2026-09-10
 

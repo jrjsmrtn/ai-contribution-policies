@@ -8,6 +8,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.19.0] - 2026-09-10
+
+### Added
+
+- **[`mechanisms/human-in-the-loop.md`](knowledge/mechanisms/human-in-the-loop.md)** — the eighth
+  mechanism concept. Nine records use the phrase or bar autonomous agents, and they constrain five
+  different things, from the mode of work to a level cdxgen asks you to declare. **All three outright
+  prohibitions hedge in the operative clause**, because autonomy is a fact about a process that
+  happened elsewhere and the artifact carries no evidence of it; each record substitutes an
+  observable proxy. LLVM's relocation to *published without approval* is the only fully observable
+  version, Ansible's veto the only one needing no detection, and a Linux wireless maintainer supplies
+  the counter-case where the human was in the loop and the patch was still wrong.
+
+### Changed
+
+- **Four records cross-linked to the concept** — `ripgrep`, `zed`, `ansible`, `llvm`. Unlike the
+  previous four mechanism concepts this one did not shorten them; the log records why.
+
 ## [0.18.0] - 2026-09-10
 
 ### Added

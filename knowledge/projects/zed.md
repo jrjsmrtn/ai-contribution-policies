@@ -43,10 +43,12 @@ staff — which is why it is filed here and not under `vendors/`.
 > reason, **we don't accept contributions from autonomous agents**. Pull requests that appear to
 > violate this may be closed, sometimes without notice.[^zed-contributing]
 
-The autonomous-agent refusal is the sharp edge. [Perl](perl.md) and
-[Dependency-Track](dependency-track.md) bar agents from *opening* issues and pull requests;
-this bars the *mode of work* — a human may use a model, a model may not be left to run. The sanction
-is stated and deliberately unceremonious: *closed, sometimes without notice.*
+The autonomous-agent refusal is the sharp edge: it bars the *mode of work* rather than the act of
+opening a thread — a human may use a model, a model may not be left to run
+([human in the loop](../mechanisms/human-in-the-loop.md) sets out the five things that phrase governs
+across the bundle). The sanction is stated and deliberately unceremonious: *closed, sometimes without
+notice*, and like the other two prohibitions it is hedged — *"appear to violate"* is a judgement, not
+a finding.
 
 ## It says where it came from
 
