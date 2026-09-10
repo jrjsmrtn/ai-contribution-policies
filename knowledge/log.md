@@ -8,8 +8,41 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-10
+
+* **Added [`projects/valkey.md`](projects/valkey.md)** — **no AI contribution policy**, measured:
+  `AGENTS.md`, `CONTRIBUTING.md`, `.github/copilot-instructions.md`, `README.md`, `GOVERNANCE.md` and
+  `DEVELOPMENT_GUIDE.md` fetched 2026-09-10 and scanned for *AI*, *LLM*, *generative*, *artificial
+  intelligence* — **zero across all six**, against a control run of the same scan over the Kubernetes
+  contributor guide returning 16. The record exists for what the project does with AI anyway.
+* **Its `.github/copilot-instructions.md` is a review-bot brief, not an authoring guide**, and three
+  of its five sections are not about code. It tells the bot to **flag missing `Signed-off-by`** — the
+  first instance in this bundle of AI touching the DCO, arriving from a direction none of the
+  arguments in [certifying origin](mechanisms/certifying-origin.md) anticipated. It also tells the bot
+  to detect *"Technical Major Decisions"* needing TSC consensus and to escalate **any** change to
+  `GOVERNANCE.md` to `@core-team`. **The bot is a governance tripwire.** And the brief never mentions
+  AI-authored contributions, so the reviewer is briefed to check sign-offs and governance scope and
+  not to notice the thing the project has no rule about.
+* **The asymmetry runs the opposite way to every other record.** Kubernetes, systemd,
+  Dependency-Track and LLVM restrict AI in contribution while running it in review; **Valkey restricts
+  nothing and runs it in review anyway**, including on its governance document.
+* **A write-scope rule addressed to the agent**, which no other record here states: *"Always push to
+  the user's fork. Never push to the upstream `valkey-io/valkey` repository. Never push directly to
+  `unstable`."* It assumes the agent holds push credentials and constrains the destination — a
+  different threat model from the one every policy in this bundle was written for. No sanction, and no
+  evidence of branch protection.
+* **⚠ Second instance of a gap [osquery](projects/osquery.md) documented as one.** valkey.io's footer
+  points at `lfprojects.org` for policies; that page was fetched 2026-09-10 — **128 KB, zero AI
+  terms**. osquery's *charter* binds to it, Valkey's *footer* points at it, and **a binding and a
+  signpost arrive at the same nothing**. The osquery record now says so.
+* **The TSC holds explicit authority over *"all technical, project, approval, and policy matters"*
+  and has not used it on AI** — the OWASP shape, machinery present and unpointed.
+* **Re-checked [osctrl](https://github.com/jmpsec/osctrl)**, per the 2026-09-09 sweep. `AGENTS.md`
+  unchanged since 2026-09-06 and still zero AI terms; `CONTRIBUTING.md` likewise. **The earlier
+  finding stands and no record is written.**
 
 ## 2026-09-10
 

@@ -140,6 +140,14 @@ contributions be a contributor's *"original work"*, requires any substitute agre
 risks of plagiarized code"*[^co-owasp] — and has never pointed any of it at AI. **Having the
 instrument is not having a position**; see [extending existing machinery](extending-existing-machinery.md).
 
+## An AI now checks the certificate
+
+[Valkey](../projects/valkey.md) has no AI policy at all and briefs a review bot to *"Flag missing
+`Signed-off-by`"* in every commit. **Nothing is inconsistent** — confirming a line is present is not
+certifying anything — but it is the first instance here of AI touching the DCO, and it arrives from
+the one direction none of the arguments above anticipated: not whether a machine may certify, but a
+machine checking that a human did.
+
 ## What to watch
 
 Whether any project cites a **clause number**. QEMU is the only one that does, and the argument

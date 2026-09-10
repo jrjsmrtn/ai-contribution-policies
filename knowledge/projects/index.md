@@ -25,6 +25,7 @@ Directory: `projects/`
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
 | [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
 | [Rust](rust.md) | Organization | Has no adopted policy; an unusually developed draft for rust-lang/rust is ope... |
+| [Valkey](valkey.md) | Organization | Has no AI contribution policy and runs an AI reviewer anyway — one briefed ... |
 | [Zed](zed.md) | Organization | Welcomes LLM-assisted coding, refuses autonomous agents outright, and reserve... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |
 | [cdxgen](cdxgen.md) | Organization | Has no contribution policy at all — no CONTRIBUTING file and no code of con... |

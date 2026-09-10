@@ -72,7 +72,9 @@ explicitly:
 
 **That list contains no AI policy.** It is Antitrust, General Rules of Operation, Privacy, Telemetry
 Data Collection and Usage, and Trademark, plus a review policy for hosted project
-tools.[^lfprojects-policies]
+tools.[^lfprojects-policies] [Valkey](valkey.md) reaches the same page from a website footer rather
+than a charter and finds the same nothing, so **this is a pattern rather than one project's
+oversight** — a binding and a signpost arriving at the same gap.
 
 The [Linux Foundation](../foundations/linux-foundation.md)'s generative-AI text lives elsewhere, and
 reads as guidance rather than obligation — the contributor *"should confirm"* permission for

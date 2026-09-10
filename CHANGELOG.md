@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.21.0] - 2026-09-10
+
+### Added
+
+- **[`projects/valkey.md`](knowledge/projects/valkey.md)** — no AI contribution policy, measured
+  across six files against a working control. The record exists for what the project does with AI
+  regardless: a review bot briefed to **flag missing DCO sign-offs**, to detect changes needing TSC
+  consensus, and to escalate **any** edit to `GOVERNANCE.md`. The asymmetry runs opposite to every
+  other record here — Valkey restricts nothing in contribution and runs AI in review anyway. Its
+  `AGENTS.md` bars the agent from pushing to the upstream repository, a write-scope rule no other
+  record states. And it is the **second** project reaching `lfprojects.org` for policy and finding no
+  AI policy there, after osquery.
+
+### Changed
+
+- **`projects/osquery.md`** — its inheritance gap was recorded as one project's; Valkey makes it a
+  pattern, reached from a website footer rather than a charter.
+- **`mechanisms/certifying-origin.md`** — records the first instance of AI touching the DCO, which is
+  a machine checking that a human certified rather than a machine certifying.
+
 ## [0.20.0] - 2026-09-10
 
 ### Added
