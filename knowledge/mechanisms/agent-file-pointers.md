@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Agent-file pointers
-description: Agent tools look for instructions under different filenames, so projects publish one file and point the other names at it. Every project in this bundle that does so uses a git symlink; the one that duplicated the content instead now maintains two documents that have already diverged. The byte counts that make symlinks look like small text files are a retrieval artifact.
+description: Agent tools look for instructions under different filenames, so projects publish one file and point the other names at it. Most projects in this bundle that do so use a git symlink, Homebrew uses a one-line import file, and the one that duplicated the content instead now maintains two documents that have already diverged. The byte counts that make symlinks look like small text files are a retrieval artifact.
 resource: https://agents.md/
 tags:
   - ai-contribution
@@ -48,7 +48,7 @@ There are only two answers. **Publish once and point the other names at it, or p
 more than once.** Every project in this bundle that solves the problem takes the first; the one that
 took the second has already drifted.
 
-## The construction is a git symlink, in every case
+## The construction is usually a git symlink
 
 | Project | Real file | Symlinked names |
 |---|---|---|
@@ -68,6 +68,13 @@ agent-facing names at `.rules`, a filename that belongs to none of the tools, wh
 source of truth from any vendor's convention. And [Elixir](../projects/elixir.md) points the
 agent-facing name at the **human-facing** document, so an agent and a contributor read identical text
 and the project maintains one file rather than a human one and a machine one.
+
+**[Homebrew](../projects/homebrew.md) points without a symlink.** In `brew`, `homebrew-core` and
+`homebrew-cask`, `CLAUDE.md` is a regular 11-byte file (mode `100644`, checked 2026-09-14) whose whole
+content is `@AGENTS.md`, Claude Code's syntax for importing another file. It cannot drift either,
+since it holds no instructions of its own, but it works only for a tool that reads that syntax, where
+a symlink works for any reader that follows it. **It is also the retrieval hazard below in reverse**:
+fetched over HTTP it looks almost exactly like a symlink, and here the mode says regular file.
 
 **NetworkManager's commit names the problem exactly**: *"AGENTS.md: add symlinks under the names other
 agents look for"* (2026-09-04).

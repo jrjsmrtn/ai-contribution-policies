@@ -15,6 +15,7 @@ Directory: `projects/`
 | [GNOME](gnome.md) | Organization | Rejects AI-authored Shell extensions at review while permitting AI as a devel... |
 | [GTK](gtk.md) | Organization | Permits AI assistance under six named requirements, requires disclosure in th... |
 | [Git](git.md) | Organization | Rejects contributions that look AI-generated while explicitly recommending ca... |
+| [Homebrew](homebrew.md) | Organization | Permits AI-assisted issues and pull requests on five conditions, forbids any ... |
 | [Kubernetes](kubernetes.md) | Organization | Permits AI assistance, requires disclosure in the PR description, and forbids... |
 | [LLVM](llvm.md) | Organization | The most theorised policy here. It names the problem — an extractive contri... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |

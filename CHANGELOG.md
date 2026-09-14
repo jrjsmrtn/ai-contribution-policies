@@ -8,6 +8,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.22.0] - 2026-09-14
+
+### Added
+
+- **[`projects/homebrew.md`](knowledge/projects/homebrew.md)** — permitted on five conditions, with
+  AI attribution in commits forbidden and **enforced by a CI check**, the first trailer ban in this
+  bundle with a machine behind it. Measured against the pinned pattern, the check rejects vendor
+  identities such as a coding agent's default `Co-Authored-By` and **passes the Linux kernel's own
+  `Assisted-by: LLM`**, so it enforces a narrower rule than the policy states. Also the first
+  concurrency cap on AI-assisted pull requests, a review-reply rule that tightened from permitted to
+  reserved in six months, a workflow that closes pull requests missing the template, agent stop hooks
+  wired to `brew lgtm`, and an admission threshold for editing `AGENTS.md`.
+
+### Changed
+
+- **[`projects/macports.md`](knowledge/projects/macports.md) re-verified.** PR 420 is still open and
+  unchanged. The rendered kernel page it cites now serves `Assisted-by: LLM`, so the proposal cites a
+  page that contradicts it, and a search of the whole thread finds no one who has noticed. The thread
+  has since produced the author's provenance rationale, a reviewer's check of the projects named, and
+  a proposal to adopt Homebrew's policy instead, which would turn the trailer requirement into a ban.
+- Homebrew added to the forbidden rows in `assisted-by-trailer` and `overview`, and to
+  `prose-reserved-to-humans`.
+
+### Fixed
+
+- **Claims Homebrew made false**: *"the only mechanical enforcement in this bundle"* (`kubernetes`),
+  *"with one exception"* (`overview`), *"the only enforcement … before a human looks"*
+  (`certifying-origin`), *"the only enforcement anywhere … is NetworkManager"*
+  (`assisted-by-trailer`), *"none"* defines human in the loop (`human-in-the-loop`), and *"a git
+  symlink, in every case"* (`agent-file-pointers`).
+- **Claims time made false**: *"`docs.kernel.org` still serves the retired form"*
+  (`policy-by-copying`), and undated present-tense statements of the same in `linux-kernel`, `nerves`
+  and `overview`.
+- **`macports`**: no longer states the pull request's 2026-08-04 wording, which cannot be retrieved
+  after a 2026-08-17 amendment; a rotting count and a stale lead removed.
+
 ## [0.21.0] - 2026-09-10
 
 ### Added

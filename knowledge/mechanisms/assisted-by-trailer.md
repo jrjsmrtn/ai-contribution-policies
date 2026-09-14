@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: The Assisted-by trailer
-description: A git commit trailer that predates the AI question — the kernel defines it for any advanced coding tool, coccinelle and sparse included — which projects then reached for to record AI use. Four projects require it, five forbid it, three replaced it with a different field, and two of the bans give incompatible reasons. It is not portable between projects and is being displaced by disclosure in the pull request.
+description: A git commit trailer that predates the AI question — the kernel defines it for any advanced coding tool, coccinelle and sparse included — which projects then reached for to record AI use. Four projects require it, six forbid it, three replaced it with a different field, and two of the bans give incompatible reasons. It is not portable between projects and is being displaced by disclosure in the pull request.
 resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst
 tags:
   - ai-contribution
@@ -65,11 +65,11 @@ several of the disagreements below follow from that.
 | **Required, model omitted** | [Linux kernel](../projects/linux-kernel.md) | `Assisted-by: LLM [TOOL1] [TOOL2]` |
 | **Required, model named** | [Nerves](../projects/nerves.md), [Ansible](../projects/ansible.md) | `AGENT_NAME:MODEL_VERSION`, `[tool name/version]` |
 | **Required** | [GCC](../projects/gcc.md) | `Assisted-by:` |
-| **Forbidden** | [GTK](../projects/gtk.md), [Kubernetes](../projects/kubernetes.md), [Dependency-Track](../projects/dependency-track.md), [systemd](../projects/systemd.md), [NetworkManager](../projects/networkmanager.md) | — |
+| **Forbidden** | [GTK](../projects/gtk.md), [Kubernetes](../projects/kubernetes.md), [Dependency-Track](../projects/dependency-track.md), [systemd](../projects/systemd.md), [NetworkManager](../projects/networkmanager.md), [Homebrew](../projects/homebrew.md) | — |
 | **Replaced** | [ASF](../foundations/apache-software-foundation.md) `Generated-by:`; [OpenInfra](../foundations/openinfra.md) both, distinguished; [QEMU](../projects/qemu.md) proposed `AI-used-for:` | — |
 
 [MacPorts](../projects/macports.md) has a proposal quoting a form the kernel had already retired; it
-is not adopted.
+is not adopted, and a participant in its thread has since proposed Homebrew's ban in its place.
 
 **The same tag carries three incompatible requirements — required without the model, required with
 the model, forbidden — and the first two moved apart within eleven days.** The kernel narrowed
@@ -121,8 +121,8 @@ provenance tag *is*, and a mutable history-tag is simply an inaccurate one.
 ## What is displacing it
 
 The field is losing ground to **disclosure in the pull request**, which is what
-[Kubernetes](../projects/kubernetes.md), [GTK](../projects/gtk.md) and
-[NetworkManager](../projects/networkmanager.md) require instead — prose in the request rather than a
+[Kubernetes](../projects/kubernetes.md), [GTK](../projects/gtk.md),
+[NetworkManager](../projects/networkmanager.md) and [Homebrew](../projects/homebrew.md) require instead — prose in the request rather than a
 token in the commit. That is consistent with the bans: the commit stays clean and the request carries
 the account.
 
@@ -142,16 +142,18 @@ two different jobs one field has been asked to do, which is part of why none of 
 
 ## Why it works badly as a mechanism
 
-**It is unverifiable.** Nothing checks that a trailer is present when it should be, or absent when it
-should not be; the tag records a claim, and the only enforcement anywhere in this bundle is
-[NetworkManager](../projects/networkmanager.md) grepping commit messages for trailers it forbids —
-enforcement of the ban, never of the requirement.
+**It is verified only where it is banned.** Nothing checks that a trailer is present when it should
+be. Two projects check for absence: [NetworkManager](../projects/networkmanager.md) greps commit
+messages for trailers it forbids, and [Homebrew](../projects/homebrew.md)'s CI rejects trailers that
+name an AI vendor or product — enforcement of the ban, never of the requirement. **And a name-matching
+check enforces less than the rule**: measured against Homebrew's pattern, the kernel's
+`Assisted-by: LLM` passes, because the form built to avoid naming a vendor has no vendor to match.
 
 **It attributes at the wrong granularity.** A commit-level tag says a tool touched the patch; it
 cannot say which hunk, which is the question a reviewer actually has. QEMU's `AI-used-for:` is an
 attempt at that and remains a proposal.
 
-**And the disagreement is not converging.** Nine projects and foundations here hold five positions
+**And the disagreement is not converging.** The projects and foundations in the table above hold five positions
 between them, the two most recent adoptions moved apart rather than together, and the newest records
 in this bundle mostly forbid the field rather than adopt it. **Treat `Assisted-by:` as a per-project
 convention, not a standard**, and read the destination's rule before emitting one.

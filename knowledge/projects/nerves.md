@@ -54,7 +54,7 @@ So one trailer now carries three incompatible rules across this bundle:
 
 **A hazard worth naming, and a claim deliberately not made.** `docs.kernel.org` still served
 `AGENT_NAME:MODEL_VERSION` and the `Claude:claude-3-opus` example when checked on 2026-08-29 — it
-renders a released kernel, not mainline. A project copying the kernel's convention from the rendered
+renders a released kernel, not mainline. It had caught up by 2026-09-14. A project copying the kernel's convention from the rendered
 documentation would get exactly the format Nerves uses. **That the stale page and the adopted format
 match is checkable; that one caused the other is not, and is not claimed here.** Nerves may simply
 have decided the model is worth recording — a defensible position the kernel itself held until this
@@ -77,7 +77,7 @@ does with the same two tags, and one of the destinations tabulated in
 > written by the contributor. **Using AI to translate or tighten your own writing is fine. Using it to
 > write in your place is not.**[^nerves-contributing]
 
-Fifteen records restrict AI in communication and **none of them splits *assist* from *substitute*
+Sixteen records restrict AI in communication and **none of them splits *assist* from *substitute*
 this cleanly** — see [prose reserved to humans](../mechanisms/prose-reserved-to-humans.md). The
 distinction is what makes the rule enforceable against the objection that non-native speakers need
 help: tightening your own sentence is explicitly allowed, and so is translation.

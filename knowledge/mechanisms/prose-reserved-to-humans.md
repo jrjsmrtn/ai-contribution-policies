@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Prose reserved to humans
-description: Fifteen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
+description: Sixteen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
 resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 tags:
   - ai-contribution
@@ -49,8 +49,8 @@ sources:
     resource: https://devguide.python.org/getting-started/ai-tools/
 ---
 
-**The most widely shared rule in this bundle is not about code.** Fifteen records permit or tolerate
-AI assistance in the patch and then restrict it in the writing around the patch, and a sixteenth put
+**The most widely shared rule in this bundle is not about code.** Sixteen records permit or tolerate
+AI assistance in the patch and then restrict it in the writing around the patch, and a seventeenth put
 it to a vote and declined. That is the opposite
 of what the risk arguments elsewhere would predict — the copyright, licensing and correctness
 worries all attach to the code, and the prose is where none of them apply.
@@ -72,6 +72,7 @@ worries all attach to the code, and the prose is where none of them apply.
 | [TeX Live](../distributions/tex-live.md) | | | | ● |
 | [Dependency-Track](../projects/dependency-track.md) | | ● | | |
 | [GTK](../projects/gtk.md) | | | ● | |
+| [Homebrew](../projects/homebrew.md) | | | ● | |
 | [Asahi Linux](../projects/asahi-linux.md) | ● | ● | ● | ● |
 | [Elixir](../projects/elixir.md) | | | | ● |
 | [Debian](../distributions/debian.md) | ○ | ○ | ○ | ○ |

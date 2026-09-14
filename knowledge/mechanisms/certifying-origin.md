@@ -120,7 +120,7 @@ these contributor license agreements so one enforcement the project made is to *
 for co-authors**."*[^co-k8s]
 
 Listing an AI as co-author now fails an automated check. Nothing has to be detected and no maintainer
-has to adjudicate — and it is the only enforcement in this bundle that runs before a human looks. The
+has to adjudicate, and it runs before a human looks. The
 same premise, one project's reason to refuse and another's mechanism to catch.
 
 ## The instrument is not load-bearing
@@ -148,11 +148,16 @@ certifying anything — but it is the first instance here of AI touching the DCO
 the one direction none of the arguments above anticipated: not whether a machine may certify, but a
 machine checking that a human did.
 
+[Homebrew](../projects/homebrew.md) settles the other direction without an argument at all. Its
+commit-format check rejects a `Signed-off-by:` trailer that names an AI identity — its own test case
+is `Signed-off-by: Codex <noreply@openai.com>` — so *may a machine sign?* is answered by a regular
+expression, and a signatory whose name matches nothing on the list passes.
+
 ## What to watch
 
 Whether any project cites a **clause number**. QEMU is the only one that does, and the argument
 cannot be joined until a second project says which clause it is reading. Whether the CLA co-author
-check spreads, since it is the only mechanical enforcement here. Whether the DCO itself is ever
+check spreads, since mechanical enforcement is still rare here. Whether the DCO itself is ever
 revised — it is at Version 1.1 and every position above is an interpretation of text written before
 the question existed. And whether a project that abolished the sign-off ever explains what it lost,
 since NetworkManager and Nerves both dropped it without argument.

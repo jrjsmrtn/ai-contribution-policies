@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: MacPorts
-description: Has no adopted AI policy. An open, contested pull request would require an Assisted-by trailer "in the format recommended by the Linux kernel developers" — but the format it copies was retired by the kernel one day before the PR opened, and the page it cites still serves the superseded form. The trailer's premise is being argued against in the thread.
+description: Has no adopted AI policy. An open, contested pull request would require an Assisted-by trailer "in the format recommended by the Linux kernel developers" — in the form the kernel retired the day before it was written. The rendered kernel page it cites has since caught up and now contradicts it, nobody in the thread has noticed, and a participant has proposed replacing the whole section with Homebrew's policy, which forbids the trailer.
 resource: https://github.com/macports/macports-base/pull/420
 tags:
   - ai-contribution
@@ -17,7 +17,9 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-29T14:20:00Z'
-stale_after: 2026-11-29
+  - by: claude/opus-5
+    at: '2026-09-14T11:20:00Z'
+stale_after: 2026-12-14
 sources:
   - id: macports-pr-420
     title: 'macports-base PR #420 — Add CONTRIBUTING.md (open, jmroot)'
@@ -25,15 +27,21 @@ sources:
   - id: macports-pr-420-diff
     title: 'macports-base PR #420 — proposed CONTRIBUTING.md, diff'
     resource: https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff
+  - id: macports-kernel-rendered
+    title: 'AI Coding Assistants — The Linux Kernel documentation (rendered; 7.3.0-rc3 on 2026-09-14)'
+    resource: https://docs.kernel.org/process/coding-assistants.html
 ---
 
 **Stance: undecided. This record describes a proposal, not a rule.** MacPorts has no adopted AI
 policy. Pull request **#420**, *"Add CONTRIBUTING.md"*, was opened by Joshua Root on **2026-08-04**
-and was **still open and unmerged** when checked on 2026-08-29.[^macports-pr-420] It is recorded here
-because of what it demonstrates, not because it binds anyone.
+and was **still open and unmerged** when re-checked on 2026-09-14.[^macports-pr-420] It is recorded
+here because of what it demonstrates, not because it binds anyone.
 
 > ⚠ **Nothing below is in force.** If you are contributing to MacPorts today, no written AI rule
 > applies. Re-read the PR before relying on any of this.
+
+Neither `macports-base` nor `macports-ports` carries any of the agent-instruction files this bundle
+surveys for (`survey-agent-files.py`, 2026-09-14).
 
 ## What it proposes
 
@@ -50,92 +58,125 @@ that the material *"can be distributed under the project's license"* — and one
 *"Please do not use agents or similar software to open pull requests or tickets without human
 supervision."*[^macports-pr-420-diff]
 
-## The format it adopts was retired the day before it was proposed
+**The proposed text has not changed since this record was first written.** The PR carries one commit,
+authored 2026-08-04 and last committed 2026-08-17; a force-push on 2026-09-02 left the head at the
+same commit, and the diff fetched on 2026-09-14 still specifies `AGENT_NAME:MODEL_VERSION`. What the
+commit said before its 2026-08-17 amendment cannot be retrieved from the pull request and is not
+claimed.
 
-This is the finding, and it is checkable in three steps.
+## The format it adopts was retired the day before it was written
 
 The PR cites `docs.kernel.org/process/coding-assistants.html#attribution` as its
 authority.[^macports-pr-420-diff] The [Linux kernel](linux-kernel.md) **replaced**
 `AGENT_NAME:MODEL_VERSION` with the bare literal `LLM` in mainline on **2026-08-03**, because naming
-models *"provides free advertising to proprietary software companies"*. This PR opened **2026-08-04**,
-one day later, specifying the retired form.
+models *"provides free advertising to proprietary software companies"*. The PR's commit was authored
+**2026-08-04**, one day later.
 
-**And the page it cites still serves that retired form** — `docs.kernel.org` renders a released
-kernel rather than mainline, and on 2026-08-29 it still showed `AGENT_NAME:MODEL_VERSION` and the
-`Claude:claude-3-opus` example.
+**On 2026-08-29 the cited page still served the retired form** — `docs.kernel.org` renders a released
+kernel rather than mainline, and it showed `AGENT_NAME:MODEL_VERSION` and the `Claude:claude-3-opus`
+example. **On 2026-09-14 it no longer did**: the page rendered `7.3.0-rc3` and specified
+`Assisted-by: LLM [TOOL1] [TOOL2]`.[^macports-kernel-rendered]
 
-**This is the documented instance of a hazard the rest of this bundle could otherwise only describe
-in the abstract**: a rendered documentation site outliving the source it renders, and a second
-project copying the superseded rule from it in good faith. No carelessness is implied — the PR cites
-a canonical-looking URL on the project's own domain, which is exactly what a careful person does.
-*What went wrong is that the URL was stale, not that the author was.*
+So the hazard has passed through both of its stages. A rendered page outlived its source long enough
+for a second project to copy the superseded rule in good faith; then the page caught up, and **the
+proposal now cites, as its authority, a page that contradicts it.** Nothing announced either change.
+The body, 19 comments and 9 reviews on the PR were searched on 2026-09-14 for any mention that the
+kernel changed the format, with a control string confirming the search worked: **none mentions it.**
 
-**The evidence supports the mechanism, not intent.** The PR cites that page and reproduces the format
-that page serves; whether the author consulted mainline is unknown and not claimed.
+**The evidence supports the mechanism, not intent.** No carelessness is implied: the PR cites a
+canonical-looking URL on the kernel's own domain, which is what a careful person does. *What went
+wrong is that the URL was stale, not that the author was.* The copying is set against the bundle's
+other copying events in [policy by copying](../mechanisms/policy-by-copying.md).
 
-## The premise itself is contested in the thread
+## The argument in the thread
 
-The PR body calls the trailer *"what appears to be the emerging de facto standard for tagging AI
-use."*[^macports-pr-420] **This bundle's evidence is that no such standard exists.** The same trailer
-is required without the model by the kernel, required *with* the model by [Nerves](nerves.md), and
-forbidden outright by [GTK](gtk.md) — three mutually exclusive rules, all live.
+**The author's case is provenance.** Asked what the trailer is for: *"In short, enabling provenance
+analysis. Putting an LLM in `Co-authored-by` is generally discouraged, BTW."* And on moving
+disclosure to review: *"Yes, but tagging commits is also useful."* He points to Apache, FreeBSD,
+Linux, LLVM, SciPy and SDL as projects whose discussions are *"well worth reading"*, and summarises:
+*"I've seen more that have decided to allow it with tagging and clear statements that the human bears
+responsibility. Almost none have allowed it with no tagging or restrictions."*[^macports-pr-420]
 
-A reviewer reached a related conclusion from first principles rather than from the corpus:
+**The main objection is that the signal is poor and the cost is real.** A reviewer who opened the
+debate on 2026-08-20 — reading the retired example as *"mentioning Claude twice"* and asking what
+`MODEL_VERSION` is supposed to be — came back after checking the projects named:
 
-> what is the purpose of "assisted-by" or "co-authored-by" for LLMs? The author of the commit is
-> responsible for its contents. … the "assisted-by" line also looks a bit hacked together, eg.
-> mentioning Claude twice, and **I don't see what the format of `MODEL_VERSION` is supposed to be
-> exactly**, other than a solitary example.[^macports-pr-420]
+> Only the Linux project requires disclosure in commit messages. Apache recommends `Generated-by` but
+> doesn't seem to require it. SciPy requires disclosure with details in the PR … LLVM does not require
+> it in the commit message.[^macports-pr-420]
 
-*"Mentioning Claude twice"* is a precise reading of the retired example, `Assisted-by:
-Claude:claude-3-opus`, where agent and model name the same vendor — **a critique of the very
-ambiguity the kernel resolved by deleting the field.** The reviewer arrives at the kernel's own
-conclusion without knowing the kernel had already reached it, which is some evidence the format was
-the problem rather than its documentation.
+He names three harms: statistics that matter more to companies than to open-source projects;
+*"lowering standards as I feel developers are more accepting of some sloppiness if it's known that an
+LLM wrote it"*; and a commit log *"littered with 'Claude', basically providing free advertising to AI
+companies"*.[^macports-pr-420] The last is the reason [GTK](gtk.md) bans the trailer and the kernel
+removed the model from it — reached here independently, in a thread that does not know the kernel
+reached it too. His conclusion is that the draft is *"too focused on LLMs and their disclosure, but
+not enough on what's expected from contributions"*, a view a third participant endorsed on
+2026-09-07.
 
-Two counter-positions follow, both of which appear elsewhere in this bundle:
+**The sharpest exchange was about who bans AI at all.** One participant called projects that
+disallow LLM-generated code *"kooks"* and asserted that *"There is no legitimate license concern.
+That has already been ruled on in several court cases in the US"*. That is a participant's claim,
+cited to no ruling, and is recorded as a claim. The author replied that *"not merging AI-generated
+code"* is not *"banning all use of AI"* and posted a non-exhaustive list of thirteen projects that
+restrict it — among them [QEMU](qemu.md), [Zig](zig.md), GIMP, libxml2, OpenJDK, pkgconf, SDL and
+Typst.[^macports-pr-420] Several on that list have no record here; they are leads, not evidence.
 
-- **Move disclosure to review.** *"The correct place for disclosure is at the time of review in the
-  PR, we can add an additional item to the existing checklist for this."*[^macports-pr-420] That is
-  [GTK](gtk.md)'s arrangement exactly — disclose in the merge request, keep it out of the commit
-  trailer.
-- **Disclosure will stop being informative.** *"almost all code going forward is going to be written
-  by AI and so it's not necessarily interesting information any longer; we can mostly just assume
-  that everything is AI assisted. The important part … is that a human is **responsible** for the
-  output."*[^macports-pr-420] No adopted policy in this bundle takes that position; it is the
-  strongest stated case here for *not* requiring disclosure at all.
+**Two further positions** from earlier in the thread still stand: that disclosure belongs in the PR
+checklist rather than the commit, which is GTK's arrangement; and that *"we can mostly just assume
+that everything is AI assisted. The important part … is that a human is **responsible**"*, which no
+adopted policy in this bundle takes.[^macports-pr-420] A later comment asks whether the document is
+meant to govern `macports-ports` as well, since it says *"code bases"* in the plural; the PR does not
+say.
+
+## The latest proposal is to adopt a policy that forbids the trailer
+
+On 2026-09-13 the same reviewer quoted [Homebrew](homebrew.md)'s five requirements in full —
+disclosure in the issue or pull request, self-review, **no AI attribution in commits including
+`Assisted-by`**, answering reviewers without AI, and one open AI-assisted pull request for
+non-maintainers — and wrote: *"I would recommend adopting this pretty much as-is."* The reply the
+same day accepted the review requirement and objected to the concurrency cap, for audit work that
+finds several problems at once.[^macports-pr-420]
+
+**If that proposal were taken, MacPorts would move from requiring the trailer to forbidding it**
+without passing through any intermediate position — which is the non-portability
+[the Assisted-by trailer](../mechanisms/assisted-by-trailer.md) describes, arriving inside one
+project's review. It is a proposal in a comment, not a change to the PR.
 
 ## Supervision, not prohibition
 
-The one agent rule attracted a refinement worth recording, because it separates two things most
+The one agent rule attracted a refinement worth keeping, because it separates two things most
 policies conflate:
 
 > asking your AI to pull something is not the same as having it do it without supervision and is
 > okay … The problem is having someone mindlessly run an AI against the repo without supervision and
 > inundate us with low quality requests … creating work for human beings.[^macports-pr-420]
 
-**Reviewer bandwidth again**, from a fifth independent project — after [GNOME](gnome.md), the
-[Linux wireless maintainer](linux-kernel.md), the kernel's `generated-content.rst` and
-[Nerves](nerves.md). It is now the most frequently stated reason for an AI rule in this corpus.
+That is reviewer bandwidth, the reason most often given for an AI rule in this corpus — see
+[human in the loop](../mechanisms/human-in-the-loop.md) for how differently projects draw the same
+line.
 
 ## What a contributor must do
 
 **Nothing specific to AI is required today**, because the PR has not merged. The existing
 expectations still apply: you are responsible for your contribution and must have the right to
-license it. If #420 merges in its current form you would add an `Assisted-by:` trailer — but check
-the merged text rather than this record, since the trailer clause is the most contested part of the
-proposal and the format it currently names is one the kernel has abandoned.
+license it. If #420 merges, read the merged text rather than this record. The trailer clause is the
+most contested part of the proposal, the format it names is one the kernel has abandoned, and the
+most recent proposal in the thread would reverse it.
 
 ## Re-verification notes
 
 The proposal lives in an open pull request, so **its state is the thing most likely to change**:
-check whether #420 merged, and if so with which trailer clause. `stale_after` is three months rather
-than six for that reason.
+check whether #420 merged, and if so which trailer clause survived, if any. `stale_after` stays three
+months for that reason.
 
-Two live leads sit in the thread. The reviewer cites the **Kubernetes** contribution guidance
-(*"Open Source Maintainership in the Age of AI"*, kubernetes.dev, 2026-06-26) on human accountability
-— not yet a record in this bundle. And the discussion repeatedly drifts to retiring Trac in favour of
-GitHub, which is out of scope here but explains why the thread is long.
+**Search the thread, do not skim it.** It is long and drifts into whether MacPorts should retire Trac
+for GitHub issues, which is out of scope here. Search the PR body, comments and reviews for
+`Assisted-by`, `Homebrew` and the kernel's `LLM` form, with a control string known to be present.
+
+**Re-fetch the rendered kernel page and record the version it renders.** The finding above depends on
+two dated observations of it, and a third would show whether it has moved again.
 
 [^macports-pr-420]: [macports-base PR #420 — Add CONTRIBUTING.md (open, jmroot)](https://github.com/macports/macports-base/pull/420)
 [^macports-pr-420-diff]: [macports-base PR #420 — proposed CONTRIBUTING.md, diff](https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff)
+[^macports-kernel-rendered]: [AI Coding Assistants — The Linux Kernel documentation (rendered; 7.3.0-rc3 on 2026-09-14)](https://docs.kernel.org/process/coding-assistants.html)

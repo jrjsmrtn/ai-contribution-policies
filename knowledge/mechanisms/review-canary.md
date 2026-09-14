@@ -34,9 +34,11 @@ sources:
     resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e
 ---
 
-**A canary asks the agent to leave a trace, then looks for it.** It is the only enforcement idea in
+**A canary asks the agent to leave a trace, then looks for it.** It is one of the few enforcement ideas in
 this bundle that does not require detecting AI-generated work: the agent marks its own output because
-its instructions told it to, and the mark is what gets checked.
+its instructions told it to, and the mark is what gets checked. [Homebrew](../projects/homebrew.md)'s
+commit check relies on an involuntary version of the same thing — the names tools write into commit
+metadata by default — and [Kubernetes](../projects/kubernetes.md)'s CLA check needs no mark at all.
 
 Three projects were running one as of 2026-09-08. They do not agree on what it should detect, and one
 of them cannot detect anything.

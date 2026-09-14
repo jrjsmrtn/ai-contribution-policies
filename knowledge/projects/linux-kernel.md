@@ -264,9 +264,10 @@ prediction is worth nothing without a re-read cadence short enough to catch it, 
 policy during August alone.
 
 **Source the tree, not the rendered docs.** `docs.kernel.org/process/coding-assistants.html` renders
-a released kernel — **7.2.0** as of this check — and still showed the superseded
+a released kernel — **7.2.0** when checked on 2026-08-29 — and at that check still showed the superseded
 `AGENT_NAME:MODEL_VERSION` format and the `Claude:claude-3-opus` example after mainline had dropped
-both.[^kernel-docs-rendered] It was this record's `resource:` and is now demoted to a citation for
+both.[^kernel-docs-rendered] On 2026-09-14 it rendered `7.3.0-rc3` and served `Assisted-by: LLM`: the
+lag closed within weeks, and nothing announced when it did. It was this record's `resource:` and is now demoted to a citation for
 the lag itself. `git.kernel.org` is authoritative; `raw.githubusercontent.com/torvalds/linux/master`
 was verified byte-identical to it on 2026-08-29 and is an acceptable mirror. **A quotation taken
 from the rendered site can be stale while looking perfectly sourced.**
@@ -275,8 +276,8 @@ from the rendered site can be stale while looking perfectly sourced.**
 one day after the format changed — proposing the `Assisted-by:` trailer *"in the format recommended
 by the Linux kernel developers"*, citing
 `docs.kernel.org/process/coding-assistants.html#attribution` and reproducing the **retired**
-`AGENT_NAME:MODEL_VERSION` form. As of 2026-08-29 that PR is open and nobody in its thread has
-noticed. **A stale rendered page is not merely a re-verification trap for this bundle; it is
+`AGENT_NAME:MODEL_VERSION` form. As of 2026-09-14 that PR is still open, still specifies the retired form, and no comment in its
+thread mentions the change. **A stale rendered page is not merely a re-verification trap for this bundle; it is
 exporting a superseded rule to other projects.**
 
 **`lore.kernel.org` sits behind an Anubis proof-of-work challenge**, answering HTTP 200 with

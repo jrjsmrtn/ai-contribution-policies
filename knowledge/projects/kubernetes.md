@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Kubernetes
-description: Permits AI assistance, requires disclosure in the PR description, and forbids the Assisted-by and co-developed trailers — the second project here to ban that tag, for the opposite reason to GTK. It is also the only record with a mechanical enforcement hook, since the CLA check is enabled for co-authors and an AI co-author cannot sign one.
+description: Permits AI assistance, requires disclosure in the PR description, and forbids the Assisted-by and co-developed trailers, for the opposite reason to GTK. Its CLA check is enabled for co-authors, so an AI co-author fails an automated check it cannot sign — the first mechanical enforcement recorded here, since joined by Homebrew's pattern-matching commit check.
 resource: https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance
 tags:
   - ai-contribution
@@ -65,10 +65,11 @@ argument implies the other.** With the [kernel](linux-kernel.md) requiring the t
 entirely, that is **five positions on commit-message attribution**, two of which agree on the rule
 and disagree on why.
 
-## The only mechanical enforcement in this bundle
+## A mechanical enforcement hook
 
-Every other policy here is enforced by review — a maintainer noticing, judging, refusing. Kubernetes
-found a hook that runs before a human looks:
+Most policies here are enforced by review — a maintainer noticing, judging, refusing. Kubernetes
+found a hook that runs before a human looks, the first recorded here; [Homebrew](homebrew.md) has
+since added a CI check that rejects AI attribution by matching names instead:
 
 > The CNCF provides a tool for verifying the contributor license agreements on each pull request.
 > **AI agents are not able to solve these contributor license agreements** so one enforcement the
@@ -167,8 +168,8 @@ maintainer**; every rule quoted above comes from the guide itself.
 
 Watch for the trailer clause, which is the most consequential for cross-project contributors — the
 same tag is required by the kernel and Nerves and forbidden here and by GTK — and for whether the CLA
-co-author check spreads, since it is the only enforcement mechanism in this bundle that does not
-depend on a maintainer noticing.
+co-author check spreads. It does not depend on a maintainer noticing, which is still rare here; compare
+[Homebrew](homebrew.md)'s commit check, which matches names and so can be evaded by renaming.
 
 [^k8s-ai-guidance]: [contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)](https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md)
 [^k8s-maintainership-blog]: [Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)

@@ -172,7 +172,8 @@ the ones the projects already apply to dependencies.
 Whether GCC's CC0 policy acquires a borrower — it is licensed for copying and no copy is recorded
 here. **Whether Zed repoints its pin**, which would be the first instance of a policy citation being
 *maintained* rather than merely placed. Whether a third project pins at all. And whether the
-rendered-docs hazard catches anyone else, since `docs.kernel.org` still serves the retired form.
+rendered-docs hazard catches anyone else — `docs.kernel.org` served the retired form for weeks and had
+caught up by 2026-09-14, with nothing to announce either change.
 
 [^cp-ripgrep]: [AI_POLICY.md — ripgrep AI policy (BurntSushi/ripgrep, master)](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
 [^cp-zed]: [CONTRIBUTING.md (zed-industries/zed, main)](https://raw.githubusercontent.com/zed-industries/zed/main/CONTRIBUTING.md)

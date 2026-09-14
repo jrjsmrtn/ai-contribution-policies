@@ -325,17 +325,22 @@ sending prompts into it**.[^ash-events-claude-md] That is not a stance on AI con
 project has none — but it is the most developed *assumption* of them anywhere in this bundle, and it
 sits in a repository whose contribution guide is silent on the question.
 
-## Enforcement is almost always a maintainer noticing — with one exception
+## Enforcement is almost always a maintainer noticing — with few exceptions
 
 Every policy in this bundle is enforced by review: someone reads, judges and refuses. That is why so
 many of them worry about detection, and why [NetworkManager](projects/networkmanager.md) and
 [GTK](projects/gtk.md) fall back on *can you explain this?* rather than *how was this made?*
 
-[Kubernetes](projects/kubernetes.md) found the one mechanical hook recorded here. The CNCF's CLA
+[Kubernetes](projects/kubernetes.md) found the first mechanical hook recorded here. The CNCF's CLA
 check was **enabled for co-authors**, and *"AI agents are not able to solve these contributor license
 agreements"*[^k8s-maintainership-blog] — so listing an AI as co-author fails an automated check
 before a human looks. **It repurposes an existing legal instrument as a gate**, and it enforces the
 prohibition without anyone having to detect anything.
+
+[Homebrew](projects/homebrew.md) built a different kind: a CI check that fails any commit whose
+author, committer or trailers match a list of AI vendor and product names. **It enforces less than its
+rule says** — measured, the kernel's own `Assisted-by: LLM` passes it, because a pattern of names can
+only catch a trailer that names someone.
 
 Note the inversion. Other projects ask whether an AI *can* satisfy a certification and reason from
 the answer — [QEMU](projects/qemu.md) concluded it cannot and prohibited AI content outright.
@@ -443,7 +448,7 @@ question, and most of the disagreement follows from that.
 [Ansible](projects/ansible.md)), required plainly ([GCC](projects/gcc.md)), forbidden
 ([GTK](projects/gtk.md), [Kubernetes](projects/kubernetes.md),
 [Dependency-Track](projects/dependency-track.md), [systemd](projects/systemd.md),
-[NetworkManager](projects/networkmanager.md)), or replaced by a different field
+[NetworkManager](projects/networkmanager.md), [Homebrew](projects/homebrew.md)), or replaced by a different field
 ([ASF](foundations/apache-software-foundation.md), [OpenInfra](foundations/openinfra.md),
 [QEMU](projects/qemu.md)).
 
@@ -467,7 +472,8 @@ kernel and served the retired `AGENT_NAME:MODEL_VERSION` form for weeks after ma
 Linux kernel developers"*, citing that page and reproducing the retired form, in a pull request opened
 **one day after** the kernel changed it.[^macports-pr-420-diff] A stale rendered page propagated a
 superseded rule into another project's draft policy. The mechanism is evidenced; intent is not
-claimed.
+claimed. By 2026-09-14 the rendered page had caught up and served `Assisted-by: LLM`, so the pull
+request now cites as its authority a page that contradicts it — and nothing announced either change.
 
 **Where it is going**: disclosure in the pull request, which the three most recent adopters require
 instead. [OpenInfra](foundations/openinfra.md) is the one refinement worth knowing — `Assisted-By:`

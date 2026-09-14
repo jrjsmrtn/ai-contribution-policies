@@ -38,6 +38,9 @@ sources:
   - id: hitl-kernel-wireless
     title: 'linux-wireless — maintainer response to AI-assisted syzbot fixes'
     resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
+  - id: hitl-homebrew
+    title: 'docs/Responsible-AI-Usage.md (Homebrew/brew, main)'
+    resource: https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md
 ---
 
 ***"A human in the loop"* is the most-copied phrase in this bundle and the least defined.** Nine
@@ -132,8 +135,10 @@ and presence does not imply it.
 
 ## What to watch
 
-Whether any project defines the term — none does, and the cdxgen scale is the only vocabulary here
-precise enough to. Whether LLVM's relocation spreads, since *published without approval* is the only
+Whether any project defines the term. [Homebrew](../projects/homebrew.md)'s guide gives it a section
+and defines it by responsibility — *"AI is not responsible for its output: you are responsible for the
+output of the AI tools you use"*[^hitl-homebrew] — which says who answers, not what the loop must
+contain; the cdxgen scale is still the only vocabulary here precise enough for that. Whether LLVM's relocation spreads, since *published without approval* is the only
 version of this rule a project can enforce without guessing. Whether the criticality argument is ever
 picked up by a project that is **not** foundational, which would be the first sign the phrase has
 detached from its reason entirely. And whether any of the three prohibitions is ever observed to
@@ -146,3 +151,4 @@ close a pull request — the sanction is stated in all three and recorded in non
 [^hitl-ansible]: [Ansible community AI policy](https://docs.ansible.com/projects/ansible/latest/community/ai_policy.html)
 [^hitl-aideclaration]: [AI-DECLARATION.md specification v0.1.2](https://ai-declaration.md/en/0.1.2)
 [^hitl-kernel-wireless]: [linux-wireless — maintainer response to AI-assisted syzbot fixes](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
+[^hitl-homebrew]: [docs/Responsible-AI-Usage.md (Homebrew/brew, main)](https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md)

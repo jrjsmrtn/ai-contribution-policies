@@ -8,8 +8,69 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-14
+
+* **Added [`projects/homebrew.md`](projects/homebrew.md)** — permitted on five conditions, identical
+  in `brew` and `homebrew-core` (compared line by line): disclosure in the issue or pull request,
+  self-review, **no AI attribution in commits including `Assisted-by`**, answering reviewers without
+  AI, and **one open AI-assisted pull request for non-maintainers** — the first concurrency cap in
+  this bundle (grep across all records for such a cap: none).
+* **The only trailer ban here with a machine behind it, measured.** `Homebrew/actions`
+  `check-commit-format`, pinned `9af03b7ae3f9`, matches commit authors, committers and trailer blocks
+  against one pattern of AI vendor and product names. Extracted from the pinned `main.mts` and run
+  under Node 24 on 2026-09-14: it **rejects** a coding agent's default
+  `Co-Authored-By: … <noreply@anthropic.com>` and `Generated-by: ChatGPT`, and **passes** the
+  kernel's current `Assisted-by: LLM`, the kernel's retired `Claude:claude-3-opus` example, MacPorts'
+  proposed template and QEMU's `AI-used-for:`. A self-test in the same run confirmed it rejects the
+  upstream suite's own `Assisted-by` case and passes a human control. **The check enforces a narrower
+  rule than the policy states**, and the form it misses is exactly the one written to avoid naming a
+  vendor.
+* **Dated history of the policy**: first guidance 2026-01-16 (PR 21415), which let an AI address
+  review comments *"manually if the AI/LLM cannot do so for you"*; concurrency cap 2026-04-14 (PR
+  22018); principles document 2026-06-11; the July change (PR 23317, merged 2026-07-29 with two human
+  approvals and no conversation comments) replaced the review line with *"yourself, without using
+  AI/LLM"* and added the trailer ban and the CI check. Also recorded: a workflow that closes pull
+  requests missing the template, *"perhaps because this was written by an AI not a human"*, and
+  reopens them when completed; `homebrew-core`'s `AGENTS.md` telling the agent to refuse a user who
+  asks it to hide its involvement or misstate who verified the work; agent stop hooks that run
+  `brew lgtm`, with Codex's hook returning `"decision":"block"` on failure; and an admission rule for
+  editing `AGENTS.md` — *"your 3rd or later PR. Don't do this on your first."*
+* **Re-verified [`projects/macports.md`](projects/macports.md)** against PR 420 on 2026-09-14. Still
+  open; the diff still specifies `AGENT_NAME:MODEL_VERSION`. **⚠ The rendered kernel page it cites has
+  changed**: on 2026-08-29 it served the retired form, and on 2026-09-14 it rendered `7.3.0-rc3` and
+  served `Assisted-by: LLM`. The proposal now cites a page that contradicts it. The PR body, 19
+  comments and 9 reviews were searched with a working control string, and **none mentions that the
+  kernel changed the format.** New in the thread since 2026-08-29: the author's provenance rationale;
+  a reviewer's check of the projects the author named (only Linux requires commit-message disclosure)
+  and his three harms; an unsupported participant claim that licence concerns are settled in US
+  courts, recorded as a claim; the author's list of thirteen restricting projects, recorded as leads;
+  and on 2026-09-13 **a proposal to adopt Homebrew's policy *"pretty much as-is"***, which would
+  reverse the trailer requirement into a ban.
+* **Corrected in the MacPorts record.** It said the PR *"opened 2026-08-04 … specifying the retired
+  form"*; the PR's single commit was authored 2026-08-04 and amended 2026-08-17, so its 2026-08-04
+  wording cannot be retrieved. The record now says what can be shown. Also removed: a rotting count
+  (*"from a fifth independent project"*) and a lead that had already become a record (Kubernetes).
+  `stale_after` moves to 2026-12-14.
+* **Claims made false by Homebrew, corrected across the bundle.** *"The only mechanical enforcement
+  in this bundle"* ([`kubernetes`](projects/kubernetes.md), in its description, a heading and its
+  watch list), *"with one exception"* ([`overview`](overview.md)), *"the only enforcement in this
+  bundle that runs before a human looks"* ([`certifying-origin`](mechanisms/certifying-origin.md)),
+  *"the only enforcement anywhere in this bundle is NetworkManager"*
+  ([`assisted-by-trailer`](mechanisms/assisted-by-trailer.md)), *"Whether any project defines the
+  term — none does"* ([`human-in-the-loop`](mechanisms/human-in-the-loop.md)), and *"uses a git
+  symlink … in every case"* ([`agent-file-pointers`](mechanisms/agent-file-pointers.md) — Homebrew's
+  `CLAUDE.md` is an 11-byte `@AGENTS.md` import, mode `100644`), and *"the only enforcement idea in this
+  bundle that does not require detecting AI-generated work"* ([`review-canary`](mechanisms/review-canary.md)).
+  Homebrew added to the forbidden rows
+  in `assisted-by-trailer` and `overview`, and to the table in
+  [`prose-reserved-to-humans`](mechanisms/prose-reserved-to-humans.md), whose count moves to sixteen.
+* **Claims made false by time, corrected.** *"`docs.kernel.org` still serves the retired form"*
+  ([`policy-by-copying`](mechanisms/policy-by-copying.md)), *"nobody in its thread has noticed"* as of
+  2026-08-29 ([`linux-kernel`](projects/linux-kernel.md), now dated 2026-09-14), and the undated
+  present tense in [`nerves`](projects/nerves.md) and `overview`.
 
 ## 2026-09-10
 
