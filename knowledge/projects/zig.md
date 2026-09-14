@@ -46,7 +46,7 @@ work than any clause in it.
 A contributing guideline governs artifacts and is enforced by rejecting them. A Code of Conduct
 governs **participants** and is enforced by moderating them. Putting the rule here means a violation
 is not a bad patch to be closed — it is misconduct, with whatever response the project applies to
-misconduct. [Rust](rust.md)'s draft reaches for the same lever narrowly, making *lying about* LLM
+misconduct. [Rust](rust.md)'s policy reaches for the same lever narrowly, making *lying about* LLM
 use a CoC violation while the rest stays moderation policy. Zig applies it to the whole rule.
 
 ## It closes the laundering routes
@@ -63,12 +63,12 @@ way down.
 ## Two clauses that go further than any other
 
 **No LLMs for finding bugs.** [curl](curl.md) permits exactly this with mandatory disclosure;
-[Rust](rust.md)'s draft permits it if you verify the bug personally. Zig forbids it — so the ban
+[Rust](rust.md)'s policy permits it if you verify the bug personally. Zig forbids it — so the ban
 covers use that never produces a single line of contributed text.
 
 **No talking about use of chatbot/LLM services.** This regulates *conversation about the tools*,
 not their use. Nothing else in this bundle attempts that. It is unenforceable in the way
-[Rust](rust.md)'s draft openly concedes about its own clauses, but it is not aimed at enforcement —
+[Rust](rust.md)'s policy openly concedes about its own clauses, but it is not aimed at enforcement —
 it is a statement about what the venue is for.
 
 ## Translation is refused, and the cost is moved rather than ignored
@@ -79,7 +79,7 @@ on others to have their own translation tools of choice to interpret your
 words."*[^zig-coc]
 
 Every other project that thought about this — [Python](python.md), [curl](curl.md),
-[FreeBSD](../distributions/freebsd.md), Rust's draft — permits machine translation precisely so as
+[FreeBSD](../distributions/freebsd.md), Rust's policy — permits machine translation precisely so as
 not to tax non-native speakers. Zig refuses, and instead **moves the translation to the reader**.
 A survey line reading "bans translation" would make this look like an oversight. It is a designed
 trade.

@@ -70,6 +70,8 @@ several of the disagreements below follow from that.
 
 [MacPorts](../projects/macports.md) has a proposal quoting a form the kernel had already retired; it
 is not adopted, and a participant in its thread has since proposed Homebrew's ban in its place.
+[Fedora](../distributions/fedora.md) requires disclosure above a threshold and recommends the trailer as
+the method, naming a model in one of its two examples (`Assisted-by: ChatGPTv5`).
 
 **The same tag carries three incompatible requirements — required without the model, required with
 the model, forbidden — and the first two moved apart within eleven days.** The kernel narrowed

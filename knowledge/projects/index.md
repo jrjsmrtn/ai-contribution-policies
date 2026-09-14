@@ -7,7 +7,7 @@ Directory: `projects/`
 | Title | Type | Description |
 |-------|------|-------------|
 | [Ansible](ansible.md) | Organization | Permits AI-assisted contributions org-wide under a published community policy... |
-| [Asahi Linux](asahi-linux.md) | Organization | Forbids LLM use in any contribution, enforced by one warning then a permanent... |
+| [Asahi Linux](asahi-linux.md) | Organization | Broadly forbids generative AI for material contributions, on ethical grounds ... |
 | [Dependency-Track](dependency-track.md) | Organization | Permits AI assistance and forbids every trace of it in the commit — no assi... |
 | [Django](django.md) | Organization | Requires granular disclosure of which AI tools were used and for what, escala... |
 | [Elixir](elixir.md) | Organization | Permits AI with restraint, and argues for it from a premise no other project ... |
@@ -25,7 +25,7 @@ Directory: `projects/`
 | [Perl](perl.md) | Organization | Draws its lines by artifact type rather than by tool or disclosure — code m... |
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
 | [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
-| [Rust](rust.md) | Organization | Has no adopted policy; an unusually developed draft for rust-lang/rust is ope... |
+| [Rust](rust.md) | Organization | Adopted an LLM usage policy for rust-lang/rust on 2026-08-05 — scoped to th... |
 | [Valkey](valkey.md) | Organization | Has no AI contribution policy and runs an AI reviewer anyway — one briefed ... |
 | [Zed](zed.md) | Organization | Welcomes LLM-assisted coding, refuses autonomous agents outright, and reserve... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |

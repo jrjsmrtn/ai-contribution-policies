@@ -93,13 +93,13 @@ The same shape governs sharing model output:
 > commentary explaining **why it's relevant and what you take from it**.[^zed-contributing]
 
 Three requirements — quote it, label it, and say what you make of it. [Asahi Linux](asahi-linux.md)
-forbids pasting model output into community channels outright; Zed permits it on condition the
+forbade pasting model output into community channels outright, until its 2026-09-07 rework; Zed permits it on condition the
 contributor does the interpretive work. **Both are answers to the same complaint**, that unlabelled
 model output transfers reading cost to the reader.
 
 And the reason given for the prose rule is the redundancy argument, put more bluntly than anywhere
 else: *"The readers are humans, and we'd like to hear from you, not from a model **(we have models at
-home)**."*[^zed-contributing] [Elixir](elixir.md) and [Asahi Linux](asahi-linux.md) reach the same
+home)**."*[^zed-contributing] [Elixir](elixir.md) reaches, and [Asahi Linux](asahi-linux.md) reached, the same
 premise independently.
 
 ## It built the canary, and it is the only project checking one

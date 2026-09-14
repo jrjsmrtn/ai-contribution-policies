@@ -37,8 +37,8 @@ sources:
     title: AI Generated Content Policy — OpenInfra Foundation
     resource: https://openinfra.org/legal/ai-policy
   - id: rust-forge-1040
-    title: 'Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)'
-    resource: https://github.com/rust-lang/rust-forge/pull/1040
+    title: 'LLM Usage Policy for rust-lang/rust (Rust Forge; adopted via rust-forge#1040, 2026-08-05)'
+    resource: https://forge.rust-lang.org/policies/llm-usage.html
   - id: zig-coc
     title: 'Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)'
     resource: https://ziglang.org/code-of-conduct/
@@ -109,8 +109,8 @@ sources:
     title: 'AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool'
     resource: https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md
   - id: asahi-slop-policy
-    title: 'Generative AI Policy — Asahi Linux'
-    resource: https://asahilinux.org/slop/
+    title: 'Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)'
+    resource: https://asahilinux.org/llm-policy/
   - id: k8s-ai-guidance
     title: 'contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)'
     resource: https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md
@@ -215,7 +215,7 @@ overly formal or bloated, that looks like AI slop … or that senders don't unde
 explain."*[^git-submitting-patches-src] It needs no disclosure and inherits detection's
 false-positive problem — a careful non-native speaker writes prose that trips it.
 
-**Rust's draft writes a declaration rule**, and says why: *"We are aware that many clauses in this
+**Rust's policy writes a declaration rule**, and says why: *"We are aware that many clauses in this
 policy are unenforceable. Our goal is not to catch every violation … Instead, our goal is to remove
 plausible deniability: to force a choice between following the policy and intentionally violating
 it."*[^rust-forge-1040] It cites anti-money-laundering compliance as the model, and elsewhere:
@@ -238,7 +238,7 @@ for no disclosure at all and no detection — the check runs in review, on the c
 to review comments yourself. If you cannot discuss your own patch with a reviewer, it will not be
 merged."*[^nm-contributing] The reviewer never has to decide how the patch was produced, only whether
 the person sending it can defend it, **which is the question the other two are proxies for**. It has
-the enforcement property Rust's draft wants without asking anyone to self-report, and it cannot
+the enforcement property Rust's policy wants without asking anyone to self-report, and it cannot
 produce Git's false positive against a careful non-native speaker. Its cost is that it only fires at
 review time, so it scales with reviewer attention rather than saving it — which is why the same
 policy closes *"Large machine-generated Merge Requests that no human has reviewed line by line"*
@@ -266,13 +266,13 @@ honest submitters attach.
 
 ## The same argument wins or loses depending on who decides
 
-[Asahi Linux](projects/asahi-linux.md) forbids LLM use partly on **environmental** grounds — *"Slop
-Generators consume an unfathomable amount of resources we can scarcely afford to waste … These
-resources are better used on quite literally anything else."*[^asahi-slop-policy]
+[Asahi Linux](projects/asahi-linux.md) forbids LLM use partly on **environmental** grounds — the
+environment is one of the *"pillars of Asahi Linux"* its policy says LLMs harm.[^asahi-slop-policy]
 
 That is the ground [Debian](distributions/debian.md)'s **Proposal H** argued, and it lost: on an
 eight-way preferential ballot it finished behind the permissive options, and the project adopted
-responsible use instead. Asahi holds the same position as settled policy, issued by its Board.
+responsible use instead. Asahi holds the same position as settled policy, first issued as the opinion
+of its Board and reworked on 2026-09-07 in a single commit, with no vote in either case.
 
 **One argument, two governance structures, opposite outcomes.** A project-wide preferential vote and
 a board decision are not the same instrument, and the difference shows up in the result rather than
@@ -292,7 +292,9 @@ That is an `AGENTS.md`, with `CLAUDE.md` and `GEMINI.md` beside it as pointers �
 covered, one source of truth. [Nerves](projects/nerves.md) approaches the same problem from the other
 side, replicating a human-facing policy into every repository *"to hopefully encourage agents to
 surface this"*. **One asks to be quoted, the other to be obeyed**, and neither can compel a tool to
-read the file at all.
+read the file at all. **And the two can drift apart**: since Asahi reworked its policy on 2026-09-07,
+its agent file still forbids *any* use while the page it links forbids *material* contributions with
+graded enforcement.
 
 This also creates a boundary worth naming: an `AGENTS.md` is simultaneously a contribution to the
 repository and an instruction to a tool. [Nerves](projects/nerves.md) governs them as contributions
@@ -556,8 +558,9 @@ kernel merged its policy, and Debian opened a vote. `sources` records where a cl
 `verified` records that somebody checked, and `stale_after` makes decay visible instead of silent.
 
 **A caution that applies to re-verification specifically.** Some primary sources are not
-machine-retrievable — Fedora's council policy and GCC's wiki both sit behind proof-of-work
-challenges that return HTTP 200 with a challenge page. A status code proves the server answered,
+machine-retrievable — Fedora's docs site and GCC's wiki have both sat behind proof-of-work
+challenges that return HTTP 200 with a challenge page. That hazard cost this bundle six weeks of a
+false "unpublished" on Fedora, whose policy loaded without a challenge on 2026-09-14. A status code proves the server answered,
 never that the content arrived. Check for the text you came for.
 
 [^git-submitting-patches-src]: [Documentation/SubmittingPatches (git/git, master)](https://raw.githubusercontent.com/git/git/master/Documentation/SubmittingPatches)
@@ -567,7 +570,7 @@ never that the content arrived. Check for the text you came for.
 [^owasp-projects-policy]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
 [^asf-generative-tooling]: [Generative Tooling Guidance — The Apache Software Foundation](https://www.apache.org/legal/generative-tooling.html)
 [^openinfra-ai-policy]: [AI Generated Content Policy — OpenInfra Foundation](https://openinfra.org/legal/ai-policy)
-[^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)](https://github.com/rust-lang/rust-forge/pull/1040)
+[^rust-forge-1040]: [LLM Usage Policy for rust-lang/rust (Rust Forge; adopted via rust-forge#1040, 2026-08-05)](https://forge.rust-lang.org/policies/llm-usage.html)
 [^zig-coc]: [Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)](https://ziglang.org/code-of-conduct/)
 [^curl-contribute]: [Contribute to curl — on AI use in curl](https://curl.se/dev/contribute.html)
 [^gcc-ai-policy]: [GNU Compiler Collection - AI Policy](https://gcc.gnu.org/ai-policy.html)
@@ -592,4 +595,4 @@ never that the content arrived. Check for the text you came for.
 [^cdxgen-agents-md]: [AGENTS.md — cdxgen contributor guide for AI agents (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
 [^ash-events-claude-md]: [CLAUDE.md — AshEvents AI Assistant Guide (ash-project/ash_events, main)](https://raw.githubusercontent.com/ash-project/ash_events/main/CLAUDE.md)
 [^asahi-agents-md]: [AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool](https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md)
-[^asahi-slop-policy]: [Generative AI Policy — Asahi Linux](https://asahilinux.org/slop/)
+[^asahi-slop-policy]: [Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)](https://asahilinux.org/llm-policy/)

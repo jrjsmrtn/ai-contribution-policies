@@ -20,8 +20,8 @@ sources:
     title: 'GCC AI policy'
     resource: https://gcc.gnu.org/ai-policy.html
   - id: ext-asahi
-    title: 'Generative AI Policy — Asahi Linux'
-    resource: https://asahilinux.org/slop/
+    title: 'Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)'
+    resource: https://asahilinux.org/llm-policy/
   - id: ext-llvm
     title: 'LLVM AI Tool Use Policy (llvm/docs/AIToolPolicy.md, main)'
     resource: https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md
@@ -43,7 +43,7 @@ varied.
 | Project | Existing machinery | How it was extended |
 |---|---|---|
 | [GCC](../projects/gcc.md) | the **copyright threshold** deciding whether a patch needs an assignment | *"legally significant"* LLM contributions are declined; below the line nothing changes[^ext-gcc] |
-| [Asahi Linux](../projects/asahi-linux.md) | an existing ban on **illegally acquired or leaked** vendor documentation | *"This also applies to regurgitated slop."*[^ext-asahi] |
+| [Asahi Linux](../projects/asahi-linux.md) | its **clean-room** reverse-engineering rules and its ban on leaked material | LLMs *"are likely to violate the clean room requirements and taint the resulting code"*[^ext-asahi] |
 | [LLVM](../projects/llvm.md) | its **copyright policy** | *"Our policy on AI tools is similar to our copyright policy"* — regenerating copyrighted material does not remove the copyright[^ext-llvm] |
 | [systemd](../projects/systemd.md) | the norms already governing **`sed`, `awk`, `coccinelle`** | *"AI tools are treated the same as traditional tooling"*[^ext-systemd] |
 | [Elixir](../projects/elixir.md) | **issue labels** in the tracker | no coding agents on existing issues unless marked *Contributions Welcome* |
@@ -62,11 +62,12 @@ on what evidence*. A new regime has to invent that; an extension already has it,
 that has used it before and contributors who recognise it.
 
 **It narrows what has to be detected.** GCC does not need to determine how a patch was produced, only
-whether it crosses a threshold it was already measuring. Asahi does not need to identify model
-output, only material it was already refusing. **Detection was the enforcement problem across this
+whether it crosses a threshold it was already measuring. Asahi asks whether a process was clean,
+which it was already asking of every reverse-engineering contribution. **Detection was the enforcement problem across this
 bundle, and extending sidesteps rather than solves it.**
 
-**And it is cheap to state.** Asahi's extension is one sentence. systemd's is one clause. Neither
+**And it is cheap to state.** Asahi's original extension was a single sentence, before a 2026-09-07
+rework argued it at paragraph length. systemd's is one clause. Neither
 required a new document, a new field, or a new sanction.
 
 ## Where it does not reach
@@ -108,7 +109,7 @@ easily copied. And whether the newer, younger projects that built new regimes la
 into existing machinery as they acquire some.
 
 [^ext-gcc]: [GCC AI policy](https://gcc.gnu.org/ai-policy.html)
-[^ext-asahi]: [Generative AI Policy — Asahi Linux](https://asahilinux.org/slop/)
+[^ext-asahi]: [Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)](https://asahilinux.org/llm-policy/)
 [^ext-llvm]: [LLVM AI Tool Use Policy (llvm/docs/AIToolPolicy.md, main)](https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md)
 [^ext-systemd]: [docs/CONTRIBUTING.md — Policy on the use of LLMs and AI tooling (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/docs/CONTRIBUTING.md)
 [^ext-owasp]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)

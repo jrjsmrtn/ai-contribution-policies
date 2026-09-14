@@ -1,15 +1,15 @@
 ---
 type: Organization
 title: Rust
-description: Has no adopted policy; an unusually developed draft for rust-lang/rust is open, permitting LLMs to analyse but not create, with a disclosure tier and a bounded experiment for LLM-created code.
-resource: https://github.com/rust-lang/rust-forge/pull/1040
+description: Adopted an LLM usage policy for rust-lang/rust on 2026-08-05 — scoped to that repository and the five teams that ratified it, not the project. It allows LLMs to analyse but not create, bans LLM-created comments, docs and diagnostics, admits LLM-created code only under a bounded experiment with a circuit breaker, and says openly that many of its clauses are unenforceable. A project-wide committee could still supersede it.
+resource: https://forge.rust-lang.org/policies/llm-usage.html
 tags:
   - ai-contribution
   - policy
   - project
-  - undecided
-  - draft
+  - permitted
   - disclosure
+  - moderation
 status: stable
 generated:
   by: claude/opus-5
@@ -17,114 +17,173 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-04T23:45:00Z'
-stale_after: 2026-11-04
+  - by: claude/opus-5
+    at: '2026-09-14T13:10:00Z'
+stale_after: 2026-12-14
 sources:
+  - id: rust-llm-policy
+    title: 'src/policies/llm-usage.md (rust-lang/rust-forge at 98f27c7c863e)'
+    resource: https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md
   - id: rust-forge-1040
-    title: 'Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)'
+    title: 'Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040, merged 2026-08-05)'
     resource: https://github.com/rust-lang/rust-forge/pull/1040
+  - id: rust-blog-adoption
+    title: 'rust-lang/rust is adopting an LLM policy (Inside Rust Blog, Jynn Nelson, 2026-08-05)'
+    resource: https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/
   - id: rust-rfc-3959
-    title: 'Project-wide LLM policy (rust-lang/rfcs#3959)'
+    title: 'Project-wide LLM policy (rust-lang/rfcs#3959, open)'
     resource: https://github.com/rust-lang/rfcs/pull/3959
   - id: rust-rfc-3950
     title: 'Add contribution policy for AI-generated work (rust-lang/rfcs#3950, closed)'
     resource: https://github.com/rust-lang/rfcs/pull/3950
 ---
 
-**Stance: undecided — nothing adopted, but the draft is the most developed in this bundle.** As of
-2026-08-04 Rust has **no merged LLM policy**. Three attempts are on record: RFC 3950 (closed,
-unmerged)[^rust-rfc-3950], RFC 3959 *"Project-wide LLM policy"* (open)[^rust-rfc-3959], and
-rust-forge #1040 *"Add an LLM policy for `rust-lang/rust`"* (open, last updated
-2026-08-02)[^rust-forge-1040].
+**Stance: conditionally allowed in `rust-lang/rust`, and nowhere else by this policy.** Pull request
+rust-forge#1040, opened 2026-04-17, was merged on **2026-08-05** after 114 conversation comments and
+reviews from dozens of participants.[^rust-forge-1040] The policy now lives on the Rust Forge. It
+opens:
 
-Quoted below is **proposed text from an open pull request**, not a rule in force. It is recorded
-because it is the clearest articulation available of how a large project reasons about this — but a
-contributor cannot be held to it, and it may change or die in review.
+> Using LLMs while working on `rust-lang/rust` is conditionally allowed, when done with care. LLMs are
+> not a substitute for thought, and we do not allow them to be used in ways that risk losing our
+> shared social and technical understanding of the project, nor in ways that hurt our goals of
+> creating a strong community.[^rust-llm-policy]
 
-## The design principle
+**This record said "no adopted policy" when it was written on 2026-08-04. The merge came the next
+day.** Its text had not changed between that reading and the merge — the file's history shows no
+commit between 2026-07-20 and 2026-08-12 — so the rules described then were accurate; only their
+status was wrong.
 
-> It's fine to use LLMs to answer questions, analyze, distill, refine, check, suggest, review. But
-> not to **create**.
->
-> LLMs work best when used as a tool to write *better*, not *faster*.[^rust-forge-1040]
+## Scope is the first thing to read
 
-## The part worth stealing: it concedes it is unenforceable
+> This policy only applies to `rust-lang/rust`, and only to the teams that have ratified it:
+> compiler, libs, types, rustdoc, bootstrap, and their subteams.[^rust-llm-policy]
 
-Alone among the policies here, the draft states its own limits and then explains why it is still
-worth writing:
+Other `rust-lang` repositories, submodules, subtrees, crates.io dependencies, and teams that did not
+ratify it — lang and edition are named — set their own policies. The announcement is explicit that
+this is *"not an official stance on LLMs, and does not apply everywhere in the Rust
+project"*.[^rust-blog-adoption]
 
-> We are aware that many clauses in this policy are unenforceable. Our goal is *not* to catch every
-> violation. Instead, our goal is to remove plausible deniability: to force a choice between
-> following the policy and intentionally violating it.[^rust-forge-1040]
+**And it can be overtaken.** An earlier contribution-policy RFC was closed unmerged,[^rust-rfc-3950] a
+project-wide policy is still an open RFC,[^rust-rfc-3959] and the policy
+yields in advance: if a proposed LLM committee *"(or any similar dedicated project-wide body) is
+formed, any policy it sets will take precedence over this policy."*[^rust-llm-policy] A contributor to
+another Rust repository cannot assume this text applies, and a contributor here cannot assume it will
+last.
 
-It cites **anti-money-laundering compliance** as the model.[^rust-forge-1040] That reframes the
-whole question. [Git](git.md)'s *"reject anything that looks AI generated"* is a detection rule and
-inherits detection's false-positive problem. Rust's is a **declaration rule**: it does not try to
-tell, it makes not-telling a deliberate act. Any project drafting a policy should decide which of
-the two it is writing, because they fail differently.
+## Why a policy, from a project that cannot agree
 
-The draft says so directly elsewhere: *"It's not your job to play detective."*[^rust-forge-1040]
+The announcement names three problems — polished work no longer signals effort, easier code
+worsens review bandwidth (*"At the time of writing, there are 1,281 open PRs to
+`rust-lang/rust`"*), and copy-pasting to and from a model wastes reviewers' time — and then explains
+why the answer is a compromise rather than a stance:[^rust-blog-adoption]
 
-## A four-level scheme, not a binary
+> We do not have a benevolent dictator … Rust operates by consensus.
 
-The draft grades by **who sees the output**, which is a sharper axis than "how much AI":
+> Our choices are not "no policy" or "policy". Our choice is whether to have the policy be an
+> unofficial list of moderation notes or something we stand by publicly.
+
+The author adds, unusually, *"I do not think every rule in this policy is wholly good."* **A policy
+adopted as the least-bad codification of moderation already happening** is a different artifact from
+one adopted as a position, and this is the clearest instance of the first kind here.
+
+## The rule, in one line
+
+> It's fine to use LLMs to answer questions, analyze, distill, refine, check, suggest, review. But not
+> to **create**.[^rust-llm-policy]
+
+The policy grades uses with symbols, and the summary is compact:
 
 | | |
 |---|---|
-| ✅ **Allowed** | *"Any use of an LLM where you are the only one who sees the output"* — questions about a codebase, private summaries, private review of your own code, personal dev-tools, generating candidate solutions then *"writing something from scratch in your own style"* |
-| ❌ **Banned** | Comments, issue bodies and PR descriptions *"originally created by an LLM"* from a personal account; LLM-created documentation, doc-comments, safety comments and **compiler diagnostics**; treating an LLM review as sufficient to merge; policies *"written such that an LLM is required to execute them"* |
-| ⚠️ **With disclosure** | Machine translation, trivial changes, LLM-assisted bug discovery *"as long as you personally verify the bug"*, review bots |
-| 🔨 **Moderation penalty** | Lying — a Code of Conduct violation |
+| ✅ **Allowed** | private use — anything where you are the only one who sees the output — and clearly experimental PRs not meant for review |
+| ❌ **Banned** | *"LLM-created comments, docs, or diagnostics. Replacing human judgement with LLM judgement. Requiring people to use an LLM to contribute."* |
+| ⚠️ **With disclosure** | trivial changes, machine translation (*"allowed but discouraged"*), LLM-assisted bug discovery you personally verify, review bots, and LLM-created code under the experiment |
+| 🔨 **Moderation penalty** | lying about LLM use |
 
-The heuristic for anything unlisted:
+The ban on comments covers issue bodies, PR descriptions and scripted voice or video, unless the model
+output is *"clearly quoted and marked"* — and even then *"the content of the comment must stand on its
+own even without the LLM content"*.[^rust-llm-policy] See
+[prose reserved to humans](../mechanisms/prose-reserved-to-humans.md).
 
-> Using an LLM for your own personal use is likely allowed ✅ · Showing LLM output to another human
-> without solicitation is likely banned ❌ · Making a decision that affects others based on LLM
-> output requires disclosure ⚠️[^rust-forge-1040]
+**Origin, not edit distance, decides.** *"No amount of editing can change how it was originally
+created"*, and *"This policy makes no distinction between LLM output that comes from a chat interface
+and output that comes from editor auto-completion."*[^rust-llm-policy]
 
-## Two clauses no other project here has
+## It concedes that it is unenforceable, and says why that is fine
 
-**Documentation must be authored for humans.** *"You must not only document where tests live with
-an `AGENTS.md`. Documentation must be authored for humans primarily, and LLM documentation may only
-summarize it, not add new detail."*[^rust-forge-1040] This is a constraint on the *project's own*
-artifacts, not on contributions — a rule against the codebase drifting into a state only a machine
-can navigate.
+> We are aware that many clauses in this policy are unenforceable. Our goal is *not* to catch every
+> violation … Instead, our goal is to remove plausible deniability: to force a choice between
+> following the policy and intentionally violating it.[^rust-llm-policy]
 
-**Review bots are regulated rather than banned.** They must be pre-approved, must post from *"a
-separate GitHub account that clearly marks them as an LLM"*, must be blockable through GitHub's
-normal user-blocking (explicitly excluding app accounts that cannot be blocked), and their comments
-*"**must not** be blocking"* — a human reviewer has to endorse a comment before it gates a PR, and
-*"cannot treat it as a CI failure."*[^rust-forge-1040]
+It cites anti-money-laundering compliance as the model. **That makes it a declaration rule rather than
+a detection rule**, and the moderation section follows through: *"It's not your job to play
+detective."* Then a sentence no other policy here writes down:
 
-## The experiment, and its five named conditions
+> Style is not evidence, and English-as-a-second-language speakers, neurodivergent people, and
+> over-explainers are the most likely to be accused of writing like an LLM.[^rust-llm-policy]
 
-LLM-*created* code is permitted only under a bounded experiment *"meant to inform future
-non-experimental policy, not to serve as the perpetual LLM usage policy"* — **pre-arranged**
-(a named reviewer agreed *before* the PR was opened), **non-critical** (internal tooling yes; *"the
-trait system, MIR building, or the query system"* no), **high-quality** (*"we are not interested in
-'vibe-coded' PRs"*), **well-tested** (*"held to a higher standard than human-created PRs, because
-LLMs make it easier to write tests"*; no test suite means write one or close the PR, with *"no
-exceptions for 'writing the tests seems hard'"*), and **well-reviewed** (author and reviewer both
-*"commit to fully understanding the code"*), all **with disclosure**.[^rust-forge-1040]
+That is the false-positive cost of a style test like [Git](git.md)'s, named by a project choosing not
+to run one. Lying is the only clause that carries a Code of Conduct penalty — a warning, then a
+possible ban — and harassing someone for using an LLM is ruled out in the same section.
 
-`rust-lang` organization members are exempt from *"non-critical"* — but the draft *"strongly
-discourages"* using that exemption: *"LLMs are very very good at generating plausible-looking code,
-and soundness is hard to test."*[^rust-forge-1040]
+## Two rules about the project, not the contributor
 
-## What a contributor must do
+**Documentation must be written for humans.** A process may not be written *"such that an LLM is
+required to execute them"*: *"you must not *only* document where tests live with an `AGENTS.md`.
+Documentation must be authored for humans primarily, and LLM documentation may only summarize it, not
+add new detail."*[^rust-llm-policy] A rule against a codebase drifting into a state only a machine can
+navigate.
 
-Nothing is binding yet. If the draft lands: keep LLM output private, or disclose. Never post
-generated prose from your own account. Do not open an LLM-written PR without arranging a reviewer
-first — that is a precondition, not a formality, and it is the clause a well-meaning contributor is
-most likely to miss.
+**Review bots are regulated, not banned.** They must be approved once by a maintainer, post from *"a
+separate GitHub account that clearly marks them as an LLM"*, be blockable through ordinary GitHub
+user-blocking, and never block a PR — *"reviewers must explicitly endorse an LLM comment before
+blocking a PR"*, and cannot treat it as a CI failure.[^rust-llm-policy]
+
+## LLM-created code: an experiment with a circuit breaker
+
+Code *"originally created by an LLM"* is allowed only if it is **pre-arranged, non-critical,
+high-quality, well-tested and well-reviewed, with disclosure**.[^rust-llm-policy] Pre-arranged means
+a reviewer agreed before the PR was opened, and *"This must be the *same* reviewer who will be
+assigned"*. Non-critical rules out soundness-sensitive areas such as *"the trait system, MIR building,
+or the query system"*. Well-tested means *"a higher standard than human-created PRs, because LLMs make
+it easier to write tests"*. Organisation members may ignore the non-critical clause, but are *"strongly
+discouraged"* from doing so.
+
+Every such PR carries an `llm-assisted` label and is posted to a private Zulip channel whose purpose
+is to learn *whether the experiment is working*, not to gatekeep. And the experiment has a stop:
+
+> If more than half of PRs merged in a 6-week window are LLM-created, we disallow merging new
+> LLM-created PRs until we go back below 50%, with a minimum cooldown of 10 days.[^rust-llm-policy]
+
+**No other record here caps AI-created work as a share of merges.** [Homebrew](homebrew.md) caps how
+many AI-assisted pull requests one person may have open; Rust caps the proportion the project accepts.
+The window matches the release cycle, and the policy *"strongly suggests"* automating the breaker to
+avoid inconsistent enforcement.
+
+## How it changes
+
+Minor edits need an ordinary approval; a new or cancelled rule needs a Major Change Proposal from
+**each** ratifying team. It can be dissolved by those teams, by a leadership council decision on
+evidence of harm, or by the project-wide committee described above.[^rust-llm-policy] Post-merge edits
+so far are small: a label name corrected on 2026-08-12 and wording changes on 2026-08-13 and
+2026-08-14.
+
+## What a contributor to `rust-lang/rust` must do
+
+Use an LLM privately as much as you like. Do not post its words as your own — not comments, PR
+descriptions, docs, doc-comments or diagnostics. Disclose trivial changes, translations, LLM-found
+bugs and review-bot output. For LLM-created code, find and agree with your reviewer **before** opening
+the PR, stay out of soundness-critical areas, test beyond the usual bar, and expect the label. Never
+lie about it. Everywhere else in the Rust project, check that repository's own rules.
 
 ## Re-verification notes
 
-Check **merge state first**, before reading any text: `gh pr view 1040 --repo rust-lang/rust-forge`
-and `gh pr view 3959 --repo rust-lang/rfcs`. A quotation from an open PR is a proposal; the same
-words merged are a rule, and this record must not describe one as the other. If #1040 merges, the
-policy will live at `forge.rust-lang.org` under `policies/llm-usage.md` — which **404s as of
-2026-08-04**, itself a usable check.
+**Check RFC 3959 and the LLM committee first**, because either can supersede this record outright.
+Then read the source file at the Forge's current commit rather than the rendered page; its history
+dates every change. `stale_after` is three months for those reasons.
 
-[^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040)](https://github.com/rust-lang/rust-forge/pull/1040)
-[^rust-rfc-3959]: [Project-wide LLM policy (rust-lang/rfcs#3959)](https://github.com/rust-lang/rfcs/pull/3959)
+[^rust-llm-policy]: [src/policies/llm-usage.md (rust-lang/rust-forge at 98f27c7c863e)](https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md)
+[^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040, merged 2026-08-05)](https://github.com/rust-lang/rust-forge/pull/1040)
+[^rust-blog-adoption]: [rust-lang/rust is adopting an LLM policy (Inside Rust Blog, Jynn Nelson, 2026-08-05)](https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/)
+[^rust-rfc-3959]: [Project-wide LLM policy (rust-lang/rfcs#3959, open)](https://github.com/rust-lang/rfcs/pull/3959)
 [^rust-rfc-3950]: [Add contribution policy for AI-generated work (rust-lang/rfcs#3950, closed)](https://github.com/rust-lang/rfcs/pull/3950)

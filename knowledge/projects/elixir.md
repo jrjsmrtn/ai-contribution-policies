@@ -36,9 +36,9 @@ for at all:
 
 Every other project here justifies restraint by cost, risk or provenance. **This one argues from
 redundancy**: the output is not scarce, so submitting it adds nothing the maintainer could not have
-produced. [Asahi Linux](asahi-linux.md) makes the same observation to ban pasted model output from
-support channels — *"others also have access to the same models as you do"* — and reaches a
-prohibition; Elixir reaches a request for judgement. **Same premise, opposite instruments.**
+produced. [Asahi Linux](asahi-linux.md) made the same observation to ban pasted model output from
+support channels, and reached a prohibition — a clause it dropped when it reworked its policy on
+2026-09-07; Elixir reaches a request for judgement. **Same premise, opposite instruments.**
 
 ## Agent work is gated by issue label
 

@@ -159,7 +159,7 @@ Several policies here admit exceptions in principle; this is the only one that *
 identifies the body that granted it, and links the decision**. It also shows the golden rule working
 as a test rather than a slogan: the bot was approved because it *reduces* maintainer work.
 
-## It copied from a policy this bundle cannot read
+## It copied from a policy proposal
 
 The References section attributes its sources, and one is remarkable:
 
@@ -167,13 +167,12 @@ The References section attributes its sources, and one is remarkable:
 > under the Creative Commons Attribution 4.0 International License. **This link serves as
 > attribution.**[^llvm-ai-policy]
 
-[Fedora](../distributions/fedora.md) is recorded here as a policy **in force but unpublished** — approved
-by a minuted unanimous vote and absent from the Council Policies page. **LLVM's document is therefore
-a partial, attributed view of text this bundle could not otherwise reach**, and the licence is what
-made that possible, as with [GCC](gcc.md)'s CC0 and [ripgrep](ripgrep.md)'s Unlicense.
+It credits the **proposal**, not the policy [Fedora](../distributions/fedora.md) adopted after revising
+it, and the two have not been compared here. The licence is what made the borrowing legitimate, as
+with [GCC](gcc.md)'s CC0 and [ripgrep](ripgrep.md)'s Unlicense. (Until 2026-09-14 this bundle wrongly
+recorded Fedora's adopted text as unpublished, and described this excerpt as the only view of it.)
 
-It is also the only copying event here where the borrower names a source that is **itself
-unreachable**, and the only one where attribution was *owed* rather than offered — see
+It is also the only copying event here where attribution was *owed* rather than offered — see
 [policy by copying](../mechanisms/policy-by-copying.md). The other references are Rust's draft policy
 on burdensome pull requests and a post by Seth Larson.
 

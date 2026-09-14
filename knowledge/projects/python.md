@@ -39,7 +39,7 @@ to explain their proposed changes independently.[^python-devguide-ai-tools]
 
 Compare the alternatives now visible across this bundle: [Ansible](ansible.md) says disclosure
 SHOULD happen above a significance threshold; the [Linux kernel](linux-kernel.md) requires a
-structured tag; [Rust](rust.md)'s draft makes it mandatory for a whole tier and treats lying as a
+structured tag; [Rust](rust.md)'s policy makes it mandatory for a whole tier and treats lying as a
 Code of Conduct violation. Python declines all three and keeps only the **explain-it test** — which
 is the same test [Git](git.md) reaches by a different route.
 

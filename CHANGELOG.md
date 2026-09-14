@@ -8,6 +8,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-09-14
+
+### Fixed
+
+- **[`projects/rust.md`](knowledge/projects/rust.md)** — Rust's LLM usage policy was adopted on
+  2026-08-05, the day after this record said it had none. Rewritten from the adopted source: scope
+  limited to `rust-lang/rust` and five teams, a project-wide committee given precedence in advance, a
+  declared-unenforceable design, and a circuit breaker capping LLM-created PRs at half of merges.
+- **[`distributions/fedora.md`](knowledge/distributions/fedora.md)** — the record said Fedora's policy
+  was unpublished; it had been published since 2025-10-24. The error came from checking the Council's
+  *Additional Policies* page instead of its *Council Policies* section. Rewritten to quote the policy.
+- **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)** — Asahi replaced its policy on
+  2026-09-07. Rewritten from the new text (clean-room argument, graded enforcement), with the
+  superseded text cited at its last commit and the now-divergent `m1n1` `AGENTS.md` recorded.
+- **Knock-on corrections** in `overview`, `llvm`, `gcc`, `python`, `networkmanager`, `nerves`, `zig`,
+  `curl`, `ansible`, `systemd`, `elixir`, `zed`, `policy-by-copying`, `prose-reserved-to-humans`,
+  `extending-existing-machinery` and `assisted-by-trailer`.
+
+### Added
+
+- A diff of the bundle against `melissawm/open-source-ai-contribution-policies`, recorded in the log:
+  18 records matched, 25 ours only, 158 of theirs as leads.
+
 ## [0.22.0] - 2026-09-14
 
 ### Added

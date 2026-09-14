@@ -8,10 +8,63 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
 ## 2026-09-14
+* **Diffed the bundle against `melissawm/open-source-ai-contribution-policies`** (pinned `a47e74ca2d73`,
+  2026-09-11): 183 policy-table rows against 43 organisation records. **18 records match 25 of their
+  rows**; 25 of ours are absent from their table, four of them (Debian, FreeBSD, GCC, Perl) listed only
+  under their *Ongoing discussions* and the Linux Foundation only under *Other references*; **158 of
+  their rows have no record here** and are leads, not evidence. The matcher was proved on planted
+  fixtures on both sides, the row parse against an independent line count, and every unmatched title
+  was searched a second way, which found two missed matches (their *CPython* and *Gentoo Linux*) and
+  one false one (ripgrep, matched only through its citation of Astral's policy). **The diff's most
+  useful output was that three of our own records were wrong.**
+* **Rewrote [`projects/rust.md`](projects/rust.md): the policy was adopted.** rust-forge#1040 merged on
+  **2026-08-05**, the day after this record was written saying *"no adopted policy"*. The source file
+  has no commit between 2026-07-20 and 2026-08-12, so the rules described on 2026-08-04 were the rules
+  adopted; only the status was wrong. Now recorded: scope limited to `rust-lang/rust` and the five
+  ratifying teams; precedence given in advance to any project-wide LLM committee (RFC 3959 still open);
+  the adoption announcement's account of why a consensus project codified moderation it could not agree
+  on; the *"Style is not evidence"* clause naming who style tests misjudge; and the **circuit breaker**
+  capping LLM-created PRs at half of merges in a six-week window, which no other record has.
+  `stale_after` three months, because either the RFC or the committee can supersede it.
+* **⚠ Rewrote [`distributions/fedora.md`](distributions/fedora.md): the policy was never unpublished.**
+  From 2026-08-05 this record said the adopted text *"has no reachable canonical publication"*. It was
+  added to the Council docs on **2025-10-24**, two days after the vote, by the person assigned to publish
+  it, and has been at `docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/` since. **The
+  record checked `council/policies/`, which the Council's navigation labels *Additional Policies*; the
+  AI policy is under a separate *Council Policies* heading.** An absence was recorded from one list on a
+  site with two, while Anubis and an unreachable Pagure made the partial check look sufficient. The
+  record now quotes the policy: MUST take responsibility, MUST disclose significant unmodified output
+  with `Assisted-by:` recommended and a model named in an example, and MUST NOT use AI as the final
+  arbiter of a contribution or to judge a person's standing.
+* **Rewrote [`projects/asahi-linux.md`](projects/asahi-linux.md): the policy was replaced.**
+  `asahilinux.org/slop/` now redirects to `/llm-policy/`, from a single commit on **2026-09-07** with no
+  associated pull request. The Board attribution, the *"Slop Generators"* vocabulary, the fixed
+  warning-then-permanent-ban, the litigation-cost argument and the community-channel rule are gone; the
+  new text argues from **clean-room reverse engineering** and grades enforcement from closing an issue to
+  an immediate ban for concealed use. The superseded text is cited at the website repository's last
+  commit before the rework. **The `m1n1` `AGENTS.md` was not changed**, so the agent file still forbids
+  *any* use while linking to a policy that forbids *material* use — the divergence this record's own
+  re-verification notes had predicted.
+* **Correction to a claim made in conversation, not committed:** Asahi's old documentation page does not
+  still show the old text; since 2026-08-30 it is a *"This page has moved"* notice.
+* **Knock-on corrections.** *"Rust's draft"* became *"Rust's policy"* in thirteen places across
+  `overview`, `gcc`, `python`, `networkmanager`, `zig`, `curl`, `ansible` and
+  [`prose-reserved-to-humans`](mechanisms/prose-reserved-to-humans.md), after checking each claim against
+  the adopted text; `llvm`'s citation of *"Rust's draft policy on burdensome pull requests"* is
+  historical and was left. Rust joins the prose table (count to seventeen), and Asahi's lists-and-forums
+  cell is cleared. Fedora's *unpublished* claim is removed from [`llvm`](projects/llvm.md),
+  [`policy-by-copying`](mechanisms/policy-by-copying.md) and `overview`, and Fedora is noted in
+  [`assisted-by-trailer`](mechanisms/assisted-by-trailer.md). Asahi's superseded quotations are removed
+  or marked as history in `overview`,
+  [`extending-existing-machinery`](mechanisms/extending-existing-machinery.md), `systemd`, `elixir` and
+  `zed`.
+* **None of the three would have been caught by expiry in time.** Rust's `stale_after` was 2026-11-04,
+  Fedora's 2026-11-05; Asahi's rework was a week old. A third-party lead list surfaced all three.
+
 
 * **Added [`projects/homebrew.md`](projects/homebrew.md)** — permitted on five conditions, identical
   in `brew` and `homebrew-core` (compared line by line): disclosure in the issue or pull request,

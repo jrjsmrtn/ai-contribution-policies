@@ -51,7 +51,7 @@ the identical criterion reads as hostile in one framing and as coaching in the o
 > your report.[^curl-contribute]
 
 Note the modal. Everywhere else in this bundle disclosure is SHOULD ([Ansible](ansible.md)),
-appreciated-not-required ([Python](python.md)), or tier-dependent ([Rust](rust.md)'s draft). Here it
+appreciated-not-required ([Python](python.md)), or tier-dependent ([Rust](rust.md)'s policy). Here it
 is **MUST**, and it applies to a narrow, high-cost channel rather than to contributions at large.
 
 Reporters must *"double-check the findings carefully before reporting them to us to validate that

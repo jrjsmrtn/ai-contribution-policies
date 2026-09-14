@@ -62,7 +62,7 @@ being."*[^systemd-agents-md]
 
 Most policies here name a consequence for the contribution — it will be closed, it will not be
 merged. This names one for the contributor, and it escalates: loss of trust first, exclusion after.
-Only [Asahi Linux](asahi-linux.md), which bans on the second offence, reaches further.
+Only [Asahi Linux](asahi-linux.md), which bans immediately for concealed use, reaches further.
 
 Note the trigger is *"the inability to prove understanding"* rather than the use of a tool. The test
 is conducted on the person in review, which is the same instrument

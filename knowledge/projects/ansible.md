@@ -59,7 +59,7 @@ checking the org policy alone can be wrong in either direction.
 
 The disclosure threshold is doing real work: it is keyed to **unmodified bulk**, not to whether a
 tool was involved. Under it, heavy editing of generated output falls below the line — a materially
-different rule from [Rust](rust.md)'s draft, where origin triggers disclosure regardless of how much
+different rule from [Rust](rust.md)'s policy, where origin triggers disclosure regardless of how much
 you rewrote.
 
 The autonomous-agent clause is worth noting separately. It grants maintainers a veto *"without prior

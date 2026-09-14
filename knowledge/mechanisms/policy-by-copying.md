@@ -56,7 +56,7 @@ made it work.**
 | Astral (`astral-sh/.github`, org default) | [ripgrep](../projects/ripgrep.md) | 2026-05-26 | ● SHA-pinned | scope — *"our projects"* → *"this project"* |
 | [ripgrep](../projects/ripgrep.md) | [Zed](../projects/zed.md) | 2026-08-21 | ● SHA-pinned | — (but pinned to a superseded revision) |
 | [Zed](../projects/zed.md) | [systemd](../projects/systemd.md) | 2026-09-03 | ○ | the canary's **check**, and the prose clause |
-| [Fedora](../distributions/fedora.md) policy proposal | [LLVM](../projects/llvm.md) | — | ● licence-required | — (a partial view; the source is unpublished) |
+| [Fedora](../distributions/fedora.md) policy proposal | [LLVM](../projects/llvm.md) | — | ● licence-required | — (copied from the proposal, not the adopted text) |
 | GNOME Loupe | ~a dozen GNOME modules | from 2025-02-26 | ◐ some | currency — the copies diverged |
 | Linux kernel docs (rendered) | [MacPorts](../projects/macports.md) PR #420 | 2026-08-04 | ● cited | currency — the source had retired the rule |
 
@@ -106,9 +106,11 @@ This is the dimension the records only touch individually, and it splits three w
   project's code licence is rarely a sensible licence for prose. Nobody has raised this, and every
   borrower above proceeded regardless.
 
-**The LLVM case is the sharpest**, because the licence did work no other mechanism could: Fedora's
-policy is in force and **unpublished**, so LLVM's attributed excerpt is the only view of that text
-this bundle can reach. Licensing made a document readable that governance had not made public.
+**The LLVM case is the sharpest**, because what LLVM copied was a **proposal**, credited under the
+proposal's licence, while Fedora went on to adopt a revised text and published it two days after the
+vote. A licensed excerpt of a draft can keep circulating after the draft is superseded — the currency
+problem again. (This bundle recorded Fedora's adopted text as unpublished until 2026-09-14, which was
+wrong.)
 
 ## Two pins, behaving oppositely
 

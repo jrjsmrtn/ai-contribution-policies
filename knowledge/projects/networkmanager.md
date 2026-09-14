@@ -78,7 +78,7 @@ thing:
 
 **The test is conducted in review, on the contributor, in public, and it is not fakeable by the
 tool** — the reviewer does not need to determine how the patch was produced, only whether the person
-sending it can defend it. That sidesteps the enforcement problem that [Rust](rust.md)'s draft
+sending it can defend it. That sidesteps the enforcement problem that [Rust](rust.md)'s policy
 concedes and that [Git](git.md)'s detection-flavoured guidance runs into, without asking anyone to
 self-report.
 
@@ -91,7 +91,7 @@ It is also, unusually, a rule whose sanction is stated: *"it will not be merged"
 > Write your own commit messages and Merge Request descriptions. Those explain why you are making the
 > change, which is the part a tool cannot know.[^nm-contributing]
 
-The *reason* is what makes this worth copying. Sixteen records reserve some conversational surface
+The *reason* is what makes this worth copying. Seventeen records reserve some conversational surface
 to humans and this is **the only one that says why** — see
 [prose reserved to humans](../mechanisms/prose-reserved-to-humans.md). NetworkManager grounds it in
 what a commit message is *for*: the change is in the diff, the *why* is only in the author's head, so

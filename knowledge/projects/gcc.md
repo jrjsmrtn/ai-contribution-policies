@@ -38,7 +38,7 @@ sources:
 
 Every other policy in this bundle draws its line somewhere else: origin ([Zig](zig.md)), appearance
 ([Git](git.md)), certifiability ([QEMU](qemu.md)), unmodified bulk ([Ansible](ansible.md)),
-disclosure ([Rust](rust.md)'s draft). GCC's line is **the copyright threshold** — the same test that
+disclosure ([Rust](rust.md)'s policy). GCC's line is **the copyright threshold** — the same test that
 decides whether a contribution needs a copyright assignment at all.
 
 That makes the policy an extension of GCC's existing legal machinery rather than a new regime. Below
@@ -110,7 +110,7 @@ Alone in this bundle, the policy's first section is about people:
 That inverts the usual posture. Where [Git](git.md) tells maintainers what to reject and
 [curl](curl.md) bans fabricated reporters outright, GCC's opening instruction is to *guide* a
 contributor who has not complied. It is also a hedge against the enforcement problem
-[Rust](rust.md)'s draft concedes: if the rule cannot be verified, the failure mode is suspicion, and
+[Rust](rust.md)'s policy concedes: if the rule cannot be verified, the failure mode is suspicion, and
 this is an explicit instruction not to treat contributors that way.
 
 ## The policy is CC0

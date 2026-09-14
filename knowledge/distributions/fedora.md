@@ -1,14 +1,15 @@
 ---
 type: Organization
 title: Fedora
-description: Has an AI-assisted contributions policy in force since 2025-10-22 by unanimous Council vote — whose agreed text has no reachable canonical publication, so this record deliberately does not state what it says.
-resource: https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2025-10-22/fedora-council-meeting.2025-10-22-14.01.log.html
+description: Permits AI-assisted contributions under a Council policy approved 2025-10-22 and published two days later — MUST take responsibility, MUST disclose when a significant part is taken from a tool unchanged, with an Assisted-by trailer as the recommended method. It also forbids AI as the final judge of a contribution or of a person's standing. This record said the policy was unpublished from 2026-08-05 to 2026-09-14; it never was.
+resource: https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/
 tags:
   - ai-contribution
   - policy
   - distribution
   - in-force
-  - unpublished
+  - permitted
+  - disclosure
 status: stable
 generated:
   by: claude/opus-5
@@ -16,91 +17,129 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-05T07:45:00Z'
-stale_after: 2026-11-05
+  - by: claude/opus-5
+    at: '2026-09-14T13:10:00Z'
+stale_after: 2027-03-14
 sources:
+  - id: fedora-ai-policy
+    title: 'AI-Assisted Contributions Policy — Fedora Council (v1.0, 2025-10-24)'
+    resource: https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/
+  - id: fedora-ai-policy-src
+    title: 'council/modules/ROOT/pages/policy/ai-contribution-policy.adoc (forge.fedoraproject.org council/docs, main)'
+    resource: https://forge.fedoraproject.org/council/docs/raw/branch/main/council/modules/ROOT/pages/policy/ai-contribution-policy.adoc
+  - id: fedora-ai-policy-commit
+    title: 'council/docs commit 823e93b640 — Add AI-Assisted Contributions Policy (2025-10-24)'
+    resource: https://forge.fedoraproject.org/council/docs/commit/823e93b640dea2205d6df2bc51586552a52898d7
+  - id: fedora-council-nav
+    title: 'council/modules/ROOT/nav.adoc (forge.fedoraproject.org council/docs, main)'
+    resource: https://forge.fedoraproject.org/council/docs/raw/branch/main/council/modules/ROOT/nav.adoc
   - id: fedora-council-meeting-2025-10-22
     title: Fedora Council meeting log, 2025-10-22 — AI policy approval
     resource: https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2025-10-22/fedora-council-meeting.2025-10-22-14.01.log.html
   - id: fedora-council-policies
-    title: Fedora Council Policies
+    title: 'Fedora Council — Additional Policies (the page this record checked on 2026-08-05)'
     resource: https://docs.fedoraproject.org/en-US/council/policies/
-  - id: fedora-communityblog-proposal
-    title: 'Council Policy Proposal: Policy on AI-Assisted Contributions (the PROPOSAL, not the adopted text)'
-    resource: https://communityblog.fedoraproject.org/council-policy-proposal-policy-on-ai-assisted-contributions/
 ---
 
-> **This record states that Fedora has a policy and that it is in force. It deliberately does not
-> state what the policy says**, because the adopted text has no reachable canonical publication and
-> nobody has read it here. Every other record in this bundle quotes its subject; this one cannot,
-> and saying so is the finding.
+**Stance: permitted, with accountability and threshold disclosure.** The Fedora Council approved the
+AI-Assisted Contributions Policy on **2025-10-22** by a recorded vote of **+7, 0,
+0**,[^fedora-council-meeting-2025-10-22] and it was added to the Council documentation on
+**2025-10-24**.[^fedora-ai-policy-commit] The published text carries `v1.0, 2025-10-24`, and a
+2026-01-15 commit added that version line without changing the rules — the two revisions differ
+only in the version line and an author attribute, compared on 2026-09-14.[^fedora-ai-policy-src]
 
-**Stance: a policy exists and binds, but is not published where a contributor can find it.**
+## ⚠ Correction: this record was wrong for six weeks, and wrong from its first day
 
-## What is established
+From 2026-08-05 to 2026-09-14 this record said the policy *"has no reachable canonical
+publication"* and deliberately declined to state what it said. **The policy had been published for
+more than nine months when that was written.**
 
-The Fedora Council approved the AI-Assisted Contributions policy on **2025-10-22**, by a recorded
-vote of **+7, 0, 0**. Aoife Moloney: *"The Fedora Council have agreed to the latest revision of the
-proposed ai policy."* The policy **takes effect immediately upon council approval**, with future
-revisions through the established Policy Change Process.[^fedora-council-meeting-2025-10-22]
+The cause was the page checked. The record looked at `council/policies/`,[^fedora-council-policies] which the Council's own
+navigation labels **"Additional Policies"**; the AI policy sits under a separate **"Council
+Policies"** heading at `council/policy/ai-contribution-policy/`.[^fedora-council-nav] At the time,
+the docs site also sat behind an Anubis challenge and the Pagure ticket holding the agreed text was
+unreachable, so the page that did load looked like confirmation. **An absence was recorded from one
+list, when the site had two.** On 2026-09-14 the policy page fetched without a challenge and its
+source fetched from `forge.fedoraproject.org`.
 
-The agreed version was referenced in **Pagure ticket #542, comment 990415**. Publication to the
-Fedora policies page was to happen via a Pagure pull request, with **Justin Wheeler assigned** to add
-it to Fedora's official policies documentation, and summaries to follow on Discourse, the mailing
-lists and the Community Blog.[^fedora-council-meeting-2025-10-22]
+The earlier record's refusal to quote the Community Blog proposal as policy was right, and remains
+right: that post is the proposal, not the adopted text.
 
-## What is not
+## The policy
 
-**As of 2026-08-05 the policy is not on the Fedora Council Policies page.**[^fedora-council-policies]
-That page carries the Council's other standing policies — meeting cadence, communication venues,
-infrastructure stance, elections, event support — and no AI policy. That is roughly nine months after
-approval, against an assigned action to publish it there.
+> You *MAY* use AI assistance for contributing to Fedora, as long as you follow the principles
+> described below.[^fedora-ai-policy]
 
-The agreed text therefore exists, so far as can be established, **only as a comment on a ticket** —
-and `pagure.io` was unreachable at the time of writing, from two independent networks.
+Four principles follow, in RFC 2119 language.
 
-## Why this is worth a record rather than an empty cell
+**Accountability** — *"You *MUST* take the responsibility for your contribution. Contributing to Fedora
+means vouching for the quality, license compliance, and utility of your submission. … The contributor
+is always the author and is fully accountable for the entirety of these
+contributions."*[^fedora-ai-policy]
 
-Fedora did the governance well: an open proposal, weeks of public discussion on Discourse, revisions
-in response to community feedback, and a recorded unanimous vote. The failure is at the last step,
-and it is the one that matters to a contributor.
+**Transparency** — a threshold, not a blanket rule:
 
-**A rule in force that cannot be read is not a rule anyone can follow.** Contributors are bound as of
-2025-10-22 by a text whose canonical location is a ticket comment on a service that may be down. This
-bundle exists because unsourced summaries of policies decay silently; Fedora is the case where the
-*policy itself* has the same problem, upstream of any summary.
+> You *MUST* disclose the use of AI tools when the significant part of the contribution is taken from
+> a tool without changes. You *SHOULD* disclose the other uses of AI tools, where it might be useful.
+> Routine use of assistive tools for correcting grammar and spelling, or for clarifying language, does
+> not require disclosure.[^fedora-ai-policy]
 
-## The Community Blog post is the proposal, not the policy
+That is close to [Ansible](../projects/ansible.md)'s wording — significant unmodified output, with
+grammar and spelling exempt — with Fedora's *MUST* where Ansible has *SHOULD*. Which text came first,
+and whether one drew on the other, is not established here.
 
-A full policy text is published on the Community Blog.[^fedora-communityblog-proposal] **It must not
-be treated as the adopted text.** The Council states it approved *"the latest revision"* after
-*"incorporating feedback from our community into better revisions of the initial
-proposal"*[^fedora-council-meeting-2025-10-22] — so the blog post is a superseded draft, and the
-extent of the differences is not documented anywhere reachable.
+**Disclosure goes where authorship goes.** *"For contributions tracked in git, the recommended method
+is an `Assisted-by:` commit message trailer"*; elsewhere, document preambles, design-file metadata,
+translation notes or a wiki category.[^fedora-ai-policy] The two examples are *"`Assisted-by: generic
+LLM chatbot`"* and *"`Assisted-by: ChatGPTv5`"* — so Fedora recommends the trailer with a model named,
+the form the [Linux kernel](../projects/linux-kernel.md) dropped as *"free advertising"*. See
+[the Assisted-by trailer](../mechanisms/assisted-by-trailer.md).
 
-Quoting it here would reproduce exactly the error this bundle was built to correct: presenting a
-plausible, well-formatted, out-of-date text as the current position of an organisation.
+**Contribution and community evaluation** — a limit on reviewers and on the project, not only on
+contributors:
+
+> You *MUST NOT* use AI as the sole or final arbiter in making a substantive or subjective judgment on
+> a contribution, nor may it be used to evaluate a person's standing within the community (e.g., for
+> funding, leadership roles, or Code of Conduct matters).[^fedora-ai-policy]
+
+Automated technical validation — CI, tests, spam filtering — is excluded, and *"The final
+accountability for accepting a contribution, even if implemented by an automated system, always
+rests with the human contributor who authorizes the action."* **Few policies here say anything about
+AI judging people**; this one rules it out for funding, leadership and conduct decisions by name.
+
+**Large-scale initiatives** are out of scope: work that *"may significantly change the ways the
+project operates or lead to exponential growth in contributions"* must be discussed with the Council
+separately. Suspected violations go to the Council through private tickets.[^fedora-ai-policy]
+
+## Governance, which was done well throughout
+
+An open proposal, public discussion, revisions in response to it, a recorded unanimous vote, and
+publication two days later by the person assigned to publish it.[^fedora-council-meeting-2025-10-22]
+[^fedora-ai-policy-commit] **Every step of Fedora's process worked; this bundle's check of it did
+not.**
+
+[LLVM](../projects/llvm.md) credits *"the Fedora project policy proposal"* for part of its own text.
+That is the proposal, not this adopted version, and the two have not been compared here.
 
 ## What a contributor must do
 
-Assume a policy binds you, because one does. Secondary reporting consistently describes disclosure
-via an `Assisted-by` tag, contributor accountability, and AI not being the sole or final arbiter in
-review — but that is reporting, not the text, and this record does not adopt it. Ask on the Fedora
-Council's Discourse category, or in `#council`, for the current canonical location before relying on
-any published summary.
+Take responsibility for everything you submit, including its licence. If a significant part came from
+an AI tool unchanged, disclose it — in git, with an `Assisted-by:` trailer. Disclose other uses where
+useful; grammar and spelling help needs no disclosure. If you review or decide things in Fedora, do not
+let an AI make the final call on a contribution, and do not use one to judge a person. Take any
+large-scale AI initiative to the Council first.
 
 ## Re-verification notes
 
-Check, in this order:
+**Read the source, and read the navigation before concluding anything is absent.** The policy's source
+is `ai-contribution-policy.adoc` in `council/docs` on `forge.fedoraproject.org`; its commit history
+dates every change. The Council's `nav.adoc` lists which pages exist and under which heading — the
+check this record skipped. Anubis has been seen on `docs.fedoraproject.org`; when it appears, the
+forge source is the route.
 
-1. **[Council Policies](https://docs.fedoraproject.org/en-US/council/policies/)** — where the Council
-   resolved to put it. Its appearance there supersedes this record entirely and turns it into a
-   normal one.
-2. **Pagure ticket #542, comment 990415** — the agreed text, when `pagure.io` is reachable.
-3. **`docs.fedoraproject.org`** is behind an Anubis proof-of-work challenge for non-browser clients,
-   which returns **HTTP 200 with a challenge page for any path, including ones that do not exist**.
-   A 200 from that host proves neither retrieval nor existence. This record's predecessor logged a
-   fabricated council URL as "located, retrieval blocked" for exactly that reason.
-
+[^fedora-ai-policy]: [AI-Assisted Contributions Policy — Fedora Council (v1.0, 2025-10-24)](https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/)
+[^fedora-ai-policy-src]: [council/modules/ROOT/pages/policy/ai-contribution-policy.adoc (forge.fedoraproject.org council/docs, main)](https://forge.fedoraproject.org/council/docs/raw/branch/main/council/modules/ROOT/pages/policy/ai-contribution-policy.adoc)
+[^fedora-ai-policy-commit]: [council/docs commit 823e93b640 — Add AI-Assisted Contributions Policy (2025-10-24)](https://forge.fedoraproject.org/council/docs/commit/823e93b640dea2205d6df2bc51586552a52898d7)
+[^fedora-council-nav]: [council/modules/ROOT/nav.adoc (forge.fedoraproject.org council/docs, main)](https://forge.fedoraproject.org/council/docs/raw/branch/main/council/modules/ROOT/nav.adoc)
 [^fedora-council-meeting-2025-10-22]: [Fedora Council meeting log, 2025-10-22 — AI policy approval](https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2025-10-22/fedora-council-meeting.2025-10-22-14.01.log.html)
-[^fedora-council-policies]: [Fedora Council Policies](https://docs.fedoraproject.org/en-US/council/policies/)
-[^fedora-communityblog-proposal]: [Council Policy Proposal: Policy on AI-Assisted Contributions (the PROPOSAL, not the adopted text)](https://communityblog.fedoraproject.org/council-policy-proposal-policy-on-ai-assisted-contributions/)
+[^fedora-council-policies]: [Fedora Council — Additional Policies (the page this record checked on 2026-08-05)](https://docs.fedoraproject.org/en-US/council/policies/)

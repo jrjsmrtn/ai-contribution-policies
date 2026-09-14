@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Prose reserved to humans
-description: Sixteen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
+description: Seventeen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
 resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 tags:
   - ai-contribution
@@ -49,8 +49,8 @@ sources:
     resource: https://devguide.python.org/getting-started/ai-tools/
 ---
 
-**The most widely shared rule in this bundle is not about code.** Sixteen records permit or tolerate
-AI assistance in the patch and then restrict it in the writing around the patch, and a seventeenth put
+**The most widely shared rule in this bundle is not about code.** Seventeen records permit or tolerate
+AI assistance in the patch and then restrict it in the writing around the patch, and an eighteenth put
 it to a vote and declined. That is the opposite
 of what the risk arguments elsewhere would predict — the copyright, licensing and correctness
 worries all attach to the code, and the prose is where none of them apply.
@@ -73,7 +73,8 @@ worries all attach to the code, and the prose is where none of them apply.
 | [Dependency-Track](../projects/dependency-track.md) | | ● | | |
 | [GTK](../projects/gtk.md) | | | ● | |
 | [Homebrew](../projects/homebrew.md) | | | ● | |
-| [Asahi Linux](../projects/asahi-linux.md) | ● | ● | ● | ● |
+| [Rust](../projects/rust.md) | | ● | ● | |
+| [Asahi Linux](../projects/asahi-linux.md) | ● | ● | ● | |
 | [Elixir](../projects/elixir.md) | | | | ● |
 | [Debian](../distributions/debian.md) | ○ | ○ | ○ | ○ |
 
@@ -127,7 +128,7 @@ speaker, and the project supplies no way to tell the two apart.
 **Assist versus substitute**, and it is what makes the rule defensible against the strongest
 objection to it. [Perl](../projects/perl.md) exempts *"LLM use for translation of human-written
 messages"*[^pr-perl]; [Python](../projects/python.md) explicitly permits *"Assistance with writing
-comments, especially in a non-native language"*[^pr-python]; Elixir, FreeBSD and Rust's draft all
+comments, especially in a non-native language"*[^pr-python]; Elixir, FreeBSD and Rust's policy all
 carve out translation; even [Zig](../projects/zig.md), which forbids everything else, tells
 contributors to post in their own language instead.
 
