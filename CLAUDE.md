@@ -67,6 +67,14 @@ including ones that do not exist — so a 200 from such a host cannot distinguis
 were simply wrong. Before recording a source as unreachable, confirm the URL from a page that
 actually resolves.
 
+**Anubis challenges clients that claim to be browsers, and the challenge follows the user agent.**
+Measured 2026-09-14: with a `Mozilla/5.0 (…)` user agent, `docs.fedoraproject.org`,
+`forge.fedoraproject.org`, `git.kernel.org` and `gitlab.freedesktop.org` all served the challenge,
+and `gitlab.gnome.org` answered HTTP 406; with plain `curl` or any non-browser user agent, every one
+returned the document. A fetch tool that impersonates a browser will see a wall that `curl` does not.
+**Try a plain `curl` before recording a source as blocked** — Fedora's record called a published
+policy unpublished for six weeks partly because the blocked fetch looked like confirmation.
+
 When a source cannot be fetched:
 
 - **Do not fall back to a summary elsewhere.** A secondary source is what this bundle exists to
@@ -120,9 +128,13 @@ Dates are ISO 8601 everywhere, including prose (`2026-08-04`, never `August 4, 2
 
 ## Current Development Status
 
-**Populated, and maintained by expiry rather than by coverage.** v0.6.0, on 2026-08-14, was the
+**Populated, and maintained by expiry and by watching sources, rather than by coverage.** v0.6.0, on 2026-08-14, was the
 first release driven by a `stale_after` coming due rather than by new material, and that remains the
-expected shape: the weekly agent reports a due record, the primary is re-read, the release follows.
+expected shape: a scheduled job reports a due record, the primary is re-read, the release follows.
+**Expiry alone proved insufficient on 2026-09-14**, when three records were found wrong before they
+came due. Since then a source watch runs on Mondays and Thursdays and reports primaries that changed
+and movements in the third-party lead list (`supplychain-workspace` ADR-0013). It never edits a
+record: a reported change is re-read here, against the primary, like any other.
 **Which versions have shipped is derived — `git tag` and `CHANGELOG.md` — and is not enumerated
 here.** A hand-written range said *"v0.1.0 to v0.6.0"* and was false from v0.7.0 onward, sitting
 directly above the paragraph warning against exactly this.
