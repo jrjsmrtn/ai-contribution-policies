@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.24.0] - 2026-09-15
+
+### Changed
+
+- **[`projects/macports.md`](knowledge/projects/macports.md)** — re-verified against the MacPorts mailing
+  lists and repositories, and the central claim changed: **the unmerged proposal is already practice.**
+  316 commits in `macports-ports` carry an `Assisted-by:` trailer, none before the day #420 opened, 313 by
+  one committer and 315 in the kernel's retired `AGENT:MODEL` form; reviewers with commit access have twice
+  pointed contributors at the draft. The author asked for discussion on macports-dev, where no one replied.
+  Adds 11 sources, including the mailing-list archives and dated commit searches.
+- Knock-on sentences in `assisted-by-trailer`, `policy-by-copying`, `linux-kernel` and `overview`.
+
+### Fixed
+
+- `macports` and `linux-kernel` said no comment on #420 mentioned the kernel's format change. This
+  bundle's maintainer posted one on 2026-09-14; both records now say so and disclose the involvement.
+
 ## [0.23.0] - 2026-09-14
 
 ### Fixed

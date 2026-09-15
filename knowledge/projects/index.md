@@ -19,7 +19,7 @@ Directory: `projects/`
 | [Kubernetes](kubernetes.md) | Organization | Permits AI assistance, requires disclosure in the PR description, and forbids... |
 | [LLVM](llvm.md) | Organization | The most theorised policy here. It names the problem — an extractive contri... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
-| [MacPorts](macports.md) | Organization | Has no adopted AI policy. An open, contested pull request would require an As... |
+| [MacPorts](macports.md) | Organization | Has no adopted AI policy, but its unmerged proposal is already practice. An o... |
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance, reserves all contributor prose to humans, and since 20... |
 | [Perl](perl.md) | Organization | Draws its lines by artifact type rather than by tool or disclosure — code m... |

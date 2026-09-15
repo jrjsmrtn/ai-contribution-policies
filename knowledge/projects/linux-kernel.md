@@ -276,8 +276,10 @@ from the rendered site can be stale while looking perfectly sourced.**
 one day after the format changed — proposing the `Assisted-by:` trailer *"in the format recommended
 by the Linux kernel developers"*, citing
 `docs.kernel.org/process/coding-assistants.html#attribution` and reproducing the **retired**
-`AGENT_NAME:MODEL_VERSION` form. As of 2026-09-14 that PR is still open, still specifies the retired form, and no comment in its
-thread mentions the change. **A stale rendered page is not merely a re-verification trap for this bundle; it is
+`AGENT_NAME:MODEL_VERSION` form. As of 2026-09-15 that PR is still open and still specifies the retired form; the first comment in
+its thread to point out the change was posted on 2026-09-14 by this bundle's maintainer. By
+2026-09-15, 316 commits in `macports-ports` already carried the retired form, and reviewers were
+citing the unmerged proposal to contributors — see [MacPorts](macports.md). **A stale rendered page is not merely a re-verification trap for this bundle; it is
 exporting a superseded rule to other projects.**
 
 **`lore.kernel.org` sits behind an Anubis proof-of-work challenge**, answering HTTP 200 with

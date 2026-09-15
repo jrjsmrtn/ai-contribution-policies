@@ -473,8 +473,8 @@ kernel and served the retired `AGENT_NAME:MODEL_VERSION` form for weeks after ma
 [MacPorts](projects/macports.md) then proposed adopting the trailer *"in the format recommended by the
 Linux kernel developers"*, citing that page and reproducing the retired form, in a pull request opened
 **one day after** the kernel changed it.[^macports-pr-420-diff] A stale rendered page propagated a
-superseded rule into another project's draft policy. The mechanism is evidenced; intent is not
-claimed. By 2026-09-14 the rendered page had caught up and served `Assisted-by: LLM`, so the pull
+superseded rule into another project's draft policy, and from the draft into 316 of that project's
+commits. The mechanism is evidenced; intent is not claimed. By 2026-09-14 the rendered page had caught up and served `Assisted-by: LLM`, so the pull
 request now cites as its authority a page that contradicts it — and nothing announced either change.
 
 **Where it is going**: disclosure in the pull request, which the three most recent adopters require

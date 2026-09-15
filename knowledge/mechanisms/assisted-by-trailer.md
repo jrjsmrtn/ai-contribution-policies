@@ -69,7 +69,9 @@ several of the disagreements below follow from that.
 | **Replaced** | [ASF](../foundations/apache-software-foundation.md) `Generated-by:`; [OpenInfra](../foundations/openinfra.md) both, distinguished; [QEMU](../projects/qemu.md) proposed `AI-used-for:` | — |
 
 [MacPorts](../projects/macports.md) has a proposal quoting a form the kernel had already retired; it
-is not adopted, and a participant in its thread has since proposed Homebrew's ban in its place.
+is not adopted — yet 316 commits in its ports tree already carry that retired form, 313 by one
+committer, and reviewers point contributors at the draft. A participant in its thread has since
+proposed Homebrew's ban in its place.
 [Fedora](../distributions/fedora.md) requires disclosure above a threshold and recommends the trailer as
 the method, naming a model in one of its two examples (`Assisted-by: ChatGPTv5`).
 

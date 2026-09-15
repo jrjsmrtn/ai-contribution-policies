@@ -83,7 +83,9 @@ state and leaves the parts that impose work.
 
 **Then currency.** MacPorts cited `docs.kernel.org`, which renders a *released* kernel rather than
 mainline, and so reproduced an attribution format the kernel had replaced **the day
-before**.[^cp-macports] [^cp-kernel-rendered] The GNOME copies diverged too: the Loupe original does
+before**.[^cp-macports] [^cp-kernel-rendered] **And the copy kept travelling**: from the day the
+proposal opened, 316 commits in `macports-ports` carry the retired format, and reviewers cite the
+unmerged draft to contributors — see [MacPorts](../projects/macports.md). The GNOME copies diverged too: the Loupe original does
 not name Ollama, `libadwaita` added it on 2025-07-11 and five siblings carry it while the rest do
 not. **A policy propagated by copy-paste diverges on exactly the detail a contributor needs** —
 whether their tool is named — and nothing reconciles the copies.

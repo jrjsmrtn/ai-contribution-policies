@@ -8,8 +8,41 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-15
+
+* **Re-verified [`projects/macports.md`](projects/macports.md) against the MacPorts mailing lists and
+  the MacPorts repositories, and the record's central claim changed.** It described #420 as a proposal
+  nobody had adopted. **The proposal is already practice**:
+  - GitHub's commit search finds **316 commits** in `macports-ports` with an `Assisted-by:` trailer. The
+    first, `a89d64e444`, landed on 2026-08-04 at 21:13 UTC, about seven hours after #420 opened; none is
+    earlier. **313 are by one committer**, and **315 use the kernel's retired `AGENT:MODEL` form**, 309 of
+    them `Claude:claude-opus-5`.
+  - The same committer had used `Co-Authored-By: … noreply@anthropic.com` on 178 of 183 such commits from
+    2026-02-15; the 106 made from 2026-08-04 carry both trailers, and none after 2026-08-16 carries
+    `Co-Authored-By`. `macports-base` has eight Anthropic-co-authored commits from 2026-03 to 2026-05.
+  - **Two reviewers with commit access have pointed contributors at the unmerged draft.** On 2026-08-17 in
+    `macports-ports` PR 34081, after the contributor disclosed Google AI use on macports-users; on
+    2026-09-15 in PR 34661, where the contributor switched to `Assisted-by: Claude:claude-fable-5-1 [Claude
+    Code]` *"per macports-base#420"* — the retired format, the day after #420's thread was told the kernel
+    dropped it.
+* **The mailing lists show where the discussion did not happen.** #420's author asked for opinions *"here
+  on the list"*; the macports-dev archives for 2026-08 and 2026-09 (53 messages, bodies read in full)
+  contain no reply. Subject indexes for macports-dev since 2024 and macports-users since 2025 carry no
+  other AI-contribution thread; the only other AI-related subject is Trac being put behind Anubis on
+  2026-06-15 because of AI crawlers.
+* **Disclosure added.** The record said none of #420's comments mentioned the kernel's format change. On
+  2026-09-14 this bundle's maintainer posted one that does; the record and
+  [`linux-kernel`](projects/linux-kernel.md) now say so and name the involvement.
+* **Knock-on sentences** in [`assisted-by-trailer`](mechanisms/assisted-by-trailer.md),
+  [`policy-by-copying`](mechanisms/policy-by-copying.md), `linux-kernel` and `overview`: the stale format
+  travelled from a rendered page into a draft and from the draft into commits.
+* **A false alarm in the method, fixed at the source.** Scanning the archives, the 2026-06 subject indexes
+  of both lists looked like challenge pages because a subject line mentions Anubis. They were not. The
+  source watch's detector had the same flaw — it matched the bare word — and now matches challenge-page
+  markup instead, in the private workspace that runs the watch, with a self-test for exactly this case.
 
 ## 2026-09-14
 * **Diffed the bundle against `melissawm/open-source-ai-contribution-policies`** (pinned `a47e74ca2d73`,
