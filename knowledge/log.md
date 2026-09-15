@@ -8,8 +8,28 @@ in a heading. The release map below is how a `knowledge/` tree separated from th
 still names its version: OKF has no in-band content-version field, and a git tag does not travel
 with a copied directory.
 
-**Releases**, newest first: **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
+**Releases**, newest first: **v0.25.0** 2026-09-15 (Rust's policy spread before its text said so) · **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
+
+## 2026-09-15
+
+* **Re-verified [`projects/rust.md`](projects/rust.md): the policy's scope widened today.** The source
+  watch's first manual run flagged the Forge page. rust-forge PR 1108, merged 2026-09-15, changed the
+  scope from *"only applies to `rust-lang/rust`"* to *"only applies to the repositories that have adopted
+  it"*, and lists six: `rust`, `cargo`, `rustlings`, `mdBook`, `rustfmt` and `rust-clippy`. **Each was
+  checked against its own contributing guide**, and the adoption text was added between 2026-08-02 and
+  2026-09-01 — `rust-lang/rust`'s three days before the Forge policy merged. The policy spread repository
+  by repository before its text said so. The five-team ratification clause is unchanged, and the PR was
+  merged with one approving review, the procedure the policy sets for minor changes.
+* **A probe missed one adopter and was caught before it became a claim.** A search for `CONTRIBUTING.md`
+  found no adoption text in rustfmt; listing the repository's files showed its guide is `Contributing.md`.
+  The record's re-verification notes now say to list files rather than guess a filename.
+* **Source-watch triage, recorded here because the manual run consumed the reports.** Of 11 sources the
+  run flagged, one is the Rust scope change above. Zed's `dangerfile.ts` changed but still fails a pull
+  request that leaves the self-review marker in `README.md`, so the [`zed`](projects/zed.md) and
+  [`review-canary`](mechanisms/review-canary.md) claims stand. Homebrew's `check-prs.yml` gained a bot
+  exclusion and cdxgen's README a version bump; neither touches a claim here. The rest were page noise:
+  per-commit tree SHAs, a docs build timestamp, a star count, blog sidebars and site navigation.
 
 ## 2026-09-15
 

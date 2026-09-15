@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.25.0] - 2026-09-15
+
+### Changed
+
+- **[`projects/rust.md`](knowledge/projects/rust.md)** — the LLM usage policy's scope widened on
+  2026-09-15 (rust-forge PR 1108) from `rust-lang/rust` to the repositories that have adopted it, and it
+  now lists six. Each adoption was verified in the repository's own contributing guide and dated; the
+  adoptions preceded the list by two to six weeks. The ratifying-teams clause is unchanged. Source pinned
+  to the new Forge commit, with six adoption sources added.
+- `overview.md` — the Rust source title reflects the adopters list.
+
 ## [0.24.0] - 2026-09-15
 
 ### Changed

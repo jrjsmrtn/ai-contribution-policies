@@ -37,7 +37,7 @@ sources:
     title: AI Generated Content Policy — OpenInfra Foundation
     resource: https://openinfra.org/legal/ai-policy
   - id: rust-forge-1040
-    title: 'LLM Usage Policy for rust-lang/rust (Rust Forge; adopted via rust-forge#1040, 2026-08-05)'
+    title: 'LLM Usage Policy — Rust (Rust Forge; adopted 2026-08-05, six repositories listed 2026-09-15)'
     resource: https://forge.rust-lang.org/policies/llm-usage.html
   - id: zig-coc
     title: 'Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)'
@@ -570,7 +570,7 @@ never that the content arrived. Check for the text you came for.
 [^owasp-projects-policy]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
 [^asf-generative-tooling]: [Generative Tooling Guidance — The Apache Software Foundation](https://www.apache.org/legal/generative-tooling.html)
 [^openinfra-ai-policy]: [AI Generated Content Policy — OpenInfra Foundation](https://openinfra.org/legal/ai-policy)
-[^rust-forge-1040]: [LLM Usage Policy for rust-lang/rust (Rust Forge; adopted via rust-forge#1040, 2026-08-05)](https://forge.rust-lang.org/policies/llm-usage.html)
+[^rust-forge-1040]: [LLM Usage Policy — Rust (Rust Forge; adopted 2026-08-05, six repositories listed 2026-09-15)](https://forge.rust-lang.org/policies/llm-usage.html)
 [^zig-coc]: [Code of Conduct — Zig Programming Language (section: Strict No LLM / No AI Policy)](https://ziglang.org/code-of-conduct/)
 [^curl-contribute]: [Contribute to curl — on AI use in curl](https://curl.se/dev/contribute.html)
 [^gcc-ai-policy]: [GNU Compiler Collection - AI Policy](https://gcc.gnu.org/ai-policy.html)

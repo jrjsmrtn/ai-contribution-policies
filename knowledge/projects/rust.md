@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Rust
-description: Adopted an LLM usage policy for rust-lang/rust on 2026-08-05 — scoped to that repository and the five teams that ratified it, not the project. It allows LLMs to analyse but not create, bans LLM-created comments, docs and diagnostics, admits LLM-created code only under a bounded experiment with a circuit breaker, and says openly that many of its clauses are unenforceable. A project-wide committee could still supersede it.
+description: Adopted an LLM usage policy for rust-lang/rust on 2026-08-05, and since 2026-09-15 lists six adopting repositories — rust, cargo, rustlings, mdBook, rustfmt and rust-clippy — still bound only to the five teams that ratified it, not the whole project. It allows LLMs to analyse but not create, bans LLM-created comments, docs and diagnostics, admits LLM-created code only under a bounded experiment with a circuit breaker, and says openly that many of its clauses are unenforceable. A project-wide committee could still supersede it.
 resource: https://forge.rust-lang.org/policies/llm-usage.html
 tags:
   - ai-contribution
@@ -19,11 +19,34 @@ verified:
     at: '2026-08-04T23:45:00Z'
   - by: claude/opus-5
     at: '2026-09-14T13:10:00Z'
+  - by: claude/opus-5
+    at: '2026-09-15T19:10:00Z'
 stale_after: 2026-12-14
 sources:
   - id: rust-llm-policy
-    title: 'src/policies/llm-usage.md (rust-lang/rust-forge at 98f27c7c863e)'
-    resource: https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md
+    title: 'src/policies/llm-usage.md (rust-lang/rust-forge at 3eda0e9cfdd5)'
+    resource: https://raw.githubusercontent.com/rust-lang/rust-forge/3eda0e9cfdd5059f7bccbd1e668c8a54ea5907f8/src/policies/llm-usage.md
+  - id: rust-forge-1108
+    title: 'Edit LLM policy — list adopting repositories (rust-lang/rust-forge#1108, merged 2026-09-15)'
+    resource: https://github.com/rust-lang/rust-forge/pull/1108
+  - id: rust-adopt-rust
+    title: 'CONTRIBUTING.md (rust-lang/rust, main) — LLM policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/rust/main/CONTRIBUTING.md
+  - id: rust-adopt-cargo
+    title: 'CONTRIBUTING.md (rust-lang/cargo, master) — LLM policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/cargo/master/CONTRIBUTING.md
+  - id: rust-adopt-rustlings
+    title: 'CONTRIBUTING.md (rust-lang/rustlings, main) — LLM Usage Policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/rustlings/main/CONTRIBUTING.md
+  - id: rust-adopt-mdbook
+    title: 'CONTRIBUTING.md (rust-lang/mdBook, main) — LLM policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/mdBook/main/CONTRIBUTING.md
+  - id: rust-adopt-rustfmt
+    title: 'Contributing.md (rust-lang/rustfmt, main) — LLM policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/rustfmt/main/Contributing.md
+  - id: rust-adopt-clippy
+    title: 'CONTRIBUTING.md (rust-lang/rust-clippy, master) — LLM policy section'
+    resource: https://raw.githubusercontent.com/rust-lang/rust-clippy/master/CONTRIBUTING.md
   - id: rust-forge-1040
     title: 'Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040, merged 2026-08-05)'
     resource: https://github.com/rust-lang/rust-forge/pull/1040
@@ -38,13 +61,14 @@ sources:
     resource: https://github.com/rust-lang/rfcs/pull/3950
 ---
 
-**Stance: conditionally allowed in `rust-lang/rust`, and nowhere else by this policy.** Pull request
+**Stance: conditionally allowed in the repositories that have adopted it — six so far, all in
+`rust-lang` — and nowhere else by this policy.** Pull request
 rust-forge#1040, opened 2026-04-17, was merged on **2026-08-05** after 114 conversation comments and
 reviews from dozens of participants.[^rust-forge-1040] The policy now lives on the Rust Forge. It
 opens:
 
-> Using LLMs while working on `rust-lang/rust` is conditionally allowed, when done with care. LLMs are
-> not a substitute for thought, and we do not allow them to be used in ways that risk losing our
+> Using LLMs while working on `rust-lang/rust`, and other repositories that have adopted this policy,
+> is conditionally allowed, when done with care. LLMs are not a substitute for thought, and we do not allow them to be used in ways that risk losing our
 > shared social and technical understanding of the project, nor in ways that hurt our goals of
 > creating a strong community.[^rust-llm-policy]
 
@@ -55,8 +79,25 @@ status was wrong.
 
 ## Scope is the first thing to read
 
-> This policy only applies to `rust-lang/rust`, and only to the teams that have ratified it:
-> compiler, libs, types, rustdoc, bootstrap, and their subteams.[^rust-llm-policy]
+> This policy only applies to the repositories that have adopted it, and only to the teams that have
+> ratified it: compiler, libs, types, rustdoc, bootstrap, and their subteams.[^rust-llm-policy]
+
+**Until 2026-09-15 the first clause read *"only applies to `rust-lang/rust`"*.** That day PR 1108
+generalised it and began listing adopters, noting that each already had text in its own contributing
+guide.[^rust-forge-1108] All six were checked on 2026-09-15:
+
+| Repository | Adoption text added to its contributing guide |
+|---|---|
+| `rust-lang/rust` | 2026-08-02 — three days before the Forge policy merged[^rust-adopt-rust] |
+| `rust-lang/cargo` | 2026-08-08[^rust-adopt-cargo] |
+| `rust-lang/rustlings` | 2026-08-11[^rust-adopt-rustlings] |
+| `rust-lang/mdBook` | 2026-08-18[^rust-adopt-mdbook] |
+| `rust-lang/rustfmt` | 2026-08-28, in `Contributing.md`[^rust-adopt-rustfmt] |
+| `rust-lang/rust-clippy` | 2026-09-01[^rust-adopt-clippy] |
+
+**So the policy spread repository by repository before its own text admitted it**, and the Forge page
+caught up with the practice rather than leading it. The teams clause did not change: adoption widens
+*where* the rules apply, not *who* ratified them.
 
 Other `rust-lang` repositories, submodules, subtrees, crates.io dependencies, and teams that did not
 ratify it — lang and edition are named — set their own policies. The announcement is explicit that
@@ -165,25 +206,35 @@ avoid inconsistent enforcement.
 Minor edits need an ordinary approval; a new or cancelled rule needs a Major Change Proposal from
 **each** ratifying team. It can be dissolved by those teams, by a leadership council decision on
 evidence of harm, or by the project-wide committee described above.[^rust-llm-policy] Post-merge edits
-so far are small: a label name corrected on 2026-08-12 and wording changes on 2026-08-13 and
-2026-08-14.
+were small at first: a label name corrected on 2026-08-12 and wording changes on 2026-08-13 and
+2026-08-14. On 2026-09-15 PR 1108 widened the scope wording and added the adopters list, merged with
+one approving review — the procedure the policy sets for minor changes, not a Major Change Proposal.[^rust-forge-1108]
 
-## What a contributor to `rust-lang/rust` must do
+## What a contributor must do
 
 Use an LLM privately as much as you like. Do not post its words as your own — not comments, PR
 descriptions, docs, doc-comments or diagnostics. Disclose trivial changes, translations, LLM-found
 bugs and review-bot output. For LLM-created code, find and agree with your reviewer **before** opening
-the PR, stay out of soundness-critical areas, test beyond the usual bar, and expect the label. Never
-lie about it. Everywhere else in the Rust project, check that repository's own rules.
+the PR, stay out of soundness-critical areas, test beyond the usual bar, and expect the label. Never lie about it. This applies in the six adopting
+repositories; everywhere else in the Rust project, check that repository's own rules.
 
 ## Re-verification notes
 
 **Check RFC 3959 and the LLM committee first**, because either can supersede this record outright.
 Then read the source file at the Forge's current commit rather than the rendered page; its history
-dates every change. `stale_after` is three months for those reasons.
+dates every change. **Check the adopters list against each repository's contributing guide** — and
+list the repository's files rather than guessing a filename: rustfmt's guide is `Contributing.md`,
+which a probe for `CONTRIBUTING.md` misses. `stale_after` is three months for those reasons.
 
-[^rust-llm-policy]: [src/policies/llm-usage.md (rust-lang/rust-forge at 98f27c7c863e)](https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md)
+[^rust-llm-policy]: [src/policies/llm-usage.md (rust-lang/rust-forge at 3eda0e9cfdd5)](https://raw.githubusercontent.com/rust-lang/rust-forge/3eda0e9cfdd5059f7bccbd1e668c8a54ea5907f8/src/policies/llm-usage.md)
 [^rust-forge-1040]: [Add an LLM policy for `rust-lang/rust` (rust-lang/rust-forge#1040, merged 2026-08-05)](https://github.com/rust-lang/rust-forge/pull/1040)
 [^rust-blog-adoption]: [rust-lang/rust is adopting an LLM policy (Inside Rust Blog, Jynn Nelson, 2026-08-05)](https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/)
 [^rust-rfc-3959]: [Project-wide LLM policy (rust-lang/rfcs#3959, open)](https://github.com/rust-lang/rfcs/pull/3959)
 [^rust-rfc-3950]: [Add contribution policy for AI-generated work (rust-lang/rfcs#3950, closed)](https://github.com/rust-lang/rfcs/pull/3950)
+[^rust-forge-1108]: [Edit LLM policy — list adopting repositories (rust-lang/rust-forge#1108, merged 2026-09-15)](https://github.com/rust-lang/rust-forge/pull/1108)
+[^rust-adopt-rust]: [CONTRIBUTING.md (rust-lang/rust, main) — LLM policy section](https://raw.githubusercontent.com/rust-lang/rust/main/CONTRIBUTING.md)
+[^rust-adopt-cargo]: [CONTRIBUTING.md (rust-lang/cargo, master) — LLM policy section](https://raw.githubusercontent.com/rust-lang/cargo/master/CONTRIBUTING.md)
+[^rust-adopt-rustlings]: [CONTRIBUTING.md (rust-lang/rustlings, main) — LLM Usage Policy section](https://raw.githubusercontent.com/rust-lang/rustlings/main/CONTRIBUTING.md)
+[^rust-adopt-mdbook]: [CONTRIBUTING.md (rust-lang/mdBook, main) — LLM policy section](https://raw.githubusercontent.com/rust-lang/mdBook/main/CONTRIBUTING.md)
+[^rust-adopt-rustfmt]: [Contributing.md (rust-lang/rustfmt, main) — LLM policy section](https://raw.githubusercontent.com/rust-lang/rustfmt/main/Contributing.md)
+[^rust-adopt-clippy]: [CONTRIBUTING.md (rust-lang/rust-clippy, master) — LLM policy section](https://raw.githubusercontent.com/rust-lang/rust-clippy/master/CONTRIBUTING.md)

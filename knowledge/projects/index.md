@@ -25,7 +25,7 @@ Directory: `projects/`
 | [Perl](perl.md) | Organization | Draws its lines by artifact type rather than by tool or disclosure — code m... |
 | [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
 | [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
-| [Rust](rust.md) | Organization | Adopted an LLM usage policy for rust-lang/rust on 2026-08-05 — scoped to th... |
+| [Rust](rust.md) | Organization | Adopted an LLM usage policy for rust-lang/rust on 2026-08-05, and since 2026-... |
 | [Valkey](valkey.md) | Organization | Has no AI contribution policy and runs an AI reviewer anyway — one briefed ... |
 | [Zed](zed.md) | Organization | Welcomes LLM-assisted coding, refuses autonomous agents outright, and reserve... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |
