@@ -77,7 +77,7 @@ does with the same two tags, and one of the destinations tabulated in
 > written by the contributor. **Using AI to translate or tighten your own writing is fine. Using it to
 > write in your place is not.**[^nerves-contributing]
 
-Seventeen records restrict AI in communication and **none of them splits *assist* from *substitute*
+Eighteen records restrict AI in communication and **none of them splits *assist* from *substitute*
 this cleanly** — see [prose reserved to humans](../mechanisms/prose-reserved-to-humans.md). The
 distinction is what makes the rule enforceable against the objection that non-native speakers need
 help: tightening your own sentence is explicitly allowed, and so is translation.

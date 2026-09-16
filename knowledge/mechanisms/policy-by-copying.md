@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Policy by copying
-description: Most AI contribution policies here were adapted from another project's. Six copying events are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
+description: Most AI contribution policies here were adapted from another project's. Seven copying events are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
 resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
 tags:
   - ai-contribution
@@ -49,12 +49,13 @@ dated and traceable, and reading them together says more about how a rule spread
 record does: **what survives a copy is the prohibition, and what is dropped is the machinery that
 made it work.**
 
-## The six events
+## The seven events
 
 | Source | Borrower | Date | Attributed | What was dropped |
 |---|---|---|:--:|---|
 | Astral (`astral-sh/.github`, org default) | [ripgrep](../projects/ripgrep.md) | 2026-05-26 | ● SHA-pinned | scope — *"our projects"* → *"this project"* |
 | [ripgrep](../projects/ripgrep.md) | [Zed](../projects/zed.md) | 2026-08-21 | ● SHA-pinned | — (but pinned to a superseded revision) |
+| [ripgrep](../projects/ripgrep.md) | [DuckDB](../projects/duckdb.md) | 2026-06-03 | ● both hops | — (four sentences changed; ripgrep cited unpinned) |
 | [Zed](../projects/zed.md) | [systemd](../projects/systemd.md) | 2026-09-03 | ○ | the canary's **check**, and the prose clause |
 | [Fedora](../distributions/fedora.md) policy proposal | [LLVM](../projects/llvm.md) | — | ● licence-required | — (copied from the proposal, not the adopted text) |
 | GNOME Loupe | ~a dozen GNOME modules | from 2025-02-26 | ◐ some | currency — the copies diverged |
@@ -62,8 +63,9 @@ made it work.**
 
 ● attributed · ◐ some copies attribute · ○ unattributed
 
-The first three are one chain — **the only fully attributed lineage here**, four hops, each borrower
-naming its lender until the last. Zed's credit is a single sentence: *"This policy was adapted from
+The first four rows are one chain, and it branches — **the only fully attributed lineage here**:
+Astral → ripgrep → Zed → systemd, each borrower naming its lender until the last, with a second branch
+from ripgrep to [DuckDB](../projects/duckdb.md), which alone credits both hops above it. Zed's credit is a single sentence: *"This policy was adapted from
 [ripgrep's AI policy]"*, linked to an exact commit.[^cp-zed] ripgrep's own adaptation is visible as
 one edit — it landed the policy and, the same day, committed *"s/our projects/this project in AI
 policy"*, which turns an organisation-wide text into one project's rule. **That edit is where Zed's
@@ -116,13 +118,17 @@ wrong.)
 
 ## Two pins, behaving oppositely
 
-**Two of the six pin their citation to a commit SHA**, and comparing them is the most useful thing in
+**Two of the seven pin their citation to a commit SHA**, and comparing them is the most useful thing in
 this concept, because they demonstrate both halves of what a pin does.
 
 | Borrower | Pins | Pinned revision | Against the source today |
 |---|---|---|---|
 | [ripgrep](../projects/ripgrep.md) | `astral-sh/.github` `c5187e20…`[^cp-ripgrep] | still current | **byte-identical** (compared 2026-09-10) |
 | [Zed](../projects/zed.md) | `BurntSushi/ripgrep` `f0cec341…`[^cp-zed] | **superseded** | differs — *"our projects"* vs *"this project"* |
+
+[DuckDB](../projects/duckdb.md) shows a third behaviour: it links uv's policy at ripgrep's pinned commit —
+copied verbatim from ripgrep's text — and links ripgrep itself at `master`. **The pin travelled; the
+habit of pinning did not.**
 
 **Zed pinned the wrong revision, and the pin is what makes that visible.** ripgrep added
 `AI_POLICY.md` at `f0cec341`, `2026-05-26T04:02:44Z`, carrying Astral's organisation-wide wording
@@ -158,13 +164,13 @@ voting on one** ([Debian](../distributions/debian.md)) or by a board issuing one
 
 Every failure mode this bundle's neighbours document in software shows up here, in prose:
 
-| Software supply-chain failure | Its form in these six events |
+| Software supply-chain failure | Its form in these seven events |
 |---|---|
 | unattributed reuse | systemd taking Zed's canary without saying so |
 | licence ambiguity | most policies carrying no stated licence for their text |
 | a stale upstream | MacPorts copying from a rendered page a day out of date |
 | a patch dropped in a fork | systemd taking the canary and leaving the check |
-| no notification channel | none of the six can learn its source changed |
+| no notification channel | none of the seven can learn its source changed |
 | a pinned dependency | ripgrep's SHA — the one case where drift is detectable |
 
 That is not an analogy stretched for effect. **These documents are copied, adapted, licensed,

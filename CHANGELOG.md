@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.27.0] - 2026-09-16
+
+### Added
+
+- **[`projects/duckdb.md`](knowledge/projects/duckdb.md)** — two AI policies that disagree: a 2025
+  contributing-guide prohibition of AI-generated pull requests, and a 2026 `AI_POLICY.md` that welcomes AI
+  for coding, reserves the conversation to humans and bans autonomous agents. Neither links the other. The
+  newer file is ripgrep's with four sentences changed, and is the only borrower here crediting two hops of
+  its lineage. 141 commits since 2026-05 credit Claude as co-author, counted from a clone after GitHub
+  search reported 42.
+
+### Changed
+
+- `policy-by-copying` (a seventh copying event, a branch in the lineage, a third pin behaviour),
+  `human-in-the-loop`, `prose-reserved-to-humans`, `agent-file-pointers`, `ripgrep`, `astral`, `nerves`
+  and `networkmanager` updated for DuckDB.
+
 ## [0.26.0] - 2026-09-16
 
 ### Added

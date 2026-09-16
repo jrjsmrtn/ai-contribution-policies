@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Prose reserved to humans
-description: Seventeen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
+description: Eighteen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
 resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 tags:
   - ai-contribution
@@ -49,8 +49,8 @@ sources:
     resource: https://devguide.python.org/getting-started/ai-tools/
 ---
 
-**The most widely shared rule in this bundle is not about code.** Seventeen records permit or tolerate
-AI assistance in the patch and then restrict it in the writing around the patch, and an eighteenth put
+**The most widely shared rule in this bundle is not about code.** Eighteen records permit or tolerate
+AI assistance in the patch and then restrict it in the writing around the patch, and a nineteenth put
 it to a vote and declined. That is the opposite
 of what the risk arguments elsewhere would predict — the copyright, licensing and correctness
 worries all attach to the code, and the prose is where none of them apply.
@@ -66,6 +66,7 @@ worries all attach to the code, and the prose is where none of them apply.
 | [Astral](../vendors/astral.md) | | ● | ● | |
 | [ripgrep](../projects/ripgrep.md) | | ● | ● | |
 | [Zed](../projects/zed.md) | | ● | ● | |
+| [DuckDB](../projects/duckdb.md) | | ● | ● | |
 | [Kubernetes](../projects/kubernetes.md) | ● | | ● | |
 | [LLVM](../projects/llvm.md) | | ● | ● | |
 | [Git](../projects/git.md) | ● | ● | ● | |
@@ -164,7 +165,8 @@ or fictitious content"*, still did not reserve the prose. **The convergence is n
 [systemd](../projects/systemd.md), and the first three all reserve issue text, PR descriptions and
 review replies. systemd inherited the [review canary](review-canary.md) and bars AI from *credit* in
 commit messages — but it does not reserve the writing. **A policy adapted from another policy loses
-clauses silently**, and this is the clause that was dropped.
+clauses silently**, and this is the clause that was dropped. [DuckDB](../projects/duckdb.md), on a
+second branch from ripgrep, kept it — so the clause is lost by some copies, not by copying.
 
 ## What to watch
 

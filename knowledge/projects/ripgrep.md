@@ -116,8 +116,9 @@ The policy closes by naming its source, pinned to an exact commit:
 the pinned text and the current `astral-sh/.github/AI_POLICY.md` were compared on 2026-09-08 and are
 **byte-identical**, so nothing has drifted under the reference.[^astral-ai-policy]
 
-That makes ripgrep the middle hop of a dated four-hop chain — tabulated, with the five other copying
-events in this bundle, in [policy by copying](../mechanisms/policy-by-copying.md).
+That makes ripgrep the middle hop of a dated four-hop chain, and a branch point: [DuckDB](duckdb.md)
+adapted this text on 2026-06-03 and credits both ripgrep and uv. Both are tabulated with the other
+copying events in [policy by copying](../mechanisms/policy-by-copying.md).
 
 **The adaptation is visible in the commits.** ripgrep landed the policy at `f0cec341`
 (`2026-05-26T04:02:44Z`) carrying Astral's *"our projects"* wording unedited, and corrected it to
@@ -156,9 +157,9 @@ stay true forever.
 by a company — and the origin of this one. **If that file changes, this record's currency claim goes
 with it**, since the claim is that ripgrep's pinned text still matches upstream.
 
-Watch whether the chain grows a fifth hop, and whether any of them starts citing ripgrep rather than
-Astral — the point at which a lineage becomes a convention is when the borrowers stop agreeing on
-who the source is.
+Watch whether the chain grows further. [DuckDB](duckdb.md) already cites ripgrep **and** Astral, naming
+the lineage rather than a single source — the point at which a lineage becomes a convention is when
+borrowers start treating the chain, not one text, as the thing they adopt.
 
 [^rg-ai-policy]: [AI Policy (AI_POLICY.md, BurntSushi/ripgrep, master)](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
 [^rg-contributing]: [Contributing (CONTRIBUTING.md, BurntSushi/ripgrep, master)](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/CONTRIBUTING.md)

@@ -10,9 +10,9 @@ Directory: `mechanisms/`
 | [Certifying origin](certifying-origin.md) | Practice | Eleven records reach a position on AI by reasoning about a certification inst... |
 | [Extending existing machinery](extending-existing-machinery.md) | Practice | The cheapest route to an AI policy is to point a rule the project already ran... |
 | [Governing the instruction file](instruction-file-governance.md) | Practice | An agent-instruction file is read at the start of every session, so it is a c... |
-| [Human in the loop](human-in-the-loop.md) | Practice | The most-copied phrase in these policies and the least defined. Nine records ... |
-| [Policy by copying](policy-by-copying.md) | Practice | Most AI contribution policies here were adapted from another project's. Six c... |
-| [Prose reserved to humans](prose-reserved-to-humans.md) | Practice | Seventeen records here permit AI in the code and restrict or forbid it in the... |
+| [Human in the loop](human-in-the-loop.md) | Practice | The most-copied phrase in these policies and the least defined. Ten records u... |
+| [Policy by copying](policy-by-copying.md) | Practice | Most AI contribution policies here were adapted from another project's. Seven... |
+| [Prose reserved to humans](prose-reserved-to-humans.md) | Practice | Eighteen records here permit AI in the code and restrict or forbid it in the ... |
 | [The Assisted-by trailer](assisted-by-trailer.md) | Practice | A git commit trailer that predates the AI question — the kernel defines it ... |
 | [The review canary](review-canary.md) | Practice | A mechanism that makes an agent mark its own work so a human's failure to rev... |
 

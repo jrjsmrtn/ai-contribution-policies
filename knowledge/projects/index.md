@@ -10,6 +10,7 @@ Directory: `projects/`
 | [Asahi Linux](asahi-linux.md) | Organization | Broadly forbids generative AI for material contributions, on ethical grounds ... |
 | [Dependency-Track](dependency-track.md) | Organization | Permits AI assistance and forbids every trace of it in the commit — no assi... |
 | [Django](django.md) | Organization | Requires granular disclosure of which AI tools were used and for what, escala... |
+| [DuckDB](duckdb.md) | Organization | Carries two AI policies that disagree. Its contributing guide has said since ... |
 | [Elixir](elixir.md) | Organization | Permits AI with restraint, and argues for it from a premise no other project ... |
 | [GCC](gcc.md) | Organization | Declines legally significant LLM contributions — a copyright threshold rath... |
 | [GNOME](gnome.md) | Organization | Rejects AI-authored Shell extensions at review while permitting AI as a devel... |

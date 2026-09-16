@@ -91,8 +91,9 @@ The remaining clauses are the ones the lineage carried:
   own voice and ideas"* — recommending you write in your native language and quote the machine
   output.[^astral-policy]
 
-**This is the head of a four-hop chain**, three hops of which cite their source, and the chain sits
-with the bundle's five other copying events in
+**This is the head of a four-hop chain**, three hops of which cite their source, and the chain has
+branched: [DuckDB](../projects/duckdb.md) adapted ripgrep's text and credits this one as its origin.
+It sits with the bundle's other copying events in
 [policy by copying](../mechanisms/policy-by-copying.md). What
 [ripgrep](../projects/ripgrep.md) changed at the first hop: *"s/our projects/this project"*, added
 *"perhaps without notice"*, and **dropped the criticality argument** — the reason Astral gives for the

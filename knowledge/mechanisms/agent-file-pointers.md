@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Agent-file pointers
-description: Agent tools look for instructions under different filenames, so projects publish one file and point the other names at it. Most projects in this bundle that do so use a git symlink, Homebrew uses a one-line import file, and the one that duplicated the content instead now maintains two documents that have already diverged. The byte counts that make symlinks look like small text files are a retrieval artifact.
+description: Agent tools look for instructions under different filenames, so projects publish one file and point the other names at it. Most projects in this bundle that do so use a git symlink, Homebrew and DuckDB use a one-line import file, and the one that duplicated the content instead now maintains two documents that have already diverged. The byte counts that make symlinks look like small text files are a retrieval artifact.
 resource: https://agents.md/
 tags:
   - ai-contribution
@@ -75,6 +75,11 @@ content is `@AGENTS.md`, Claude Code's syntax for importing another file. It can
 since it holds no instructions of its own, but it works only for a tool that reads that syntax, where
 a symlink works for any reader that follows it. **It is also the retrieval hazard below in reverse**:
 fetched over HTTP it looks almost exactly like a symlink, and here the mode says regular file.
+
+**[DuckDB](../projects/duckdb.md) chose the import over a symlink and said why.** Its `CLAUDE.md` became a
+10-byte `@AGENTS.md` on 2026-06-05, and the contributor explained: *"avoided symlinking because it
+complicates things on Windows."* That is the only stated trade-off between the two constructions in
+this bundle — portability of the checkout against portability across tools.
 
 **NetworkManager's commit names the problem exactly**: *"AGENTS.md: add symlinks under the names other
 agents look for"* (2026-09-04).

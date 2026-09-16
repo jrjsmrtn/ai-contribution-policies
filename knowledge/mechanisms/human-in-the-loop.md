@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Human in the loop
-description: The most-copied phrase in these policies and the least defined. Nine records use it or bar autonomous agents, and they govern five different things — the mode of work, the act of publishing, maintainer discretion, where in the tracker, and a level you declare. None of them can detect autonomy, so each substitutes an observable proxy, and the three outright prohibitions all hedge their verbs. A Linux wireless maintainer supplies the counter-case where the human was in the loop and it made no difference.
+description: The most-copied phrase in these policies and the least defined. Ten records use it or bar autonomous agents, and they govern five different things — the mode of work, the act of publishing, maintainer discretion, where in the tracker, and a level you declare. None of them can detect autonomy, so each substitutes an observable proxy, and the four outright prohibitions all hedge their verbs. A Linux wireless maintainer supplies the counter-case where the human was in the loop and it made no difference.
 resource: https://raw.githubusercontent.com/astral-sh/.github/main/AI_POLICY.md
 tags:
   - ai-contribution
@@ -43,7 +43,7 @@ sources:
     resource: https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md
 ---
 
-***"A human in the loop"* is the most-copied phrase in this bundle and the least defined.** Nine
+***"A human in the loop"* is the most-copied phrase in this bundle and the least defined.** Ten
 records use it or bar autonomous agents, and reading them side by side shows they are not making the
 same rule — they are governing five different things and calling it one.
 
@@ -54,6 +54,7 @@ same rule — they are governing five different things and calling it one.
 | [Astral](../vendors/astral.md) | the **mode of work** | *"We do not allow autonomous agents"*[^hitl-astral] |
 | [ripgrep](../projects/ripgrep.md) | the mode of work | the same sentence, scope-edited[^hitl-ripgrep] |
 | [Zed](../projects/zed.md) | the mode of work | *"we don't accept contributions from autonomous agents"*[^hitl-zed] |
+| [DuckDB](../projects/duckdb.md) | the mode of work | ripgrep's sentence, copied unchanged |
 | [LLVM](../projects/llvm.md) | the act of **publishing** | bans agents that *"take action in our digital spaces without human approval"*[^hitl-llvm] |
 | [Ansible](../projects/ansible.md) | **maintainer discretion** | autonomous contributions *"MAY be rejected … without prior justification"*[^hitl-ansible] |
 | [Elixir](../projects/elixir.md) | **where in the tracker** | no agents on issues without the *Contributions Welcome* label |
@@ -61,16 +62,17 @@ same rule — they are governing five different things and calling it one.
 | [Dependency-Track](../projects/dependency-track.md) | the act of opening a thread | *"Never create an issue. Never create a PR"* |
 | [cdxgen](../projects/cdxgen.md) | **a level you declare** | `auto` is a disclosure value, not a prohibition[^hitl-aideclaration] |
 
-**The same mode of work is a bannable offence in three projects and a disclosable attribute in a
-fourth.** cdxgen's scale defines `auto` as *"Human prompts and AI acts autonomously, bringing the
+**The same mode of work is a bannable offence in four projects and a disclosable attribute in a
+fifth.** cdxgen's scale defines `auto` as *"Human prompts and AI acts autonomously, bringing the
 task to completion"* and asks you to record it per path. Nothing in this bundle is a sharper
 disagreement about the same behaviour.
 
 ## Nobody forbids autonomy, because nobody can detect it
 
-**Read the three prohibitions for their verbs.** Astral closes pull requests *"we believe were
+**Read the four prohibitions for their verbs.** Astral closes pull requests *"we believe were
 created autonomously"*.[^hitl-astral] ripgrep closes those *"that appear in violation"*.[^hitl-ripgrep]
-Zed closes those *"that appear to violate this"*.[^hitl-zed] All three hedge, and they hedge in the
+Zed closes those *"that appear to violate this"*.[^hitl-zed] DuckDB copied ripgrep's *"appear in
+violation"*. All four hedge, and they hedge in the
 operative clause.
 
 That is not sloppiness; it is the honest form of the rule. **Autonomy is a fact about a process that
@@ -79,7 +81,7 @@ here substitutes something observable:
 
 | Record | The observable proxy |
 |---|---|
-| Astral, ripgrep, Zed | a submission that *looks* autonomous, judged by a maintainer |
+| Astral, ripgrep, Zed, DuckDB | a submission that *looks* autonomous, judged by a maintainer |
 | LLVM | something **published** in project spaces without approval |
 | Ansible | nothing — the maintainer's veto needs no finding of fact |
 | Elixir | the **label** on the issue |
@@ -108,7 +110,7 @@ declines to define the thing it is refusing.
 blast radius sets the bar — a position that would justify a *different* answer for a less
 load-bearing project, and does not pretend otherwise.
 
-**ripgrep and Zed carry the rule and not the argument.** The criticality clause is the piece dropped
+**ripgrep, Zed and DuckDB carry the rule and not the argument.** The criticality clause is the piece dropped
 at the first hop of the lineage, which is the pattern
 [policy by copying](policy-by-copying.md) records: **the borrower keeps the prohibition and leaves
 the reasoning that bounded it.** A rule inherited without its justification cannot be applied to a
@@ -129,7 +131,7 @@ level up. He is explicit that he cannot supply that himself — *"I really canno
 call myself for every single issue like that … Need the contributors to do
 that."*[^hitl-kernel-wireless]
 
-**A human in the loop is a necessary condition that eight of these records treat as a sufficient
+**A human in the loop is a necessary condition that nine of these records treat as a sufficient
 one.** The phrase names a presence; the failure it is meant to prevent is an absence of judgement,
 and presence does not imply it.
 
@@ -141,8 +143,8 @@ output of the AI tools you use"*[^hitl-homebrew] — which says who answers, not
 contain; the cdxgen scale is still the only vocabulary here precise enough for that. Whether LLVM's relocation spreads, since *published without approval* is the only
 version of this rule a project can enforce without guessing. Whether the criticality argument is ever
 picked up by a project that is **not** foundational, which would be the first sign the phrase has
-detached from its reason entirely. And whether any of the three prohibitions is ever observed to
-close a pull request — the sanction is stated in all three and recorded in none.
+detached from its reason entirely. And whether any of the four prohibitions is ever observed to
+close a pull request — the sanction is stated in all four and recorded in none.
 
 [^hitl-astral]: [AI_POLICY.md (astral-sh/.github, main)](https://raw.githubusercontent.com/astral-sh/.github/main/AI_POLICY.md)
 [^hitl-ripgrep]: [AI_POLICY.md — ripgrep AI policy (BurntSushi/ripgrep, master)](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
