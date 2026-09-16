@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.26.0] - 2026-09-16
+
+### Added
+
+- **[`projects/ladybird.md`](knowledge/projects/ladybird.md)** — mild AI rules (quality obligation, no
+  trailer, no disclosure) followed by the strongest reaction in the bundle: public pull requests ended on
+  2026-06-05 because AI made a patch stop evidencing the effort that stood for good faith. Measured: 93
+  pull requests closed that day, and every pull request since comes from the maintainer group. The project
+  simultaneously ported its JavaScript engine to Rust with AI assistance, which the record treats as
+  coherent rather than contradictory.
+- `overview.md` — Ladybird added as the end point of the review-cost argument.
+
 ## [0.25.0] - 2026-09-15
 
 ### Changed

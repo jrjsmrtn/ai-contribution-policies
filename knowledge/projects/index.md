@@ -18,6 +18,7 @@ Directory: `projects/`
 | [Homebrew](homebrew.md) | Organization | Permits AI-assisted issues and pull requests on five conditions, forbids any ... |
 | [Kubernetes](kubernetes.md) | Organization | Permits AI assistance, requires disclosure in the PR description, and forbids... |
 | [LLVM](llvm.md) | Organization | The most theorised policy here. It names the problem — an extractive contri... |
+| [Ladybird](ladybird.md) | Organization | Permits AI assistance under a quality obligation, then closed the contributio... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
 | [MacPorts](macports.md) | Organization | Has no adopted AI policy, but its unmerged proposal is already practice. An o... |
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |

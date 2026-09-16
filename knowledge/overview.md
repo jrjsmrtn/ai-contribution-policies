@@ -36,6 +36,9 @@ sources:
   - id: openinfra-ai-policy
     title: AI Generated Content Policy — OpenInfra Foundation
     resource: https://openinfra.org/legal/ai-policy
+  - id: ladybird-post-closing
+    title: 'Changing How We Develop Ladybird (ladybird.org, 2026-06-05)'
+    resource: https://ladybird.org/posts/changing-how-we-develop-ladybird/
   - id: rust-forge-1040
     title: 'LLM Usage Policy — Rust (Rust Forge; adopted 2026-08-05, six repositories listed 2026-09-15)'
     resource: https://forge.rust-lang.org/policies/llm-usage.html
@@ -252,6 +255,14 @@ ground — GNOME, the Linux wireless maintainer, the kernel's `generated-content
 MacPorts and QEMU — and this is the one that names the mechanism rather than the symptom. It also
 explains why volume caps and "be able to explain it" clauses keep arriving together: both are
 attempts to restore the prior the reviewer lost.
+
+**[Ladybird](projects/ladybird.md) is where that argument ends.** On 2026-06-05 it stopped accepting
+public pull requests altogether, closing about 78 open ones unmerged, and said why: *"a pull request
+no longer tells us as much as it used to about the person submitting it. A substantial patch used to
+imply substantial effort, and that effort was a reasonable proxy for good faith. That assumption no
+longer holds."*[^ladybird-post-closing] Every other record here keeps a channel open and manages what
+arrives through it. This one closed the channel while continuing to use AI on its own code — the
+distinction being who answers for the result.
 
 **The best argument for disclosure comes from someone refusing the contributions.** When the Linux
 wireless maintainer announced he would ignore syzbot's AI-generated patches, syzkaller stopped sending
@@ -596,3 +607,4 @@ never that the content arrived. Check for the text you came for.
 [^ash-events-claude-md]: [CLAUDE.md — AshEvents AI Assistant Guide (ash-project/ash_events, main)](https://raw.githubusercontent.com/ash-project/ash_events/main/CLAUDE.md)
 [^asahi-agents-md]: [AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool](https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md)
 [^asahi-slop-policy]: [Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)](https://asahilinux.org/llm-policy/)
+[^ladybird-post-closing]: [Changing How We Develop Ladybird (ladybird.org, 2026-06-05)](https://ladybird.org/posts/changing-how-we-develop-ladybird/)
