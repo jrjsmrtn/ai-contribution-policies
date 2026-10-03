@@ -33,6 +33,30 @@ with a copied directory.
   commits' trees, the maintainer's earlier reply, and the repository's agent-file survey). The
   141-commit trailer count and the pull request metadata in the rest of the record were **not**
   re-checked on 2026-10-03; the two policy texts and their diff against ripgrep's were.
+* **Added [`projects/croaring.md`](projects/croaring.md) and [`projects/apache-arrow.md`](projects/apache-arrow.md)**
+  — two of the six upstreams of Ladybug's new MacPorts ports, surveyed at the owner's request; the other
+  four (NumKong, icebug, pcg-cpp, tlx) have no policy, no AI terms in their contributing files, and no
+  trailers naming an AI tool in the window, and are recorded here as a line and not as records.
+* **CRoaring's policy is LLVM's, shortened.** 13 of its 19 sentences are verbatim LLVM text at the revision in
+  force on 2026-03-23, and it dropped the labelling requirement, the ban on autonomous agents, the violations
+  process, the exceptions and the credit to the author of the *extractive* passage, without saying it was
+  adapted. Its `AGENTS.md`, added 2026-06-11, is addressed to agents about a class of bug report and tells them
+  *"These reports are bogus."* — the only agent file here that rebuts a category of AI output. Added as the
+  eighth event in [`mechanisms/policy-by-copying.md`](mechanisms/policy-by-copying.md), and cross-linked from
+  [`projects/llvm.md`](projects/llvm.md).
+* **Apache Arrow has a policy and its `arrow-adbc` repository says nothing.** The *AI-generated code*
+  section (2026-01-28) threatens closure of pull requests that appear fully AI-generated, asks for
+  disclosure in prose and never for a trailer, and since 2026-05-27 asks contributors not to use AI to
+  write their questions and comments. `arrow-adbc`, a separate repository, carries no mention of it in 94
+  scanned files, and 51 of 809 recent commits carry an AI trailer, 33 of them in the ASF's
+  `Generated-by`/`Assisted-by` forms, 32 from one author name, **none of which the main repository uses**.
+* **Measured by clone, with three errors caught on the way.** The first scan missed `AI_USAGE_POLICY.md`,
+  because the filename pattern was `AI_POLICY*`; it was found only because a README linked it. A first
+  trailer count flagged 380 *other AI trailers* in `arrow-adbc` that were dependabot. And a summary written
+  for the owner said the `Generated-by`/`Assisted-by` commits were *33 of 34* — it is 33, and 32 of them
+  from one author name. **Not re-tallied:** the counts in `human-in-the-loop`, `prose-reserved-to-humans`
+  and `assisted-by-trailer` and the read-through in `overview.md`, none of which were rewritten for the two
+  new records.
 * **A first draft of the Ladybug record said the other co-author trailers were human.** Two were Copilot Autofix.
   The scan that would have caught them used a pattern for tool names, and the trailer is a name.
 * **Not read:** the project's Discord, which its guide names as the place for real-time discussion, and

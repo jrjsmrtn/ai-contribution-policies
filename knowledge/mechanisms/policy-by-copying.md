@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Policy by copying
-description: Most AI contribution policies here were adapted from another project's. Seven copying events are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
+description: Most AI contribution policies here were adapted from another project's. Eight copying events are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
 resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
 tags:
   - ai-contribution
@@ -49,7 +49,7 @@ dated and traceable, and reading them together says more about how a rule spread
 record does: **what survives a copy is the prohibition, and what is dropped is the machinery that
 made it work.**
 
-## The seven events
+## The eight events
 
 | Source | Borrower | Date | Attributed | What was dropped |
 |---|---|---|:--:|---|
@@ -60,6 +60,7 @@ made it work.**
 | [Fedora](../distributions/fedora.md) policy proposal | [LLVM](../projects/llvm.md) | — | ● licence-required | — (copied from the proposal, not the adopted text) |
 | GNOME Loupe | ~a dozen GNOME modules | from 2025-02-26 | ◐ some | currency — the copies diverged |
 | Linux kernel docs (rendered) | [MacPorts](../projects/macports.md) PR #420 | 2026-08-04 | ● cited | currency — the source had retired the rule |
+| [LLVM](../projects/llvm.md) | [CRoaring](../projects/croaring.md) | 2026-03-23 | ○ links LLVM's thread under *Reference*, never says it was adapted | the labelling requirement, the agent ban and the violations process, and the credit to the passage's author |
 
 ● attributed · ◐ some copies attribute · ○ unattributed
 
@@ -81,7 +82,9 @@ caught anyway; the detail is in [the review canary](review-canary.md).
 **Then the clauses that cost something.** systemd also dropped the prose rule that the first three
 hops all carry, keeping the attribution ban instead — see
 [prose reserved to humans](prose-reserved-to-humans.md). A borrower takes the parts that are cheap to
-state and leaves the parts that impose work.
+state and leaves the parts that impose work. [CRoaring](../projects/croaring.md) did the same to LLVM's text: it kept
+the rule that a human must read the output and dropped the required label and the ban on autonomous agents, the
+two clauses that made the rule specific.
 
 **Then currency.** MacPorts cited `docs.kernel.org`, which renders a *released* kernel rather than
 mainline, and so reproduced an attribution format the kernel had replaced **the day
@@ -118,7 +121,7 @@ wrong.)
 
 ## Two pins, behaving oppositely
 
-**Two of the seven pin their citation to a commit SHA**, and comparing them is the most useful thing in
+**Two of the eight pin their citation to a commit SHA**, and comparing them is the most useful thing in
 this concept, because they demonstrate both halves of what a pin does.
 
 | Borrower | Pins | Pinned revision | Against the source today |
@@ -164,13 +167,13 @@ voting on one** ([Debian](../distributions/debian.md)) or by a board issuing one
 
 Every failure mode this bundle's neighbours document in software shows up here, in prose:
 
-| Software supply-chain failure | Its form in these seven events |
+| Software supply-chain failure | Its form in these eight events |
 |---|---|
 | unattributed reuse | systemd taking Zed's canary without saying so |
 | licence ambiguity | most policies carrying no stated licence for their text |
 | a stale upstream | MacPorts copying from a rendered page a day out of date |
 | a patch dropped in a fork | systemd taking the canary and leaving the check |
-| no notification channel | none of the seven can learn its source changed |
+| no notification channel | none of the eight can learn its source changed |
 | a pinned dependency | ripgrep's SHA — the one case where drift is detectable |
 
 That is not an analogy stretched for effect. **These documents are copied, adapted, licensed,

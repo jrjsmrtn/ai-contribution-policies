@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/croaring.md`](knowledge/projects/croaring.md)** — LLVM's human-in-the-loop policy shortened:
+  13 of 19 sentences verbatim, the labelling requirement, agent ban and violations process dropped, and no
+  credit as a copy. Plus an `AGENTS.md` that tells agents a class of AI-generated bug report is bogus.
+- **[`projects/apache-arrow.md`](knowledge/projects/apache-arrow.md)** — a policy that threatens closure of
+  fully AI-generated pull requests and asks for prose disclosure, and a sub-repository (`arrow-adbc`) that
+  never mentions it while its commits carry the ASF's `Generated-by`/`Assisted-by` trailers the main
+  repository never uses.
+
+### Changed
+
+- `policy-by-copying` gains an eighth copying event (LLVM → CRoaring); `llvm` links the borrower.
+
 ## [0.28.0] - 2026-10-03
 
 ### Added

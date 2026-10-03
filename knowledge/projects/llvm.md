@@ -176,6 +176,10 @@ It is also the only copying event here where attribution was *owed* rather than 
 [policy by copying](../mechanisms/policy-by-copying.md). The other references are Rust's draft policy
 on burdensome pull requests and a post by Seth Larson.
 
+**LLVM's text has itself been copied.** [CRoaring](croaring.md) adopted it on 2026-03-23 in shortened form,
+keeping the human-in-the-loop rule and the copyright section verbatim and dropping the labelling requirement,
+the ban on autonomous agents and the violations process, and without saying it was adapted.
+
 ## The delivery mechanism is still being argued
 
 LLVM's `.gitignore` carries a block titled `# Coding assistants' stuff` that ignores **every**

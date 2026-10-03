@@ -7,7 +7,9 @@ Directory: `projects/`
 | Title | Type | Description |
 |-------|------|-------------|
 | [Ansible](ansible.md) | Organization | Permits AI-assisted contributions org-wide under a published community policy... |
+| [Apache Arrow](apache-arrow.md) | Organization | Permits AI tools but says a pull request that appears fully AI-generated with... |
 | [Asahi Linux](asahi-linux.md) | Organization | Broadly forbids generative AI for material contributions, on ethical grounds ... |
+| [CRoaring](croaring.md) | Organization | Permits any tooling under a human-in-the-loop rule copied from LLVM, with LLV... |
 | [Dependency-Track](dependency-track.md) | Organization | Permits AI assistance and forbids every trace of it in the commit — no assi... |
 | [Django](django.md) | Organization | Requires granular disclosure of which AI tools were used and for what, escala... |
 | [DuckDB](duckdb.md) | Organization | Carries two AI policies that disagree. Its contributing guide has said since ... |
