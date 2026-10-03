@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.28.0] - 2026-10-03
+
 ### Added
 
 - **[`projects/duckdb.md`](knowledge/projects/duckdb.md)** gains a case from `duckdb/odbc-scanner`: a
