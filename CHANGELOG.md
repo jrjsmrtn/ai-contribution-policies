@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/duckdb.md`](knowledge/projects/duckdb.md)** gains a case from `duckdb/odbc-scanner`: a
+  maintainer approved a disclosed AI-drafted pull request and asked for the Claude co-author trailer to be
+  removed, citing the contributing guide's prohibition rather than `AI_POLICY.md`.
+- **[`projects/ladybug.md`](knowledge/projects/ladybug.md)** — no AI contribution policy, measured against
+  a control; a contributing guide untouched since 2025-10-16; an `AGENTS.md` that is a build guide with no
+  policy; and 15 commits since 2026-04 crediting Claude as co-author, counted from a clone.
+
 ## [0.27.0] - 2026-09-16
 
 ### Added

@@ -11,6 +11,33 @@ with a copied directory.
 **Releases**, newest first: **v0.27.0** 2026-09-16 (two policies in one repository) · **v0.26.0** 2026-09-16 (the project that closed the door) · **v0.25.0** 2026-09-15 (Rust's policy spread before its text said so) · **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-10-03
+
+* **Added [`projects/ladybug.md`](projects/ladybug.md)** — asked for, not previously surveyed, and absent
+  from the third-party lead list. **Ladybug (the graph database formerly Kuzu) has no AI contribution
+  policy**, measured: zero occurrences of seven AI terms across eleven repository files, against four in a
+  control file. Its `CONTRIBUTING.md` has not been edited since 2025-10-16 and still names a `master`
+  branch the repository no longer has.
+* **Practice measured by clone.** 15 of 1,294 commits since 2025-10-01 carry a `Co-Authored-By` trailer
+  naming Anthropic, from 2026-04-02 to 2026-09-08, across four model strings and five author names; two
+  further trailers name GitHub's Copilot Autofix. `AGENTS.md` is a build-and-test guide that predates the
+  first Claude trailer by five months and states no policy.
+* **Updated [`projects/duckdb.md`](projects/duckdb.md)** with a case from `duckdb/odbc-scanner`, an
+  extension repository in the same organisation with no policy or agent file. A maintainer approved a
+  pull request whose comment and description disclosed AI drafting, and asked that the
+  `Co-Authored-By: Claude` trailer be removed by force-push because it *"contradicts the current AI
+  contributions policy"*, linking the `CONTRIBUTING.md` prohibition and not `AI_POLICY.md`. The
+  replacement commit has the same tree and parent. **Disclosure accepted, trailer refused**, by one
+  maintainer in one repository; whether either file governs extensions is not stated. Reported by the
+  MacPorts workspace session, then checked against the GitHub API (review, force-push event, both
+  commits' trees, the maintainer's earlier reply, and the repository's agent-file survey). The
+  141-commit trailer count and the pull request metadata in the rest of the record were **not**
+  re-checked on 2026-10-03; the two policy texts and their diff against ripgrep's were.
+* **A first draft of the Ladybug record said the other co-author trailers were human.** Two were Copilot Autofix.
+  The scan that would have caught them used a pattern for tool names, and the trailer is a name.
+* **Not read:** the project's Discord, which its guide names as the place for real-time discussion, and
+  GitHub Discussions. The absence covers the repository and the documentation site only.
+
 ## 2026-09-16
 
 * **Added [`projects/duckdb.md`](projects/duckdb.md)** — asked for, not previously surveyed, and absent
