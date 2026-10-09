@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.29.0] - 2026-10-09
+
 ### Added
 
 - **[`projects/croaring.md`](knowledge/projects/croaring.md)** — LLVM's human-in-the-loop policy shortened:
