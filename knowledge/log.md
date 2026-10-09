@@ -11,6 +11,24 @@ with a copied directory.
 **Releases**, newest first: **v0.28.0** 2026-10-03 (no policy, and a guide untouched while Claude was credited) · **v0.27.0** 2026-09-16 (two policies in one repository) · **v0.26.0** 2026-09-16 (the project that closed the door) · **v0.25.0** 2026-09-15 (Rust's policy spread before its text said so) · **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-10-09
+
+* **Added [`projects/tart.md`](projects/tart.md), [`projects/orchard.md`](projects/orchard.md) and
+  [`projects/packer.md`](projects/packer.md)**: asked for together, as the macOS VM tool, its
+  orchestrator, and the image builder that drives it. None was previously surveyed. **None of the three
+  has an AI contribution policy**, measured by searching every contribution-facing file for nine AI terms,
+  with zero matches against two in a control file.
+* **Tart and Orchard moved from Cirrus Labs to OpenAI.** Tart's contributing guide was edited by the
+  commit that recorded the move, on 2026-06-06, and gained no AI rule. Orchard has no contributing guide,
+  and its README still points to `cirruslabs/`. Neither has an agent-instruction file.
+* **Packer's `AGENTS.md`, added 2026-07-06, governs the agent and not the contribution.** It forbids
+  commits and pull requests unless asked, confines the agent to the repository and requires a handoff
+  report. It says nothing about disclosure or attribution.
+* **Practice measured by clone, and each window checked against the GitHub API.** Since 2025-10-01:
+  Tart 4 of 75 commits credit an AI model (three Claude, one Codex), Orchard 2 of 99 (both Codex, before
+  the move), Packer 3 of 124 (two Copilot release commits, one Claude). The first Packer clone held only
+  93 of the 124 commits; the API comparison caught the gap.
+
 ## 2026-10-03
 
 * **Added [`projects/ladybug.md`](projects/ladybug.md)** — asked for, not previously surveyed, and absent

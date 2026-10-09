@@ -18,6 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   never mentions it while its commits carry the ASF's `Generated-by`/`Assisted-by` trailers the main
   repository never uses.
 
+- **[`projects/tart.md`](knowledge/projects/tart.md)**: no AI policy. The guide was edited by the commit
+  that recorded the move to OpenAI and gained no rule. Four commits since 2026-01 credit Claude or Codex.
+- **[`projects/orchard.md`](knowledge/projects/orchard.md)**: no contributing guide at all. Two Codex
+  co-authored commits by a code owner, both before the move to OpenAI.
+- **[`projects/packer.md`](knowledge/projects/packer.md)**: no AI policy, and an `AGENTS.md` that limits what
+  the agent may do but asks nothing about disclosure. Copilot credited on two release commits, Claude on one.
+
 ### Changed
 
 - `policy-by-copying` gains an eighth copying event (LLVM → CRoaring); `llvm` links the borrower.
