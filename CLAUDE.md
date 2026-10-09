@@ -93,8 +93,8 @@ name. LLVM carries `.github/instructions/*.instructions.md`, a convention no pro
 Same failure both times: **a pattern that matches less than you think, reported as an absence.**
 
 ```bash
-../workspace/scripts/survey-agent-files.py <owner/repo>[:<ref>] ...   # what does it carry?
-../workspace/scripts/survey-agent-files.py --conventions             # the list, with provenance
+../../SupplyChain/workspace/scripts/survey-agent-files.py <owner/repo>[:<ref>] ...   # what does it carry?
+../../SupplyChain/workspace/scripts/survey-agent-files.py --conventions             # the list, with provenance
 ```
 
 The list lives in that script and nowhere else, so a sweep cannot quietly use a shorter one. Entries
