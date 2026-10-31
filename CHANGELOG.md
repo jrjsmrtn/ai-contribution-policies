@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)**: Next.js removed its
+  `CLAUDE.md` symlink on 2026-09-22 because *"Claude Code now reads `AGENTS.md` directly"*; the page
+  described the symlink and its self-documenting note as current, and now records both as retired.
+- **[`projects/django.md`](knowledge/projects/django.md)** grouped Next.js with frameworks that scaffold no
+  agent instructions; `create-next-app` has generated an `AGENTS.md` by default since 2026-02-11.
+- **Twenty-four more quotations corrected across Fedora, CRoaring, Homebrew, MacPorts, Rust, Red Hat, the
+  overview and the agent-file pointers page**, mostly by citing the source they came from: commit titles,
+  a pinned earlier version of Rust's policy, DuckDB's pull request, and other projects' documents. One
+  quotation ended with a full stop the source does not have there. Three phrases were the bundle's own
+  framing and are now plain text, and two quote earlier wording or a secondary claim and are marked.
 - **[`mechanisms/certifying-origin.md`](knowledge/mechanisms/certifying-origin.md),
   [`projects/gtk.md`](knowledge/projects/gtk.md) and [`projects/llvm.md`](knowledge/projects/llvm.md)**:
   ten quotations from other projects' sources now cite them (GCC, the DCO text, Valkey, the kernel, the

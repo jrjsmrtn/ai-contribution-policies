@@ -39,6 +39,12 @@ sources:
   - id: fedora-council-policies
     title: 'Fedora Council — Additional Policies (the page this record checked on 2026-08-05)'
     resource: https://docs.fedoraproject.org/en-US/council/policies/
+  - id: fedora-kernel-attribution
+    title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
+  - id: fedora-llvm-policy
+    title: 'LLVM AI Tool Use Policy (llvm/llvm-project, main) — credits the Fedora proposal'
+    resource: https://raw.githubusercontent.com/llvm/llvm-project/6695f1d97f9615e6bbe5a5d40ea4496b7e84a3d9/llvm/docs/AIToolPolicy.md
 ---
 
 **Stance: permitted, with accountability and threshold disclosure.** The Fedora Council approved the
@@ -50,7 +56,7 @@ only in the version line and an author attribute, compared on 2026-09-14.[^fedor
 
 ## ⚠ Correction: this record was wrong for six weeks, and wrong from its first day
 
-From 2026-08-05 to 2026-09-14 this record said the policy *"has no reachable canonical
+From 2026-08-05 to 2026-09-14 this record said the policy *"has no reachable canonical <!-- quote-ok: this record's own earlier wording, quoted as the claim being corrected -->
 publication"* and deliberately declined to state what it said. **The policy had been published for
 more than nine months when that was written.**
 
@@ -91,8 +97,8 @@ and whether one drew on the other, is not established here.
 **Disclosure goes where authorship goes.** *"For contributions tracked in git, the recommended method
 is an `Assisted-by:` commit message trailer"*; elsewhere, document preambles, design-file metadata,
 translation notes or a wiki category.[^fedora-ai-policy] The two examples are *"`Assisted-by: generic
-LLM chatbot`"* and *"`Assisted-by: ChatGPTv5`"* — so Fedora recommends the trailer with a model named,
-the form the [Linux kernel](../projects/linux-kernel.md) dropped as *"free advertising"*. See
+LLM chatbot`"*[^fedora-ai-policy] and *"`Assisted-by: ChatGPTv5`"*[^fedora-ai-policy] — so Fedora recommends the trailer with a model named,
+the form the [Linux kernel](../projects/linux-kernel.md) dropped as *"free advertising"*[^fedora-kernel-attribution]. See
 [the Assisted-by trailer](../mechanisms/assisted-by-trailer.md).
 
 **Contribution and community evaluation** — a limit on reviewers and on the project, not only on
@@ -118,7 +124,7 @@ publication two days later by the person assigned to publish it.[^fedora-council
 [^fedora-ai-policy-commit] **Every step of Fedora's process worked; this bundle's check of it did
 not.**
 
-[LLVM](../projects/llvm.md) credits *"the Fedora project policy proposal"* for part of its own text.
+[LLVM](../projects/llvm.md) credits *"the Fedora project policy proposal"*[^fedora-llvm-policy] for part of its own text.
 That is the proposal, not this adopted version, and the two have not been compared here.
 
 ## What a contributor must do
@@ -143,3 +149,5 @@ forge source is the route.
 [^fedora-council-nav]: [council/modules/ROOT/nav.adoc (forge.fedoraproject.org council/docs, main)](https://forge.fedoraproject.org/council/docs/raw/branch/main/council/modules/ROOT/nav.adoc)
 [^fedora-council-meeting-2025-10-22]: [Fedora Council meeting log, 2025-10-22 — AI policy approval](https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2025-10-22/fedora-council-meeting.2025-10-22-14.01.log.html)
 [^fedora-council-policies]: [Fedora Council — Additional Policies (the page this record checked on 2026-08-05)](https://docs.fedoraproject.org/en-US/council/policies/)
+[^fedora-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
+[^fedora-llvm-policy]: [LLVM AI Tool Use Policy (llvm/llvm-project, main) — credits the Fedora proposal](https://raw.githubusercontent.com/llvm/llvm-project/6695f1d97f9615e6bbe5a5d40ea4496b7e84a3d9/llvm/docs/AIToolPolicy.md)

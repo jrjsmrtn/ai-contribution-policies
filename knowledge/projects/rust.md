@@ -59,6 +59,9 @@ sources:
   - id: rust-rfc-3950
     title: 'Add contribution policy for AI-generated work (rust-lang/rfcs#3950, closed)'
     resource: https://github.com/rust-lang/rfcs/pull/3950
+  - id: rust-forge-pre-1108
+    title: 'src/policies/llm-usage.md before PR 1108 (rust-lang/rust-forge, commit 98f27c7c)'
+    resource: https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md
 ---
 
 **Stance: conditionally allowed in the repositories that have adopted it — six so far, all in
@@ -82,7 +85,7 @@ status was wrong.
 > This policy only applies to the repositories that have adopted it, and only to the teams that have
 > ratified it: compiler, libs, types, rustdoc, bootstrap, and their subteams.[^rust-llm-policy]
 
-**Until 2026-09-15 the first clause read *"only applies to `rust-lang/rust`"*.** That day PR 1108
+**Until 2026-09-15 the first clause read *"only applies to `rust-lang/rust`"*[^rust-forge-pre-1108].** That day PR 1108
 generalised it and began listing adopters, noting that each already had text in its own contributing
 guide.[^rust-forge-1108] All six were checked on 2026-09-15:
 
@@ -186,8 +189,8 @@ Code *"originally created by an LLM"* is allowed only if it is **pre-arranged, n
 high-quality, well-tested and well-reviewed, with disclosure**.[^rust-llm-policy] Pre-arranged means
 a reviewer agreed before the PR was opened, and *"This must be the *same* reviewer who will be
 assigned"*. Non-critical rules out soundness-sensitive areas such as *"the trait system, MIR building,
-or the query system"*. Well-tested means *"a higher standard than human-created PRs, because LLMs make
-it easier to write tests"*. Organisation members may ignore the non-critical clause, but are *"strongly
+or the query system"*[^rust-llm-policy]. Well-tested means *"a higher standard than human-created PRs, because LLMs make
+it easier to write tests"*[^rust-llm-policy]. Organisation members may ignore the non-critical clause, but are *"strongly
 discouraged"*[^rust-blog-adoption] from doing so.
 
 Every such PR carries an `llm-assisted` label and is posted to a private Zulip channel whose purpose
@@ -238,3 +241,4 @@ which a probe for `CONTRIBUTING.md` misses. `stale_after` is three months for th
 [^rust-adopt-mdbook]: [CONTRIBUTING.md (rust-lang/mdBook, main) — LLM policy section](https://raw.githubusercontent.com/rust-lang/mdBook/main/CONTRIBUTING.md)
 [^rust-adopt-rustfmt]: [Contributing.md (rust-lang/rustfmt, main) — LLM policy section](https://raw.githubusercontent.com/rust-lang/rustfmt/main/Contributing.md)
 [^rust-adopt-clippy]: [CONTRIBUTING.md (rust-lang/rust-clippy, master) — LLM policy section](https://raw.githubusercontent.com/rust-lang/rust-clippy/master/CONTRIBUTING.md)
+[^rust-forge-pre-1108]: [src/policies/llm-usage.md before PR 1108 (rust-lang/rust-forge, commit 98f27c7c)](https://raw.githubusercontent.com/rust-lang/rust-forge/98f27c7c863eab79e0c208a336d7db1f50ba3db4/src/policies/llm-usage.md)

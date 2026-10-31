@@ -209,8 +209,8 @@ path. And its spec argues disclosure as **review triage** rather than as complia
 into just those parts"*[^aideclaration-spec] — which is a fourth job for a provenance signal, and one
 no policy here asks a contributor to serve.
 
-**The trap it sets for a reader is the reason to record it.** Someone asking *"does this project
-accept AI contributions?"* finds a file that looks like the answer, is dated, is machine-readable,
+**The trap it sets for a reader is the reason to record it.** Someone asking "does this project
+accept AI contributions?" finds a file that looks like the answer, is dated, is machine-readable,
 and does not answer the question. A declaration and a policy are not the same artifact, and only one
 of them binds anybody.
 
@@ -315,7 +315,7 @@ graded enforcement.
 
 This also creates a boundary worth naming: an `AGENTS.md` is simultaneously a contribution to the
 repository and an instruction to a tool. [Nerves](projects/nerves.md) governs them as contributions
-— *"Don't add AI tool configuration such as `AGENTS.md` or `CLAUDE.md` without asking first"* — while
+— *"Don't add AI tool configuration such as `AGENTS.md` or `CLAUDE.md` without asking first"*[^nerves-contributing] — while
 Asahi uses one as the policy's delivery mechanism.
 
 **But the filename predicts nothing, and this is now measurable.** Three projects ship an `AGENTS.md`
@@ -514,7 +514,7 @@ declined.[^debian-gr-2026-002] Adding what the other records surface, a policy h
 2. **Disclosure — mandatory, encouraged, or silent?** And above what threshold: any use, or
    unmodified bulk?
 3. **Prose and human conversation, or only code?** Debian's Proposal C requires messages to humans
-   be *"drafted solely by humans"*; Ansible's scope covers its Forum and Matrix; Zig forbids even
+   be *"drafted solely by humans"*[^debian-gr-2026-002]; Ansible's scope covers its Forum and Matrix; Zig forbids even
    *"talking about use of chatbot/LLM services"*.[^zig-coc]
 4. **Upstream, or only the project's own work?**
 5. **May contributor data leave the project's infrastructure?**

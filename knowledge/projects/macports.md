@@ -65,6 +65,9 @@ sources:
   - id: macports-pr-420-bundle-comment
     title: 'macports-base PR 420 — comment by this bundle''s maintainer on the kernel format change (2026-09-14)'
     resource: https://github.com/macports/macports-base/pull/420#issuecomment-5664987148
+  - id: macports-kernel-attribution
+    title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
 ---
 
 **Stance: undecided. This record describes a proposal, not a rule.** MacPorts has no adopted AI
@@ -105,7 +108,7 @@ claimed.
 The PR cites `docs.kernel.org/process/coding-assistants.html#attribution` as its
 authority.[^macports-pr-420-diff] The [Linux kernel](linux-kernel.md) **replaced**
 `AGENT_NAME:MODEL_VERSION` with the bare literal `LLM` in mainline on **2026-08-03**, because naming
-models *"provides free advertising to proprietary software companies"*. The PR's commit was authored
+models *"provides free advertising to proprietary software companies"*[^macports-kernel-attribution]. The PR's commit was authored
 **2026-08-04**, one day later.
 
 **On 2026-08-29 the cited page still served the retired form** — `docs.kernel.org` renders a released
@@ -148,7 +151,7 @@ every one has a trailer line rather than a passing mention.[^macports-ports-assi
   `neverpanic` or `herbygillot`.[^macports-base-coauthored-search]
 
 **So the switch in the ports tree followed the proposal within hours, and follows its wording exactly —
-the retired format included.** The PR body calls the trailer *"the emerging de facto standard"*; inside
+the retired format included.** The PR body calls the trailer *"the emerging de facto standard"*[^macports-pr-420]; inside
 MacPorts, the measured practice is overwhelmingly one committer's commit history, adopted the day the
 proposal appeared. This record draws no conclusion about intent from the timing; the dates and counts
 are what can be checked.
@@ -193,7 +196,7 @@ robots.txt"*[^macports-dev-trac-anubis] — a response to crawlers, not a rule a
 ## The argument in the thread
 
 **The author's case is provenance.** Asked what the trailer is for: *"In short, enabling provenance
-analysis. Putting an LLM in `Co-authored-by` is generally discouraged, BTW."* And on moving
+analysis. Putting an LLM in `Co-authored-by` is generally discouraged, BTW."*[^macports-pr-420] And on moving
 disclosure to review: *"Yes, but tagging commits is also useful."* He points to Apache, FreeBSD,
 Linux, LLVM, SciPy and SDL as projects whose discussions are *"well worth reading"*, and summarises:
 *"I've seen more that have decided to allow it with tagging and clear statements that the human bears
@@ -304,3 +307,4 @@ subject index that mentions Anubis is not a challenge page — check for challen
 [^macports-ports-coauthored-search]: [GitHub commit search, macports-ports, noreply@anthropic.com (183 results on 2026-09-15)](https://api.github.com/search/commits?q=repo:macports/macports-ports+%22noreply%40anthropic.com%22)
 [^macports-base-coauthored-search]: [GitHub commit search, macports-base, noreply@anthropic.com (8 results on 2026-09-15)](https://api.github.com/search/commits?q=repo:macports/macports-base+%22noreply%40anthropic.com%22)
 [^macports-pr-420-bundle-comment]: [macports-base PR 420 — comment by this bundle's maintainer on the kernel format change (2026-09-14)](https://github.com/macports/macports-base/pull/420#issuecomment-5664987148)
+[^macports-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)

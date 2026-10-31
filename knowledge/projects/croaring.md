@@ -62,19 +62,19 @@ usage policy"*),[^cr-readme] and `SECURITY.md`.[^cr-security]
 
 ## It is LLVM's policy, shortened
 
-The file's last line is a link headed *"LLVM AI Tool Use Policy"*, pointing at LLVM's discussion thread.
+The file's last line is a link headed *"LLVM AI Tool Use Policy"*[^cr-policy], pointing at LLVM's discussion thread.
 Nowhere does the file say the text was adapted from LLVM's. Compared sentence by sentence with the LLVM text in force when it
 landed (revision `6695f1d97f`, 2026-03-05; markdown stripped, split at `.`, `!`, `?` and `:`), **13 of
 CRoaring's 19 sentences appear verbatim in LLVM's**; the other six are headings run into the sentence after
-them, a first sentence recast from *"LLVM's policy is that contributors…"* to *"Contributors can…"*, and a
+them, a first sentence recast from *"LLVM's policy is that contributors…"*[^cr-llvm-policy] to *"Contributors can…"*, and a
 disclosure section CRoaring wrote itself.[^cr-policy][^cr-llvm-policy] The LLVM text is unchanged in those
 sentences today. See [policy by copying](../mechanisms/policy-by-copying.md).
 
 **What the copy left out**, each checked by searching the CRoaring file for the phrase:
 
 - **The labelling requirement.** LLVM expects contributors to *"be transparent and label contributions that
-  contain substantial amounts of tool-generated content"* and suggests an `Assisted-by:` trailer.
-  CRoaring says *"we encourage you to disclose its use and explain your process"*, and adds a sentence of its
+  contain substantial amounts of tool-generated content"*[^cr-llvm-policy] and suggests an `Assisted-by:` trailer.
+  CRoaring says *"we encourage you to disclose its use and explain your process"*[^cr-policy], and adds a sentence of its
   own that turns non-disclosure into a suspicion rather than a breach: *"If a submission appears to rely
   heavily on AI without disclosure, we may doubt that the human-in-the-loop requirement has been
   met."*[^cr-policy][^cr-llvm-policy] No trailer is mentioned.

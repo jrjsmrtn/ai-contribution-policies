@@ -13,6 +13,13 @@ with a copied directory.
 
 ## 2026-10-31
 
+* **Next.js retired its `CLAUDE.md` pointer on 2026-09-22**, stating that *"Claude Code now reads
+  `AGENTS.md` directly, so the additional alias is no longer needed."* It is the first record here of a
+  pointer withdrawn because a tool learned to read the shared name; see
+  [agent-file pointers](mechanisms/agent-file-pointers.md).
+* **A comparison in [`projects/django.md`](projects/django.md) was wrong when written.** It placed Next.js
+  with frameworks that scaffold no agent instructions; `create-next-app` had generated an `AGENTS.md` by
+  default since 2026-02-11.
 * **The Linux kernel withdrew its `Assisted-by` tag on 2026-10-14**, and
   [`projects/linux-kernel.md`](projects/linux-kernel.md) is re-verified. Commit `1e035297` removed the
   tag from `coding-assistants.rst` and `submitting-patches.rst` and from `checkpatch`, after the 2026

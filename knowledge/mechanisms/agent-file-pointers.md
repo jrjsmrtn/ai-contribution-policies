@@ -26,9 +26,9 @@ sources:
   - id: ptr-zed-tree
     title: 'Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md'
     resource: https://api.github.com/repos/zed-industries/zed/git/trees/main
-  - id: ptr-next-agents
-    title: 'AGENTS.md — Next.js Development Guide (vercel/next.js, canary), which documents its own symlink'
-    resource: https://raw.githubusercontent.com/vercel/next.js/canary/AGENTS.md
+  - id: ptr-next-agents-old
+    title: 'AGENTS.md — Next.js Development Guide (vercel/next.js, commit 2f3e77f5, before the symlink was removed)'
+    resource: https://raw.githubusercontent.com/vercel/next.js/2f3e77f5a456c1a84f0ec5474fc825ec350d5d52/AGENTS.md
   - id: ptr-osquery-cursor
     title: '.cursor/rules/build-format.mdc (osquery/osquery, master)'
     resource: https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc
@@ -38,6 +38,15 @@ sources:
   - id: ptr-cdxgen-copilot
     title: '.github/copilot-instructions.md (cdxgen/cdxgen, master)'
     resource: https://raw.githubusercontent.com/cdxgen/cdxgen/master/.github/copilot-instructions.md
+  - id: ptr-nm-commit-symlinks
+    title: 'commit 4f6265fb — AGENTS.md: add symlinks under the names other agents look for (NetworkManager, 2026-09-04)'
+    resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/4f6265fb6498
+  - id: ptr-duckdb-pr-23077
+    title: 'duckdb/duckdb PR 23077 — create AGENTS.md and link from CLAUDE.md (merged 2026-06-05)'
+    resource: https://github.com/duckdb/duckdb/pull/23077
+  - id: ptr-next-99043
+    title: 'vercel/next.js PR 99043 — Use AGENTS.md for managed agent instructions (2026-09-22)'
+    resource: https://github.com/vercel/next.js/pull/99043
 ---
 
 **Different agents look for different filenames, and no specification says which.** `AGENTS.md`,
@@ -78,17 +87,22 @@ fetched over HTTP it looks almost exactly like a symlink, and here the mode says
 
 **[DuckDB](../projects/duckdb.md) chose the import over a symlink and said why.** Its `CLAUDE.md` became a
 10-byte `@AGENTS.md` on 2026-06-05, and the contributor explained: *"avoided symlinking because it
-complicates things on Windows."* That is the only stated trade-off between the two constructions in
+complicates things on Windows"*[^ptr-duckdb-pr-23077] That is the only stated trade-off between the two constructions in
 this bundle — portability of the checkout against portability across tools.
 
 **NetworkManager's commit names the problem exactly**: *"AGENTS.md: add symlinks under the names other
-agents look for"* (2026-09-04).
+agents look for"*[^ptr-nm-commit-symlinks] (2026-09-04).
 
-**Next.js documents its own**, which nothing else here does: the first lines of its `AGENTS.md` read
-*"**Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same file."*[^ptr-next-agents] Given
-that a symlink fetched over HTTP is indistinguishable from a small stub — the hazard below — a
-project stating the fact in prose is the only version of this construction that survives being read
-through an API.
+**Next.js documented its own**, which nothing else here did: until 2026-09-22 the first lines of its
+`AGENTS.md` read *"**Note:** `CLAUDE.md` is a symlink to `AGENTS.md`. They are the same
+file."*[^ptr-next-agents-old] Given that a symlink fetched over HTTP is indistinguishable from a small
+stub — the hazard below — a project stating the fact in prose was the only version of this
+construction that survived being read through an API.
+
+**Then Next.js removed the pointer altogether**, on the ground that it was no longer needed: *"Claude
+Code now reads `AGENTS.md` directly, so the additional alias is no longer
+needed."*[^ptr-next-99043] It is the first record here of a pointer retired because a tool learned to
+read the shared name.
 
 ## The counter-example, and it has already diverged
 
@@ -167,7 +181,10 @@ entire construction and is exactly the kind of change nothing in a repository wo
 [^ptr-asahi-tree]: [Repository tree, AsahiLinux/m1n1 at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/AsahiLinux/m1n1/git/trees/main)
 [^ptr-elixir-tree]: [Repository tree, elixir-lang/elixir at main — file mode for AGENTS.md](https://api.github.com/repos/elixir-lang/elixir/git/trees/main)
 [^ptr-zed-tree]: [Repository tree, zed-industries/zed at main — file modes for AGENTS.md, CLAUDE.md, GEMINI.md](https://api.github.com/repos/zed-industries/zed/git/trees/main)
-[^ptr-next-agents]: [AGENTS.md — Next.js Development Guide (vercel/next.js, canary), which documents its own symlink](https://raw.githubusercontent.com/vercel/next.js/canary/AGENTS.md)
+[^ptr-next-agents-old]: [AGENTS.md — Next.js Development Guide (vercel/next.js, commit 2f3e77f5, before the symlink was removed)](https://raw.githubusercontent.com/vercel/next.js/2f3e77f5a456c1a84f0ec5474fc825ec350d5d52/AGENTS.md)
 [^ptr-osquery-cursor]: [.cursor/rules/build-format.mdc (osquery/osquery, master)](https://raw.githubusercontent.com/osquery/osquery/master/.cursor/rules/build-format.mdc)
 [^ptr-cdxgen-agents]: [AGENTS.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/AGENTS.md)
 [^ptr-cdxgen-copilot]: [.github/copilot-instructions.md (cdxgen/cdxgen, master)](https://raw.githubusercontent.com/cdxgen/cdxgen/master/.github/copilot-instructions.md)
+[^ptr-nm-commit-symlinks]: [commit 4f6265fb — AGENTS.md: add symlinks under the names other agents look for (NetworkManager, 2026-09-04)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/4f6265fb6498)
+[^ptr-duckdb-pr-23077]: [duckdb/duckdb PR 23077 — create AGENTS.md and link from CLAUDE.md (merged 2026-06-05)](https://github.com/duckdb/duckdb/pull/23077)
+[^ptr-next-99043]: [vercel/next.js PR 99043 — Use AGENTS.md for managed agent instructions (2026-09-22)](https://github.com/vercel/next.js/pull/99043)

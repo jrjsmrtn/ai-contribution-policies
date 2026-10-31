@@ -43,14 +43,14 @@ that"*, that human oversight remains critical, and that contributions must adher
 practices of each unique community."*[^redhat-ai-assisted-dev]
 
 That last clause is the substantive one, and it is a **deferral**. Red Hat does not set a rule that
-travels with its engineers; it directs them to the receiving project's rule. So the question *"may a
-Red Hat engineer send you AI-assisted code?"* resolves to *"what does **your** project's policy
-say?"* — which is the correct answer, and also means Red Hat's position adds no constraint of its
+travels with its engineers; it directs them to the receiving project's rule. So the question "may a
+Red Hat engineer send you AI-assisted code?" resolves to "what does **your** project's policy
+say?" — which is the correct answer, and also means Red Hat's position adds no constraint of its
 own.
 
 ## A widely-repeated claim this record does not adopt
 
-Secondary sources describe Red Hat as having *"guidelines for AI-based open source contribution for
+Secondary sources describe Red Hat as having *"guidelines for AI-based open source contribution for <!-- quote-ok: a secondary source's wording, quoted as the claim this record does not adopt -->
 their staff … based on 3 principles."* **No such enumeration appears in either Red Hat post read
 here.**[^redhat-ai-assisted-dev][^redhat-when-bots-commit] The claim may be true and the document
 elsewhere; it is not recorded because it was not found.

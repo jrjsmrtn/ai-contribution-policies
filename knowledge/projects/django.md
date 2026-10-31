@@ -25,6 +25,9 @@ sources:
   - id: dj-copilot-instructions
     title: '.github/copilot-instructions.md (django/django, main) — the review refusal'
     resource: https://raw.githubusercontent.com/django/django/main/.github/copilot-instructions.md
+  - id: dj-create-next-app
+    title: 'packages/create-next-app/index.ts — the --agents-md option, on by default (vercel/next.js, canary)'
+    resource: https://raw.githubusercontent.com/vercel/next.js/canary/packages/create-next-app/index.ts
 ---
 
 **Stance: permitted with granular disclosure, and automated review refused outright.** The policy
@@ -122,8 +125,10 @@ reports.
 
 `django-admin startproject` and `startapp` ship **13 template files between them and none carries
 agent instructions**, checked 2026-09-09. Django's only agent-facing file is the review refusal above.
-That places it with Rails and Next.js and against Phoenix, which generates an `AGENTS.md` into every
-new application by default — a comparison developed in the private tracking corpus rather than here.
+That places it with Rails and against Phoenix, which generates an `AGENTS.md` into every new
+application by default — a comparison developed in the private tracking corpus rather than here. An
+earlier version of this sentence also placed Next.js with Django; `create-next-app` has generated an
+`AGENTS.md` by default since 2026-02-11, so it belongs with Phoenix.[^dj-create-next-app]
 
 ## What a contributor must do
 
@@ -150,3 +155,4 @@ enforcement silently stops — the same shape as a canary nobody checks.
 
 [^dj-submitting-patches]: [Submitting patches — AI-Assisted Contributions (django/django, main)](https://raw.githubusercontent.com/django/django/main/docs/internals/contributing/writing-code/submitting-patches.txt)
 [^dj-copilot-instructions]: [.github/copilot-instructions.md (django/django, main) — the review refusal](https://raw.githubusercontent.com/django/django/main/.github/copilot-instructions.md)
+[^dj-create-next-app]: [packages/create-next-app/index.ts — the --agents-md option, on by default (vercel/next.js, canary)](https://raw.githubusercontent.com/vercel/next.js/canary/packages/create-next-app/index.ts)

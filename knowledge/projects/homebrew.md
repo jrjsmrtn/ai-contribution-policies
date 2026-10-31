@@ -68,6 +68,12 @@ sources:
   - id: hb-kernel-attribution
     title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
     resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
+  - id: hb-commit-check-prs-sync
+    title: 'commit 1b2818ee — check-prs.yml: update to match main configuration (Homebrew/brew, 2026-08-05)'
+    resource: https://github.com/Homebrew/brew/commit/1b2818eee121bf63a015ae71d1d7e256138d70de
+  - id: hb-commit-ai-hooks
+    title: 'commit f560d47b — Add AI hooks (Homebrew/brew, 2025-10-09)'
+    resource: https://github.com/Homebrew/brew/commit/f560d47b4ec37e97f01e180d49d2bbd2d9582f9f
 ---
 
 **Stance: permitted, disclosed in the issue or pull request, and never attributed in a commit.** The
@@ -159,7 +165,7 @@ arrives without the template, and says why:
 **A form as a Turing test, with an automatic appeal.** It detects nothing about authorship; it
 detects an unfilled template and states a hypothesis about why. That text has been in `brew`'s copy
 of the workflow since 2026-08-05, arriving in a `BrewTestBot` commit titled *"update to match main
-configuration"*; which repository it was synced from is not established here.
+configuration"*[^hb-commit-check-prs-sync]; which repository it was synced from is not established here.
 
 ## The review-reply rule tightened in six months
 
@@ -169,10 +175,10 @@ The first version, merged 2026-01-16, had four bullets, and the third permitted 
 > for you**.[^hb-pr-21415]
 
 On 2026-07-29 that line was replaced with *"You must answer all maintainer questions and pull request
-review comments yourself, **without using AI/LLM**"*.[^hb-pr-23317] **From a fallback to a
+review comments yourself, **without using AI/LLM**"*[^hb-contributing].[^hb-pr-23317] **From a fallback to a
 prohibition**, with the stated reason in the commit body — *"Ensure reviewers engage directly with
-responsible contributors"*. The same change added the trailer ban, justified by *"Keep commit history
-tied to accountable human contributors"* — the accountability ground [Kubernetes](kubernetes.md)
+responsible contributors"*[^hb-pr-23317]. The same change added the trailer ban, justified by *"Keep commit history
+tied to accountable human contributors"*[^hb-pr-23317] — the accountability ground [Kubernetes](kubernetes.md)
 gives, not the advertising ground [GTK](gtk.md) gives.
 
 Homebrew now reserves the review conversation to humans and nothing else — issue text and pull
@@ -208,7 +214,7 @@ pointing one filename at another, beside the symlinks and duplicated files recor
 ## Agents cannot stop until the project's gate passes
 
 `brew` ships hook configurations for three agents. Claude Code's and Cursor's were added on
-2025-10-09, in a commit titled *"Add AI hooks"*; Codex's on 2026-06-10. Claude Code runs
+2025-10-09, in a commit titled *"Add AI hooks"*[^hb-commit-ai-hooks]; Codex's on 2026-06-10. Claude Code runs
 `./bin/brew lgtm` (style, type checks, tests) at stop, Cursor runs style and type checks after every
 file edit and tests at stop, and the Codex hook refuses to let the session finish:
 
@@ -295,3 +301,5 @@ would be the first recorded copy of it.
 [^hb-governance]: [docs/Homebrew-Governance.md (Homebrew/brew, main)](https://raw.githubusercontent.com/Homebrew/brew/main/docs/Homebrew-Governance.md)
 [^hb-macports-420]: [macports-base PR 420 — thread comment proposing Homebrew's policy (2026-09-13)](https://github.com/macports/macports-base/pull/420)
 [^hb-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
+[^hb-commit-check-prs-sync]: [commit 1b2818ee — check-prs.yml: update to match main configuration (Homebrew/brew, 2026-08-05)](https://github.com/Homebrew/brew/commit/1b2818eee121bf63a015ae71d1d7e256138d70de)
+[^hb-commit-ai-hooks]: [commit f560d47b — Add AI hooks (Homebrew/brew, 2025-10-09)](https://github.com/Homebrew/brew/commit/f560d47b4ec37e97f01e180d49d2bbd2d9582f9f)
