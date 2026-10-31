@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)**: its pinned copy of the superseded
+  policy can be checked again, after a fetch fault was fixed outside the bundle. The before-and-after
+  table now cites each policy cell by cell, and the `m1n1` commit that added the agent files is cited.
 - **Nineteen more quotations corrected against their sources.** Thirteen had a slip the source does not
   have: a changed word (*shall* read as *to*, *be made for* as *been made over*, *sounds* as *sound*),
   an added comma, a spaced dash, single quotes and backticks where the source has double quotes, a

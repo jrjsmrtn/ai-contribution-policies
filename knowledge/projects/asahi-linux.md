@@ -34,6 +34,9 @@ sources:
   - id: asahi-agents-md
     title: 'AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool'
     resource: https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md
+  - id: asahi-m1n1-agents-commit
+    title: 'commit c9a03479 — Add AGENTS, CLAUDE and GEMINI.md to contain the slop (AsahiLinux/m1n1)'
+    resource: https://github.com/AsahiLinux/m1n1/commit/c9a03479bc2b0d1d97f77f61f6a0f8b277789cc3
 ---
 
 **Stance: broadly prohibited, with graded enforcement.** Since a rework committed on 2026-09-07, the
@@ -55,11 +58,11 @@ distinctive about it is gone:
 
 | | Before 2026-09-07 | Since |
 |---|---|---|
-| **Voice** | *"It is the opinion of the Board …"* | no body is named |
-| **Vocabulary** | LLMs *"herein referred to as Slop Generators"* | *"generative AI tooling"*, *"LLMs"* |
-| **Scope** | any contribution, *"expressly forbidden"* | *"material contributions"* |
-| **Sanction** | a single warning, then *"immediate and permanent ban"* from the project and all associated spaces | graded, from closing an issue to an immediate ban |
-| **Legal argument** | leaked vendor material in training data, and that FOSS projects *"cannot afford costly intellectual property lawsuits"* | clean-room reverse engineering |
+| **Voice** | *"It is the opinion of the Board …"*[^asahi-slop-superseded] | no body is named |
+| **Vocabulary** | LLMs *"herein referred to as Slop Generators"*[^asahi-slop-superseded] | *"generative AI tooling"*, *"LLMs"*[^asahi-llm-policy] |
+| **Scope** | any contribution, *"expressly forbidden"*[^asahi-slop-superseded] | *"material contributions"*[^asahi-llm-policy] |
+| **Sanction** | a single warning, then *"immediate and permanent ban"*[^asahi-slop-superseded] from the project and all associated spaces | graded, from closing an issue to an immediate ban |
+| **Legal argument** | leaked vendor material in training data, and that FOSS projects *"cannot afford costly intellectual property lawsuits"*[^asahi-slop-superseded] | clean-room reverse engineering |
 | **Community channels** | pasting model output into forum answers treated like posting an LMGTFY link | not mentioned |
 | **Environment** | a paragraph of its own | one of seven harms listed |
 
@@ -109,7 +112,7 @@ the same weight [Rust](rust.md) gives to lying, reached from a legal rather than
 ## The agent file is now stricter than the policy it points to
 
 `AsahiLinux/m1n1` carries a 181-byte `AGENTS.md`, authored 2026-07-14 in a commit titled *"Add
-AGENTS, CLAUDE and GEMINI.md to contain the slop"*, with `CLAUDE.md` and `GEMINI.md` as git symlinks
+AGENTS, CLAUDE and GEMINI.md to contain the slop"*[^asahi-m1n1-agents-commit], with `CLAUDE.md` and `GEMINI.md` as git symlinks
 to it (mode `120000`):
 
 > The maintainers of this project forbid any usage of AI or LLM tools whatsoever due to legal
@@ -151,3 +154,4 @@ policy while trying to follow it.
 [^asahi-slop-superseded]: [content/slop.md at AsahiLinux.github.io babf005258ed — the superseded policy text](https://raw.githubusercontent.com/AsahiLinux/AsahiLinux.github.io/babf005258edd13c5c57a073302bcb0ce7512ec3/content/slop.md)
 [^asahi-slop-redirect]: [asahilinux.org/slop/ — now a redirect to /llm-policy/](https://asahilinux.org/slop/)
 [^asahi-agents-md]: [AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool](https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md)
+[^asahi-m1n1-agents-commit]: [commit c9a03479 — Add AGENTS, CLAUDE and GEMINI.md to contain the slop (AsahiLinux/m1n1)](https://github.com/AsahiLinux/m1n1/commit/c9a03479bc2b0d1d97f77f61f6a0f8b277789cc3)
