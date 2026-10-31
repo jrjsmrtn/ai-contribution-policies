@@ -42,6 +42,9 @@ sources:
   - id: lb-kuzu
     title: 'kuzudb/kuzu — the repository Ladybug continues'
     resource: https://github.com/kuzudb/kuzu
+  - id: lb-pg-ladybug
+    title: 'README.md (LadybugDB/pg_ladybug, main) — the Postgres extension'
+    resource: https://raw.githubusercontent.com/LadybugDB/pg_ladybug/main/README.md
 ---
 
 **Stance: none stated, and the absence is measured rather than assumed.** The repository's
@@ -113,6 +116,17 @@ contributing guide's history runs through a `kuzu` → `ladybug` rename commit, 
 Kuzu's. **Whether Kuzu had an AI policy was not checked**, so this record does not say Ladybug
 inherited or dropped one.
 
+## pg_ladybug, the Postgres extension
+
+`LadybugDB/pg_ladybug`, created 2026-07-25, embeds the Ladybug engine in Postgres so that Cypher
+queries can read Postgres tables.[^lb-pg-ladybug] It is PostgreSQL-licensed and has 18 tracked files.
+**It has no contributing guide and no agent-instruction file**, and its three Markdown files contain
+none of the seven AI terms above, nor *ChatGPT*, *Codex* or *agent*, checked 2026-10-31; the one hit,
+for *cursor*, is a database cursor. All 42
+commits on `main` share one author name, and none credits or mentions an AI tool. The commit list from a
+clone matches the GitHub API's. Its 13 issues and pull requests do not mention AI either. A contributor
+to the extension has even less in writing than one to Ladybug itself.
+
 ## What a contributor must do
 
 **Nothing written binds you on AI.** Discuss changes with the core team first, open a pull request from a
@@ -138,3 +152,4 @@ search undercounted DuckDB by more than two thirds.
 [^lb-agents-history]: [Commit history of AGENTS.md (LadybugDB/ladybug, main)](https://github.com/LadybugDB/ladybug/commits/main/AGENTS.md)
 [^lb-contributing-history]: [Commit history of CONTRIBUTING.md (LadybugDB/ladybug, main)](https://github.com/LadybugDB/ladybug/commits/main/CONTRIBUTING.md)
 [^lb-kuzu]: [kuzudb/kuzu — the repository Ladybug continues](https://github.com/kuzudb/kuzu)
+[^lb-pg-ladybug]: [README.md (LadybugDB/pg_ladybug, main) — the Postgres extension](https://raw.githubusercontent.com/LadybugDB/pg_ladybug/main/README.md)

@@ -184,6 +184,8 @@ pull request description was left in place.[^dd-odbc-pr] The pull request was st
 - **It is evidence of one maintainer's reading, in one repository.** He is a member of the `duckdb`
   organisation and wrote most of that repository's recent commits, but whether either policy file governs
   `odbc-scanner` was stated only by his link. Neither file says it covers extension repositories.
+  [pg_duckdb](pg-duckdb.md), another repository in the organisation, carries a guide trimmed from
+  DuckDB's before the AI section existed, and has no AI rule at all.
 - **It does not match the main repository's practice.** In `duckdb/duckdb`, 141 commits carry the same
   kind of trailer (above), and neither policy file mentions trailers.
 - **One case.** It cannot say whether the maintainers of `duckdb/duckdb` read the two files the same way.

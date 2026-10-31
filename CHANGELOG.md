@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/pg-duckdb.md`](knowledge/projects/pg-duckdb.md)**: no AI policy. The contributing guide was
+  trimmed from DuckDB's in 2024-08 and last edited 2025-03, before DuckDB added its AI section, so the copy
+  never received it. Contributors disclose AI use in prose, unasked; no commit carries an AI trailer.
+
+### Changed
+
+- **[`projects/ladybug.md`](knowledge/projects/ladybug.md)**: a section on `pg_ladybug`, the Postgres
+  extension: no contributing guide, no agent file, no AI mention in files, commits or issues.
+- **[`projects/duckdb.md`](knowledge/projects/duckdb.md)**: links the pg_duckdb record from the scope
+  question about the organisation's other repositories.
+
 ## [0.29.0] - 2026-10-09
 
 ### Added
