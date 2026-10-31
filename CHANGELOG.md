@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.30.2] - 2026-10-31
+
 ### Fixed
 
 - **[`projects/python.md`](knowledge/projects/python.md)** re-verified. Two quotations that appear in no
