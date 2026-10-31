@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.30.1] - 2026-10-31
+
 ### Fixed
 
 - **[`foundations/openinfra.md`](knowledge/foundations/openinfra.md)** re-verified against version
