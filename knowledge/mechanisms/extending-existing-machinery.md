@@ -34,6 +34,9 @@ sources:
   - id: ext-systemd-0908
     title: 'docs/CONTRIBUTING.md before the 2026-10-03 rewrite (systemd/systemd, commit 57f0f540)'
     resource: https://raw.githubusercontent.com/systemd/systemd/57f0f540b50248c0fb51eee551084a27383c213a/docs/CONTRIBUTING.md
+  - id: ext-debian-gr
+    title: 'General Resolution: LLM usage in Debian (2026 vote_002)'
+    resource: https://www.debian.org/vote/2026/vote_002
 ---
 
 **Writing an AI policy from scratch means answering "who decides?" from scratch.** Extending a rule
@@ -50,7 +53,7 @@ varied.
 | [LLVM](../projects/llvm.md) | its **copyright policy** | *"Our policy on AI tools is similar to our copyright policy"* — regenerating copyrighted material does not remove the copyright[^ext-llvm] |
 | [systemd](../projects/systemd.md), until 2026-10-03 | the norms already governing **`sed`, `awk`, `coccinelle`** | *"AI tools are treated the same as traditional tooling"*[^ext-systemd-0908]; replaced by rules adapted from jj's policy[^ext-systemd] |
 | [Elixir](../projects/elixir.md) | **issue labels** in the tracker | no coding agents on existing issues unless marked *Contributions Welcome* |
-| [Debian](../distributions/debian.md) | the **standards already expected of contributors** | generative AI is *"neither exempt from nor subject to special rules beyond"* them |
+| [Debian](../distributions/debian.md) | the **standards already expected of contributors** | generative AI is *"neither exempt from nor subject to special rules beyond"*[^ext-debian-gr] them |
 | [OWASP](../foundations/owasp.md) | a mandated **DCO** requiring *"original work"* and covering *"the risks of plagiarized code"* | **not extended** — see below[^ext-owasp] |
 
 **GCC's is the clearest instance and the most reusable.** Its line is a test the project already
@@ -117,3 +120,4 @@ into existing machinery as they acquire some.
 [^ext-systemd]: [docs/CONTRIBUTING.md — Policy on the use of LLMs and AI tooling (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/docs/CONTRIBUTING.md)
 [^ext-owasp]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
 [^ext-systemd-0908]: [docs/CONTRIBUTING.md before the 2026-10-03 rewrite (systemd/systemd, commit 57f0f540)](https://raw.githubusercontent.com/systemd/systemd/57f0f540b50248c0fb51eee551084a27383c213a/docs/CONTRIBUTING.md)
+[^ext-debian-gr]: [General Resolution: LLM usage in Debian (2026 vote_002)](https://www.debian.org/vote/2026/vote_002)

@@ -63,7 +63,7 @@ CLA and the Technical Steering Committee.[^osquery-contributing] It says nothing
 
 ## What it inherits, precisely
 
-osquery is *"a Series of LF Projects, LLC"*, adopted 2019-06-14, and its charter binds participants
+osquery is *"a Series of LF Projects, LLC"*[^osquery-charter], adopted 2019-06-14, and its charter binds participants
 explicitly:
 
 > Contributors will comply with the policies of LF Projects as may be adopted and amended by LF

@@ -28,6 +28,9 @@ sources:
   - id: dj-create-next-app
     title: 'packages/create-next-app/index.ts — the --agents-md option, on by default (vercel/next.js, canary)'
     resource: https://raw.githubusercontent.com/vercel/next.js/canary/packages/create-next-app/index.ts
+  - id: dj-copilot-commit
+    title: 'commit 3180ddb3 — Discouraged automated AI reviews of pull requests (django/django, 2026-03-12)'
+    resource: https://github.com/django/django/commit/3180ddb3f532ef246d318d64225886b7c0593676
 ---
 
 **Stance: permitted with granular disclosure, and automated review refused outright.** The policy
@@ -79,7 +82,7 @@ Every other project here that mentions review bots **runs one** — [Kubernetes]
 > request.[^dj-submitting-patches]
 
 **And the rule is not left to goodwill.** `.github/copilot-instructions.md` — added **2026-03-12** in
-a commit titled *"Discouraged automated AI reviews of pull requests"* — is 316 bytes that turn the bot
+a commit titled *"Discouraged automated AI reviews of pull requests"*[^dj-copilot-commit] — is 316 bytes that turn the bot
 off, using the vendor's own `applyTo:` glob mechanism against the vendor's own reviewer:
 
 > ```
@@ -156,3 +159,4 @@ enforcement silently stops — the same shape as a canary nobody checks.
 [^dj-submitting-patches]: [Submitting patches — AI-Assisted Contributions (django/django, main)](https://raw.githubusercontent.com/django/django/main/docs/internals/contributing/writing-code/submitting-patches.txt)
 [^dj-copilot-instructions]: [.github/copilot-instructions.md (django/django, main) — the review refusal](https://raw.githubusercontent.com/django/django/main/.github/copilot-instructions.md)
 [^dj-create-next-app]: [packages/create-next-app/index.ts — the --agents-md option, on by default (vercel/next.js, canary)](https://raw.githubusercontent.com/vercel/next.js/canary/packages/create-next-app/index.ts)
+[^dj-copilot-commit]: [commit 3180ddb3 — Discouraged automated AI reviews of pull requests (django/django, 2026-03-12)](https://github.com/django/django/commit/3180ddb3f532ef246d318d64225886b7c0593676)

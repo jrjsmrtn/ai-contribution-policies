@@ -41,6 +41,9 @@ sources:
   - id: hitl-homebrew
     title: 'docs/Responsible-AI-Usage.md (Homebrew/brew, main)'
     resource: https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md
+  - id: hitl-dt-frontend-agents
+    title: 'AGENTS.md (DependencyTrack/frontend, main)'
+    resource: https://raw.githubusercontent.com/DependencyTrack/frontend/main/AGENTS.md
 ---
 
 **The phrase *"a human in the loop"* is the most-copied in this bundle and the least defined.** Ten
@@ -59,7 +62,7 @@ same rule — they are governing five different things and calling it one.
 | [Ansible](../projects/ansible.md) | **maintainer discretion** | autonomous contributions *"MAY be rejected … without prior justification"*[^hitl-ansible] |
 | [Elixir](../projects/elixir.md) | **where in the tracker** | no agents on issues without the *Contributions Welcome* label |
 | [Perl](../projects/perl.md) | the act of **opening a thread** | an agent may not create an issue or a pull request |
-| [Dependency-Track](../projects/dependency-track.md) | the act of opening a thread | *"Never create an issue. Never create a PR"* |
+| [Dependency-Track](../projects/dependency-track.md) | the act of opening a thread | *"Never create an issue. Never create a PR"*[^hitl-dt-frontend-agents] |
 | [cdxgen](../projects/cdxgen.md) | **a level you declare** | `auto` is a disclosure value, not a prohibition[^hitl-aideclaration] |
 
 **The same mode of work is a bannable offence in four projects and a disclosable attribute in a
@@ -154,3 +157,4 @@ close a pull request — the sanction is stated in all four and recorded in none
 [^hitl-aideclaration]: [AI-DECLARATION.md specification v0.1.2](https://ai-declaration.md/en/0.1.2)
 [^hitl-kernel-wireless]: [linux-wireless — maintainer response to AI-assisted syzbot fixes](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
 [^hitl-homebrew]: [docs/Responsible-AI-Usage.md (Homebrew/brew, main)](https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md)
+[^hitl-dt-frontend-agents]: [AGENTS.md (DependencyTrack/frontend, main)](https://raw.githubusercontent.com/DependencyTrack/frontend/main/AGENTS.md)

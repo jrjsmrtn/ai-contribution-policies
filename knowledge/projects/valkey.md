@@ -43,6 +43,9 @@ sources:
   - id: vk-lf-genai
     title: 'Generative AI policy — The Linux Foundation'
     resource: https://www.linuxfoundation.org/legal/generative-ai
+  - id: vk-kernel-coding-assistants
+    title: 'Documentation/process/coding-assistants.rst (torvalds/linux, master)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/coding-assistants.rst
 ---
 
 **Stance: none stated, and the absence is measured rather than assumed.** `AGENTS.md`,
@@ -65,7 +68,7 @@ five sections hand that bot work that is not about code:
 
 **An AI is checking the certification instrument that several projects here insist only a human can
 satisfy.** The [Linux kernel](linux-kernel.md) and [Elixir](elixir.md) both state that *"Only humans
-can legally certify the Developer Certificate of Origin"*; Valkey has an agent verify that a human
+can legally certify the Developer Certificate of Origin"*[^vk-kernel-coding-assistants]; Valkey has an agent verify that a human
 did. Nothing is inconsistent — checking that a line is present is not certifying anything — but it is
 the first instance in this bundle of AI touching the DCO at all, and it lands on the opposite side of
 the instrument from every argument in [certifying origin](../mechanisms/certifying-origin.md).
@@ -189,3 +192,4 @@ carries an AI policy, which would resolve the inheritance gap for this project a
 [^vk-site]: [valkey.io — project site and footer](https://valkey.io/)
 [^vk-lfprojects]: [Policies — LF Projects, LLC](https://lfprojects.org/policies/)
 [^vk-lf-genai]: [Generative AI policy — The Linux Foundation](https://www.linuxfoundation.org/legal/generative-ai)
+[^vk-kernel-coding-assistants]: [Documentation/process/coding-assistants.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/coding-assistants.rst)

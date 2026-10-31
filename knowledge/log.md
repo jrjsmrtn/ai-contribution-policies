@@ -13,6 +13,13 @@ with a copied directory.
 
 ## 2026-10-31
 
+* **Every quotation in the bundle matches its source again**, for the first time since the weekly check
+  began reporting failures on 2026-09-21: 645 checked, 18 exempted with a stated reason. A planted change
+  of one word was caught. The 282 failures of 2026-10-11 came from faults in the shared tools,
+  quotations credited to a neighbouring footnote, slips in transcription, sources that had changed under
+  their records — four of which (OpenInfra, systemd, the Linux kernel, Python) needed their records
+  re-verified — and quotations of wording no version of the source contained, in the Python, Ansible,
+  ASF and OpenInfra records.
 * **Next.js retired its `CLAUDE.md` pointer on 2026-09-22**, stating that *"Claude Code now reads
   `AGENTS.md` directly, so the additional alias is no longer needed."* It is the first record here of a
   pointer withdrawn because a tool learned to read the shared name; see

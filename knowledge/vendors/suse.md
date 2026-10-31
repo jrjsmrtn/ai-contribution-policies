@@ -68,7 +68,7 @@ synchronised. Nothing reachable settles it.
 
 ## Why this matters beyond SUSE
 
-*"SUSE bans AI pair programming"* is widely repeated, and it traces to the PDF. **It may no longer be
+*"SUSE bans AI pair programming"* is widely repeated, and it traces to the PDF. **It may no longer be <!-- quote-ok: a secondary claim, quoted as the claim this record examines -->
 true.** A reader relying on the live policy would find no such rule; a reader relying on the PDF
 would find a flat prohibition. This is the failure this bundle exists to surface, occurring in the
 source rather than in a summary of it — compare [Fedora](../distributions/fedora.md), whose adopted

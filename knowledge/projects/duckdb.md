@@ -52,6 +52,9 @@ sources:
   - id: dd-faq
     title: 'Frequently Asked Questions — duckdb.org'
     resource: https://duckdb.org/faq
+  - id: dd-astral-policy
+    title: 'AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted'
+    resource: https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md
 ---
 
 **Stance: two written policies that point in different directions.** `CONTRIBUTING.md` prohibits AI-generated
@@ -138,7 +141,7 @@ DuckDB took on 2026-06-03 is the current one.
 - **The pin travelled, the pinning did not.** DuckDB links uv's policy at the exact commit ripgrep
   pinned — copied verbatim from ripgrep's text — but links ripgrep itself at `master`, unpinned.
 - **The reason stayed behind.** Astral justifies its human-in-the-loop rule by *"the foundational nature
-  of our projects"*; ripgrep dropped that sentence at the first hop, and DuckDB did not restore it.
+  of our projects"*[^dd-astral-policy]; ripgrep dropped that sentence at the first hop, and DuckDB did not restore it.
 
 ## Practice: AI co-authorship is routine
 
@@ -152,7 +155,7 @@ A partial clone of both `main` and `v2.0-cyanoptera` on 2026-09-16 counts **141 
   in 2026-09. The 33 from April and May were authored while the contributing guide's prohibition was the
   only written rule.
 - **Ten distinct model strings**, from `Claude Opus 4.6` to `Claude Sonnet 5`; one commit uses
-  `Assisted-by:`, and three carry *"Generated with [Claude Code]"*. Neither policy asks for any trailer.
+  `Assisted-by:`, and three carry `Generated with [Claude Code]`. Neither policy asks for any trailer.
 
 **Measured by clone, not by search.** GitHub's commit search reported 42 such commits for the same
 repository; the clone found 141, and a control term returned 25 hits in search against 312 in the clone.
@@ -230,3 +233,4 @@ branch, which is currently named for a release line and may change.
 [^dd-ripgrep-policy]: [AI_POLICY.md (BurntSushi/ripgrep, master) — the text DuckDB adapted](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
 [^dd-foundation]: [DuckDB Foundation — duckdb.org](https://duckdb.org/foundation/)
 [^dd-faq]: [Frequently Asked Questions — duckdb.org](https://duckdb.org/faq)
+[^dd-astral-policy]: [AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted](https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md)

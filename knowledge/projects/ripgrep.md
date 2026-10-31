@@ -121,7 +121,7 @@ adapted this text on 2026-06-03 and credits both ripgrep and uv. Both are tabula
 copying events in [policy by copying](../mechanisms/policy-by-copying.md).
 
 **The adaptation is visible in the commits.** ripgrep landed the policy at `f0cec341`
-(`2026-05-26T04:02:44Z`) carrying Astral's *"our projects"* wording unedited, and corrected it to
+(`2026-05-26T04:02:44Z`) carrying Astral's *"our projects"*[^astral-ai-policy] wording unedited, and corrected it to
 *"this project"*[^rg-ai-policy] **8 hours 33 minutes later** at `4857d6fa` — the single edit that turns an
 organisation-wide text into one project's rule. That is the whole mechanics of adaptation in one
 `sed` expression, and [Zed](zed.md)'s pinned citation landed on the wrong side of it.

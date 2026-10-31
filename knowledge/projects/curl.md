@@ -22,6 +22,9 @@ sources:
   - id: curl-contribute
     title: Contribute to curl — on AI use in curl
     resource: https://curl.se/dev/contribute.html
+  - id: curl-git-submitting-patches
+    title: 'SubmittingPatches — Git documentation'
+    resource: https://git-scm.com/docs/SubmittingPatches
 ---
 
 **Stance: permitted for code, tightly governed for security reports.** curl is the only project in
@@ -40,7 +43,7 @@ And the memorable formulation of the standard:
 > A basic rule of thumb is that if someone can spot that the contribution was made with the help of
 > AI, you have more work to do.[^curl-contribute]
 
-That is [Git](git.md)'s *"looks AI generated"* rejection restated as **a target for the contributor
+That is [Git](git.md)'s *"looks AI generated"*[^curl-git-submitting-patches] rejection restated as **a target for the contributor
 rather than a trigger for the maintainer** — same observable, opposite direction. Git tells
 maintainers what to reject; curl tells contributors what to fix. Worth noting for anyone drafting:
 the identical criterion reads as hostile in one framing and as coaching in the other.
@@ -94,3 +97,4 @@ than relying on a fragment anchor. curl also publishes separately about AI-gener
 bug-bounty programme; treat this page as the normative one and other writing as commentary.
 
 [^curl-contribute]: [Contribute to curl — on AI use in curl](https://curl.se/dev/contribute.html)
+[^curl-git-submitting-patches]: [SubmittingPatches — Git documentation](https://git-scm.com/docs/SubmittingPatches)

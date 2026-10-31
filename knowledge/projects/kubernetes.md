@@ -32,6 +32,9 @@ sources:
   - id: k8s-gtk-contributing
     title: 'CONTRIBUTING.md — AI Contribution Policy (GTK, main)'
     resource: https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md
+  - id: k8s-nerves-contributing
+    title: 'CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)'
+    resource: https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md
 ---
 
 **Stance: permitted, disclosed in the pull request, and never in a commit trailer.** The policy was
@@ -58,7 +61,7 @@ compliance looks like tends either to over-disclose or to skip it.
 
 | Project | Trailer | Stated reason |
 |---|---|---|
-| [GTK](gtk.md) | forbidden | it is *"free advertising for AI companies"* |
+| [GTK](gtk.md) | forbidden | it is *"free advertising for AI companies"*[^k8s-gtk-contributing] |
 | **Kubernetes** | forbidden | it **dilutes human accountability** |
 
 The blog puts the second reason plainly: *"This isn't about diminishing AI's role as a tool—it's
@@ -111,7 +114,7 @@ refusing to *"argue with an LLM"*[^k8s-kernel-wireless] — here with the outcom
 > **Large AI generated PRs and AI generated commit messages are not allowed.**[^k8s-ai-guidance]
 
 A volume cap and a prose ban in nine words. [Nerves](nerves.md) reaches the same place with a more
-carefully drawn line (*"translate or tighten your own writing is fine"*); Kubernetes simply forbids
+carefully drawn line (*"translate or tighten your own writing is fine"*[^k8s-nerves-contributing]); Kubernetes simply forbids
 generated commit messages outright.
 
 > **Do not leave the first review of AI generated changes to the reviewers.** Verify the changes
@@ -182,3 +185,4 @@ co-author check spreads. It does not depend on a maintainer noticing, which is s
 [^k8s-maintainership-blog]: [Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)
 [^k8s-kernel-wireless]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
 [^k8s-gtk-contributing]: [CONTRIBUTING.md — AI Contribution Policy (GTK, main)](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)
+[^k8s-nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)

@@ -83,7 +83,7 @@ style, explain what you verified, break large changes up, and watch for verbose 
 Three bear on this bundle:
 
 - **Ownership:** *"Only submit a PR if you are able to debug and own the changes yourself"*.
-- **Disclosure, in prose:** *"Be upfront about AI usage and summarise what was AI-generated"*. The section
+- **Disclosure, in prose:** *"Be upfront about AI usage and summarise what was AI-generated"*[^ar-overview]. The section
   names no trailer, no label and no field. See [Assisted-by trailer](../mechanisms/assisted-by-trailer.md).
 - **Agents:** *"AI agents should never tag or ping maintainers"*, a recommendation like the rest, added on 2026-05-27 as a one-line
   addition to the list.[^ar-pr-49277]

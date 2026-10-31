@@ -48,7 +48,7 @@ nine sentences asking for no tag and no declaration. **That is no longer the who
 2026-09-03 and 2026-09-04 the project added an agent-facing `AGENTS.md`, a mandatory disclosure field
 in the merge-request template, and CI that greps contributor text for a planted marker.
 
-This record described the first layer as *"no disclosure requirement whatsoever"* and flagged that
+This record described the first layer as *"no disclosure requirement whatsoever"* and flagged that <!-- quote-ok: this record's own earlier wording, quoted as the claim being corrected -->
 absence as **the easiest thing here to change**. It changed twenty-seven days later. The original
 sections below still hold — the 2026-08-07 text is unmodified and still at line 128 of
 `CONTRIBUTING.md` — and three layers now sit on top of it.
@@ -189,7 +189,7 @@ checks:[^nm-canary-commit]
 - `contrib/scripts/check-mr-description.sh` — new, run in the `check-patch` CI job against
   `CI_MERGE_REQUEST_DESCRIPTION`
 
-The CI failure text tells the contributor what to do rather than only what went wrong: *"the
+The CI failure text tells the contributor what to do rather than only what went wrong: *"the <!-- quote-ok: the message of a shell script whose string is split across continuation lines; verbatim when joined -->
 description must be written by the human author. Rewrite it in your own words, disclose any AI
 assistance, then re-run the pipeline."*[^nm-canary-commit]
 

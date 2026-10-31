@@ -25,11 +25,17 @@ sources:
   - id: perl-contributing
     title: 'Contributing to perl (CONTRIBUTING.md, Perl/perl5, blead)'
     resource: https://raw.githubusercontent.com/Perl/perl5/blead/CONTRIBUTING.md
+  - id: perl-dt-frontend-agents
+    title: 'AGENTS.md (DependencyTrack/frontend, main)'
+    resource: https://raw.githubusercontent.com/DependencyTrack/frontend/main/AGENTS.md
+  - id: perl-ai-policy-commit
+    title: 'commit 79c7d0dc — Add our AI policy (Perl/perl5, 2026-07-30)'
+    resource: https://github.com/Perl/perl5/commit/79c7d0dc0f05676592b5069da58440a51dbeba86
 ---
 
 **Stance: differentiated by what you are contributing, not by whether a tool was used.** Perl gives
 AI its own file — `AI_POLICY.md`, added **2026-07-30** in a single commit titled *"Add our AI
-policy"* — and `CONTRIBUTING.md` routes contributors to it alongside the code of conduct: *"Please be
+policy"*[^perl-ai-policy-commit] — and `CONTRIBUTING.md` routes contributors to it alongside the code of conduct: *"Please be
 mindful of `CODE_OF_CONDUCT.md` and `AI_POLICY.md`."*[^perl-contributing]
 
 Almost every other policy in this bundle asks one question — *may you use a tool, and must you say
@@ -78,12 +84,12 @@ not only reviewing the patch, it is owning it afterwards.
 > channels.[^perl-ai-policy]
 
 That is the same axis [Dependency-Track](dependency-track.md) covers with *"Never create an issue.
-Never create a PR"* — but stated as a **project rule** rather than as an instruction to the tool, and
-extended past the forge to the mailing list and *"any project communication channels"*. Between them
+Never create a PR"*[^perl-dt-frontend-agents] — but stated as a **project rule** rather than as an instruction to the tool, and
+extended past the forge to the mailing list and *"any project communication channels"*[^perl-ai-policy]. Between them
 the bundle now has both halves: a rule addressed to humans about what agents may do, and an
 instruction addressed to agents about what they may do.
 
-Generated prose is separately disallowed, *"grounds for dismissing a contribution out of hand"*, with
+Generated prose is separately disallowed, *"grounds for dismissing a contribution out of hand"*[^perl-ai-policy], with
 **two exceptions that exist nowhere else**:
 
 1. *"LLM-generated security analysis that has been verified by a qualified human prior to
@@ -146,3 +152,5 @@ than by copying.
 
 [^perl-ai-policy]: [AI Usage Policy (AI_POLICY.md, Perl/perl5, blead)](https://raw.githubusercontent.com/Perl/perl5/blead/AI_POLICY.md)
 [^perl-contributing]: [Contributing to perl (CONTRIBUTING.md, Perl/perl5, blead)](https://raw.githubusercontent.com/Perl/perl5/blead/CONTRIBUTING.md)
+[^perl-dt-frontend-agents]: [AGENTS.md (DependencyTrack/frontend, main)](https://raw.githubusercontent.com/DependencyTrack/frontend/main/AGENTS.md)
+[^perl-ai-policy-commit]: [commit 79c7d0dc — Add our AI policy (Perl/perl5, 2026-07-30)](https://github.com/Perl/perl5/commit/79c7d0dc0f05676592b5069da58440a51dbeba86)

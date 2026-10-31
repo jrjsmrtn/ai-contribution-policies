@@ -63,7 +63,8 @@ tells you when you are done.
 
 ## The tag is a third spelling
 
-Contributors *"should indicate tooling used"*, including a `Generated-by: ` token in commit
+A recommended practice is for contributors to *"indicate the tooling used to create the
+contribution"*, including a `Generated-by: ` token in commit
 messages, described as being for future machine-parsable tracking.[^asf-generative-tooling]
 
 That makes **three field names across five organisations** for the same job:

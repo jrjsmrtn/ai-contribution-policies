@@ -51,6 +51,9 @@ sources:
   - id: cp-jj
     title: 'AI_POLICY.md (jj-vcs/jj, commit 9a00709a)'
     resource: https://raw.githubusercontent.com/jj-vcs/jj/9a00709a22c47bf1df776dca198986382eb2c2ac/AI_POLICY.md
+  - id: cp-ripgrep-scope-commit
+    title: 'commit 4857d6fa — s/our projects/this project in AI policy (BurntSushi/ripgrep, 2026-05-26)'
+    resource: https://github.com/BurntSushi/ripgrep/commit/4857d6fa67db69a95cd4b6f2adda5d807d4d0119
 ---
 
 **Very few of these policies were written from scratch.** The copying events below are dated
@@ -79,7 +82,7 @@ Astral → ripgrep → Zed → systemd, each borrower naming its lender until th
 from ripgrep to [DuckDB](../projects/duckdb.md), which alone credits both hops above it. Zed's credit is a single sentence: *"This policy was adapted from
 [ripgrep's AI policy]"*, linked to an exact commit.[^cp-zed] ripgrep's own adaptation is visible as
 one edit — it landed the policy and, the same day, committed *"s/our projects/this project in AI
-policy"*, which turns an organisation-wide text into one project's rule. **That edit is where Zed's
+policy"*[^cp-ripgrep-scope-commit], which turns an organisation-wide text into one project's rule. **That edit is where Zed's
 pin lands on the wrong side**, as the next section shows.
 
 ## What a copy loses
@@ -139,7 +142,7 @@ this concept, because they demonstrate both halves of what a pin does.
 | Borrower | Pins | Pinned revision | Against the source today |
 |---|---|---|---|
 | [ripgrep](../projects/ripgrep.md) | `astral-sh/.github` `c5187e20…`[^cp-ripgrep] | still current | **byte-identical** (compared 2026-09-10) |
-| [Zed](../projects/zed.md) | `BurntSushi/ripgrep` `f0cec341…`[^cp-zed] | **superseded** | differs — *"our projects"* vs *"this project"*[^cp-ripgrep] |
+| [Zed](../projects/zed.md) | `BurntSushi/ripgrep` `f0cec341…`[^cp-zed] | **superseded** | differs — *"our projects"*[^cp-astral-original] vs *"this project"*[^cp-ripgrep] |
 
 [DuckDB](../projects/duckdb.md) shows a third behaviour: it links uv's policy at ripgrep's pinned commit —
 copied verbatim from ripgrep's text — and links ripgrep itself at `master`. **The pin travelled; the
@@ -211,3 +214,4 @@ caught up by 2026-09-14, with nothing to announce either change.
 [^cp-astral-original]: [AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted](https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md)
 [^cp-systemd-rewrite]: [commit 643b9318 — Extend the AI policy a bit (systemd/systemd, 2026-10-03)](https://github.com/systemd/systemd/commit/643b93185cdb)
 [^cp-jj]: [AI_POLICY.md (jj-vcs/jj, commit 9a00709a)](https://raw.githubusercontent.com/jj-vcs/jj/9a00709a22c47bf1df776dca198986382eb2c2ac/AI_POLICY.md)
+[^cp-ripgrep-scope-commit]: [commit 4857d6fa — s/our projects/this project in AI policy (BurntSushi/ripgrep, 2026-05-26)](https://github.com/BurntSushi/ripgrep/commit/4857d6fa67db69a95cd4b6f2adda5d807d4d0119)

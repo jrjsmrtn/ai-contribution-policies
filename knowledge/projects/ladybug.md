@@ -73,7 +73,7 @@ a pull request."*[^lb-contributing] The reviewer-burden concern that other proje
 rule is present only as a general one.
 
 **The guide has not been edited since 2025-10-16.**[^lb-contributing-history] It still says *"Do not
-commit/push directly to the master branch"* while the default branch is `main`, so it has not been read
+commit/push directly to the master branch"*[^lb-contributing] while the default branch is `main`, so it has not been read
 against the repository since the rename. Everything below happened after its last revision.
 
 ## Practice: Claude is credited as co-author, and nothing asks for it

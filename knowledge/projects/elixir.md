@@ -22,6 +22,12 @@ sources:
   - id: elixir-contributing
     title: 'Contributing to Elixir (CONTRIBUTING.md, elixir-lang/elixir, main) — Using AI and coding agents'
     resource: https://raw.githubusercontent.com/elixir-lang/elixir/main/CONTRIBUTING.md
+  - id: elixir-k8s-guide
+    title: 'contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)'
+    resource: https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md
+  - id: elixir-symlink-commit
+    title: 'commit 1d599978 — Symlink AGENTS.md to CONTRIBUTING.md (elixir-lang/elixir, 2026-06-15)'
+    resource: https://github.com/elixir-lang/elixir/commit/1d599978f7d36ea6896b294b3d26d110212be7ab
 ---
 
 **Stance: permitted, with restraint argued from an unusual premise.** The guidance arrived
@@ -64,7 +70,7 @@ to agent work.
 > requests.[^elixir-contributing]
 
 **Nothing else in this bundle requires a red team.** Other policies tell a contributor to verify
-their own work — [Kubernetes](kubernetes.md)'s *"do not leave the first review to the reviewers"* is
+their own work — [Kubernetes](kubernetes.md)'s *"Do not leave the first review … to the reviewers"*[^elixir-k8s-guide] is
 the closest — but this specifies the *method*, and specifies that the method's output does not count
 as approval.
 
@@ -105,7 +111,7 @@ substitution.** The rule is a boundary rather than a ban, which is why it needs 
 ## `AGENTS.md` is a symlink, and that is the point
 
 The repository's `AGENTS.md` is a **git symlink** to `CONTRIBUTING.md` — mode `120000`, added
-2026-06-15 in a commit titled *"Symlink AGENTS.md to CONTRIBUTING.md"*.
+2026-06-15 in a commit titled *"Symlink AGENTS.md to CONTRIBUTING.md"*[^elixir-symlink-commit].
 
 Symlinking is the settled construction — [Asahi Linux](asahi-linux.md),
 [Dependency-Track](dependency-track.md), [systemd](systemd.md), [NetworkManager](networkmanager.md)
@@ -140,3 +146,5 @@ whether it survives as written, gains an enforcement mechanism, or quietly relax
 informative thing this record can be re-read for.
 
 [^elixir-contributing]: [Contributing to Elixir (CONTRIBUTING.md, elixir-lang/elixir, main) — Using AI and coding agents](https://raw.githubusercontent.com/elixir-lang/elixir/main/CONTRIBUTING.md)
+[^elixir-k8s-guide]: [contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)](https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md)
+[^elixir-symlink-commit]: [commit 1d599978 — Symlink AGENTS.md to CONTRIBUTING.md (elixir-lang/elixir, 2026-06-15)](https://github.com/elixir-lang/elixir/commit/1d599978f7d36ea6896b294b3d26d110212be7ab)

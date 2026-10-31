@@ -35,6 +35,12 @@ sources:
   - id: zed-pr-63384
     title: 'zed-industries/zed PR 63384 — Restore the rule (merged 2026-08-28)'
     resource: https://github.com/zed-industries/zed/pull/63384
+  - id: zed-astral-original
+    title: 'AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted'
+    resource: https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md
+  - id: zed-systemd-agents
+    title: 'AGENTS.md (systemd/systemd, main)'
+    resource: https://raw.githubusercontent.com/systemd/systemd/main/AGENTS.md
 ---
 
 **Stance: LLM-assisted coding welcome, autonomous agents refused, prose reserved to humans.** Zed is a
@@ -72,7 +78,7 @@ events are tabulated in [policy by copying](../mechanisms/policy-by-copying.md).
 `f0cec341ab95c25c691ad3d5754d4bd9eedde21f`[^zed-contributing] — the second SHA-pinned policy citation
 here, the practice inherited along with the policy. ⚠ **The pin resolves to a superseded revision.**
 ripgrep added `AI_POLICY.md` at that commit on `2026-05-26T04:02:44Z` still carrying Astral's
-organisation-wide *"our projects"* wording, and corrected it to *"this project"*[^ripgrep-ai-policy] 8 hours 33 minutes
+organisation-wide *"our projects"*[^zed-astral-original] wording, and corrected it to *"this project"*[^ripgrep-ai-policy] 8 hours 33 minutes
 later at `4857d6fa`. Zed adopted on 2026-08-21, three months after the fix, and cited the pre-fix
 commit; the current ripgrep text and Zed's pinned text differ by those three words (compared
 2026-09-10). Nothing turns on the wording — **what the case shows is that a pin makes a citation
@@ -137,8 +143,8 @@ deciding — *"Rules emerge from validated patterns, not one-off observations."*
 **Two projects in this bundle now govern their agent-instruction files, and they agree** — the
 mechanism is recorded at
 [governing the instruction file](../mechanisms/instruction-file-governance.md).
-[systemd](systemd.md)'s rule is *"only add instructions to this file if you've seen an AI agent mess
-up that particular bit of logic in practice"* — Zed's criterion 2, arrived at separately. Both are
+[systemd](systemd.md)'s rule is *"Only add instructions to this file if you've seen an AI agent mess
+up that particular bit of logic in practice"*[^zed-systemd-agents] — Zed's criterion 2, arrived at separately. Both are
 answers to context cost: a file read at the start of every session is a budget, and anything
 speculative in it is spent for nothing.
 
@@ -186,3 +192,5 @@ to keep.
 [^zed-danger]: [script/danger/dangerfile.ts (zed-industries/zed, main)](https://raw.githubusercontent.com/zed-industries/zed/main/script/danger/dangerfile.ts)
 [^ripgrep-ai-policy]: [AI Policy (AI_POLICY.md, BurntSushi/ripgrep, master) — the source Zed adapted](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
 [^zed-pr-63384]: [zed-industries/zed PR 63384 — Restore the rule (merged 2026-08-28)](https://github.com/zed-industries/zed/pull/63384)
+[^zed-astral-original]: [AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted](https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md)
+[^zed-systemd-agents]: [AGENTS.md (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/AGENTS.md)

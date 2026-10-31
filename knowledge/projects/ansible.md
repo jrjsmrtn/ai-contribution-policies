@@ -41,8 +41,8 @@ GitHub organizations, **and** public communication platforms — the Ansible For
 channels, GitHub discussions.[^ansible-ai-policy] Like [Debian](../distributions/debian.md)'s
 Proposal C, this reaches conversation and not only code.
 
-**Sub-projects may differ**: individual projects *"may have their own AI policies that are more or
-less restrictive."*[^ansible-ai-policy] So an org-level answer is not a project-level answer, and
+**Sub-projects may differ**: individual projects *"MAY have their own AI policies which MAY expand or be more restrictive
+than this policy."*[^ansible-ai-policy] So an org-level answer is not a project-level answer, and
 checking the org policy alone can be wrong in either direction.
 
 ## The requirements

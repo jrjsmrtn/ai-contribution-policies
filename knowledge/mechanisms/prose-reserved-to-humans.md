@@ -115,7 +115,7 @@ who asks a question in review learns whether the contributor can answer, and the
 live, in public, by the person. Nothing has to be determined about how the patch was made.
 
 That is why the same sentence appears as both a prose rule and an enforcement mechanism —
-NetworkManager's *"If you cannot discuss your own patch with a reviewer, it will not be merged"* is
+NetworkManager's *"If you cannot discuss your own patch with a reviewer, it will not be merged"*[^pr-nm] is
 simultaneously the obligation and the test.
 
 **Git is the exception that tries to detect, and shows why the others do not.** It rejects

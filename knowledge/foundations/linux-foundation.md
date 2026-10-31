@@ -48,7 +48,7 @@ foundation hosting many of the projects that reason **from** the DCO — to proh
 volume-scoped caution, to a certification-relocation rule — reasons from **licence compatibility and
 third-party rights** instead, and arrives at permission.
 
-**Any summary that explains a stance by *"they require a DCO"* is explaining nothing**, and this
+**Any summary that explains a stance by "they require a DCO" is explaining nothing**, and this
 record is the reason to stop using that shorthand. Where the same unchanged text actually leads is
 tabulated in [certifying origin](../mechanisms/certifying-origin.md).
 

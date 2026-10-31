@@ -10,6 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **Every quotation now matches its source: 645 checked, 18 exempted with a stated reason, none failing**,
+  against the snapshots as of 2026-10-31. The last thirty: sixteen quotations of other projects' documents
+  now cite them; commit titles in ripgrep, Django, Elixir and Perl are cited to their commits; and Ladybird's
+  clause is cited to the file its pull request merged.
+- **Three quotations were misquoted from the start.** [`projects/ansible.md`](knowledge/projects/ansible.md)
+  quoted sub-project policies as *more or less restrictive*; Ansible's only version says they *"MAY
+  expand or be more restrictive"*.
+  [`foundations/apache-software-foundation.md`](knowledge/foundations/apache-software-foundation.md) quoted
+  *should indicate tooling used* for *"a recommended practice is for contributors to indicate the tooling
+  used"*. [`projects/elixir.md`](knowledge/projects/elixir.md) dropped *"of AI generated changes"* from a
+  Kubernetes sentence without an ellipsis.
 - **[`mechanisms/agent-file-pointers.md`](knowledge/mechanisms/agent-file-pointers.md)**: Next.js removed its
   `CLAUDE.md` symlink on 2026-09-22 because *"Claude Code now reads `AGENTS.md` directly"*; the page
   described the symlink and its self-documenting note as current, and now records both as retired.
