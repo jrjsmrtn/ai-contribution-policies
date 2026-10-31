@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`mechanisms/certifying-origin.md`](knowledge/mechanisms/certifying-origin.md),
+  [`projects/gtk.md`](knowledge/projects/gtk.md) and [`projects/llvm.md`](knowledge/projects/llvm.md)**:
+  ten quotations from other projects' sources now cite them (GCC, the DCO text, Valkey, the kernel, the
+  linux-wireless thread, NetworkManager, QEMU, LLVM's own policy). One LLVM quotation changed the source's
+  capitalisation. LLVM's `extractive` label is cited from its web page rather than the GitHub API, whose
+  303-character reply the snapshot refuses as too short to be a document. One phrase was the bundle's
+  own summary and is now plain text.
 - **[`projects/gnome.md`](knowledge/projects/gnome.md)**: eight quotations from GNOME modules and handbook
   pages the record named but did not cite now cite them. The Dia passage named the wrong file — the
   heading and sentence are in `HACKING.md`, not `README.md` — and ended a quotation with a full stop
