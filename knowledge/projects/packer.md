@@ -62,7 +62,7 @@ contract"*[^pk-agents] and is written to the agent, not to the person using it. 
   SDK boundary, HCL2 template parsing, the command surface, CI and release workflows, or
   security-relevant behaviour.
 - **It confines the agent to the repository.** *"Do not read from, write to, or execute files outside
-  the workspace"*,[^pk-agents] and the list that follows names `/tmp`, `~` and `/etc`.
+  the workspace"*,[^pk-agents] and the list that follows names `/tmp`, `~` and `/etc`. <!-- audience-ok: quoting Packer's AGENTS.md, whose workspace is the Packer repository -->
 - **It requires a handoff report.** The completion checklist ends with *"Final handoff states what
   changed, what was validated"*, plus any remaining risk.[^pk-agents]
 

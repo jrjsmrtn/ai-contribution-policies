@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **[`projects/packer.md`](knowledge/projects/packer.md)**: the audience gate took a word in a quotation of
+  Packer's `AGENTS.md` for maintainer-facing context, and failed every weekly sweep from 2026-10-12. The
+  line is now marked as deliberate.
+
 ## [0.30.0] - 2026-10-31
 
 ### Added
