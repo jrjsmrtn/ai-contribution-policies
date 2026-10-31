@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.30.4] - 2026-10-31
+
 ### Fixed
 
 - **Every quotation now matches its source: 645 checked, 18 exempted with a stated reason, none failing**,
