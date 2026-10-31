@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`projects/python.md`](knowledge/projects/python.md)** re-verified. Two quotations that appear in no
+  version of the devguide page, and one from the page replaced before the record was written, are
+  withdrawn, as is the "python GitHub org" scope claim. The labels-and-bot enforcement added on
+  2026-10-28 is recorded.
 - **[`projects/systemd.md`](knowledge/projects/systemd.md)** re-verified: the policy was rewritten from
   jj's on 2026-10-03, and the review canary gained a check on 2026-09-23 that drafts the pull request
   instead of failing it. The earlier policy is cited from the commit before the rewrite. The review

@@ -30,7 +30,7 @@ Directory: `projects/`
 | [Orchard](orchard.md) | Organization | Has no contributing guide, so it has no AI contribution policy either. The re... |
 | [Packer](packer.md) | Organization | Has no AI contribution policy. Since 2026-07 it has carried an AGENTS.md that... |
 | [Perl](perl.md) | Organization | Draws its lines by artifact type rather than by tool or disclosure — code m... |
-| [Python (CPython)](python.md) | Organization | Permits AI tools across the python GitHub org, resting entirely on contributo... |
+| [Python (CPython)](python.md) | Organization | Permits AI tools in contributions, resting on contributor responsibility and ... |
 | [QEMU](qemu.md) | Organization | Still prohibits AI-generated contributions — verified 2026-08-30 against ma... |
 | [Rust](rust.md) | Organization | Adopted an LLM usage policy for rust-lang/rust on 2026-08-05, and since 2026-... |
 | [Tart](tart.md) | Organization | Has no AI contribution policy and no agent-instruction file. The repository m... |
