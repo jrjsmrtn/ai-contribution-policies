@@ -43,7 +43,7 @@ decides whether a contribution needs a copyright assignment at all.
 
 That makes the policy an extension of GCC's existing legal machinery rather than a new regime. Below
 the threshold nothing much changes; above it, LLM-derived content is declined. It also means the
-question *"is this AI-generated?"* is subordinate to *"is this legally significant?"* — a contributor
+question "is this AI-generated?" is subordinate to "is this legally significant?" — a contributor
 who already knows GCC's assignment rules already knows which of their patches are in scope.
 
 ## Three exceptions, each doing distinct work

@@ -86,7 +86,7 @@ The remaining clauses are the ones the lineage carried:
 - **Prose to humans**, sanctioned by hiding rather than closing — *"We may hide any comments that we
   believe are AI generated"* — and reaching issues, pull-request bodies and replies alike.
 - **Quoted model output** must be in a quote block, disclosed, accompanied by human commentary on its
-  relevance, and *"do not share long snippets."*
+  relevance, and *"Do not share long snippets."*
 - **Translation** is welcomed with a voice test — *"please take the time to ensure it reflects your
   own voice and ideas"* — recommending you write in your native language and quote the machine
   output.[^astral-policy]
@@ -95,7 +95,7 @@ The remaining clauses are the ones the lineage carried:
 branched: [DuckDB](../projects/duckdb.md) adapted ripgrep's text and credits this one as its origin.
 It sits with the bundle's other copying events in
 [policy by copying](../mechanisms/policy-by-copying.md). What
-[ripgrep](../projects/ripgrep.md) changed at the first hop: *"s/our projects/this project"*, added
+[ripgrep](../projects/ripgrep.md) changed at the first hop: "s/our projects/this project", added
 *"perhaps without notice"*, and **dropped the criticality argument** — the reason Astral gives for the
 rule did not travel with the rule.
 

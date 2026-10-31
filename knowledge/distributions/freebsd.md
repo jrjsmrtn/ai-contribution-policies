@@ -31,8 +31,8 @@ and the absence is the finding.
 
 The FreeBSD Core Team reported in its 2025-04 to 2025-06 status that *"Core is investigating setting up
 a policy for LLM/AI usage (including but not limited to generating code)"*, that
-*"we currently tend to not use it to generate code because of license concerns"*, and that
-*"the discussion continues at the core session at BSDCan 2025 developer summit, and core is still
+*"We currently tend to not use it to generate code because of license concerns"*, and that
+*"The discussion continues at the core session at BSDCan 2025 developer summit, and core is still
 collecting feedback and working on the policy."*[^freebsd-core-2025q2]
 
 Core stated the result would be added to the Contributors Guide.[^freebsd-core-2025q2] **As of

@@ -214,7 +214,7 @@ created 2025-12-09), so the CycloneDX org-level `CONTRIBUTING.md` — which requ
 is silent on AI — **no longer governs it**. The `cdxgen` org publishes no `.github` defaults.
 
 OWASP sets no foundation-level floor that reaches it. The nearest thing is the **OWASP Developer
-Guide**, which does have a rule — *"if it is genuinely helpful to use generative AI then it must be
+Guide**, which does have a rule — *"If it is genuinely helpful to use generative AI then it must be
 declared in any pull request or issue, failure to do so can result in the contribution being closed
 or even deleted"*, and *"AI slop drains maintainers' time and is actively harmful to **this
 project**"*[^owasp-devguide-contributing] — but that text scopes itself to the Developer Guide and

@@ -146,8 +146,8 @@ far better than the stance label does.
 
 GCC's is the newest shape and the most reusable. Its line is the **copyright threshold** — the same
 test that already decides whether a contribution needs an assignment — so the policy extends existing
-legal machinery instead of creating a new regime, and *"is this AI-generated?"* becomes subordinate
-to *"is this legally significant?"*. It is also the only policy here released **CC0**, so the text can
+legal machinery instead of creating a new regime, and "is this AI-generated?" becomes subordinate
+to "is this legally significant?". It is also the only policy here released **CC0**, so the text can
 be adopted outright.
 
 **[Debian](distributions/debian.md) adopted a responsibility rule on 2026-08-28, and added no
@@ -199,7 +199,7 @@ Three things make it worth the entry anyway. It is the **only machine-readable d
 bundle — everything else is prose. It is the **finest-grained**: the disclosure tags below record
 *that* AI was used and at most *which tool*, while this records *how much*, on a defined scale, per
 path. And its spec argues disclosure as **review triage** rather than as compliance or warning —
-*"when you declare what parts of the code were, in fact, generated, a skeptic can immediately look
+*"When you declare what parts of the code were, in fact, generated, a skeptic can immediately look
 into just those parts"*[^aideclaration-spec] — which is a fourth job for a provenance signal, and one
 no policy here asks a contributor to serve.
 
@@ -224,7 +224,7 @@ plausible deniability: to force a choice between following the policy and intent
 it."*[^rust-forge-1040] It cites anti-money-laundering compliance as the model, and elsewhere:
 *"It's not your job to play detective"*.
 
-curl shows the two are one observable seen from opposite ends. *"If someone can spot that the
+curl shows the two are one observable seen from opposite ends. *"if someone can spot that the
 contribution was made with the help of AI, you have more work to do."*[^curl-contribute] Git tells
 maintainers what to reject; curl tells contributors what to fix.
 

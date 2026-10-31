@@ -37,7 +37,7 @@ any contribution if use of AI is either known or suspected."*[^qemu-code-provena
 This is the most transferable part of the policy. QEMU requires the **Developer's Certificate of
 Origin**, which obliges a contributor to understand the copyright and licence status of what they
 submit. The project's position is that for AI generators *"the copyright and license status of the
-output is ill-defined with no generally accepted, settled legal foundation"*, so *"how contributors
+output is ill-defined with no generally accepted, settled legal foundation"*, so *"How contributors
 could comply with DCO terms (b) or (c) … is unclear"*, and the project *"is not willing or able to
 accept the legal risks of non-compliance."*[^qemu-code-provenance]
 

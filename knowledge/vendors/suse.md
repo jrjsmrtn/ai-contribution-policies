@@ -55,8 +55,8 @@ project's own contribution guidelines govern them.
 > are not resolved.[^suse-policy-pdf]
 
 **The live web policy does not contain it.** Checked by counting rather than reading:
-`opensource.suse.com/legal/policy` returns **zero** matches for *"pair programming"* or *"artificial
-intelligence"*, while containing the sections that **bracket** the AI clause in the PDF — *Creating
+`opensource.suse.com/legal/policy` returns **zero** matches for "pair programming" or "artificial
+intelligence", while containing the sections that **bracket** the AI clause in the PDF — *Creating
 new projects*, *Guiding Principles*, *codes of conduct*, and *Contributing to Open Source
 Projects*.[^suse-policy-html] So the page is complete and the clause is genuinely absent, not
 truncated in transit.

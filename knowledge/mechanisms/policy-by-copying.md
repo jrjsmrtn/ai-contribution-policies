@@ -127,7 +127,7 @@ this concept, because they demonstrate both halves of what a pin does.
 | Borrower | Pins | Pinned revision | Against the source today |
 |---|---|---|---|
 | [ripgrep](../projects/ripgrep.md) | `astral-sh/.github` `c5187e20…`[^cp-ripgrep] | still current | **byte-identical** (compared 2026-09-10) |
-| [Zed](../projects/zed.md) | `BurntSushi/ripgrep` `f0cec341…`[^cp-zed] | **superseded** | differs — *"our projects"* vs *"this project"* |
+| [Zed](../projects/zed.md) | `BurntSushi/ripgrep` `f0cec341…`[^cp-zed] | **superseded** | differs — *"our projects"* vs *"this project"*[^cp-ripgrep] |
 
 [DuckDB](../projects/duckdb.md) shows a third behaviour: it links uv's policy at ripgrep's pinned commit —
 copied verbatim from ripgrep's text — and links ripgrep itself at `master`. **The pin travelled; the
@@ -135,7 +135,7 @@ habit of pinning did not.**
 
 **Zed pinned the wrong revision, and the pin is what makes that visible.** ripgrep added
 `AI_POLICY.md` at `f0cec341`, `2026-05-26T04:02:44Z`, carrying Astral's organisation-wide wording
-unedited; it corrected that to *"this project"* **8 hours 33 minutes later**, at `4857d6fa`,
+unedited; it corrected that to *"this project"*[^cp-ripgrep] **8 hours 33 minutes later**, at `4857d6fa`,
 `2026-05-26T12:36:15Z`. Zed adopted the policy on 2026-08-21 — three months after the fix — and
 pinned the pre-fix commit.
 

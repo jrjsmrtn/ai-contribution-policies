@@ -41,6 +41,9 @@ sources:
   - id: gnome-vte-readme
     title: 'README.md — contribution licensing and AI (vte, main)'
     resource: https://gitlab.gnome.org/GNOME/vte/-/raw/master/README.md
+  - id: gnome-git-submitting-patches
+    title: Documentation/SubmittingPatches (git/git, master) — Git's detection rule
+    resource: https://raw.githubusercontent.com/git/git/master/Documentation/SubmittingPatches
 ---
 
 **Stance: AI as a tool is permitted, an AI-authored extension is rejected — and what this governs is
@@ -60,7 +63,7 @@ guidelines on **2025-11-30**.[^gnome-ai-guideline-commit]
 ## It names the artifacts, which no other detection rule here does
 
 [Git](git.md) writes the bundle's other detection rule and looks for **prose**: things that sound
-*"overly formal or bloated"*, that look like *"AI slop"*. That inherits detection's classic
+*"overly formal or bloated"*, that look like *"AI slop"*.[^gnome-git-submitting-patches] That inherits detection's classic
 false-positive problem, since a careful non-native speaker writes formal prose.
 
 GNOME looks for **code artifacts** instead, and lists them:
@@ -268,3 +271,4 @@ between them is the kind of thing a contributor complaint tends to close.
 [^gnome-loupe-discourse]: [Loupe no longer allows generative AI contributions — GNOME Discourse, 2025-02-26](https://discourse.gnome.org/t/loupe-no-longer-allows-generative-ai-contributions/27327)
 [^gnome-libxml2-readme]: [README.md — Strict No LLM / No AI Policy (libxml2, main)](https://gitlab.gnome.org/GNOME/libxml2/-/raw/master/README.md)
 [^gnome-vte-readme]: [README.md — contribution licensing and AI (vte, main)](https://gitlab.gnome.org/GNOME/vte/-/raw/master/README.md)
+[^gnome-git-submitting-patches]: [Documentation/SubmittingPatches (git/git, master) — Git's detection rule](https://raw.githubusercontent.com/git/git/master/Documentation/SubmittingPatches)

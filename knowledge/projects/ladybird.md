@@ -160,7 +160,7 @@ A commit search on 2026-09-16 finds **no `Assisted-by:` trailers** and **four co
 different maintainers.[^lb-claude-commits] None postdates the closure. The policy asks for no trailer, so
 these are contributors' own habits rather than compliance with anything.
 
-A search for *"Generated with"* returns twenty commits, and they are unrelated — test cases generated
+A search for "Generated with" returns twenty commits, and they are unrelated — test cases generated
 with GIMP or a Python script. **Checked rather than counted**, because that phrase is also what several
 coding agents write by default.
 

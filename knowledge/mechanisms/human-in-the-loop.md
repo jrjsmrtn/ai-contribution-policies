@@ -43,7 +43,7 @@ sources:
     resource: https://raw.githubusercontent.com/Homebrew/brew/main/docs/Responsible-AI-Usage.md
 ---
 
-***"A human in the loop"* is the most-copied phrase in this bundle and the least defined.** Ten
+**The phrase *"a human in the loop"* is the most-copied in this bundle and the least defined.** Ten
 records use it or bar autonomous agents, and reading them side by side shows they are not making the
 same rule — they are governing five different things and calling it one.
 
@@ -72,7 +72,7 @@ disagreement about the same behaviour.
 **Read the four prohibitions for their verbs.** Astral closes pull requests *"we believe were
 created autonomously"*.[^hitl-astral] ripgrep closes those *"that appear in violation"*.[^hitl-ripgrep]
 Zed closes those *"that appear to violate this"*.[^hitl-zed] DuckDB copied ripgrep's *"appear in
-violation"*. All four hedge, and they hedge in the
+violation"*[^hitl-ripgrep]. All four hedge, and they hedge in the
 operative clause.
 
 That is not sloppiness; it is the honest form of the rule. **Autonomy is a fact about a process that

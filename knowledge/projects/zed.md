@@ -69,7 +69,7 @@ events are tabulated in [policy by copying](../mechanisms/policy-by-copying.md).
 `f0cec341ab95c25c691ad3d5754d4bd9eedde21f`[^zed-contributing] — the second SHA-pinned policy citation
 here, the practice inherited along with the policy. ⚠ **The pin resolves to a superseded revision.**
 ripgrep added `AI_POLICY.md` at that commit on `2026-05-26T04:02:44Z` still carrying Astral's
-organisation-wide *"our projects"* wording, and corrected it to *"this project"* 8 hours 33 minutes
+organisation-wide *"our projects"* wording, and corrected it to *"this project"*[^ripgrep-ai-policy] 8 hours 33 minutes
 later at `4857d6fa`. Zed adopted on 2026-08-21, three months after the fix, and cited the pre-fix
 commit; the current ripgrep text and Zed's pinned text differ by those three words (compared
 2026-09-10). Nothing turns on the wording — **what the case shows is that a pin makes a citation

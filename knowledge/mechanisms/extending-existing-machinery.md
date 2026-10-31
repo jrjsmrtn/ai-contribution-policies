@@ -51,8 +51,8 @@ varied.
 | [OWASP](../foundations/owasp.md) | a mandated **DCO** requiring *"original work"* and covering *"the risks of plagiarized code"* | **not extended** — see below[^ext-owasp] |
 
 **GCC's is the clearest instance and the most reusable.** Its line is a test the project already
-applied to every contribution, so *"is this AI-generated?"* becomes subordinate to *"is this legally
-significant?"* — and a contributor who already knows the assignment rules already knows which of
+applied to every contribution, so "is this AI-generated?" becomes subordinate to "is this legally
+significant?" — and a contributor who already knows the assignment rules already knows which of
 their patches are in scope. Nothing had to be taught.
 
 ## Why it works

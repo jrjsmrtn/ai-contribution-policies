@@ -39,7 +39,7 @@ so?* This asks a different one for each kind of thing you might submit.
 
 | What you are contributing | Rule |
 |---|---|
-| **Code** | *"may be accepted"* — subject to the competence bound below |
+| **Code** | *"may be accepted"*[^perl-ai-policy] — subject to the competence bound below |
 | **Documentation and other non-code** | *"will not be accepted"* |
 | **Prose in any channel** | *"grounds for dismissing a contribution out of hand"*, with two exceptions |
 | **Reading the codebase** | *"up to the contributor and does not require disclosure"* |

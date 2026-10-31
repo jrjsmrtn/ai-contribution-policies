@@ -39,8 +39,8 @@ The framing is deliberately deflationary:
 
 ## It does not invoke the DCO — verified, not assumed
 
-The page contains **zero occurrences** of *"Developer Certificate of Origin"*, *"DCO"* or
-*"Signed-off-by"* (checked 2026-08-05 against the fetched page text, not inferred from
+The page contains **zero occurrences** of "Developer Certificate of Origin", "DCO" or
+"Signed-off-by" (checked 2026-08-05 against the fetched page text, not inferred from
 reading).[^lf-generative-ai]
 
 That is the most consequential thing about this document, given the company it keeps. The

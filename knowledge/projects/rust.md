@@ -188,7 +188,7 @@ a reviewer agreed before the PR was opened, and *"This must be the *same* review
 assigned"*. Non-critical rules out soundness-sensitive areas such as *"the trait system, MIR building,
 or the query system"*. Well-tested means *"a higher standard than human-created PRs, because LLMs make
 it easier to write tests"*. Organisation members may ignore the non-critical clause, but are *"strongly
-discouraged"* from doing so.
+discouraged"*[^rust-blog-adoption] from doing so.
 
 Every such PR carries an `llm-assisted` label and is posted to a private Zulip channel whose purpose
 is to learn *whether the experiment is working*, not to gatekeep. And the experiment has a stop:

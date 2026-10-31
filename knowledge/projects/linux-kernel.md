@@ -54,7 +54,7 @@ sources:
 | `coding-assistants.rst` | AI coding assistants specifically | 2026-01-06 |
 
 The broader document is the one most policies elsewhere have no equivalent of. Its trigger is not
-*"was AI involved?"* but whether *"a meaningful amount of content in a kernel contribution was not
+"was AI involved?" but whether *"a meaningful amount of content in a kernel contribution was not
 written by a person in the Signed-off-by chain, but was instead created by a
 tool."*[^kernel-generated-content] **That framing makes the AI question a special case of an older
 one**, which is why the kernel could absorb generative AI without inventing a separate regime.
@@ -86,7 +86,7 @@ listed."* The example given is:[^kernel-coding-assistants-src]
 
 **Until 2026-08-03 the tag named the agent and the model** — `Assisted-by: AGENT_NAME:MODEL_VERSION`,
 with `Assisted-by: Claude:claude-3-opus coccinelle sparse` as the example. Commit `816d9992`,
-*"coding-assistants: simplify attribution"*, replaced both with the bare literal `LLM`. The stated
+*"coding-assistants: simplify attribution"*[^kernel-commit-simplify-attribution], replaced both with the bare literal `LLM`. The stated
 ground is one no other organisation in this bundle reasons from:
 
 > The requirement to identify specific models used in the Assisted-by tag **provides free

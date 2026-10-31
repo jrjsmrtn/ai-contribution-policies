@@ -23,6 +23,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
     quotation from it checks. Three quotations from other projects' sources gain their own citations.
   - Nineteen quotations across twelve pages ended with a full stop the source does not have there;
     the full stop now sits outside the quotation marks.
+  - Eight quotations changed the source's capitalisation; they now match it, and one sentence in
+    [`mechanisms/human-in-the-loop.md`](knowledge/mechanisms/human-in-the-loop.md) was reworded to allow it.
+  - Eleven short quotations were source wording credited to the wrong footnote and now carry the
+    right one. A sentence in [`projects/gnome.md`](knowledge/projects/gnome.md) quoting Git's
+    detection rule now cites Git's `SubmittingPatches`.
+  - Seventeen phrases were set as quotations although they are search strings or this bundle's own
+    framing questions, such as "is this AI-generated?". They are now plain text.
 
 ## [0.30.0] - 2026-10-31
 

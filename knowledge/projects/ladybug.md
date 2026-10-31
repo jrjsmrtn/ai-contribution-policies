@@ -97,7 +97,7 @@ string absent from every commit returned zero.
 
 ## The agent file is a build guide
 
-`AGENTS.md` is a 2,660-byte regular file (mode `100644`) headed *"Ladybug Agent Guidelines"*: build
+`AGENTS.md` is a 2,660-byte regular file (mode `100644`) headed *"Ladybug Agent Guidelines"*[^lb-agents]: build
 commands, test commands, formatting and linting, and a list of further documents. It names no policy,
 makes no demand of an agent about attribution or disclosure, and links nothing about contribution.
 The survey tool found no other agent-instruction file on `main` — no `CLAUDE.md`, no Copilot

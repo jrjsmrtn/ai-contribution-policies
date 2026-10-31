@@ -83,7 +83,7 @@ third-party material and *"should provide notice and attribution"* — closing w
 > **Individual Linux Foundation projects may develop their own project-specific guidance** and
 > recommendations regarding AI-generated content.[^lf-generative-ai]
 
-So a contributor asking *"what am I bound to?"* and one asking *"what guidance exists?"* get
+So a contributor asking "what am I bound to?" and one asking "what guidance exists?" get
 different answers. **The binding set has no AI clause; the AI text is advisory and invites the
 project to write its own.** osquery has not.
 

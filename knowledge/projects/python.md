@@ -28,7 +28,7 @@ guidance on AI tools whose operative sentence is:
 > The person submitting an issue or PR is responsible for its content, regardless of whether AI
 > tools were used in its creation.[^python-devguide-ai-tools]
 
-The survey being replaced filed Python under *"developing guidelines"*. It has published ones, and
+The survey being replaced filed Python under "developing guidelines". It has published ones, and
 they have been revised at least once.
 
 ## Disclosure is appreciated, not required
