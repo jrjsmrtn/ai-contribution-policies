@@ -67,6 +67,14 @@ pre-commit:
     changelog:
       run: python3 ../../workspace/scripts/check-changelog.py CHANGELOG.md
 
+    # Maintainer-facing content in the published tree: private names, workspace deixis, paths
+    # that escape `knowledge/`. It ran only in the weekly sweep until 2026-10-31, so a false
+    # positive in projects/packer.md failed every sweep from 2026-10-12 unnoticed, and a log
+    # entry pointing at a list outside the bundle shipped in v0.30.2 and was caught only by a
+    # manual run. A published bundle should not need a schedule to catch what a commit adds.
+    audience:
+      run: python3 ../../workspace/scripts/check-bundle-audience.py knowledge
+
     gitleaks:
       run: gitleaks protect --staged --verbose
     reuse:

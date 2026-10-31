@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **The audience check now runs on every commit**, not only in the weekly sweep. It catches private names,
+  references to the maintainers' workspace and paths outside `knowledge/` in the published tree. Run
+  weekly only, it missed a false positive that failed every sweep from 2026-10-12 and a log entry that
+  shipped in v0.30.2. A planted reference was refused by the hook before this was committed.
+
 ## [0.30.4] - 2026-10-31
 
 ### Fixed
