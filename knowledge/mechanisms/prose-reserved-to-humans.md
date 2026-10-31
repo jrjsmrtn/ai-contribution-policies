@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Prose reserved to humans
-description: Eighteen records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
+description: Many records here permit AI in the code and restrict or forbid it in the writing around the code — commit messages, issue text, pull request descriptions, review replies, mailing lists. The split runs opposite to the intuition that code is the risky part, it is the one rule in this bundle that enforces itself without detection, and translation is the exception nearly every project that thought about it grants.
 resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 tags:
   - ai-contribution
@@ -47,11 +47,14 @@ sources:
   - id: pr-python
     title: 'Using Artificial Intelligence tools — Python Developer''s Guide'
     resource: https://devguide.python.org/getting-started/ai-tools/
+  - id: pr-systemd-2026
+    title: 'docs/CONTRIBUTING.md — Policy on the use of LLMs and AI tooling (systemd/systemd, main)'
+    resource: https://raw.githubusercontent.com/systemd/systemd/main/docs/CONTRIBUTING.md
 ---
 
-**The most widely shared rule in this bundle is not about code.** Eighteen records permit or tolerate
-AI assistance in the patch and then restrict it in the writing around the patch, and a nineteenth put
-it to a vote and declined. That is the opposite
+**The most widely shared rule in this bundle is not about code.** Every record in the table below
+permits or tolerates AI assistance in the patch and then restricts it in the writing around the patch,
+except Debian, which put it to a vote and declined. That is the opposite
 of what the risk arguments elsewhere would predict — the copyright, licensing and correctness
 worries all attach to the code, and the prose is where none of them apply.
 
@@ -77,6 +80,7 @@ worries all attach to the code, and the prose is where none of them apply.
 | [Rust](../projects/rust.md) | | ● | ● | |
 | [Asahi Linux](../projects/asahi-linux.md) | ● | ● | ● | |
 | [Elixir](../projects/elixir.md) | | | | ● |
+| [systemd](../projects/systemd.md), since 2026-10-03 | | ● | ● | ● |
 | [Debian](../distributions/debian.md) | ○ | ○ | ○ | ○ |
 
 ● reserved · ○ proposed and not adopted — Debian's Proposal C would have required human-drafted
@@ -164,8 +168,9 @@ or fictitious content"*, still did not reserve the prose. **The convergence is n
 **And the clause does not survive copying.** The attributed lineage runs Astral → ripgrep → Zed →
 [systemd](../projects/systemd.md), and the first three all reserve issue text, PR descriptions and
 review replies. systemd inherited the [review canary](review-canary.md) and bars AI from *credit* in
-commit messages — but it does not reserve the writing. **A policy adapted from another policy loses
-clauses silently**, and this is the clause that was dropped. [DuckDB](../projects/duckdb.md), on a
+commit messages — but it did not reserve the writing. **A policy adapted from another policy loses
+clauses silently**, and this is the clause that was dropped. It came back on 2026-10-03 by another
+route: systemd rewrote its policy from jj's, and now says *"You must speak for yourself."*[^pr-systemd-2026] [DuckDB](../projects/duckdb.md), on a
 second branch from ripgrep, kept it — so the clause is lost by some copies, not by copying.
 
 ## What to watch
@@ -186,3 +191,4 @@ that six have granted it; that combination is what the objection to this rule is
 [^pr-dt]: [AGENTS.md (DependencyTrack/dependency-track, main)](https://raw.githubusercontent.com/DependencyTrack/dependency-track/main/AGENTS.md)
 [^pr-django]: [docs/internals/contributing/writing-code/submitting-patches.txt (django/django, main)](https://raw.githubusercontent.com/django/django/main/docs/internals/contributing/writing-code/submitting-patches.txt)
 [^pr-python]: [Using Artificial Intelligence tools — Python Developer's Guide](https://devguide.python.org/getting-started/ai-tools/)
+[^pr-systemd-2026]: [docs/CONTRIBUTING.md — Policy on the use of LLMs and AI tooling (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/docs/CONTRIBUTING.md)

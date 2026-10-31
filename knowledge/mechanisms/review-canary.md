@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: The review canary
-description: A mechanism that makes an agent mark its own work so a human's failure to review is detectable. Zed built it in 2026-08 as a file marker with CI enforcement; NetworkManager built a different one that watermarks only forbidden output; systemd copied Zed's instruction without its check. Three implementations, two designs, and one that cannot fire.
+description: A mechanism that makes an agent mark its own work so a human's failure to review is detectable. Zed built it in 2026-08 as a file marker with CI enforcement; NetworkManager built a different one that watermarks only forbidden output; systemd copied Zed's instruction without its check, then built a check of its own on 2026-09-23 that parks an unreviewed pull request as a draft instead of failing it. Three implementations, two designs, and three ways to act on the mark.
 resource: https://github.com/zed-industries/zed/blob/main/.rules
 tags:
   - ai-contribution
@@ -32,6 +32,12 @@ sources:
   - id: nm-canary-mech
     title: 'commit 329b610e — contrib: reject the AI canary marker in contributor text (NetworkManager)'
     resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e
+  - id: systemd-labeler-mech
+    title: '.github/workflows/labeler.yml (systemd/systemd, main)'
+    resource: https://raw.githubusercontent.com/systemd/systemd/main/.github/workflows/labeler.yml
+  - id: systemd-canary-check-mech
+    title: 'commit 69cb8c4a — ci: draft PRs and skip reviews while the README notice is present (systemd/systemd, 2026-09-23)'
+    resource: https://github.com/systemd/systemd/commit/69cb8c4a94a4
 ---
 
 **A canary asks the agent to leave a trace, then looks for it.** It is one of the few enforcement ideas in
@@ -77,7 +83,7 @@ The check is a Danger rule that runs on every pull request touching `README.md`:
 **The loop closes**: instruct, plant, detect, fail. The failure message is aimed at the human and
 names the inference — *a line that asks to be removed which you should have spotted*.
 
-## systemd copied the instruction and not the check
+## systemd copied the instruction, then built a different check
 
 systemd added the same marker text to `AGENTS.md` on 2026-09-03, as a `HARD RULE`, with an
 anti-tampering clause Zed's does not have:
@@ -86,14 +92,21 @@ anti-tampering clause Zed's does not have:
 > changes: removing them is strictly a manual step for the human author to confirm they have reviewed
 > the changes.[^systemd-agents]
 
-**The marker string appears in exactly one file in the systemd repository — `AGENTS.md` itself.**
-There is no Danger configuration, no workflow and no script that greps for it. So the canary is
-planted and nothing looks for it: detection falls to whichever reviewer notices two unexplained lines
-at the top of `README.md`.
+**For twenty days nothing looked for it.** On 2026-09-08 the marker string appeared in one file in
+the repository, `AGENTS.md` itself, so detection fell to whichever reviewer noticed two unexplained
+lines at the top of `README.md`.
 
-That may be a deliberate trade — a tripwire visible in the diff costs nothing to run — but it is a
-materially weaker mechanism than the one it was copied from, and nothing in the repository says the
-omission was considered.
+**On 2026-09-23 systemd added a check, and it is not Zed's.** Zed fails the pull request. systemd's
+labeler reads `README.md` at the head of the pull request and, if the notice is there, converts the
+pull request to a draft; its automated review skips it for the same reason:
+
+> A README.md that still carries the AI review notice has not been looked at by its author yet, so
+> nobody else should review it.[^systemd-labeler-mech]
+
+The commit that added it describes the whole loop: *"Marking the PR ready for review after removing the
+notice triggers the normal labeling again."*[^systemd-canary-check-mech] **Zed's check refuses the
+change; systemd's withholds review.** Both make the author's inattention visible; only systemd's
+protects reviewers' time by keeping the pull request out of their queue until the author has looked.
 
 **This is a case of a rule spreading by copying rather than by governance**, alongside the
 boilerplate [GNOME](../projects/gnome.md) modules took from a Discourse post and the retired kernel
@@ -139,8 +152,8 @@ interface that never saw the repository leaves no mark, and the check passes.
 scripts and a documented instruction; anyone who wants to defeat it can. The mechanism is a tripwire
 for the careless, not a control against the adversarial, and no project running one claims otherwise.
 
-**An unchecked canary is decoration.** systemd's is the case in point: the instruction is enforced by
-nothing, so it detects only what a reviewer would have caught unaided.
+**An unchecked canary is decoration.** systemd's was the case in point for its first twenty days:
+enforced by nothing, it detected only what a reviewer would have caught unaided.
 
 The honest summary is that a canary raises the cost of *not looking* rather than the cost of *using a
 tool* — which is precisely what its authors say they want. Zed's failure message asks the contributor
@@ -149,7 +162,7 @@ to self-review; NetworkManager's asks them to rewrite the text themselves and di
 ## What to watch
 
 Whether the two designs converge, or whether projects start running both — they are complementary and
-nothing prevents it. Whether systemd wires up a check, which would close the only gap of the three.
+nothing prevents it. Whether systemd's draft-and-skip check is copied as often as Zed's instruction was.
 Whether the marker strings change once evasion is observed, since both are published. And whether a
 fourth project adopts either design, which would make this a convention rather than three
 experiments — [LLVM was debating adopting an `AGENTS.md`](../log.md) as of 2026-09, without a canary
@@ -160,3 +173,5 @@ in the proposal.
 [^systemd-agents]: [AGENTS.md (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/AGENTS.md)
 [^nm-agents-mech]: [AGENTS.md — Instructions for AI coding agents (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/AGENTS.md)
 [^nm-canary-mech]: [commit 329b610e — contrib: reject the AI canary marker in contributor text (NetworkManager)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e)
+[^systemd-labeler-mech]: [.github/workflows/labeler.yml (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/.github/workflows/labeler.yml)
+[^systemd-canary-check-mech]: [commit 69cb8c4a — ci: draft PRs and skip reviews while the README notice is present (systemd/systemd, 2026-09-23)](https://github.com/systemd/systemd/commit/69cb8c4a94a4)

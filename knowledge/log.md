@@ -13,6 +13,20 @@ with a copied directory.
 
 ## 2026-10-31
 
+* **Re-verified [`projects/systemd.md`](projects/systemd.md): both of its central claims had expired.**
+  The policy was rewritten on 2026-10-03 from jj's, whose `AI_POLICY.md` the commit names as its
+  inspiration. The comparison with `sed`, `awk` and `coccinelle` is gone; four numbered rules replace it,
+  including *"You must speak for yourself"*, with a warning and then a ban. systemd kept its ban on
+  crediting AI and did not take jj's `Assisted-by` disclosure trailer. And the review canary, copied
+  from Zed without a check, has had one since 2026-09-23: an unreviewed pull request is turned into a
+  draft and skipped by the automated review, where Zed fails it. Found because two quotations stopped
+  matching, five months before the record was due.
+* **Five other pages repeated the old account** and are corrected:
+  [the review canary](mechanisms/review-canary.md), [policy by copying](mechanisms/policy-by-copying.md)
+  (which gains the jj → systemd event), [prose reserved to humans](mechanisms/prose-reserved-to-humans.md)
+  (which gains systemd's row), [extending existing machinery](mechanisms/extending-existing-machinery.md)
+  and [Zed](projects/zed.md). Counts of copying events and of prose-reserving records were removed from
+  prose rather than updated; the copying page had already disagreed with itself, eight against six.
 * **Re-verified [`foundations/openinfra.md`](foundations/openinfra.md): the policy reversed itself.**
   Version 0.12.0, dated 2026-09-25, welcomes AI use, recommends `Assisted-By` for all material use while
   still approving `Generated-By`, and holds labelled changes to the same standard as any other. The

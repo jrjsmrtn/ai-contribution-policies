@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Policy by copying
-description: Most AI contribution policies here were adapted from another project's. Eight copying events are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
+description: Most AI contribution policies here were adapted from another project's. The copying events recorded here are dated and traceable, and what a copy drops is the enforcement, the currency and the clauses that cost something. A policy turns out to be an artifact with a supply chain, exhibiting unattributed reuse, licence ambiguity, a stale upstream and no notification channel. Two borrowers pin their citation to a commit SHA and the two pins behave oppositely, which is the honest account of what a pin buys — reproducibility, not correctness.
 resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
 tags:
   - ai-contribution
@@ -45,21 +45,28 @@ sources:
   - id: cp-astral-original
     title: 'AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted'
     resource: https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md
+  - id: cp-systemd-rewrite
+    title: 'commit 643b9318 — Extend the AI policy a bit (systemd/systemd, 2026-10-03)'
+    resource: https://github.com/systemd/systemd/commit/643b93185cdb
+  - id: cp-jj
+    title: 'AI_POLICY.md (jj-vcs/jj, commit 9a00709a)'
+    resource: https://raw.githubusercontent.com/jj-vcs/jj/9a00709a22c47bf1df776dca198986382eb2c2ac/AI_POLICY.md
 ---
 
-**Very few of these policies were written from scratch.** Six copying events in this bundle are
-dated and traceable, and reading them together says more about how a rule spreads than any single
+**Very few of these policies were written from scratch.** The copying events below are dated
+and traceable, and reading them together says more about how a rule spreads than any single
 record does: **what survives a copy is the prohibition, and what is dropped is the machinery that
 made it work.**
 
-## The eight events
+## The events
 
 | Source | Borrower | Date | Attributed | What was dropped |
 |---|---|---|:--:|---|
 | Astral (`astral-sh/.github`, org default) | [ripgrep](../projects/ripgrep.md) | 2026-05-26 | ● SHA-pinned | scope — *"our projects"*[^cp-astral-original] → *"this project"*[^cp-ripgrep] |
 | [ripgrep](../projects/ripgrep.md) | [Zed](../projects/zed.md) | 2026-08-21 | ● SHA-pinned | — (but pinned to a superseded revision) |
 | [ripgrep](../projects/ripgrep.md) | [DuckDB](../projects/duckdb.md) | 2026-06-03 | ● both hops | — (four sentences changed; ripgrep cited unpinned) |
-| [Zed](../projects/zed.md) | [systemd](../projects/systemd.md) | 2026-09-03 | ○ | the canary's **check**, and the prose clause |
+| [Zed](../projects/zed.md) | [systemd](../projects/systemd.md) | 2026-09-03 | ○ | the canary's **check**, and the prose clause (systemd later rebuilt both: below) |
+| jj (`jj-vcs/jj`) | [systemd](../projects/systemd.md) | 2026-10-03 | ○ named in the commit message,[^cp-systemd-rewrite] not in the file | the `Assisted-by` disclosure trailer,[^cp-jj] kept out in favour of systemd's ban on crediting AI; the allowance for machine translation |
 | [Fedora](../distributions/fedora.md) policy proposal | [LLVM](../projects/llvm.md) | — | ● licence-required | — (copied from the proposal, not the adopted text) |
 | GNOME Loupe | ~a dozen GNOME modules | from 2025-02-26 | ◐ some | currency — the copies diverged |
 | Linux kernel docs (rendered) | [MacPorts](../projects/macports.md) PR #420 | 2026-08-04 | ● cited | currency — the source had retired the rule |
@@ -78,13 +85,15 @@ pin lands on the wrong side**, as the next section shows.
 ## What a copy loses
 
 **Enforcement is the first thing to go.** [systemd](../projects/systemd.md) took Zed's review canary
-verbatim and did not take the CI job that checks it — the marker string appears in exactly one
-file.[^cp-systemd] A canary nobody greps for is a canary that detects only what a reviewer would have
-caught anyway; the detail is in [the review canary](review-canary.md).
+verbatim and did not take the CI job that checks it; on 2026-09-08 the marker string appeared in
+exactly one file.[^cp-systemd] A canary nobody greps for detects only what a reviewer would have caught
+anyway. **Twenty days later systemd wrote a check of its own**, and a different one: it parks the pull
+request as a draft rather than failing it. The detail is in [the review canary](review-canary.md).
 
 **Then the clauses that cost something.** systemd also dropped the prose rule that the first three
 hops all carry, keeping the attribution ban instead — see
-[prose reserved to humans](prose-reserved-to-humans.md). A borrower takes the parts that are cheap to
+[prose reserved to humans](prose-reserved-to-humans.md). On 2026-10-03 it took a prose rule back, from
+jj rather than from Zed, and again kept its attribution ban over the source's disclosure trailer. A borrower takes the parts that are cheap to
 state and leaves the parts that impose work. [CRoaring](../projects/croaring.md) did the same to LLVM's text: it kept
 the rule that a human must read the output and dropped the required label and the ban on autonomous agents, the
 two clauses that made the rule specific.
@@ -124,7 +133,7 @@ wrong.)
 
 ## Two pins, behaving oppositely
 
-**Two of the eight pin their citation to a commit SHA**, and comparing them is the most useful thing in
+**Two of these borrowers pin their citation to a commit SHA**, and comparing them is the most useful thing in
 this concept, because they demonstrate both halves of what a pin does.
 
 | Borrower | Pins | Pinned revision | Against the source today |
@@ -170,13 +179,13 @@ voting on one** ([Debian](../distributions/debian.md)) or by a board issuing one
 
 Every failure mode this bundle's neighbours document in software shows up here, in prose:
 
-| Software supply-chain failure | Its form in these eight events |
+| Software supply-chain failure | Its form in these events |
 |---|---|
 | unattributed reuse | systemd taking Zed's canary without saying so |
 | licence ambiguity | most policies carrying no stated licence for their text |
 | a stale upstream | MacPorts copying from a rendered page a day out of date |
-| a patch dropped in a fork | systemd taking the canary and leaving the check |
-| no notification channel | none of the eight can learn its source changed |
+| a patch dropped in a fork | systemd taking the canary and leaving the check, then writing a different one |
+| no notification channel | no borrower here can learn its source changed |
 | a pinned dependency | ripgrep's SHA — the one case where drift is detectable |
 
 That is not an analogy stretched for effect. **These documents are copied, adapted, licensed,
@@ -200,3 +209,5 @@ caught up by 2026-09-14, with nothing to announce either change.
 [^cp-kernel-rendered]: [Coding assistants — Linux kernel documentation (rendered, released kernel)](https://docs.kernel.org/process/coding-assistants.html)
 [^cp-gcc]: [GCC AI policy](https://gcc.gnu.org/ai-policy.html)
 [^cp-astral-original]: [AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted](https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md)
+[^cp-systemd-rewrite]: [commit 643b9318 — Extend the AI policy a bit (systemd/systemd, 2026-10-03)](https://github.com/systemd/systemd/commit/643b93185cdb)
+[^cp-jj]: [AI_POLICY.md (jj-vcs/jj, commit 9a00709a)](https://raw.githubusercontent.com/jj-vcs/jj/9a00709a22c47bf1df776dca198986382eb2c2ac/AI_POLICY.md)

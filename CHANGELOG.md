@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`projects/systemd.md`](knowledge/projects/systemd.md)** re-verified: the policy was rewritten from
+  jj's on 2026-10-03, and the review canary gained a check on 2026-09-23 that drafts the pull request
+  instead of failing it. The earlier policy is cited from the commit before the rewrite. The review
+  canary, policy by copying, prose reserved to humans, extending existing machinery and Zed pages are
+  corrected to match.
 - **The 45 quotations with no footnote near them are resolved or explained.** 17 matched a source their
   record already cited and now carry its footnote. 10 matched a source the record did not cite, mostly
   commit titles and other projects' files, which are now added. 12 quote this bundle's own earlier

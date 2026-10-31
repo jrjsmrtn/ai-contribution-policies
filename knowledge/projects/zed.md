@@ -112,9 +112,9 @@ policy section — telling the agent to prepend a self-review marker to `README.
 change.[^zed-rules-file] `script/danger/dangerfile.ts` then fails any pull request where that marker
 appears in the `README.md` diff.[^zed-danger]
 
-**Zed is the origin of the design and, with [NetworkManager](networkmanager.md)'s different one, one
-of only two projects whose canary is actually enforced** — [systemd](systemd.md) copied the
-instruction without the check. The mechanism, its two designs and its failure modes are recorded in
+**Zed is the origin of the design.** [NetworkManager](networkmanager.md) enforces a different one.
+[systemd](systemd.md) copied the instruction without the check, and on 2026-09-23 added a check of its
+own that turns the pull request into a draft instead of failing it. The mechanism, its two designs and its failure modes are recorded in
 [the review canary](../mechanisms/review-canary.md).
 
 ## `.rules` governs its own growth, with criteria

@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Extending existing machinery
-description: The cheapest route to an AI policy is to point a rule the project already ran at the new question — a copyright threshold, a ban on leaked material, a tracker label, a tooling norm. Seven records here take it, one has the machinery and has not used it, and one concluded its existing bar already sufficed. It works because it inherits an answer to "who decides", and it fails where nothing suitable exists.
+description: The cheapest route to an AI policy is to point a rule the project already ran at the new question — a copyright threshold, a ban on leaked material, a tracker label, a tooling norm. Several records here take it, one took it and then left it, one has the machinery and has not used it, and one concluded its existing bar already sufficed. It works because it inherits an answer to "who decides", and it fails where nothing suitable exists.
 resource: https://gcc.gnu.org/ai-policy.html
 tags:
   - ai-contribution
@@ -31,6 +31,9 @@ sources:
   - id: ext-owasp
     title: 'Project Policy — OWASP Foundation (operational/projects.md, www-policy)'
     resource: https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md
+  - id: ext-systemd-0908
+    title: 'docs/CONTRIBUTING.md before the 2026-10-03 rewrite (systemd/systemd, commit 57f0f540)'
+    resource: https://raw.githubusercontent.com/systemd/systemd/57f0f540b50248c0fb51eee551084a27383c213a/docs/CONTRIBUTING.md
 ---
 
 **Writing an AI policy from scratch means answering "who decides?" from scratch.** Extending a rule
@@ -45,7 +48,7 @@ varied.
 | [GCC](../projects/gcc.md) | the **copyright threshold** deciding whether a patch needs an assignment | *"legally significant"* LLM contributions are declined; below the line nothing changes[^ext-gcc] |
 | [Asahi Linux](../projects/asahi-linux.md) | its **clean-room** reverse-engineering rules and its ban on leaked material | LLMs *"are likely to violate the clean room requirements and taint the resulting code"*[^ext-asahi] |
 | [LLVM](../projects/llvm.md) | its **copyright policy** | *"Our policy on AI tools is similar to our copyright policy"* — regenerating copyrighted material does not remove the copyright[^ext-llvm] |
-| [systemd](../projects/systemd.md) | the norms already governing **`sed`, `awk`, `coccinelle`** | *"AI tools are treated the same as traditional tooling"*[^ext-systemd] |
+| [systemd](../projects/systemd.md), until 2026-10-03 | the norms already governing **`sed`, `awk`, `coccinelle`** | *"AI tools are treated the same as traditional tooling"*[^ext-systemd-0908]; replaced by rules adapted from jj's policy[^ext-systemd] |
 | [Elixir](../projects/elixir.md) | **issue labels** in the tracker | no coding agents on existing issues unless marked *Contributions Welcome* |
 | [Debian](../distributions/debian.md) | the **standards already expected of contributors** | generative AI is *"neither exempt from nor subject to special rules beyond"* them |
 | [OWASP](../foundations/owasp.md) | a mandated **DCO** requiring *"original work"* and covering *"the risks of plagiarized code"* | **not extended** — see below[^ext-owasp] |
@@ -67,7 +70,7 @@ which it was already asking of every reverse-engineering contribution. **Detecti
 bundle, and extending sidesteps rather than solves it.**
 
 **And it is cheap to state.** Asahi's original extension was a single sentence, before a 2026-09-07
-rework argued it at paragraph length. systemd's is one clause. Neither
+rework argued it at paragraph length. systemd's was one clause until it was replaced. Neither
 required a new document, a new field, or a new sanction.
 
 ## Where it does not reach
@@ -92,8 +95,8 @@ in this bundle build new regimes instead. The route is cheapest for projects tha
 
 **An extension inherits the gaps of what it extends.** GCC's threshold says nothing about
 contributions below it, which is most of them. Asahi's ban addresses provenance and not correctness.
-systemd's framing settles authorship and leaves review cost untouched — which is why systemd needed a
-separate sanction and a canary on top.
+systemd's framing settled authorship and left review cost untouched, which is why systemd needed a
+separate sanction and a canary on top; on 2026-10-03 it replaced the framing with numbered rules.
 
 **And it can mislead by familiarity.** A contributor who knows the old rule may assume they know the
 new one. Debian's outcome is the case to hold onto: **a project that argued the question to a
@@ -113,3 +116,4 @@ into existing machinery as they acquire some.
 [^ext-llvm]: [LLVM AI Tool Use Policy (llvm/docs/AIToolPolicy.md, main)](https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md)
 [^ext-systemd]: [docs/CONTRIBUTING.md — Policy on the use of LLMs and AI tooling (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/docs/CONTRIBUTING.md)
 [^ext-owasp]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
+[^ext-systemd-0908]: [docs/CONTRIBUTING.md before the 2026-10-03 rewrite (systemd/systemd, commit 57f0f540)](https://raw.githubusercontent.com/systemd/systemd/57f0f540b50248c0fb51eee551084a27383c213a/docs/CONTRIBUTING.md)

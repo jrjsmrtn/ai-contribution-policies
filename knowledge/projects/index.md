@@ -42,5 +42,5 @@ Directory: `projects/`
 | [osquery](osquery.md) | Organization | Has no AI policy of its own and inherits the Linux Foundation's, which is gui... |
 | [pg_duckdb](pg-duckdb.md) | Organization | Has no AI contribution policy. Its contributing guide was trimmed from DuckDB... |
 | [ripgrep](ripgrep.md) | Organization | Welcomes LLM-assisted coding, forbids autonomous agents, and reserves every w... |
-| [systemd](systemd.md) | Organization | Treats AI tools as equivalent to sed, awk or coccinelle — grunt work applie... |
+| [systemd](systemd.md) | Organization | Permits AI-assisted contributions the contributor understands and owns, bars ... |
 
