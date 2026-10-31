@@ -86,7 +86,8 @@ entirely — with one condition, that the contributor verifies the output.
 
 GCC is the **fourth** project here to land on `Assisted-by:`, after the
 [Linux kernel](linux-kernel.md), [Ansible](ansible.md) and OpenInfra — with no shared specification
-between them. It joins the kernel in reserving `Signed-off-by:` to humans, and goes further by
+between them. The kernel has since dropped the tag, on 2026-10-14, so GCC now asks for a tag the kernel
+no longer uses. It joins the kernel in reserving `Signed-off-by:` to humans, and goes further by
 barring an LLM from committing at all: a rule about *agents with write access*, not just about
 generated text.
 

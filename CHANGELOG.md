@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md)** re-verified: the kernel removed its
+  `Assisted-by` tag on 2026-10-14. The record, [the Assisted-by trailer](knowledge/mechanisms/assisted-by-trailer.md),
+  the overview and the records that compared themselves with the kernel's tag now describe it as
+  withdrawn, with its wording quoted from the tree before the removal.
 - **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)**: its pinned copy of the superseded
   policy can be checked again, after a fetch fault was fixed outside the bundle. The before-and-after
   table now cites each policy cell by cell, and the `m1n1` commit that added the agent files is cited.

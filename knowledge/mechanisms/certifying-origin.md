@@ -109,7 +109,7 @@ tool cannot certify that for you."*[^co-nm]
 
 **Nerves dropped the sign-off and kept a trailer.** *"Do not add `Signed-off-by` tags. Nerves does not
 use them"*[^co-nerves] — while requiring an `Assisted-by` trailer naming the model. Attribution
-without certification, which is the inverse of what the kernel does with the same two tags; see
+without certification, which is the inverse of what the kernel did with the same two tags until 2026-10-14; see
 [the Assisted-by trailer](assisted-by-trailer.md).
 
 ## Kubernetes inverted QEMU's premise

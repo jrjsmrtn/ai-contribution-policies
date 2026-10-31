@@ -75,8 +75,8 @@ preambles.[^ansible-ai-policy]
 **Two independent projects converged on `Assisted-by:`, then diverged on what it carries.** The
 [Linux kernel](linux-kernel.md) once specified `Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1]
 [TOOL2]`, and on 2026-08-03 **deliberately dropped the tool and model**, leaving the bare literal
-`Assisted-by: LLM`, on the ground that naming them advertised proprietary vendors. Ansible still
-asks for `[tool name/version]`.
+`Assisted-by: LLM`, on the ground that naming them advertised proprietary vendors. On 2026-10-14 the kernel
+dropped the tag altogether. Ansible still asks for `[tool name/version]`.
 
 So the same field name now encodes **opposite intentions**: Ansible wants to know which tool, the
 kernel has decided it does not. The *value grammar* never matched and the gap has widened. Anyone

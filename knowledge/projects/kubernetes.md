@@ -66,7 +66,7 @@ about maintaining clear accountability. **If something breaks, there needs to be
 understands why and can fix it.**"*[^k8s-maintainership-blog]
 
 **So the same rule is reached from anti-vendor sentiment and from accountability, and neither
-argument implies the other.** With the [kernel](linux-kernel.md) requiring the tag without the model,
+argument implies the other.** With the [kernel](linux-kernel.md) having required the tag without the model until 2026-10-14,
 [Nerves](nerves.md) requiring it with the model, and [QEMU](qemu.md) proposing a different field
 entirely, that is **five positions on commit-message attribution**, two of which agree on the rule
 and disagree on why.
@@ -173,7 +173,8 @@ The blog post carries the reasoning and the enforcement detail but is a **second
 maintainer**; every rule quoted above comes from the guide itself.
 
 Watch for the trailer clause, which is the most consequential for cross-project contributors — the
-same tag is required by the kernel and Nerves and forbidden here and by GTK — and for whether the CLA
+same tag is required by Nerves, was required by the kernel until 2026-10-14, and is forbidden here and
+by GTK — and for whether the CLA
 co-author check spreads. It does not depend on a maintainer noticing, which is still rare here; compare
 [Homebrew](homebrew.md)'s commit check, which matches names and so can be evaded by renaming.
 

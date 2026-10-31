@@ -39,7 +39,7 @@ contributors"*.[^gtk-commit-guidelines] It opens by stating a preference rather 
 > more joy in reviewing contributions when there's people at the other end of the line to stand by
 > their changes.[^gtk-contributing]
 
-## It forbids the trailer the Linux kernel requires
+## It forbids the trailer the Linux kernel required
 
 This is the sharpest direct contradiction in this bundle, and both sides argue it the same way.
 
@@ -47,11 +47,13 @@ This is the sharpest direct contradiction in this bundle, and both sides argue i
 > include trailers like "Co-authored-by:" or "Assisted-by:" in commit messages, since they serve as
 > free advertising for AI companies.**[^gtk-contributing]
 
-The [Linux kernel](linux-kernel.md) **requires** `Assisted-by:`, and narrowed it on 2026-08-03 from
+The [Linux kernel](linux-kernel.md) **required** `Assisted-by:` until 2026-10-14, and narrowed it on 2026-08-03 from
 naming the model to the bare literal `LLM` on the ground that identifying models *"provides free
 advertising to proprietary software companies"*. **Same premise, opposite instrument**: the kernel
 kept the trailer and stripped the vendor from it; GTK removed the trailer and moved the disclosure
-into the merge request.
+into the merge request. On 2026-10-14 the kernel removed the trailer as well, for a different reason:
+too few contributors added it for it to tell a reviewer anything, so disclosure moved to the cover
+letter.
 
 **GTK got there first.** The *"free ad"* motivation was added to this file on
 **2026-04-03**;[^gtk-commit-free-ad] the kernel's commit was authored 2026-07-01 and reached mainline
@@ -62,8 +64,8 @@ one should decide the instrument separately from the premise, because two seriou
 premise to incompatible rules.
 
 It also means **the trailer is not portable**. A contributor who learned `Assisted-by:` from the
-kernel and applies it here is violating GTK's policy by following another project's; the same tag is
-mandatory in one tree and forbidden in another.
+kernel and applies it here is violating GTK's policy by following another project's; the same tag was
+mandatory in one tree, until 2026-10-14, and is forbidden in another.
 
 ## Six requirements, and what each is actually for
 

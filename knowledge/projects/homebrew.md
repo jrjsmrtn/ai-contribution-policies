@@ -111,7 +111,7 @@ Node 24 against trailers recorded elsewhere in this bundle:
 |---|---|
 | `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` — a coding agent's default | **rejected** |
 | `Generated-by: ChatGPT` — the [ASF](../foundations/apache-software-foundation.md) field | **rejected** |
-| `Assisted-by: LLM coccinelle sparse` — the [Linux kernel](linux-kernel.md)'s current form | passes |
+| `Assisted-by: LLM coccinelle sparse` — the [Linux kernel](linux-kernel.md)'s form from 2026-08-03 until it dropped the tag on 2026-10-14 | passes |
 | `Assisted-by: Claude:claude-3-opus` — the kernel's retired example | passes |
 | `Assisted-by: AGENT_NAME:MODEL_VERSION` — [MacPorts](macports.md)' proposed template | passes |
 | `AI-used-for: tests` — [QEMU](qemu.md)'s proposed field | passes |
@@ -275,7 +275,7 @@ workflow pins it by SHA, so the pattern that applies is the one at the pinned co
 `aiIdentityPattern` from that `main.mts`, run it against the kernel's `Assisted-by: LLM` form and a
 human control, and record what passes. The finding above is a measurement against one pinned version.
 
-Watch three things: whether the pattern learns the kernel's `LLM` literal; whether the concurrency
+Watch three things: whether the pattern learns the `LLM` literal the kernel used until 2026-10-14; whether the concurrency
 cap survives the audit-work objection; and whether [MacPorts](macports.md) adopts this text, which
 would be the first recorded copy of it.
 

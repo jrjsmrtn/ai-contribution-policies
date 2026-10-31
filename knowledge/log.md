@@ -13,6 +13,22 @@ with a copied directory.
 
 ## 2026-10-31
 
+* **The Linux kernel withdrew its `Assisted-by` tag on 2026-10-14**, and
+  [`projects/linux-kernel.md`](projects/linux-kernel.md) is re-verified. Commit `1e035297` removed the
+  tag from `coding-assistants.rst` and `submitting-patches.rst` and from `checkpatch`, after the 2026
+  Maintainers Summit found that about one non-merge commit in ten in 7.3 carried it while LLM use was far
+  wider: a required tag that most contributors leave off says nothing either way. How a patch was made
+  now belongs in the cover letter; `generated-content.rst`, which asks for transparency, is unchanged.
+  It is the first record here of a disclosure tag withdrawn because it was not used.
+* **Thirteen other pages described the kernel's tag as current** and are corrected, among them
+  [the Assisted-by trailer](mechanisms/assisted-by-trailer.md), the [overview](overview.md),
+  [GTK](projects/gtk.md), [Nerves](projects/nerves.md), [Homebrew](projects/homebrew.md),
+  [Kubernetes](projects/kubernetes.md), [Ansible](projects/ansible.md) and [QEMU](projects/qemu.md). The
+  tag's wording is now quoted from the tree as it stood the commit before the removal. Found because
+  three quotations of it stopped matching.
+* **Asahi Linux's superseded policy can be checked again.** Its pinned raw file had never been
+  snapshotted, because the fetch refused any short capture opening with "forbidden", and Asahi's policy
+  says what it forbids.
 * **Re-verified [`projects/python.md`](projects/python.md): two of its quotations were never on the
   page.** A requirement to explain *the tool's usage and modifications*, and a scope of *all forms of
   contributions in the python GitHub org*, appear in no version of the devguide page, and code search

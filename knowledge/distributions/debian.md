@@ -93,7 +93,7 @@ contributors."*[^debian-gr-2026-002] That is the limit case of
 empty one, available only to a project confident its existing bar already holds.
 
 **Disclosure is encouraged and explicitly not required**, which puts Debian on the opposite side of
-this axis from the kernel's required `Assisted-by:` trailer:
+this axis from the kernel's `Assisted-by:` trailer, which was required until 2026-10-14:
 
 > We enourage our contributors to disclose whether a contribution was made with AI assitance, but do
 > not require them to do so.[^debian-gr-2026-002]

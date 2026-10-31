@@ -13,6 +13,6 @@ Directory: `mechanisms/`
 | [Human in the loop](human-in-the-loop.md) | Practice | The most-copied phrase in these policies and the least defined. Ten records u... |
 | [Policy by copying](policy-by-copying.md) | Practice | Most AI contribution policies here were adapted from another project's. The c... |
 | [Prose reserved to humans](prose-reserved-to-humans.md) | Practice | Many records here permit AI in the code and restrict or forbid it in the writ... |
-| [The Assisted-by trailer](assisted-by-trailer.md) | Practice | A git commit trailer that predates the AI question — the kernel defines it ... |
+| [The Assisted-by trailer](assisted-by-trailer.md) | Practice | A git commit trailer that predates the AI question — the kernel defined it ... |
 | [The review canary](review-canary.md) | Practice | A mechanism that makes an agent mark its own work so a human's failure to rev... |
 

@@ -51,13 +51,14 @@ with the worked example `Assisted-by: Claude Code:claude-opus-5`.[^nerves-contri
 **That is the [Linux kernel](linux-kernel.md)'s superseded grammar.** The kernel dropped
 `AGENT_NAME:MODEL_VERSION` for the bare literal `LLM` on **2026-08-03**, because naming models
 *"provides free advertising to proprietary software companies"*.[^nerves-kernel-attribution] Nerves adopted the retired form on
-**2026-08-14**, eleven days later.
+**2026-08-14**, eleven days later. On **2026-10-14** the kernel dropped the tag altogether, so Nerves
+requires a form whose origin no longer asks for any.
 
-So one trailer now carries three incompatible rules across this bundle:
+So one trailer carried three incompatible rules across this bundle:
 
 | Project | Rule | Reasoning |
 |---|---|---|
-| [Linux kernel](linux-kernel.md) | **required**, model **not** named | naming vendors is free advertising |
+| [Linux kernel](linux-kernel.md), until 2026-10-14 | **required**, model **not** named | naming vendors is free advertising |
 | [GTK](gtk.md) | **forbidden** entirely | the trailer itself is free advertising |
 | **Nerves** | **required**, model **named** | credit the tools used |
 
@@ -174,8 +175,9 @@ Because copies are replicated across repositories, **check the canonical one** �
 copies is what happened to GNOME's shared text within months.
 
 Watch the trailer clause specifically. It is the most likely thing here to change, because the format
-it mandates was retired by the project that invented it, and because a contributor working across
-Nerves, the kernel and GTK is subject to three mutually exclusive rules about the same tag.
+it mandates was retired by the project that invented it, which has since dropped the tag altogether,
+and because a contributor working across Nerves and GTK is subject to opposite rules about the same
+tag.
 
 [^nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
 [^nerves-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)

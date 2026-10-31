@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Linux Kernel
-description: Permits AI-assisted contributions under two merged in-tree documents — a tool-generic one covering anything not written by a person in the Signed-off-by chain, and an AI-specific one that bars agents from signing off and requires an Assisted-by tag. The tag no longer names the model, because identifying it was judged free advertising for proprietary vendors.
+description: Permits AI-assisted contributions under two merged in-tree documents — a tool-generic one covering anything not written by a person in the Signed-off-by chain and asking for transparency in cover letters and changelogs, and an AI-specific one that bars agents from signing off. It asked for an Assisted-by tag until 2026-10-14, first naming the model and from 2026-08-03 not, and then removed it, because about one commit in ten carried it while LLM use was far wider.
 resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/coding-assistants.rst
 tags:
   - ai-contribution
@@ -20,7 +20,9 @@ verified:
     at: '2026-08-04T23:10:00Z'
   - by: claude/opus-5
     at: '2026-08-29T03:15:00Z'
-stale_after: 2026-11-29
+  - by: claude/opus-5-5
+    at: '2026-10-31T12:00:00Z'
+stale_after: 2027-01-31
 sources:
   - id: kernel-coding-assistants-src
     title: Documentation/process/coding-assistants.rst (torvalds/linux, mainline)
@@ -43,9 +45,24 @@ sources:
   - id: kernel-wireless-syzbot
     title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
     resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
+  - id: kernel-commit-remove-assisted-by
+    title: 'commit 1e035297 — docs: remove Assisted-by references (2026-10-14)'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=1e035297ffdadf2184c3c773b8c098e372324aaf
+  - id: kernel-coding-assistants-pre-removal
+    title: 'Documentation/process/coding-assistants.rst before the removal (torvalds/linux, commit 8fdbd353)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/coding-assistants.rst
+  - id: kernel-submitting-patches-pre-removal
+    title: 'Documentation/process/submitting-patches.rst before the removal (torvalds/linux, commit 8fdbd353)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/submitting-patches.rst
+  - id: kernel-gcc-ai-policy
+    title: 'GCC AI policy — the counterpart rule'
+    resource: https://gcc.gnu.org/ai-policy.html
+  - id: kernel-macports-pr-420
+    title: 'CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)'
+    resource: https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md
 ---
 
-**Stance: permitted, with mandatory disclosure and a human on the hook.** The kernel governs this in
+**Stance: permitted, with transparency asked and a human on the hook.** The kernel governs this in
 **two merged in-tree documents**, and reading only the AI-specific one gets the rule wrong:
 
 | Document | Scope | In tree since |
@@ -71,16 +88,23 @@ with licensing requirements"*, *"Adding their own Signed-off-by tag to certify t
 Note what this does to the DCO argument. [QEMU](qemu.md) reads the same certificate and concludes
 that AI-generated content cannot satisfy it. The kernel reaches the opposite conclusion from the
 same premise by **relocating the certification** — the human certifies, having reviewed, and the
-tool is credited without signing. Two projects, one instrument, opposite outcomes: the DCO does not
+tool signs nothing. Two projects, one instrument, opposite outcomes: the DCO does not
 by itself determine a policy.
 
-## The attribution tag, and why it stopped naming the model
+## The attribution tag: narrowed in August, removed in October
+
+**Since 2026-10-14 the kernel asks for no AI tag.** Commit `1e035297`, *"docs: remove Assisted-by
+references"*, deleted the tag from `coding-assistants.rst` and `submitting-patches.rst` and dropped its
+handling from `checkpatch`.[^kernel-commit-remove-assisted-by] The history below is what it asked
+for until then.
+
+From 2026-08-03 the tag read:
 
     Assisted-by: LLM [TOOL1] [TOOL2]
 
 The bracketed items *"are optional specialized analysis tools used (e.g., coccinelle, sparse,
 smatch, clang-tidy)"*, and *"Basic development tools (git, gcc, make, editors) should not be
-listed."* The example given is:[^kernel-coding-assistants-src]
+listed."* The example given was:[^kernel-coding-assistants-pre-removal]
 
     Assisted-by: LLM coccinelle sparse
 
@@ -100,23 +124,36 @@ specificity on anti-vendor-marketing grounds rather than privacy or practicality
 the tag should copy the reasoning or reject it deliberately — the two formats collect different
 data, and the kernel gave up the model-level dataset on purpose.
 
-**Disclosure is required, and that is stated in the main submission document** rather than only in
-the AI-specific one. `submitting-patches.rst` carries a *"Using Assisted-by:"* section: *"If you
-used any sort of advanced coding tool in the creation of your patch, you need to acknowledge that
-use by adding an Assisted-by tag. Failure to do so may impede the acceptance of your
-work."*[^kernel-submitting-patches] A contributor following the ordinary process meets the
-requirement without ever opening the AI policy.
+**Until 2026-10-14 the requirement was also in the main submission document.** `submitting-patches.rst`
+carried a *"Using Assisted-by:"* section: *"If you used any sort of advanced coding tool in the
+creation of your patch, you need to acknowledge that use by adding an Assisted-by tag. Failure to do
+so may impede the acceptance of your work."*[^kernel-submitting-patches-pre-removal]
 
-**Why a new token rather than `Co-developed-by:`.** The kernel's existing vocabulary makes the
-obvious choice incoherent: `Co-developed-by:` denotes authorship, and every one *"must be
+**Then the tag was removed, on evidence about how it was used.** The removal commit counts it:
+*"Roughly 10% of the 18,533 non-merge commits in 7.3 through -rc7 carry an Assisted-by tag, while
+actual LLM use is far more widespread."*[^kernel-commit-remove-assisted-by] Its conclusion: *"the tag does not provide the signal it was
+kept for: its absence says nothing about how a patch was made, and for developers who use these tools
+for almost everything, its presence says little more."*[^kernel-commit-remove-assisted-by] Faced with *"finding a way to enforce the
+requirement and dropping it"*[^kernel-commit-remove-assisted-by], the 2026 Maintainers Summit chose to drop it. Disclosure did not go
+with it: the view was that how a patch was made *"belongs in the cover letter, where it can describe
+how the tools were used, rather than in the changelog."*[^kernel-commit-remove-assisted-by]
+
+**This is the first record here of a disclosure tag withdrawn because it was not used.** Other
+projects forbid AI trailers as advertising or as diluted accountability; the kernel dropped one it had
+required, because a tag that most contributors leave off tells a reviewer nothing. See
+[the Assisted-by trailer](../mechanisms/assisted-by-trailer.md).
+
+**Why the kernel had chosen a new token rather than `Co-developed-by:`.** Its existing vocabulary
+makes the obvious choice incoherent, and still does: `Co-developed-by:` denotes authorship, and every one *"must be
 immediately followed by a Signed-off-by: of the associated co-author"*[^kernel-submitting-patches]
-— a sign-off this policy forbids an agent from adding. `Assisted-by:` is the only shape consistent
+— a sign-off this policy forbids an agent from adding. `Assisted-by:` was the only shape consistent
 with both rules. Guidance recommending `Co-developed-by:` for AI attribution, which circulated
 widely before this policy landed, asks for a structurally invalid trailer block.
 
 ## Disclose the prompts, not just the fact
 
-`generated-content.rst` asks for more than a trailer. Contributors are told to *"be transparent about the
+`generated-content.rst` asks for more than a trailer ever did, and since 2026-10-14 it is the kernel's
+only disclosure rule. Contributors are told to *"be transparent about the
 origin of content in cover letters and changelogs"*, and the suggested detail
 includes:[^kernel-generated-content]
 
@@ -149,8 +186,8 @@ sanction: *"maintainers are entitled to reject your series without detailed revi
 defend what you submitted.[^kernel-generated-content]
 
 **This is why a subsystem may look stricter than the kernel.** A maintainer refusing AI-generated
-patches outright is exercising a discretion the policy grants, not contradicting it — so *"the Linux
-kernel permits this"* is true at project level and may be false for the tree you are actually
+patches outright is exercising a discretion the policy grants, not contradicting it — so "the Linux
+kernel permits this" is true at project level and may be false for the tree you are actually
 sending to.
 
 ## The discretion exercised: wireless, 2026-08-06
@@ -197,7 +234,8 @@ subsystem."*[^kernel-wireless-syzbot] No policy was amended and no rule was brok
 enumerated discretion working exactly as `generated-content.rst` describes it, which is why a
 subsystem can be closed to a class of contribution the project as a whole permits.
 
-**The finding worth carrying, though, is about disclosure — argued from the receiving end.** Berg
+**The finding worth carrying, though, is about disclosure — argued from the receiving end**, and the
+removal of the tag two months later turned on the same point. Berg
 notes that refusing the labelled channel does not stop the patches arriving:
 
 > now that I say this (and you disabled it) I guess I'll just see the patches pasted into an email
@@ -225,22 +263,22 @@ follow nine steps, of which the load-bearing ones are:[^kernel-coding-assistants
 - Attempt a reproducer for any non-trivial bug; *"Stop here if it finally looks wrong."*
 - Write the fix — *"This part is not optional"* — then build and verify it, dropping fixes that do
   not work.
-- Add `Assisted-by:`, and **no** `Signed-off-by:`.
+- **No** `Signed-off-by:`. Until 2026-10-14 this step also asked for `Assisted-by:`.
 - State what could not be done: *"maintainers currently waste too much time analyzing unverified
   reports and untested fixes."*
 - Classify against `threat-model.rst` and leave the result for human review — **the assistant
-  *"must never send anything itself"*.**
+  *"must never send anything itself"*[^kernel-coding-assistants-src].**
 
 That last rule is the kernel's counterpart to GCC's *"An LLM may not commit code to the project
-repository"*: both constrain what an **agent with access** may do, as distinct from what generated
+repository"*[^kernel-gcc-ai-policy]: both constrain what an **agent with access** may do, as distinct from what generated
 text must look like.
 
 ## What a contributor must do
 
 Review what the tool produced, well enough to defend it — *"If you are unable to do so, then do not
-submit the resulting changes."*[^kernel-generated-content] Add your own `Signed-off-by`. Add
-`Assisted-by: LLM` in the current format, **not** the older `AGENT_NAME:MODEL_VERSION` shape. Say in
-the changelog what the tool did and, where the code came from prompts, what they were. Never let an
+submit the resulting changes."*[^kernel-generated-content] Add your own `Signed-off-by`. No AI tag
+is asked for since 2026-10-14. Say what the tool did and, where the code came from prompts, what they
+were: the cover letter is where the maintainers who removed the tag want it. Never let an
 agent add a `Signed-off-by`, and never let one send mail. Then check the subsystem: the maintainer
 you are sending to may have set a higher bar, and is entitled to.
 
@@ -257,7 +295,7 @@ since 2026-07-22. Reading the AI-specific document and stopping there produced a
 accurate about half a policy.
 
 **The previous version predicted its own failure and could not act on it.** Its closing note said to
-*"Watch specifically for the tag format changing: the `AGENT_NAME:MODEL_VERSION` shape is unusual"* —
+*"Watch specifically for the tag format changing: the `AGENT_NAME:MODEL_VERSION` shape is unusual"* — <!-- quote-ok: this record's own earlier note, quoted as a prediction -->
 which is exactly what happened, on 2026-08-03, the day before that sentence was written. A correct
 prediction is worth nothing without a re-read cadence short enough to catch it, which is why
 `stale_after` is now **three months rather than six**: three substantive commits landed in this
@@ -274,7 +312,7 @@ from the rendered site can be stale while looking perfectly sourced.**
 
 **The lag has already propagated.** [MacPorts](macports.md) opened a pull request on 2026-08-04 —
 one day after the format changed — proposing the `Assisted-by:` trailer *"in the format recommended
-by the Linux kernel developers"*, citing
+by the Linux kernel developers"*[^kernel-macports-pr-420], citing
 `docs.kernel.org/process/coding-assistants.html#attribution` and reproducing the **retired**
 `AGENT_NAME:MODEL_VERSION` form. As of 2026-09-15 that PR is still open and still specifies the retired form; the first comment in
 its thread to point out the change was posted on 2026-09-14 by this bundle's maintainer. By
@@ -288,8 +326,12 @@ correct throughout; only the retrieval was blocked, and a real browser clears it
 from the lore *search* results, which do answer, rather than assembling a message-id by hand.
 
 The audit trail is `git log --follow Documentation/process/coding-assistants.rst` and the same for
-`generated-content.rst`. Watch for the two documents diverging: the tool-generic one sets the
-threshold and the AI-specific one sets the tag, so a change to either moves the rule.
+`generated-content.rst`. Watch whether `generated-content.rst` gains the cover-letter wording the
+removal commit describes, since it is now the only disclosure rule.
+
+**Corrections made on 2026-10-31.** This record described the `Assisted-by` tag as required, which
+stopped being true on 2026-10-14. The tag's wording is now quoted from the tree as it stood the
+commit before.
 
 [^kernel-coding-assistants-src]: [Documentation/process/coding-assistants.rst (torvalds/linux, mainline)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/coding-assistants.rst)
 [^kernel-generated-content]: [Documentation/process/generated-content.rst (torvalds/linux, mainline)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/Documentation/process/generated-content.rst)
@@ -298,3 +340,8 @@ threshold and the AI-specific one sets the tag, so a change to either moves the 
 [^kernel-commit-bug-procedure]: [commit 3d7c44f7 — docs: coding-assistant: explain important steps when looking for bugs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=3d7c44f73765d98665fb97a4fb89c002c88ba1b9)
 [^kernel-docs-rendered]: [AI Coding Assistants — The Linux Kernel documentation (rendered, lags the tree)](https://docs.kernel.org/process/coding-assistants.html)
 [^kernel-wireless-syzbot]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
+[^kernel-commit-remove-assisted-by]: [commit 1e035297 — docs: remove Assisted-by references (2026-10-14)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=1e035297ffdadf2184c3c773b8c098e372324aaf)
+[^kernel-coding-assistants-pre-removal]: [Documentation/process/coding-assistants.rst before the removal (torvalds/linux, commit 8fdbd353)](https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/coding-assistants.rst)
+[^kernel-submitting-patches-pre-removal]: [Documentation/process/submitting-patches.rst before the removal (torvalds/linux, commit 8fdbd353)](https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/submitting-patches.rst)
+[^kernel-gcc-ai-policy]: [GCC AI policy — the counterpart rule](https://gcc.gnu.org/ai-policy.html)
+[^kernel-macports-pr-420]: [CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)](https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md)

@@ -125,8 +125,9 @@ reviewer*, telling them which parts to read hardest. A project choosing between 
 between proving compliance and directing attention, and no other record here makes that distinction.
 
 Added to the [kernel](linux-kernel.md)'s `Assisted-by: LLM`, [Nerves](nerves.md)'s
-`Assisted-by: AGENT_NAME:MODEL_VERSION` and [GTK](gtk.md)'s outright prohibition, that is **four
-positions on commit-message attribution**, of which three are in force and one is proposed.
+`Assisted-by: AGENT_NAME:MODEL_VERSION` and [GTK](gtk.md)'s outright prohibition, that made **four
+positions on commit-message attribution**. Since the kernel dropped its tag on 2026-10-14, two are in
+force and one is proposed.
 
 The proposal keeps the DCO intact regardless: *"use of AI does not relax any other contribution
 requirement: authors still comply with the DCO and take responsibility for the whole patch via

@@ -121,8 +121,8 @@ sources:
     title: 'Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org'
     resource: https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/
   - id: kernel-submitting-patches
-    title: 'Documentation/process/submitting-patches.rst (torvalds/linux, master)'
-    resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst
+    title: 'Documentation/process/submitting-patches.rst (torvalds/linux, commit 8fdbd353, before the tag was removed)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/submitting-patches.rst
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -358,7 +358,7 @@ prohibition without anyone having to detect anything.
 
 [Homebrew](projects/homebrew.md) built a different kind: a CI check that fails any commit whose
 author, committer or trailers match a list of AI vendor and product names. **It enforces less than its
-rule says** — measured, the kernel's own `Assisted-by: LLM` passes it, because a pattern of names can
+rule says** — measured, the kernel's former `Assisted-by: LLM` passes it, because a pattern of names can
 only catch a trailer that names someone.
 
 Note the inversion. Other projects ask whether an AI *can* satisfy a certification and reason from
@@ -376,7 +376,7 @@ Four organisations reason from the **Developer Certificate of Origin** and reach
   amount of content"* — the concern is scoped to bulk, not to any assistance.[^git-submitting-patches-src]
 - **Linux kernel → relocated certification.** *"AI agents MUST NOT add Signed-off-by tags. Only
   humans can legally certify"*.[^kernel-coding-assistants-src] The human certifies, having reviewed;
-  the tool is credited without signing.
+  the tool signs nothing.
 - **Linux Foundation → not invoked at all.** Its policy contains zero occurrences of `DCO`,
   `Developer Certificate of Origin` or `Signed-off-by`, and reaches permission via licence
   compatibility instead.[^lf-generative-ai]
@@ -458,12 +458,13 @@ the rule to itself. **Three projects, three answers, and no rule for any of them
 **The detail lives in [the Assisted-by trailer](mechanisms/assisted-by-trailer.md)**; what belongs on
 the map is why the field is not the answer it looks like.
 
-`Assisted-by:` is **not an AI tag**. The kernel defines it for *"any sort of advanced coding tool"*[^kernel-submitting-patches] and
-lists a model beside `coccinelle` and `sparse`. Projects narrowed a general instrument to a specific
+`Assisted-by:` is **not an AI tag**. The kernel defined it for *"any sort of advanced coding tool"*[^kernel-submitting-patches] and
+listed a model beside `coccinelle` and `sparse`, until it dropped the tag on 2026-10-14 because about
+one commit in ten carried it. Projects narrowed a general instrument to a specific
 question, and most of the disagreement follows from that.
 
 **There are five positions and they are mutually exclusive** — required without the model
-([kernel](projects/linux-kernel.md)), required with it ([Nerves](projects/nerves.md),
+([kernel](projects/linux-kernel.md), until 2026-10-14), required with it ([Nerves](projects/nerves.md),
 [Ansible](projects/ansible.md)), required plainly ([GCC](projects/gcc.md)), forbidden
 ([GTK](projects/gtk.md), [Kubernetes](projects/kubernetes.md),
 [Dependency-Track](projects/dependency-track.md), [systemd](projects/systemd.md),
@@ -482,7 +483,8 @@ unrelated grounds, that it dilutes accountability.[^k8s-ai-guidance]
 
 **The tag is not portable, and that is the practical consequence.** A contributor who learned it in
 the kernel breaks GTK's rule by applying it, and the form [Nerves](projects/nerves.md) mandates is the
-one the kernel abandoned eleven days earlier.[^nerves-contributing] Tooling that emits these tags must
+one the kernel abandoned eleven days earlier;[^nerves-contributing] on 2026-10-14 the kernel dropped
+the tag altogether. Tooling that emits these tags must
 key on the destination project; there is no default that is safe.
 
 **One retrieval hazard is documented rather than hypothetical.** `docs.kernel.org` renders a released
@@ -617,4 +619,4 @@ never that the content arrived. Check for the text you came for.
 [^asahi-slop-policy]: [Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)](https://asahilinux.org/llm-policy/)
 [^ladybird-post-closing]: [Changing How We Develop Ladybird (ladybird.org, 2026-06-05)](https://ladybird.org/posts/changing-how-we-develop-ladybird/)
 [^nerves-newsletter]: [Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org](https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/)
-[^kernel-submitting-patches]: [Documentation/process/submitting-patches.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst)
+[^kernel-submitting-patches]: [Documentation/process/submitting-patches.rst (torvalds/linux, commit 8fdbd353, before the tag was removed)](https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/submitting-patches.rst)

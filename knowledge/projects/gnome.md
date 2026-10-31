@@ -214,7 +214,7 @@ under the heading *"So-called 'AI'"*: *"All hallucinations in Dia are purely org
 
 **A conditional permission, in [GTK](gtk.md)**, which has its own record. It permits AI use under six
 requirements, requires disclosure in the merge request, and **forbids the `Assisted-by:` trailer the
-Linux kernel requires** — on the same anti-vendor-advertising ground the kernel used to narrow it.
+Linux kernel required until 2026-10-14** — on the same anti-vendor-advertising ground the kernel used to narrow it.
 
 ## What the survey establishes
 
