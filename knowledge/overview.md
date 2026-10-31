@@ -222,7 +222,7 @@ false-positive problem — a careful non-native speaker writes prose that trips 
 policy are unenforceable. Our goal is not to catch every violation … Instead, our goal is to remove
 plausible deniability: to force a choice between following the policy and intentionally violating
 it."*[^rust-forge-1040] It cites anti-money-laundering compliance as the model, and elsewhere:
-*"It's not your job to play detective."*
+*"It's not your job to play detective"*.
 
 curl shows the two are one observable seen from opposite ends. *"If someone can spot that the
 contribution was made with the help of AI, you have more work to do."*[^curl-contribute] Git tells
@@ -268,7 +268,7 @@ distinction being who answers for the result.
 wireless maintainer announced he would ignore syzbot's AI-generated patches, syzkaller stopped sending
 them — and he immediately named the cost: *"now that I say this (and you disabled it) I guess I'll
 just see the patches pasted into an email manually instead, and I've lost the signal that I could use
-to just ignore them entirely."*[^kernel-wireless-syzbot] Everywhere else here, disclosure is argued as
+to just ignore them entirely"*.[^kernel-wireless-syzbot] Everywhere else here, disclosure is argued as
 an obligation on the contributor, for honesty or legal hygiene. **From the receiving end it is a
 filter**, and driving a declared channel underground does not reduce the patches, only the
 maintainer's ability to triage them. Any project weighing a disclosure rule against the objection that
@@ -369,7 +369,7 @@ Four organisations reason from the **Developer Certificate of Origin** and reach
 - **Git → volume-scoped caution.** Satisfying the DCO is unclear *"when submitting significant
   amount of content"* — the concern is scoped to bulk, not to any assistance.[^git-submitting-patches-src]
 - **Linux kernel → relocated certification.** *"AI agents MUST NOT add Signed-off-by tags. Only
-  humans can legally certify."*[^kernel-coding-assistants-src] The human certifies, having reviewed;
+  humans can legally certify"*.[^kernel-coding-assistants-src] The human certifies, having reviewed;
   the tool is credited without signing.
 - **Linux Foundation → not invoked at all.** Its policy contains zero occurrences of `DCO`,
   `Developer Certificate of Origin` or `Signed-off-by`, and reaches permission via licence
@@ -420,7 +420,7 @@ SUSE-published versions of one policy disagree** on whether AI pair programming 
 The [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md)
 and [OpenInfra](foundations/openinfra.md) each set a permissive baseline across many projects — and
 each says projects may go further. *"Individual Linux Foundation projects may develop their own
-project-specific guidance."*[^lf-generative-ai] The kernel's in-tree policy is exactly that, and it
+project-specific guidance"*.[^lf-generative-ai] The kernel's in-tree policy is exactly that, and it
 is stricter.
 
 **Checking only the foundation is a reliable way to be wrong about the project.** The more active a

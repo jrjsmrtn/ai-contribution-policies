@@ -198,7 +198,7 @@ must pass before one is submitted.[^dd-agents]
 `CLAUDE.md` is a regular 10-byte file containing `@AGENTS.md` (mode `100644`). It was the project's
 original instruction file; on 2026-06-05 its content moved to `AGENTS.md` and it became an import, with
 the contributor explaining the choice: *"avoided symlinking because it complicates things on
-Windows."*[^dd-pr-23077] That is the first stated reason in this bundle for preferring an import over a
+Windows"*.[^dd-pr-23077] That is the first stated reason in this bundle for preferring an import over a
 symlink — see [agent-file pointers](../mechanisms/agent-file-pointers.md).
 
 ## What a contributor must do

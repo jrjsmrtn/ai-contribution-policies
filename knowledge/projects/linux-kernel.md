@@ -66,7 +66,7 @@ one**, which is why the kernel could absorb generative AI without inventing a se
 
 The human submitter is responsible for *"Reviewing all AI-generated code"*, *"Ensuring compliance
 with licensing requirements"*, *"Adding their own Signed-off-by tag to certify the DCO"*, and
-*"Taking full responsibility for the contribution."*[^kernel-coding-assistants-src]
+*"Taking full responsibility for the contribution"*.[^kernel-coding-assistants-src]
 
 Note what this does to the DCO argument. [QEMU](qemu.md) reads the same certificate and concludes
 that AI-generated content cannot satisfy it. The kernel reaches the opposite conclusion from the

@@ -187,7 +187,7 @@ contest an eight-way list suggests, and any reading of the outcome has to accoun
 **C** requires that *"messages to humans … must be drafted solely by humans without LLM
 assistance."* **G** reaches the same surface from the other direction, disallowing generative output
 in *"Submissions (messages, bug reports, patches, etc.) to the BTS, Salsa, mailing
-lists."*[^debian-gr-2026-002] Every other policy in this bundle governs **code**. In a project whose
+lists"*.[^debian-gr-2026-002] Every other policy in this bundle governs **code**. In a project whose
 work is substantially mailing-list discussion, the conversation is the larger surface — and it is
 now the position of two independent proposals rather than one, which is a change in the shape of the
 disagreement, not only its size.

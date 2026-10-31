@@ -95,7 +95,7 @@ generated text.
 Research, analysis, bug discovery and reporting, patch review and debugging are all fine *"so long
 as the output is not included in the contributions"* — with two qualifications worth noting: report
 output *"should not be sent verbatim without due consideration"*, and patch review is *"supporting
-human review, not replacing it."*[^gcc-ai-policy]
+human review, not replacing it"*.[^gcc-ai-policy]
 
 ## It opens by protecting contributors, not the codebase
 
@@ -115,7 +115,7 @@ this is an explicit instruction not to treat contributors that way.
 
 ## The policy is CC0
 
-*"This work is marked CC0 1.0 Universal."*[^gcc-ai-policy] It is the only policy in this bundle
+*"This work is marked CC0 1.0 Universal"*.[^gcc-ai-policy] It is the only policy in this bundle
 released for reuse, so a project wanting a copyright-threshold rule can adopt the text outright
 rather than draft one.
 

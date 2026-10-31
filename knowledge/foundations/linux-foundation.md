@@ -90,7 +90,7 @@ threshold-based SHOULD, and far more so than [Rust](../projects/rust.md)'s draft
 ## It is a floor, not a ceiling
 
 *"Individual Linux Foundation projects may develop their own project-specific
-guidance."*[^lf-generative-ai] The Linux kernel's in-tree policy is exactly that, and it is
+guidance"*.[^lf-generative-ai] The Linux kernel's in-tree policy is exactly that, and it is
 stricter. **Checking only this page and concluding "permitted" would be wrong for any project that
 has written its own rule** — which, on this bundle's evidence, the more active ones have.
 

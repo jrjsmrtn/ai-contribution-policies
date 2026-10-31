@@ -83,7 +83,7 @@ non-native speaker does. A project wanting a detection rule that does not tax th
 Worth reading carefully before adopting it, because the operative sentence is the mildest of the
 three:
 
-- The **heading** is absolute: *"Extensions must not be AI-generated."*
+- The **heading** is absolute: *"Extensions must not be AI-generated"*.
 - The **body** is a detection-and-explainability rule: AI is *"not prohibited … as a learning aid or
   a development tool"*, and rejection follows *"indications of AI-generated
   output"*.[^gnome-review-guidelines]
@@ -196,7 +196,7 @@ own, **Strict No LLM / No AI Policy**: *"No LLMs for issues. No LLMs for patches
 LLMs for comments on the bug tracker, **including translation**."* It substitutes a human
 accommodation instead — *"English is encouraged, but not required. You are welcome to post in your
 native language and rely on others to have their own translation tools of
-choice."*[^gnome-libxml2-readme] **That is the accessibility axis being decided the other way**, and
+choice"*.[^gnome-libxml2-readme] **That is the accessibility axis being decided the other way**, and
 by a project inside the same federation as the modules granting the exception.
 
 `vte` frames its ban as a licensing condition rather than a quality one, sitting in the paragraph

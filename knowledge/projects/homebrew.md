@@ -168,7 +168,7 @@ The first version, merged 2026-01-16, had four bullets, and the third permitted 
 On 2026-07-29 that line was replaced with *"You must answer all maintainer questions and pull request
 review comments yourself, **without using AI/LLM**"*.[^hb-pr-23317] **From a fallback to a
 prohibition**, with the stated reason in the commit body — *"Ensure reviewers engage directly with
-responsible contributors."* The same change added the trailer ban, justified by *"Keep commit history
+responsible contributors"*. The same change added the trailer ban, justified by *"Keep commit history
 tied to accountable human contributors"* — the accountability ground [Kubernetes](kubernetes.md)
 gives, not the advertising ground [GTK](gtk.md) gives.
 

@@ -34,7 +34,7 @@ use.[^asf-generative-tooling]
 
 1. **Tool terms must not conflict with the Open Source Definition.** *"The terms and conditions of
    the generative AI tool do not place any restrictions on use of the output that would be
-   inconsistent with the Open Source Definition."*[^asf-generative-tooling]
+   inconsistent with the Open Source Definition"*.[^asf-generative-tooling]
 
 2. **One of three must hold** for third-party material: the output is not copyrightable; or no
    third-party materials are included; or any that are included have permission and comply with the
@@ -42,7 +42,7 @@ use.[^asf-generative-tooling]
 
 3. **Due diligence has a defined bar.** *"A contributor obtains reasonable certainty that conditions
    2.2 or 2.3 are met if the AI tool itself provides sufficient information about output that may be
-   similar to training data."*[^asf-generative-tooling]
+   similar to training data"*.[^asf-generative-tooling]
 
 Condition 3 is the pragmatic move. The obligation is otherwise unsatisfiable — a contributor cannot
 audit a model's training data — so the ASF makes **the tool's own similarity reporting** the

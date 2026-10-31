@@ -47,7 +47,7 @@ is the same test [Git](git.md) reaches by a different route.
 
 *"Assistance with writing comments, especially in a non-native language"*, *"Gaining understanding
 of existing code"*, and *"Supplementing contributor knowledge for code, tests, and
-documentation."*[^python-devguide-ai-tools]
+documentation"*.[^python-devguide-ai-tools]
 
 The non-native-language allowance recurs: six records grant it, and a policy that forbids generated
 prose outright taxes non-native speakers and nothing else — see

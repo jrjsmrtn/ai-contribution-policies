@@ -13,6 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **[`projects/packer.md`](knowledge/projects/packer.md)**: the audience gate took a word in a quotation of
   Packer's `AGENTS.md` for maintainer-facing context, and failed every weekly sweep from 2026-10-12. The
   line is now marked as deliberate.
+- **Quotations checked against their sources again**, after the weekly sweep had reported them failing
+  since 2026-09-21. This round:
+  - [`projects/ladybird.md`](knowledge/projects/ladybird.md) cited commit `f57c6a4328` by a full hash
+    whose last 30 characters were wrong, so the link led nowhere. Corrected to the real commit; the other
+    six full commit hashes the bundle cites were checked and resolve.
+  - [`projects/nerves.md`](knowledge/projects/nerves.md) cited the newsletter's sign-up page for an
+    issue the Nerves project also publishes on its own site; it now cites that page, and every
+    quotation from it checks. Three quotations from other projects' sources gain their own citations.
+  - Nineteen quotations across twelve pages ended with a full stop the source does not have there;
+    the full stop now sits outside the quotation marks.
 
 ## [0.30.0] - 2026-10-31
 

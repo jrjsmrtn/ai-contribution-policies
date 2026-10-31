@@ -22,9 +22,18 @@ sources:
   - id: nerves-contributing
     title: 'CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)'
     resource: https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md
+  - id: nerves-kernel-attribution
+    title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
+  - id: nerves-macports-pr-420
+    title: 'CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)'
+    resource: https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md
+  - id: nerves-gnome-commit
+    title: 'gjs-guide commit dd6429b2 — review-guidelines: add guideline prohibited AI-generated code'
+    resource: https://gitlab.gnome.org/World/javascript/gjs-guide/-/commit/dd6429b20e3b
   - id: nerves-newsletter
-    title: 'Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman)'
-    resource: https://underjord.io/nerves-newsletter.html
+    title: 'Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org'
+    resource: https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/
 ---
 
 **Stance: permitted, with the contributor accountable and all human-facing writing reserved to
@@ -41,7 +50,7 @@ with the worked example `Assisted-by: Claude Code:claude-opus-5`.[^nerves-contri
 
 **That is the [Linux kernel](linux-kernel.md)'s superseded grammar.** The kernel dropped
 `AGENT_NAME:MODEL_VERSION` for the bare literal `LLM` on **2026-08-03**, because naming models
-*"provides free advertising to proprietary software companies"*. Nerves adopted the retired form on
+*"provides free advertising to proprietary software companies"*.[^nerves-kernel-attribution] Nerves adopted the retired form on
 **2026-08-14**, eleven days later.
 
 So one trailer now carries three incompatible rules across this bundle:
@@ -62,7 +71,7 @@ month, and its policy cites no external authority at all.
 
 **That the route exists is no longer hypothetical**, which sharpens rather than settles the question.
 [MacPorts](macports.md) proposed the same retired format on 2026-08-04, explicitly *"in the format
-recommended by the Linux kernel developers"* and citing the stale rendered page. **Nerves cites
+recommended by the Linux kernel developers"*[^nerves-macports-pr-420] and citing the stale rendered page. **Nerves cites
 nothing, so the same inference cannot be drawn about it** — the two cases look alike and only one is
 evidenced.
 
@@ -108,7 +117,7 @@ two of these have no counterpart in this bundle:[^nerves-contributing]
   handling, and comments that restate the code."* — a shape constraint like GTK's, and it names the
   specific artifacts generation tends to add.
 - *"Review AI-generated code as carefully as you would review a stranger's, and confirm that it
-  compiles, runs, and is tested before sending it."*
+  compiles, runs, and is tested before sending it."*[^nerves-contributing]
 
 ## Friction is the point, and the reason is review bandwidth
 
@@ -119,7 +128,7 @@ point."* One well-meaning person with agents can *"completely saturate the bandw
 core team in terms of review and feedback."*[^nerves-newsletter]
 
 **That is review bandwidth again** — the same ground [GNOME](gnome.md) gives (*"to reduce the strain
-on volunteer reviewers"*), the same one the [Linux wireless maintainer](linux-kernel.md) gave for
+on volunteer reviewers"*[^nerves-gnome-commit]), the same one the [Linux wireless maintainer](linux-kernel.md) gave for
 refusing compliant patches, and the one the kernel's `generated-content.rst` opens with. **Four
 independent projects, one motive.** It is now the most common stated reason for an AI rule in this
 bundle — more common than licensing, copyright or output quality.
@@ -127,10 +136,10 @@ bundle — more common than licensing, copyright or output quality.
 The project is explicit that this is not opposition: *"We are not inherently against it … The project
 doesn't take a hard stance in that because you'll do what you do."*[^nerves-newsletter]
 
-> ⚠ **The newsletter is a source a third party cannot fetch.** It was received by email; underjord.io
-> publishes no per-issue archive, so the `resource` above is the newsletter's home page rather than
-> the issue. Every claim about **what the policy says** is taken from the public `CONTRIBUTING.md`
-> instead. The quotations in this section are rationale, not rule, and are marked as such.
+> The newsletter issue was first read as an email. **The same issue is published on the Nerves
+> project's website**, found 2026-10-31, and that copy is the one cited; until then this record cited
+> the newsletter's sign-up page. Every claim about **what the policy says** is still taken from the
+> public `CONTRIBUTING.md`. The quotations in this section are rationale, not rule.
 
 ## Copied into every repository — on purpose, and not quite completely
 
@@ -159,7 +168,7 @@ it, keep the change focused, and verify any claim you make, especially a securit
 
 ## Re-verification notes
 
-The policy is the *"AI-assisted contributions"* section of `CONTRIBUTING.md` in
+The policy is the "AI-assisted contributions" section of `CONTRIBUTING.md` in
 `nerves-project/nerves`; `git log -- CONTRIBUTING.md` dates it to commit `28dc3f77` on 2026-08-14.
 Because copies are replicated across repositories, **check the canonical one** — divergence between
 copies is what happened to GNOME's shared text within months.
@@ -169,4 +178,7 @@ it mandates was retired by the project that invented it, and because a contribut
 Nerves, the kernel and GTK is subject to three mutually exclusive rules about the same tag.
 
 [^nerves-contributing]: [CONTRIBUTING.md — AI-assisted contributions (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
-[^nerves-newsletter]: [Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman)](https://underjord.io/nerves-newsletter.html)
+[^nerves-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
+[^nerves-macports-pr-420]: [CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)](https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md)
+[^nerves-gnome-commit]: [gjs-guide commit dd6429b2 — review-guidelines: add guideline prohibited AI-generated code](https://gitlab.gnome.org/World/javascript/gjs-guide/-/commit/dd6429b20e3b)
+[^nerves-newsletter]: [Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org](https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/)

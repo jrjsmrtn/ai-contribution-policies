@@ -34,7 +34,7 @@ so its requirements can be read off rather than inferred.
 
 "AI" is *"technology that is generally built using the machine learning approach"*, covering
 *"assistive tools, including those considered as autonomous and semi-autonomous, such as large
-language models (LLMs), text or image generators, and agentic systems."*[^ansible-ai-policy]
+language models (LLMs), text or image generators, and agentic systems"*.[^ansible-ai-policy]
 
 Scope is **all public projects** under the `ansible`, `ansible-community` and `ansible-collections`
 GitHub organizations, **and** public communication platforms — the Ansible Forum, official Matrix
@@ -48,7 +48,7 @@ checking the org policy alone can be wrong in either direction.
 ## The requirements
 
 - Contributions *"MUST adhere to any specific project or platform standards, conventions and
-  contributing guidelines."*
+  contributing guidelines"*.
 - *"Contributors are fully accountable for the contributions they make with or without AI
   assistance."*
 - *"Any autonomous contributions submitted by AI tools MAY be rejected by resource maintainers

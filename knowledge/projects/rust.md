@@ -158,7 +158,7 @@ and output that comes from editor auto-completion."*[^rust-llm-policy]
 
 It cites anti-money-laundering compliance as the model. **That makes it a declaration rule rather than
 a detection rule**, and the moderation section follows through: *"It's not your job to play
-detective."* Then a sentence no other policy here writes down:
+detective"*. Then a sentence no other policy here writes down:
 
 > Style is not evidence, and English-as-a-second-language speakers, neurodivergent people, and
 > over-explainers are the most likely to be accused of writing like an LLM.[^rust-llm-policy]
