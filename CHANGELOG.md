@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.30.0] - 2026-10-31
+
 ### Added
 
 - **[`projects/pg-duckdb.md`](knowledge/projects/pg-duckdb.md)**: no AI policy. The contributing guide was
