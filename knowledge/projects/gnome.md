@@ -44,6 +44,30 @@ sources:
   - id: gnome-git-submitting-patches
     title: Documentation/SubmittingPatches (git/git, master) — Git's detection rule
     resource: https://raw.githubusercontent.com/git/git/master/Documentation/SubmittingPatches
+  - id: gnome-handbook-change-submission
+    title: 'Change submission — GNOME Project Handbook'
+    resource: https://handbook.gnome.org/development/change-submission.html
+  - id: gnome-handbook-legal
+    title: 'Legal — GNOME Project Handbook'
+    resource: https://handbook.gnome.org/development/legal.html
+  - id: gnome-console-readme
+    title: 'README.md — Use of Generative AI (GNOME/console, main)'
+    resource: https://gitlab.gnome.org/GNOME/console/-/raw/main/README.md
+  - id: gnome-dia-readme
+    title: 'README.md — Use of Generative AI (GNOME/dia, master)'
+    resource: https://gitlab.gnome.org/GNOME/dia/-/raw/master/README.md
+  - id: gnome-gitg-readme
+    title: 'README.md — Use of Generative AI (GNOME/gitg, master)'
+    resource: https://gitlab.gnome.org/GNOME/gitg/-/raw/master/README.md
+  - id: gnome-loupe-contributing
+    title: 'CONTRIBUTING.md — the original text (GNOME/loupe, main)'
+    resource: https://gitlab.gnome.org/GNOME/loupe/-/raw/main/CONTRIBUTING.md
+  - id: gnome-showtime-readme
+    title: 'README.md (GNOME/showtime, main; GitHub mirror, byte-identical to gitlab.gnome.org on 2026-10-31)'
+    resource: https://raw.githubusercontent.com/GNOME/showtime/main/README.md
+  - id: gnome-dia-hacking
+    title: 'HACKING.md — So-called AI (GNOME/dia, master)'
+    resource: https://gitlab.gnome.org/GNOME/dia/-/raw/master/HACKING.md
 ---
 
 **Stance: AI as a tool is permitted, an AI-authored extension is rejected — and what this governs is
@@ -127,9 +151,9 @@ precisely the pages where such a rule would sit:[^gnome-handbook]
 
 | Page | What it covers | AI mentions |
 |---|---|---|
-| `development/change-submission` | *"how to submit code changes to projects … hosted on gitlab.gnome.org"* | none |
+| `development/change-submission` | *"how to submit code changes to projects … hosted on gitlab.gnome.org"*[^gnome-handbook-change-submission] | none |
 | `development/commit-messages` | commit conventions — where a trailer would be documented | none |
-| `development/legal` | *"GNOME's legal guidelines and requirements for development projects"* | none |
+| `development/legal` | *"GNOME's legal guidelines and requirements for development projects"*[^gnome-handbook-legal] | none |
 
 Also none across the six `maintainers/` pages, the seven `issues/` pages, or anywhere else.
 
@@ -166,7 +190,7 @@ output."*[^gnome-libadwaita-contributing]
 `sophieherold`: *"I just merged an addition to Loupe's contribution guidelines that bans the use of
 AI generated content in contributions. For now, I came up with the following text. **I'm in favor of
 adopting a similar policy for all official GNOME software.**"*[^gnome-loupe-discourse] Several
-adopters credit it in place — `console`, `dia` and `gitg` all carry *"Adopted from Loupe"*, and
+adopters credit it in place — `console`, `dia` and `gitg` all carry *"Adopted from Loupe"*,[^gnome-console-readme][^gnome-dia-readme][^gnome-gitg-readme] and
 `gitg` links back to that very thread.
 
 **This is policy diffusion across a federation, observable and dated — and it bypassed the centre
@@ -194,9 +218,9 @@ for assistance grow increasingly reliant on them and stop questioning the
 results"*.[^gnome-commander-contributing]
 
 **Two modules reject the boilerplate's own carve-out.** The shared text exempts *"purely translating
-texts for issues and comments to English"*. `libxml2` refuses that exception under a heading of its
+texts for issues and comments to English"*.[^gnome-loupe-contributing] `libxml2` refuses that exception under a heading of its
 own, **Strict No LLM / No AI Policy**: *"No LLMs for issues. No LLMs for patches / pull requests. No
-LLMs for comments on the bug tracker, **including translation**."* It substitutes a human
+LLMs for comments on the bug tracker, **including translation**."*[^gnome-libxml2-readme] It substitutes a human
 accommodation instead — *"English is encouraged, but not required. You are welcome to post in your
 native language and rely on others to have their own translation tools of
 choice"*.[^gnome-libxml2-readme] **That is the accessibility axis being decided the other way**, and
@@ -209,8 +233,9 @@ and "in any form" are broader than the boilerplate**, which bans generated *cont
 AI's involvement in authorship at all.
 
 The shortest policy in this bundle is also here — `showtime`, in full: *"We do not accept AI-generated
-contributions."* And `dia` puts the policy in `README.md` with a cross-reference from `HACKING.md`,
-under the heading *"So-called 'AI'"*: *"All hallucinations in Dia are purely organic in origin."*
+contributions."*[^gnome-showtime-readme] And `dia` puts the Loupe text in `README.md` and points to it from `HACKING.md`, under the
+heading *"So-called 'AI'"*: *"All hallucinations in Dia are purely organic in origin"*, followed by a
+link to the policy.[^gnome-dia-hacking]
 
 **A conditional permission, in [GTK](gtk.md)**, which has its own record. It permits AI use under six
 requirements, requires disclosure in the merge request, and **forbids the `Assisted-by:` trailer the
@@ -272,3 +297,11 @@ between them is the kind of thing a contributor complaint tends to close.
 [^gnome-libxml2-readme]: [README.md — Strict No LLM / No AI Policy (libxml2, main)](https://gitlab.gnome.org/GNOME/libxml2/-/raw/master/README.md)
 [^gnome-vte-readme]: [README.md — contribution licensing and AI (vte, main)](https://gitlab.gnome.org/GNOME/vte/-/raw/master/README.md)
 [^gnome-git-submitting-patches]: [Documentation/SubmittingPatches (git/git, master) — Git's detection rule](https://raw.githubusercontent.com/git/git/master/Documentation/SubmittingPatches)
+[^gnome-handbook-change-submission]: [Change submission — GNOME Project Handbook](https://handbook.gnome.org/development/change-submission.html)
+[^gnome-handbook-legal]: [Legal — GNOME Project Handbook](https://handbook.gnome.org/development/legal.html)
+[^gnome-console-readme]: [README.md — Use of Generative AI (GNOME/console, main)](https://gitlab.gnome.org/GNOME/console/-/raw/main/README.md)
+[^gnome-dia-readme]: [README.md — Use of Generative AI (GNOME/dia, master)](https://gitlab.gnome.org/GNOME/dia/-/raw/master/README.md)
+[^gnome-gitg-readme]: [README.md — Use of Generative AI (GNOME/gitg, master)](https://gitlab.gnome.org/GNOME/gitg/-/raw/master/README.md)
+[^gnome-loupe-contributing]: [CONTRIBUTING.md — the original text (GNOME/loupe, main)](https://gitlab.gnome.org/GNOME/loupe/-/raw/main/CONTRIBUTING.md)
+[^gnome-showtime-readme]: [README.md (GNOME/showtime, main; GitHub mirror, byte-identical to gitlab.gnome.org on 2026-10-31)](https://raw.githubusercontent.com/GNOME/showtime/main/README.md)
+[^gnome-dia-hacking]: [HACKING.md — So-called AI (GNOME/dia, master)](https://gitlab.gnome.org/GNOME/dia/-/raw/master/HACKING.md)

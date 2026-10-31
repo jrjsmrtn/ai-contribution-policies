@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **[`projects/gnome.md`](knowledge/projects/gnome.md)**: eight quotations from GNOME modules and handbook
+  pages the record named but did not cite now cite them. The Dia passage named the wrong file — the
+  heading and sentence are in `HACKING.md`, not `README.md` — and ended a quotation with a full stop
+  where the sentence continues. Showtime's 331-character README is cited from GNOME's GitHub mirror,
+  byte-identical, because the GitLab copy is too short for the snapshot's block-page floor.
+
 ## [0.30.3] - 2026-10-31
 
 ### Fixed
