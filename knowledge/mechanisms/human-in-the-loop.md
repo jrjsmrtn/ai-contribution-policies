@@ -63,7 +63,7 @@ same rule — they are governing five different things and calling it one.
 | [cdxgen](../projects/cdxgen.md) | **a level you declare** | `auto` is a disclosure value, not a prohibition[^hitl-aideclaration] |
 
 **The same mode of work is a bannable offence in four projects and a disclosable attribute in a
-fifth.** cdxgen's scale defines `auto` as *"Human prompts and AI acts autonomously, bringing the
+fifth.** cdxgen's scale defines `auto` as *"Human prompts and AI acts autonomously bringing the
 task to completion"* and asks you to record it per path. Nothing in this bundle is a sharper
 disagreement about the same behaviour.
 

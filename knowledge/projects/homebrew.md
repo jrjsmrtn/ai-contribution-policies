@@ -239,7 +239,7 @@ Two instructions in it have no counterpart elsewhere in this bundle. The trust c
 concrete: *"Verify AI output for correctness as you would that of an avatarless GitHub user with no
 previous contributions."* And **editing the agent instructions is gated by contribution count**:
 when a model needs repeated correction, *"ask it to write or update an `AGENTS.md` file so the next
-person and the next agent start from a better place. It's acceptable to do this in the same pull
+person and the next agent start from a better place. … It's acceptable to do this in the same pull
 request as your 3rd or later PR. Don't do this on your first."*[^hb-rai] That is an admission rule for
 the instruction file itself — see
 [instruction-file governance](../mechanisms/instruction-file-governance.md).

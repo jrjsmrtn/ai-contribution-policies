@@ -35,7 +35,7 @@ produced, not on what the distribution ships.[^gentoo-council-ai-policy]
 ## The stated grounds
 
 Three, named together: **copyright, ethical and quality concerns**. The motion is explicitly
-revisitable *"should a case been made over such a tool that does not pose"* those
+revisitable *"should a case be made for such a tool that does not pose"* those
 concerns[^gentoo-council-ai-policy] — so the ban is conditional on the state of the tooling rather
 than on the idea of AI assistance, and a re-check should look for whether that case has been made.
 

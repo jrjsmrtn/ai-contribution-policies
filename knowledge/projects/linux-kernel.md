@@ -116,7 +116,7 @@ widely before this policy landed, asks for a structurally invalid trailer block.
 
 ## Disclose the prompts, not just the fact
 
-`generated-content.rst` asks for more than a trailer. Contributors *"should be transparent about the
+`generated-content.rst` asks for more than a trailer. Contributors are told to *"be transparent about the
 origin of content in cover letters and changelogs"*, and the suggested detail
 includes:[^kernel-generated-content]
 

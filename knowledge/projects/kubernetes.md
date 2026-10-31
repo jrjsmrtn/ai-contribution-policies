@@ -26,6 +26,12 @@ sources:
   - id: k8s-maintainership-blog
     title: 'Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)'
     resource: https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/
+  - id: k8s-kernel-wireless
+    title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
+    resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
+  - id: k8s-gtk-contributing
+    title: 'CONTRIBUTING.md — AI Contribution Policy (GTK, main)'
+    resource: https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md
 ---
 
 **Stance: permitted, disclosed in the pull request, and never in a commit trailer.** The policy was
@@ -55,7 +61,7 @@ compliance looks like tends either to over-disclose or to skip it.
 | [GTK](gtk.md) | forbidden | it is *"free advertising for AI companies"* |
 | **Kubernetes** | forbidden | it **dilutes human accountability** |
 
-The blog puts the second reason plainly: *"This isn't about diminishing AI's role as a tool — it's
+The blog puts the second reason plainly: *"This isn't about diminishing AI's role as a tool—it's
 about maintaining clear accountability. **If something breaks, there needs to be a human who
 understands why and can fix it.**"*[^k8s-maintainership-blog]
 
@@ -97,8 +103,8 @@ applies:[^k8s-ai-guidance]
   reviewers, **the PR will be closed**."*
 
 The second is the same rule [GTK](gtk.md) writes as *"Do NOT feed the review feedback to an
-LLM/GenAI tool"* and the [Linux wireless maintainer](linux-kernel.md) enforced unilaterally by
-refusing to *"argue with an LLM"* — here with the outcome spelled out in advance.
+LLM/GenAI tool"*[^k8s-gtk-contributing] and the [Linux wireless maintainer](linux-kernel.md) enforced unilaterally by
+refusing to *"argue with an LLM"*[^k8s-kernel-wireless] — here with the outcome spelled out in advance.
 
 ## Two limits nobody else states this bluntly
 
@@ -173,3 +179,5 @@ co-author check spreads. It does not depend on a maintainer noticing, which is s
 
 [^k8s-ai-guidance]: [contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)](https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md)
 [^k8s-maintainership-blog]: [Open source maintainership in the age of AI (Kevin Hannon, kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)
+[^k8s-kernel-wireless]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
+[^k8s-gtk-contributing]: [CONTRIBUTING.md — AI Contribution Policy (GTK, main)](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)

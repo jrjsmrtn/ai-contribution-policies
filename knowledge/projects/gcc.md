@@ -76,12 +76,12 @@ entirely — with one condition, that the contributor verifies the output.
 
 ## Transparency, and who may act
 
-- *"The commit message for any contribution of LLM-generated content must include an `Assisted-by:`
+- *"The commit message for any contribution of LLM-generated content must include an “Assisted-by:”
   tag."*[^gcc-ai-policy]
 - *"All contributions must be submitted by a human who understands the changes and is prepared to
   answer questions about them. The decision to include the contribution in the project must also be
   made by a human."*[^gcc-ai-policy]
-- *"Only a human may provide the `Signed-off-by:` tag certifying the Developer Certificate of Origin
+- *"Only a human may provide the “Signed-off-by:” tag certifying the Developer Certificate of Origin
   (DCO). **An LLM may not commit code to the project repository.**"*[^gcc-ai-policy]
 
 GCC is the **fourth** project here to land on `Assisted-by:`, after the

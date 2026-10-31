@@ -38,6 +38,9 @@ sources:
   - id: astral-rg-ai-policy
     title: 'AI_POLICY.md (BurntSushi/ripgrep, master) — the first borrower'
     resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
+  - id: astral-gh-org
+    title: 'astral-sh — GitHub organisation page'
+    resource: https://github.com/astral-sh
 ---
 
 **Stance: permitted for code, autonomous agents refused, all maintainer-facing prose reserved to
@@ -131,7 +134,7 @@ distinction that matters to a reader is not who published it — it is **who it 
 
 Astral's own site leads with *"Astral to join OpenAI as part of the Codex team"*,[^astral-site] and its
 GitHub organisation describes itself as *"High-performance developer tools for the Python ecosystem,
-from @OpenAI."*
+from @openai."*[^astral-gh-org]
 
 **So the author of the most-copied AI contribution policy in this bundle is being acquired by an AI
 lab, while forbidding autonomous agents in its own repositories.** No inference is drawn here about
@@ -172,3 +175,4 @@ starting point.
 [^astral-rg-contributing]: [CONTRIBUTING.md (BurntSushi/ripgrep, master) — the stub ripgrep copied](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/CONTRIBUTING.md)
 [^astral-policy-commit]: [commit 88a2f5d5 — Add an AI policy (#1) (astral-sh/.github, 2026-03-13)](https://github.com/astral-sh/.github/commit/88a2f5d5c9cdf229b098ded0191199e41eca4249)
 [^astral-rg-ai-policy]: [AI_POLICY.md (BurntSushi/ripgrep, master) — the first borrower](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
+[^astral-gh-org]: [astral-sh — GitHub organisation page](https://github.com/astral-sh)

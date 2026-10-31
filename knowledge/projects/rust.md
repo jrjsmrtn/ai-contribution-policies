@@ -198,7 +198,7 @@ is to learn *whether the experiment is working*, not to gatekeep. And the experi
 
 **No other record here caps AI-created work as a share of merges.** [Homebrew](homebrew.md) caps how
 many AI-assisted pull requests one person may have open; Rust caps the proportion the project accepts.
-The window matches the release cycle, and the policy *"strongly suggests"* automating the breaker to
+The window matches the release cycle, and the policy's authors *"strongly suggest"* automating the breaker to
 avoid inconsistent enforcement.
 
 ## How it changes

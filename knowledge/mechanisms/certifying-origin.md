@@ -101,7 +101,7 @@ volume does.
 
 ## Two projects removed the instrument
 
-**NetworkManager abolished it.** *"Do not use 'Signed-off-by:' lines in commits for NetworkManager. It
+**NetworkManager abolished it.** *"Do not use “Signed-off-by:” lines in commits for NetworkManager. It
 has no meaning."*[^co-nm] Certification attaches instead to a licensing commitment — all new
 contributions *"MUST be made under terms of LGPL-2.1-or-later"* — and the AI clause hooks directly to
 that: *"You are the one certifying that the contribution can be released under LGPL-2.1-or-later. A

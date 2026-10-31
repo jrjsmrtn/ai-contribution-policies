@@ -119,7 +119,7 @@ NetworkManager's *"If you cannot discuss your own patch with a reviewer, it will
 simultaneously the obligation and the test.
 
 **Git is the exception that tries to detect, and shows why the others do not.** It rejects
-submissions that *"sound overly formal or bloated"*[^pr-git] — a register test, applied to the prose
+anything that *"sounds overly formal or bloated"*[^pr-git] — a register test, applied to the prose
 rather than to the person. It catches machine-written text and it also catches a careful non-native
 speaker, and the project supplies no way to tell the two apart.
 

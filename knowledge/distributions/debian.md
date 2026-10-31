@@ -60,7 +60,7 @@ it**.[^debian-gr-2026-002]
 
 > **This record carried the automated result for a day before the official one existed, and said so
 > in place.** Devotee published the computed tally at 2026-08-29 00:01:45 UTC, describing itself as
-> *"an automated, unofficial publication of vote results"* with official results *"to follow, sent in
+> *"an automated, unofficial publication of vote results"* with official results that *"shall follow, sent in
 > by the vote taker"*.[^debian-gr-2026-002-results] **Every figure in it matched the declaration**,
 > which is the expected outcome — Devotee computes what the Secretary certifies — but the two were
 > recorded as different kinds of claim while only one existed. The distinction cost nothing and would

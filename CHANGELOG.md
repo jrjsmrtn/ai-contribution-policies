@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **Nineteen more quotations corrected against their sources.** Thirteen had a slip the source does not
+  have: a changed word (*shall* read as *to*, *be made for* as *been made over*, *sounds* as *sound*),
+  an added comma, a spaced dash, single quotes and backticks where the source has double quotes, a
+  sentence elided without an ellipsis, and Astral's GitHub description, now cited to GitHub rather than
+  its website and quoted as GitHub renders it. Six were credited to a neighbouring footnote, including
+  the DuckDB/ripgrep comparison table, whose cells now each cite their own policy. One phrase was the
+  bundle's own summary and is now plain text.
+- **[`log.md`](knowledge/log.md)**: an entry published in v0.30.2 pointed at a list kept outside the
+  bundle; reworded so a reader of the bundle alone can follow it.
+
 ## [0.30.2] - 2026-10-31
 
 ### Fixed

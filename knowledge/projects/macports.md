@@ -209,7 +209,7 @@ debate on 2026-08-20 — reading the retired example as *"mentioning Claude twic
 
 He names three harms: statistics that matter more to companies than to open-source projects;
 *"lowering standards as I feel developers are more accepting of some sloppiness if it's known that an
-LLM wrote it"*; and a commit log *"littered with 'Claude', basically providing free advertising to AI
+LLM wrote it"*; and a commit log *"littered with “Claude”, basically providing free advertising to AI
 companies"*.[^macports-pr-420] The last is the reason [GTK](gtk.md) bans the trailer and the kernel
 removed the model from it — reached here independently, in a thread that does not know the kernel
 reached it too. His conclusion is that the draft is *"too focused on LLMs and their disclosure, but

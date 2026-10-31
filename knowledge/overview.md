@@ -385,7 +385,7 @@ Four organisations reason from the **Developer Certificate of Origin** and reach
   licensing commitment — every contribution must be releasable under LGPL-2.1-or-later, and *"A tool
   cannot certify that for you."*[^nm-contributing]
 
-So *"they require a DCO"* predicts nothing about a project's stance. Any summary organised around
+So "they require a DCO" predicts nothing about a project's stance. Any summary organised around
 that fact is organised around noise.
 
 [GCC](projects/gcc.md) shows the instrument is not even the unit of choice: it accepts **either** an

@@ -123,10 +123,10 @@ and DuckDB's differ in exactly four places:
 
 | ripgrep | DuckDB |
 |---|---|
-| *"…when communicating with maintainers."* | *"…when communicating with maintainers **and contributors**."* |
-| *"…may be hidden without notice."* | *"…may be **hidden/closed** without notice."* |
-| *"Do not share long snippets."* | *"Do not share long snippets: **pasting an interaction with AI in a pull request description is not a substitute for human commentary.**"* |
-| *"This policy was adapted from [uv's AI policy]."* | *"…adapted from [ripgrep's AI policy], which was adapted from [uv's AI policy]."* |
+| *"…when communicating with maintainers."*[^dd-ripgrep-policy] | *"…when communicating with maintainers **and contributors**."*[^dd-ai-policy] |
+| *"…may be hidden without notice."*[^dd-ripgrep-policy] | *"…may be **hidden/closed** without notice."*[^dd-ai-policy] |
+| *"Do not share long snippets."*[^dd-ripgrep-policy] | *"Do not share long snippets: **pasting an interaction with AI in a pull request description is not a substitute for human commentary.**"*[^dd-ai-policy] |
+| *"This policy was adapted from [uv's AI policy]."*[^dd-ripgrep-policy] | *"…adapted from [ripgrep's AI policy], which was adapted from [uv's AI policy]."*[^dd-ai-policy] |
 
 DuckDB also added section headings. ripgrep's policy has not changed since 2026-05-26, so the text
 DuckDB took on 2026-06-03 is the current one.
