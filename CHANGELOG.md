@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- **[`foundations/openinfra.md`](knowledge/foundations/openinfra.md)** re-verified against version
+  0.12.0 of OpenInfra's policy (2026-09-25), which reversed the predictive/generative label split and
+  the heightened scrutiny asked of reviewers. The earlier version is cited from an archived copy.
+  [`overview.md`](knowledge/overview.md), [`mechanisms/assisted-by-trailer.md`](knowledge/mechanisms/assisted-by-trailer.md)
+  and [`foundations/apache-software-foundation.md`](knowledge/foundations/apache-software-foundation.md)
+  no longer describe the old scheme as current.
 - **[`projects/packer.md`](knowledge/projects/packer.md)**: the audience gate took a word in a quotation of
   Packer's `AGENTS.md` for maintainer-facing context, and failed every weekly sweep from 2026-10-12. The
   line is now marked as deliberate.

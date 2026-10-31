@@ -76,12 +76,13 @@ That makes **three field names across five organisations** for the same job:
 The semantics differ too, not only the spelling — *assisted* and *generated* describe different
 degrees of authorship, so a project could plausibly want both.
 
-**[OpenInfra](openinfra.md) uses both, and says which is which**: `Assisted-By:` for *predictive*
-tools (auto-complete), `Generated-By:` for *generative* ones. Read through that scheme, the ASF and
-the [Linux kernel](../projects/linux-kernel.md) are not disagreeing about spelling — each has
-adopted the tag for one degree of authorship and left the other unnamed. Anyone building tooling
-should still emit what the target project asks for, but should not assume the two fields are
-interchangeable: they are not synonyms.
+**[OpenInfra](openinfra.md) used both and said which was which** until 2026-09-25: `Generated-By:`
+when a substantial portion of a patch was generated, `Assisted-By:` otherwise. Read through that
+scheme, the ASF and the [Linux kernel](../projects/linux-kernel.md) were not disagreeing about
+spelling; each had adopted the tag for one degree of authorship. OpenInfra's version 0.12.0 then
+recommended `Assisted-By:` for all material use while keeping `Generated-By:` approved, so the one
+policy that drew the distinction no longer asks contributors to make it. Anyone building tooling should
+still emit what the target project asks for, and should not assume the two fields mean the same.
 
 ## What a contributor must do
 

@@ -41,6 +41,9 @@ sources:
   - id: qemu-relax-trailer
     title: 'QEMU code provenance relaxation proposal (qemu-devel, 2026-05)'
     resource: https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html
+  - id: openinfra-policy-trailer-0112
+    title: 'Policy for AI Generated Content, version 0.11.2 — OpenInfra Foundation, archived 2026-08-27'
+    resource: http://web.archive.org/web/20260827150910/https://openinfra.org/legal/ai-policy/
 ---
 
 **It is not an AI trailer.** That is the fact most readings of it get wrong, and it explains both why
@@ -66,7 +69,7 @@ several of the disagreements below follow from that.
 | **Required, model named** | [Nerves](../projects/nerves.md), [Ansible](../projects/ansible.md) | `AGENT_NAME:MODEL_VERSION`, `[tool name/version]` |
 | **Required** | [GCC](../projects/gcc.md) | `Assisted-by:` |
 | **Forbidden** | [GTK](../projects/gtk.md), [Kubernetes](../projects/kubernetes.md), [Dependency-Track](../projects/dependency-track.md), [systemd](../projects/systemd.md), [NetworkManager](../projects/networkmanager.md), [Homebrew](../projects/homebrew.md) | — |
-| **Replaced** | [ASF](../foundations/apache-software-foundation.md) `Generated-by:`; [OpenInfra](../foundations/openinfra.md) both, distinguished; [QEMU](../projects/qemu.md) proposed `AI-used-for:` | — |
+| **Replaced** | [ASF](../foundations/apache-software-foundation.md) `Generated-by:`; [OpenInfra](../foundations/openinfra.md) both approved, `Assisted-By` recommended since 2026-09; [QEMU](../projects/qemu.md) proposed `AI-used-for:` | — |
 
 [MacPorts](../projects/macports.md) has a proposal quoting a form the kernel had already retired; it
 is not adopted — yet 316 commits in its ports tree already carry that retired form, 313 by one
@@ -117,8 +120,8 @@ closes pull requests that carry it.** There is no convention to follow, only per
 tooling that emits these tags must key on the destination repository rather than on a default.
 
 Two further incompatibilities sit under the same field name. **Value grammars differ** — a trailer
-formatted for the kernel is not a valid Ansible one. And **OpenInfra's labels are mutable**: a
-reviewer may remove one *"if substantial human reworking occurs"*.[^openinfra-policy-trailer]
+formatted for the kernel is not a valid Ansible one. And **OpenInfra's labels are mutable**: after
+substantial rework a reviewer should *"consider whether it makes sense to remove"* one.[^openinfra-policy-trailer]
 Everywhere else the tag records history and is permanent. Those are incompatible readings of what a
 provenance tag *is*, and a mutable history-tag is simply an inaccurate one.
 
@@ -132,11 +135,12 @@ the account.
 
 Two alternatives kept the commit and changed the field. [ASF](../foundations/apache-software-foundation.md)
 uses `Generated-by:`, reasoning from licence compatibility and third-party rights rather than from
-attribution.[^asf-tooling-trailer] [OpenInfra](../foundations/openinfra.md) uses **both**, and states the
-distinction: `Assisted-By:` for *predictive* tools such as auto-complete, `Generated-By:` for
-*generative* ones.[^openinfra-policy-trailer] **That is the only place the vocabulary is split by what
-the tool did rather than by whether one was used**, and it is the sharpest version of the field
-available.
+attribution.[^asf-tooling-trailer] [OpenInfra](../foundations/openinfra.md) used **both**, and until 2026-09-25 split them by what the
+tool did: `Generated-By:` when *"a substantial portion of a patch is generated"*, `Assisted-By:`
+otherwise.[^openinfra-policy-trailer-0112] **That was the only place the vocabulary was split by what
+the tool did rather than by whether one was used, and its author retired it.** Version 0.12.0
+recommends `Assisted-By` for all material use, keeps `Generated-By` approved, and explains the move as
+recognising *"that AI tools assist developers in many different ways"*.[^openinfra-policy-trailer]
 
 [QEMU](../projects/qemu.md)'s pending proposal reframes the job entirely with `AI-used-for:`,
 recording **where** AI was used rather than that it was, and says why that differs: `Assisted-by`
@@ -165,8 +169,8 @@ convention, not a standard**, and read the destination's rule before emitting on
 ## What to watch
 
 Whether the bans keep outnumbering the requirements among new policies — the trend across 2026 is
-towards prohibition plus pull-request disclosure. Whether OpenInfra's predictive/generative split is
-picked up anywhere else, since it is the only refinement of the field that adds information. And
+towards prohibition plus pull-request disclosure. Whether anyone revives the split OpenInfra
+retired in 2026-09, since it was the only refinement of the field that added information. And
 whether QEMU's `AI-used-for:` lands, which would be the first token designed for the job rather than
 borrowed for it.
 
@@ -178,3 +182,4 @@ borrowed for it.
 [^openinfra-policy-trailer]: [AI Generated Content Policy — OpenInfra Foundation](https://openinfra.org/legal/ai-policy)
 [^asf-tooling-trailer]: [Generative Tooling Guidance — The Apache Software Foundation](https://www.apache.org/legal/generative-tooling.html)
 [^qemu-relax-trailer]: [QEMU code provenance relaxation proposal (qemu-devel, 2026-05)](https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html)
+[^openinfra-policy-trailer-0112]: [Policy for AI Generated Content, version 0.11.2 — OpenInfra Foundation, archived 2026-08-27](http://web.archive.org/web/20260827150910/https://openinfra.org/legal/ai-policy/)

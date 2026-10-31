@@ -13,6 +13,15 @@ with a copied directory.
 
 ## 2026-10-31
 
+* **Re-verified [`foundations/openinfra.md`](foundations/openinfra.md): the policy reversed itself.**
+  Version 0.12.0, dated 2026-09-25, welcomes AI use, recommends `Assisted-By` for all material use while
+  still approving `Generated-By`, and holds labelled changes to the same standard as any other. The
+  record described version 0.11.2: labels split by what the tool did, and heightened scrutiny from
+  reviewers. An archived copy of 2026-08-27 confirms the old wording and is now cited for it. Found
+  because a quotation failed, not by a scheduled re-read: the record was not due until 2027-02-04.
+* **A quotation in that record matched neither version.** The label-removal clause was quoted as
+  wording the page has never used; it is now quoted from the page. The overview, the trailer mechanism
+  page and the ASF record repeated the old scheme and are corrected.
 * **Added [`projects/pg-duckdb.md`](projects/pg-duckdb.md)**, asked for with `pg_ladybug` as the two
   database projects' Postgres extensions. **pg_duckdb has no AI contribution policy**, measured: zero
   matches for ten AI terms across 18 files, against two in a control file. Its guide was trimmed from

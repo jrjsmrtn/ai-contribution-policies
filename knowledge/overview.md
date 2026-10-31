@@ -489,8 +489,9 @@ commits. The mechanism is evidenced; intent is not claimed. By 2026-09-14 the re
 request now cites as its authority a page that contradicts it — and nothing announced either change.
 
 **Where it is going**: disclosure in the pull request, which the three most recent adopters require
-instead. [OpenInfra](foundations/openinfra.md) is the one refinement worth knowing — `Assisted-By:`
-for *predictive* tools, `Generated-By:` for *generative* ones[^openinfra-ai-policy] — and
+instead. [OpenInfra](foundations/openinfra.md) split the field by what the tool did — `Assisted-By:` for
+assistive tools, `Generated-By:` for generative ones — until 2026-09-25, when it began recommending
+`Assisted-By` for all material use[^openinfra-ai-policy] — and
 [QEMU](projects/qemu.md)'s proposed `AI-used-for:` is the one attempt to record **where** AI was used
 rather than that it was.[^qemu-relax-proposal]
 
@@ -510,8 +511,9 @@ declined.[^debian-gr-2026-002] Adding what the other records surface, a policy h
 4. **Upstream, or only the project's own work?**
 5. **May contributor data leave the project's infrastructure?**
 6. **Is there a volume threshold?**
-7. **Who carries the burden — submitter only, or reviewers too?** OpenInfra requires reviewers to
-   apply *"heightened scrutiny"* to labelled changes.[^openinfra-ai-policy]
+7. **Who carries the burden — submitter only, or reviewers too?** OpenInfra answered *reviewers
+   too* until 2026-09-25, then reversed: *"neither a higher nor a lower bar applies because a tool
+   was involved."*[^openinfra-ai-policy]
 
 A policy silent on any of these has a gap someone will find. Two more decisions sit underneath:
 **where the rule lives** (Zig's ban is a Code of Conduct clause, so a violation is misconduct rather
