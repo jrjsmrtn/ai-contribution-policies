@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.30.3] - 2026-10-31
+
 ### Fixed
 
 - **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md)** re-verified: the kernel removed its
