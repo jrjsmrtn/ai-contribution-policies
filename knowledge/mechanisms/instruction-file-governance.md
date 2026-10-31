@@ -114,14 +114,14 @@ the other. Given how much else in this bundle spread by copying, **arriving at t
 separately is the finding** rather than the count.
 
 **Zed's version is spreading, and by how much is not established.** GitHub code search returns dozens
-of repositories carrying its *"High bar for new rules"* heading. Spot checks found most to be
+of repositories carrying its *"High bar for new rules"*[^gov-zed] heading. Spot checks found most to be
 re-uploads of the Zed codebase under new names rather than git forks, and the handful of genuinely
 different projects had taken the heading without Zed's distinctive phrasing — adaptation rather than
 verbatim copying. **The population was not enumerated; a rate limit stopped the check** and the number
 is not claimed.
 
 **⚠ Code search is not a reliable population estimate here, demonstrated rather than assumed.** The
-only results for systemd's phrase *"Only add instructions to this file"* are **this bundle's own
+only results for systemd's phrase *"Only add instructions to this file"*[^gov-systemd] are **this bundle's own
 records**, quoting it. systemd's `AGENTS.md` is not in the index. A search-derived count would have
 reported one implementation and missed the other.
 
@@ -129,7 +129,7 @@ reported one implementation and missed the other.
 
 **It bounds what enters, not what stays.** Neither project describes removing a rule once the failure
 it recorded stops happening, and both files will accumulate on a one-way ratchet unless something
-prunes them. The private tracking bundle in this family uses *"past `stale_after` for two consecutive
+prunes them. The private tracking bundle in this family uses *"past `stale_after` for two consecutive <!-- quote-ok: the rule of a private sibling bundle, which a reader cannot fetch -->
 review cycles → delete, don't carry"* for exactly this reason; nothing equivalent appears in an
 instruction file here.
 

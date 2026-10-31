@@ -115,7 +115,7 @@ weakest work for the reviewer, which is the same instinct as
 nothing detects an agent that simply does not comply.
 
 The anti-fabrication clause is also the only place in this bundle where **inventing citations** is
-named as a rejection criterion, which follows directly from the *"fictitious content"* the diagnosis
+named as a rejection criterion, which follows directly from the *"fictitious content"*[^dj-submitting-patches] the diagnosis
 reports.
 
 ## It scaffolds nothing
@@ -135,7 +135,7 @@ closed unread, and a pattern of them can cost you access.
 
 ## Re-verification notes
 
-**Two files, and they must agree.** The policy is the *"AI-Assisted Contributions"* section of
+**Two files, and they must agree.** The policy is the *"AI-Assisted Contributions"*[^dj-submitting-patches] section of
 `docs/internals/contributing/writing-code/submitting-patches.txt`; the enforcement is
 `.github/copilot-instructions.md`. **A divergence between them would be the interesting finding** —
 today the bot is made to quote the documentation, and nothing checks that it still does.

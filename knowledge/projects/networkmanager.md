@@ -37,6 +37,9 @@ sources:
   - id: nm-canary-commit
     title: 'commit 329b610e — contrib: reject the AI canary marker in contributor text'
     resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e
+  - id: nm-commit-symlinks
+    title: 'commit 4f6265fb — AGENTS.md: add symlinks under the names other agents look for (2026-09-04)'
+    resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/4f6265fb6498
 ---
 
 **Stance: permitted, prose reserved to humans, and — since 2026-09-03 — disclosed.** NetworkManager
@@ -214,12 +217,12 @@ The policy is a section of `CONTRIBUTING.md` in the repository, so `git log -- C
 `/-/blob/main/CONTRIBUTING.md` returns HTTP 200 with the file text **absent** from the response body;
 `/-/raw/main/CONTRIBUTING.md` returns the file. The blob URL is the `resource:` here because it is
 the right link for a human, but a re-verification must read the raw path or the API. During this
-first pass the raw path also returned a GitLab *"404: Page not found"* body under HTTP 200 once,
+first pass the raw path also returned a GitLab *"404: Page not found"* body under HTTP 200 once, <!-- quote-ok: an error body observed once on fetch, not a stored source -->
 transiently, before serving correctly — **check for the text you came for, never for the status
 code.**
 
 **The 2026-08-29 version of this record predicted its own obsolescence and named the trigger** —
-*"watch also for a disclosure requirement being added; its absence is the most distinctive thing here,
+*"watch also for a disclosure requirement being added; its absence is the most distinctive thing here, <!-- quote-ok: this record's own earlier wording, quoted as a prediction -->
 and the easiest thing to change."* Disclosure arrived 2026-09-03. The prediction was right, and the
 record was still wrong for five days, which is the argument for `stale_after` being a floor rather
 than a schedule.
@@ -231,7 +234,7 @@ re-verification that reads only the first will report the 2026-08-07 position an
 since.
 
 `CLAUDE.md` is a symlink to `AGENTS.md`, added 2026-09-04 in a commit titled *"AGENTS.md: add symlinks
-under the names other agents look for"* — the settled construction across this bundle, which
+under the names other agents look for"*[^nm-commit-symlinks] — the settled construction across this bundle, which
 [Asahi Linux](asahi-linux.md), [Dependency-Track](dependency-track.md), [systemd](systemd.md),
 [Elixir](elixir.md) and [Zed](zed.md) all use. See
 [agent-file pointers](../mechanisms/agent-file-pointers.md).
@@ -247,3 +250,4 @@ projects; it is the first external campaign page cited by any policy in this bun
 [^nm-mr-template]: [Default merge request template (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/.gitlab/merge_request_templates/Default.md)
 [^nm-canary-commit]: [commit 329b610e — contrib: reject the AI canary marker in contributor text](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e)
 [^nm-policy-commit]: [commit 565a3422 — CONTRIBUTING: add a policy for AI coding assistants](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/565a342281d6cf32885783f87c008734a235f779)
+[^nm-commit-symlinks]: [commit 4f6265fb — AGENTS.md: add symlinks under the names other agents look for (2026-09-04)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/4f6265fb6498)

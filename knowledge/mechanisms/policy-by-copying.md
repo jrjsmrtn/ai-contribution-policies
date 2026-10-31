@@ -42,6 +42,9 @@ sources:
   - id: cp-gcc
     title: 'GCC AI policy'
     resource: https://gcc.gnu.org/ai-policy.html
+  - id: cp-astral-original
+    title: 'AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted'
+    resource: https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md
 ---
 
 **Very few of these policies were written from scratch.** Six copying events in this bundle are
@@ -53,7 +56,7 @@ made it work.**
 
 | Source | Borrower | Date | Attributed | What was dropped |
 |---|---|---|:--:|---|
-| Astral (`astral-sh/.github`, org default) | [ripgrep](../projects/ripgrep.md) | 2026-05-26 | ● SHA-pinned | scope — *"our projects"* → *"this project"* |
+| Astral (`astral-sh/.github`, org default) | [ripgrep](../projects/ripgrep.md) | 2026-05-26 | ● SHA-pinned | scope — *"our projects"*[^cp-astral-original] → *"this project"*[^cp-ripgrep] |
 | [ripgrep](../projects/ripgrep.md) | [Zed](../projects/zed.md) | 2026-08-21 | ● SHA-pinned | — (but pinned to a superseded revision) |
 | [ripgrep](../projects/ripgrep.md) | [DuckDB](../projects/duckdb.md) | 2026-06-03 | ● both hops | — (four sentences changed; ripgrep cited unpinned) |
 | [Zed](../projects/zed.md) | [systemd](../projects/systemd.md) | 2026-09-03 | ○ | the canary's **check**, and the prose clause |
@@ -196,3 +199,4 @@ caught up by 2026-09-14, with nothing to announce either change.
 [^cp-macports]: [macports-base pull request 420 — diff](https://patch-diff.githubusercontent.com/raw/macports/macports-base/pull/420.diff)
 [^cp-kernel-rendered]: [Coding assistants — Linux kernel documentation (rendered, released kernel)](https://docs.kernel.org/process/coding-assistants.html)
 [^cp-gcc]: [GCC AI policy](https://gcc.gnu.org/ai-policy.html)
+[^cp-astral-original]: [AI_POLICY.md (astral-sh/.github, pinned c5187e2) — the text ripgrep adopted](https://raw.githubusercontent.com/astral-sh/.github/c5187e200db51bfe11d56e13053d29bd3793fdd8/AI_POLICY.md)

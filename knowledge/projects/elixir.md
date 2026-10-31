@@ -126,7 +126,7 @@ discussion posts; translate with AI if you need to, but do not let it reply for 
 
 ## Re-verification notes
 
-The policy lives in `CONTRIBUTING.md` under *"Using AI and coding agents"* and *"AI contributions"*.
+The policy lives in `CONTRIBUTING.md` under *"Using AI and coding agents"* and *"AI contributions"*[^elixir-contributing].
 **Read the repository copy** — `git log -- CONTRIBUTING.md` dates the first AI guidance to
 2026-04-15 and the extension to 2026-05-04.
 

@@ -250,7 +250,7 @@ answers HTTP 200 with the file text absent, exactly as
 
 **The handbook, by contrast, is static HTML and fully machine-retrievable** — a Sphinx site, every
 page readable with a plain fetch. The first version of this record asserted the opposite, that it
-*"renders client-side"*, and used that to excuse not checking. It was wrong: the absence above was
+*"renders client-side"*, and used that to excuse not checking. It was wrong: the absence above was <!-- quote-ok: this record's own earlier wording, quoted as the claim being corrected -->
 established with 76 ordinary HTTP requests. **An untested assumption about a source's retrievability
 became a reason not to look**, which is the same failure as trusting a status code, one step earlier.
 

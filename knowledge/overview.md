@@ -117,6 +117,12 @@ sources:
   - id: k8s-ai-guidance
     title: 'contributors/guide/pull-requests.md — AI Guidance (kubernetes/community, master)'
     resource: https://raw.githubusercontent.com/kubernetes/community/master/contributors/guide/pull-requests.md
+  - id: nerves-newsletter
+    title: 'Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org'
+    resource: https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/
+  - id: kernel-submitting-patches
+    title: 'Documentation/process/submitting-patches.rst (torvalds/linux, master)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst
 ---
 
 A contributor about to send AI-assisted work upstream needs one fact before starting: **what does
@@ -302,7 +308,7 @@ Until recently every policy here addressed a contributor, in a file a contributo
 That is an `AGENTS.md`, with `CLAUDE.md` and `GEMINI.md` beside it as pointers — three conventions
 covered, one source of truth. [Nerves](projects/nerves.md) approaches the same problem from the other
 side, replicating a human-facing policy into every repository *"to hopefully encourage agents to
-surface this"*. **One asks to be quoted, the other to be obeyed**, and neither can compel a tool to
+surface this"*[^nerves-newsletter]. **One asks to be quoted, the other to be obeyed**, and neither can compel a tool to
 read the file at all. **And the two can drift apart**: since Asahi reworked its policy on 2026-09-07,
 its agent file still forbids *any* use while the page it links forbids *material* contributions with
 graded enforcement.
@@ -452,7 +458,7 @@ the rule to itself. **Three projects, three answers, and no rule for any of them
 **The detail lives in [the Assisted-by trailer](mechanisms/assisted-by-trailer.md)**; what belongs on
 the map is why the field is not the answer it looks like.
 
-`Assisted-by:` is **not an AI tag**. The kernel defines it for *"any sort of advanced coding tool"* and
+`Assisted-by:` is **not an AI tag**. The kernel defines it for *"any sort of advanced coding tool"*[^kernel-submitting-patches] and
 lists a model beside `coccinelle` and `sparse`. Projects narrowed a general instrument to a specific
 question, and most of the disagreement follows from that.
 
@@ -610,3 +616,5 @@ never that the content arrived. Check for the text you came for.
 [^asahi-agents-md]: [AGENTS.md (AsahiLinux/m1n1, main) — the policy as an instruction to the tool](https://raw.githubusercontent.com/AsahiLinux/m1n1/main/AGENTS.md)
 [^asahi-slop-policy]: [Generative AI (LLM) Policy — Asahi Linux (reworked 2026-09-07)](https://asahilinux.org/llm-policy/)
 [^ladybird-post-closing]: [Changing How We Develop Ladybird (ladybird.org, 2026-06-05)](https://ladybird.org/posts/changing-how-we-develop-ladybird/)
+[^nerves-newsletter]: [Nerves Newsletter, 2026-08-20 issue — "Nerves sets an AI policy" (Lars Wikman), nerves-project.org](https://nerves-project.org/newsletter/2026-08-20-nerves-sets-an-ai-policy/)
+[^kernel-submitting-patches]: [Documentation/process/submitting-patches.rst (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/Documentation/process/submitting-patches.rst)

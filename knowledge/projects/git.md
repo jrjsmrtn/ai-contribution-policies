@@ -43,7 +43,7 @@ first and dropped the second, and the two together are a materially different po
 
 ## What is actually prohibited
 
-Read the rejection criteria as a list and none of them is *"you used a tool"*. They are properties
+Read the rejection criteria as a list and none of them is "you used a tool". They are properties
 of the submission: it **looks** AI generated; it sounds overly formal or bloated; it is AI slop; it
 looks good on the surface but makes no sense; the sender does not understand it or cannot explain
 it. The last is the load-bearing one — it is the test a maintainer can actually apply, and it is

@@ -134,7 +134,7 @@ DuckDB took on 2026-06-03 is the current one.
 **Three details of the copy are worth holding:**
 
 - **The sanction grew.** Astral and ripgrep both only *hide* comments believed to be AI-written; DuckDB
-  says they may be *"hidden/closed"*.
+  says they may be *"hidden/closed"*[^dd-ai-policy].
 - **The pin travelled, the pinning did not.** DuckDB links uv's policy at the exact commit ripgrep
   pinned — copied verbatim from ripgrep's text — but links ripgrep itself at `master`, unpinned.
 - **The reason stayed behind.** Astral justifies its human-in-the-loop rule by *"the foundational nature

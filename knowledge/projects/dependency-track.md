@@ -34,6 +34,12 @@ sources:
   - id: dt-hyades-copilot
     title: 'Copilot Code Review Instructions (.github/copilot-instructions.md, DependencyTrack/hyades-apiserver, main)'
     resource: https://raw.githubusercontent.com/DependencyTrack/hyades-apiserver/main/.github/copilot-instructions.md
+  - id: dt-commit-repo-docs
+    title: 'commit eae9e2f1 — Update repository docs (DependencyTrack/dependency-track, 2026-08-28)'
+    resource: https://github.com/DependencyTrack/dependency-track/commit/eae9e2f187e9ebd3e57bee27de1de127a99e1620
+  - id: dt-gtk-contributing
+    title: 'CONTRIBUTING.md (GNOME/gtk, main) — GTK''s trailer ban'
+    resource: https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md
 ---
 
 **Stance: permitted, and required to leave no trace in the commit.** The rule is one bullet, added
@@ -59,7 +65,7 @@ Three projects now forbid the tag, and this is the third:
 
 | Project | What is forbidden | Stated reason |
 |---|---|---|
-| [GTK](gtk.md) | `Co-authored-by:`, `Assisted-by:` | *"free advertising for AI companies"* |
+| [GTK](gtk.md) | `Co-authored-by:`, `Assisted-by:` | *"free advertising for AI companies"*[^dt-gtk-contributing] |
 | [Kubernetes](kubernetes.md) | `assisted-by`, `co-developed`, AI co-author, AI co-sign | dilutes human accountability |
 | **Dependency-Track** | assistant `Co-authored-by:`, **session links**, **"generated with" footers** | none given |
 
@@ -69,7 +75,7 @@ crediting the tool. GTK and Kubernetes name the trailer and stop, which leaves t
 untouched by a contributor following the rule literally. This closes all three.
 
 **It is also the only one that says what remains allowed** — *"`Co-authored-by` for human
-collaborators is fine"* — which matters because the blanket bans elsewhere read as prohibiting a
+collaborators is fine"*[^dt-agents] — which matters because the blanket bans elsewhere read as prohibiting a
 field that has an ordinary, unrelated use. A contributor pairing with a colleague is not caught here.
 
 No reason is given for the rule, which is worth recording rather than filling in. GTK's anti-vendor
@@ -181,7 +187,7 @@ re-verification that checks the contributing guide will find nothing and conclud
 record was nearly written that way.
 
 `git log -- AGENTS.md` dates the file to **2026-02-27** and the AI-attribution bullet to
-**2026-08-28**, six months later and in a commit titled *"Update repository docs"* — so the rule
+**2026-08-28**, six months later and in a commit titled *"Update repository docs"*[^dt-commit-repo-docs] — so the rule
 arrived as routine maintenance rather than as an announced policy, and no discussion, issue or ADR
 was found introducing it. **The absence of a stated rationale is a finding, not a gap in this
 record.**
@@ -196,3 +202,5 @@ today a contributor reading only the human-facing guide has no way to learn the 
 [^dt-makefile]: [Makefile (DependencyTrack/dependency-track, main) — the AGENT build flag](https://raw.githubusercontent.com/DependencyTrack/dependency-track/main/Makefile)
 [^dt-frontend-agents]: [AGENTS.md (DependencyTrack/frontend, main)](https://raw.githubusercontent.com/DependencyTrack/frontend/main/AGENTS.md)
 [^dt-hyades-copilot]: [Copilot Code Review Instructions (.github/copilot-instructions.md, DependencyTrack/hyades-apiserver, main)](https://raw.githubusercontent.com/DependencyTrack/hyades-apiserver/main/.github/copilot-instructions.md)
+[^dt-commit-repo-docs]: [commit eae9e2f1 — Update repository docs (DependencyTrack/dependency-track, 2026-08-28)](https://github.com/DependencyTrack/dependency-track/commit/eae9e2f187e9ebd3e57bee27de1de127a99e1620)
+[^dt-gtk-contributing]: [CONTRIBUTING.md (GNOME/gtk, main) — GTK's trailer ban](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)

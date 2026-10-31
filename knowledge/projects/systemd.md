@@ -124,7 +124,7 @@ the change** — leave them in and you are announcing that you did not.
 ## Re-verification notes
 
 **Two files, and they do different jobs.** `docs/CONTRIBUTING.md` carries the human-facing policy
-under *"Policy on the use of Large Language Models (LLMs) and AI tooling"*; `AGENTS.md` carries the
+under *"Policy on the use of Large Language Models (LLMs) and AI tooling"*[^systemd-contributing]; `AGENTS.md` carries the
 agent-facing rules and the canary. Reading only one gives a partial answer — unlike
 [Dependency-Track](dependency-track.md), where the AI rule exists **only** in `AGENTS.md`, systemd has
 both, and they do not fully overlap.

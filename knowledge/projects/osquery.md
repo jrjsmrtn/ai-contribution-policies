@@ -94,7 +94,7 @@ contributor following the charter literally will not arrive at the AI text.
 
 ## Why a silent project earns a record here
 
-The [overview](../overview.md) warns that *"checking only the foundation is a reliable way to be
+The [overview](../overview.md) warns that *"checking only the foundation is a reliable way to be <!-- quote-ok: this bundle's overview, quoted -->
 wrong about the project"*, on the reasoning that the more active a project is, the likelier it has
 written its own rule. **osquery is the counter-example that keeps the warning honest**: 23,549 stars, a
 funded foundation, a Technical Steering Committee, and steady maintenance — thirty commits across the

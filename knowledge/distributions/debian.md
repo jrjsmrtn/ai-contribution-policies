@@ -298,13 +298,13 @@ offer that its reasoning was sound.
 returns to the bundle's six months, since the subject is now a settled decision rather than a vote in
 progress. What would reopen it is Debian amending or superseding the statement, which Proposal E
 explicitly contemplates — it reserves the right to evolve *"without the need to resort to future
-general resolutions"*, so a change need not arrive through another GR and will not announce itself on
+general resolutions"*[^debian-gr-2026-002], so a change need not arrive through another GR and will not announce itself on
 the vote page.
 
 **Two corrections to where this record previously said to look**, both still worth keeping:
 
 - **The vote page was not where the result appeared first.** This record said
-  `https://www.debian.org/vote/2026/vote_002` *"carries the result once the ballot closes"*. Hours
+  `https://www.debian.org/vote/2026/vote_002` *"carries the result once the ballot closes"*. Hours <!-- quote-ok: this record's own earlier wording, quoted as the claim being corrected -->
   after closing it carried no outcome section, no tally sheet and no quorum log, while the result
   had been published on the `debian-vote` list. **Watch the list, then the page.**
 - **The preferential-outcome caution did not apply.** The Schwartz set resolved to a single option,

@@ -108,9 +108,9 @@ A symlink named `CLAUDE.md` pointing at `AGENTS.md` therefore fetches as a 9-byt
 string `AGENTS.md`, and looks exactly like a deliberately-written stub.
 
 **This bundle recorded that mistake in six records before it was caught.** Asahi Linux's,
-Dependency-Track's and systemd's `CLAUDE.md` files were described as *"nine-byte pointer files"*, and
-contrasted unfavourably with the *"symlinks"* Elixir and NetworkManager had chosen — a distinction
-between two things that are the same thing. The claim *"a pointer can go stale and a symlink cannot"*
+Dependency-Track's and systemd's `CLAUDE.md` files were described as *"nine-byte pointer files"*, and <!-- quote-ok: this bundle's own earlier wording, quoted as the mistake -->
+contrasted unfavourably with the *"symlinks"* Elixir and NetworkManager had chosen — a distinction <!-- quote-ok: this bundle's own earlier wording, quoted as the mistake -->
+between two things that are the same thing. The claim *"a pointer can go stale and a symlink cannot"* <!-- quote-ok: this bundle's own earlier wording, quoted as the mistake -->
 was true in general and false about every example it was attached to.
 
 **Check the mode, not the bytes**: `git ls-tree <ref> <path>` or the tree API returns `120000` for a

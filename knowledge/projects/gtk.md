@@ -141,7 +141,7 @@ the kernel's requirement. Handle review yourself, and do not route the feedback 
 
 ## Re-verification notes
 
-The policy is the *"AI Contribution Policy"* section of `CONTRIBUTING.md` in `GNOME/gtk`; read the
+The policy is the *"AI Contribution Policy"*[^gtk-contributing] section of `CONTRIBUTING.md` in `GNOME/gtk`; read the
 `/-/raw/` path, since the GitLab blob view renders client-side and answers HTTP 200 with the file
 text absent. `git log -- CONTRIBUTING.md` dates every change: the guidelines landed 2026-04-03 across
 several same-day commits, with a further wording pass on 2026-04-27.

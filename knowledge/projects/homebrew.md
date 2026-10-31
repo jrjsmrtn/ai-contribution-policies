@@ -65,6 +65,9 @@ sources:
   - id: hb-macports-420
     title: 'macports-base PR 420 — thread comment proposing Homebrew''s policy (2026-09-13)'
     resource: https://github.com/macports/macports-base/pull/420
+  - id: hb-kernel-attribution
+    title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
 ---
 
 **Stance: permitted, disclosed in the issue or pull request, and never attributed in a commit.** The
@@ -118,9 +121,9 @@ A self-test in the same run confirmed the pattern rejects the upstream suite's o
 case and passes the human control, so the passes above are not a broken harness.
 
 **The check enforces a narrower rule than the policy states.** The policy forbids *"an `Assisted-by`
-… or similar commit trailer"* whatever it contains; the check catches a trailer that names a vendor.
+… or similar commit trailer"*[^hb-rai] whatever it contains; the check catches a trailer that names a vendor.
 And the form it misses is exactly the one designed not to name one: the kernel reduced its trailer to
-the bare literal `LLM` because naming models is *"free advertising"*. **A trailer written to avoid
+the bare literal `LLM` because naming models is *"free advertising"*[^hb-kernel-attribution]. **A trailer written to avoid
 advertising a vendor also avoids a pattern built out of vendor names.** Nothing here suggests the
 check is meant to be complete — it catches the defaults tools emit, which is most of what arrives —
 but a contributor copying the kernel's convention would pass CI and break the written rule.
@@ -291,3 +294,4 @@ would be the first recorded copy of it.
 [^hb-codex-hook]: [.codex/hooks/brew-lgtm-stop.sh (Homebrew/brew, main)](https://raw.githubusercontent.com/Homebrew/brew/main/.codex/hooks/brew-lgtm-stop.sh)
 [^hb-governance]: [docs/Homebrew-Governance.md (Homebrew/brew, main)](https://raw.githubusercontent.com/Homebrew/brew/main/docs/Homebrew-Governance.md)
 [^hb-macports-420]: [macports-base PR 420 — thread comment proposing Homebrew's policy (2026-09-13)](https://github.com/macports/macports-base/pull/420)
+[^hb-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)

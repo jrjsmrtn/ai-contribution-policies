@@ -32,6 +32,9 @@ sources:
   - id: ripgrep-ai-policy
     title: 'AI Policy (AI_POLICY.md, BurntSushi/ripgrep, master) — the source Zed adapted'
     resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
+  - id: zed-pr-63384
+    title: 'zed-industries/zed PR 63384 — Restore the rule (merged 2026-08-28)'
+    resource: https://github.com/zed-industries/zed/pull/63384
 ---
 
 **Stance: LLM-assisted coding welcome, autonomous agents refused, prose reserved to humans.** Zed is a
@@ -167,7 +170,7 @@ canary, `script/danger/dangerfile.ts` holds the enforcement. `AGENTS.md` and `CL
 and carry nothing.
 
 `git log -- .rules` dates the marker instruction to **2026-08-21** (#62945) and shows it being
-**restored on 2026-08-28** (#63384, *"Restore the rule"*) — so it was removed at some point in
+**restored on 2026-08-28** (#63384, *"Restore the rule"*[^zed-pr-63384]) — so it was removed at some point in
 between. **Why it was removed and restored is not established here**, and is the most interesting
 unanswered question about this record: a canary that was briefly reverted may have met an objection
 worth knowing about.
@@ -182,3 +185,4 @@ to keep.
 [^zed-rules-file]: [.rules (zed-industries/zed, main)](https://raw.githubusercontent.com/zed-industries/zed/main/.rules)
 [^zed-danger]: [script/danger/dangerfile.ts (zed-industries/zed, main)](https://raw.githubusercontent.com/zed-industries/zed/main/script/danger/dangerfile.ts)
 [^ripgrep-ai-policy]: [AI Policy (AI_POLICY.md, BurntSushi/ripgrep, master) — the source Zed adapted](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)
+[^zed-pr-63384]: [zed-industries/zed PR 63384 — Restore the rule (merged 2026-08-28)](https://github.com/zed-industries/zed/pull/63384)

@@ -158,7 +158,7 @@ you cannot explain a change, or you route replies through a tool, the PR is clos
 
 ## Re-verification notes
 
-The policy is the *"AI Guidance"* section of `contributors/guide/pull-requests.md` in
+The policy is the *"AI Guidance"*[^k8s-ai-guidance] section of `contributors/guide/pull-requests.md` in
 `kubernetes/community`, rendered at `kubernetes.dev/docs/guide/pull-requests/#ai-guidance`. **Read the
 repository copy** — `git log -- contributors/guide/pull-requests.md` dates every revision, and the
 rendered site cannot show you when a rule changed.

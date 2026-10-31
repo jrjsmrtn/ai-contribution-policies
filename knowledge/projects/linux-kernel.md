@@ -283,7 +283,7 @@ citing the unmerged proposal to contributors — see [MacPorts](macports.md). **
 exporting a superseded rule to other projects.**
 
 **`lore.kernel.org` sits behind an Anubis proof-of-work challenge**, answering HTTP 200 with
-*"Making sure you're not a bot!"* to `curl` on both the message and `/raw` paths. The message-id was
+*"Making sure you're not a bot!"* to `curl` on both the message and `/raw` paths. The message-id was <!-- quote-ok: the title of a challenge page observed on fetch, not a stored source -->
 correct throughout; only the retrieval was blocked, and a real browser clears it. Confirm the URL
 from the lore *search* results, which do answer, rather than assembling a message-id by hand.
 

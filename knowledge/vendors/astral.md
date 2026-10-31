@@ -29,6 +29,15 @@ sources:
   - id: astral-site
     title: 'Astral — High-performance Python tooling (astral.sh)'
     resource: https://astral.sh
+  - id: astral-rg-contributing
+    title: 'CONTRIBUTING.md (BurntSushi/ripgrep, master) — the stub ripgrep copied'
+    resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/CONTRIBUTING.md
+  - id: astral-policy-commit
+    title: 'commit 88a2f5d5 — Add an AI policy (#1) (astral-sh/.github, 2026-03-13)'
+    resource: https://github.com/astral-sh/.github/commit/88a2f5d5c9cdf229b098ded0191199e41eca4249
+  - id: astral-rg-ai-policy
+    title: 'AI_POLICY.md (BurntSushi/ripgrep, master) — the first borrower'
+    resource: https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md
 ---
 
 **Stance: permitted for code, autonomous agents refused, all maintainer-facing prose reserved to
@@ -96,15 +105,15 @@ branched: [DuckDB](../projects/duckdb.md) adapted ripgrep's text and credits thi
 It sits with the bundle's other copying events in
 [policy by copying](../mechanisms/policy-by-copying.md). What
 [ripgrep](../projects/ripgrep.md) changed at the first hop: "s/our projects/this project", added
-*"perhaps without notice"*, and **dropped the criticality argument** — the reason Astral gives for the
+*"perhaps without notice"*[^astral-rg-ai-policy], and **dropped the criticality argument** — the reason Astral gives for the
 rule did not travel with the rule.
 
 ripgrep pinned its citation to a commit of this text, and that pin was compared against it again on
 2026-09-10 and found **byte-identical** — the policy has not moved since it began being copied.
 
 **ripgrep also copied the `CONTRIBUTING.md` stub**, not just the policy: Astral's *"require all use of
-AI … it will be closed"* becomes ripgrep's *"All use of AI in contributions must follow the AI Policy.
-Contributions not following the AI Policy will be closed."* The delivery pattern travelled with the
+AI … it will be closed"*[^astral-uv-contributing] becomes ripgrep's *"All use of AI in contributions must follow the AI Policy.
+Contributions not following the AI Policy will be closed."*[^astral-rg-contributing] The delivery pattern travelled with the
 text.
 
 ## The one vendor here whose policy binds the reader
@@ -143,7 +152,7 @@ whether or not that project's `CONTRIBUTING.md` mentions it.
 ## Re-verification notes
 
 **One file governs 86 repositories.** `astral-sh/.github/AI_POLICY.md` is the only copy;
-`git log` on it showed a single commit, *"Add an AI policy (#1)"*, 2026-03-13, when checked. A second
+`git log` on it showed a single commit, *"Add an AI policy (#1)"*[^astral-policy-commit], 2026-03-13, when checked. A second
 commit there would change the policy for every Astral project at once, and would silently invalidate
 [ripgrep](../projects/ripgrep.md)'s currency claim, which rests on the pinned text still matching.
 
@@ -160,3 +169,6 @@ starting point.
 [^astral-policy]: [AI Policy (AI_POLICY.md, astral-sh/.github, main)](https://raw.githubusercontent.com/astral-sh/.github/main/AI_POLICY.md)
 [^astral-uv-contributing]: [Contributing (CONTRIBUTING.md, astral-sh/uv, main)](https://raw.githubusercontent.com/astral-sh/uv/main/CONTRIBUTING.md)
 [^astral-site]: [Astral — High-performance Python tooling (astral.sh)](https://astral.sh)
+[^astral-rg-contributing]: [CONTRIBUTING.md (BurntSushi/ripgrep, master) — the stub ripgrep copied](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/CONTRIBUTING.md)
+[^astral-policy-commit]: [commit 88a2f5d5 — Add an AI policy (#1) (astral-sh/.github, 2026-03-13)](https://github.com/astral-sh/.github/commit/88a2f5d5c9cdf229b098ded0191199e41eca4249)
+[^astral-rg-ai-policy]: [AI_POLICY.md (BurntSushi/ripgrep, master) — the first borrower](https://raw.githubusercontent.com/BurntSushi/ripgrep/master/AI_POLICY.md)

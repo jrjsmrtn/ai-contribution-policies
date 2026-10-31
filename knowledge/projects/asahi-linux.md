@@ -119,7 +119,7 @@ to it (mode `120000`):
 **It was unchanged on 2026-09-14.** So an agent reading it is told that *any* use is forbidden and is
 told to send the user to a page that now forbids *material* use, grades enforcement, and describes a
 warning — not a ban — for one kind of analysis. This record's earlier re-verification notes predicted
-that *"a divergence between it and the Board policy would be the interesting finding"*; that
+that *"a divergence between it and the Board policy would be the interesting finding"*; that <!-- quote-ok: this record's own earlier re-verification note -->
 divergence now exists, because the policy moved and the agent file did not.
 
 It remains the clearest case here of a policy written **to the tool** in the imperative — refuse,

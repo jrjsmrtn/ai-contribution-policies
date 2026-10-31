@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **The 45 quotations with no footnote near them are resolved or explained.** 17 matched a source their
+  record already cited and now carry its footnote. 10 matched a source the record did not cite, mostly
+  commit titles and other projects' files, which are now added. 12 quote this bundle's own earlier
+  wording, a planted test sentence or a page observed on fetch, and carry a `quote-ok` marker saying so.
+  2 were the bundle's own framing and are now plain text. 3 are left for re-verification because their
+  sources changed: one in [`projects/python.md`](knowledge/projects/python.md), still unattributed, and
+  two in [`projects/systemd.md`](knowledge/projects/systemd.md), now attributed but not verbatim.
+
 ## [0.30.1] - 2026-10-31
 
 ### Fixed
