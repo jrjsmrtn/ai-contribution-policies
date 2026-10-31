@@ -28,10 +28,13 @@ sources:
     resource: https://github.com/llvm/llvm-project/pull/220659
   - id: llvm-extractive-label
     title: 'The `extractive` label (llvm/llvm-project)'
-    resource: https://api.github.com/repos/llvm/llvm-project/labels/extractive
+    resource: https://github.com/llvm/llvm-project/labels?q=extractive
   - id: llvm-copilot-instructions
     title: '.github/instructions/llvm.instructions.md (llvm/llvm-project, main)'
     resource: https://raw.githubusercontent.com/llvm/llvm-project/main/.github/instructions/llvm.instructions.md
+  - id: llvm-qemu-proposal
+    title: '[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)'
+    resource: https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html
 ---
 
 **Stance: permitted with a human in the loop, and argued more thoroughly than anything else here.**
@@ -53,7 +56,7 @@ What follows is not.
 > Our **golden rule** is that **a contribution should be worth more to the project than the time it
 > takes to review it.**[^llvm-ai-policy]
 
-The term is quoted from Nadia Eghbal's *Working in Public* and attributed in place — *"extractive
+The term is quoted from Nadia Eghbal's *Working in Public* and attributed in place — *"Extractive
 contributions are those where the marginal cost of reviewing and merging that contribution is greater
 than the marginal benefit to the project's producers."*[^llvm-ai-policy]
 
@@ -90,7 +93,7 @@ project for us to review it."*[^llvm-ai-policy]
 **A label.** `extractive`, described in the repository as *"Used for PRs which are extractive
 according to our developer policy"*, exists and carried **41 issues and pull requests** when checked
 on 2026-09-09.[^llvm-extractive-label] Its stated purpose is triage — *"to help other reviewers
-prioritize their review time"* — so the label routes attention rather than punishing.
+prioritize their review time"*[^llvm-ai-policy] — so the label routes attention rather than punishing.
 
 **Escalation.** If a contributor does not make the change less extractive, maintainers *"escalate to
 the relevant moderation or admin team for the space (GitHub, Discourse, Discord, etc) to lock the
@@ -134,7 +137,7 @@ machinery.
 field to do several different jobs. **This is the fourth stated purpose and the first to disclaim
 provenance outright** — LLVM wants the tag to direct a reviewer's attention and explicitly does not
 want a map of generated code. Contrast [QEMU](qemu.md), for which the tag *"doubles as a check that
-the author has read the policy"*.
+the author has read the policy"*[^llvm-qemu-proposal].
 
 Note also that LLVM asks for the tool's **name**, the grammar the [kernel](linux-kernel.md) retired
 and [Nerves](nerves.md) mandates.
@@ -227,5 +230,6 @@ thing to diff.
 
 [^llvm-ai-policy]: [LLVM AI Tool Use Policy (llvm/docs/AIToolPolicy.md, llvm/llvm-project, main)](https://raw.githubusercontent.com/llvm/llvm-project/main/llvm/docs/AIToolPolicy.md)
 [^llvm-agents-pr]: [Add minimal AGENTS.md (llvm/llvm-project#220659, draft, opened 2026-09-02)](https://github.com/llvm/llvm-project/pull/220659)
-[^llvm-extractive-label]: [The `extractive` label (llvm/llvm-project)](https://api.github.com/repos/llvm/llvm-project/labels/extractive)
+[^llvm-extractive-label]: [The `extractive` label (llvm/llvm-project)](https://github.com/llvm/llvm-project/labels?q=extractive)
 [^llvm-copilot-instructions]: [.github/instructions/llvm.instructions.md (llvm/llvm-project, main)](https://raw.githubusercontent.com/llvm/llvm-project/main/.github/instructions/llvm.instructions.md)
+[^llvm-qemu-proposal]: [[PATCH] docs/devel: relax policy on AI-generated contributions (Paolo Bonzini, qemu-devel, 2026-05-28)](https://lists.nongnu.org/archive/html/qemu-devel/2026-05/msg07614.html)

@@ -45,13 +45,19 @@ sources:
   - id: co-owasp
     title: 'Project Policy — OWASP Foundation (operational/projects.md, www-policy)'
     resource: https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md
+  - id: co-gcc
+    title: 'GNU Compiler Collection — AI Policy'
+    resource: https://gcc.gnu.org/ai-policy.html
+  - id: co-valkey
+    title: 'Valkey Project Instructions (.github/copilot-instructions.md, valkey-io/valkey, unstable)'
+    resource: https://raw.githubusercontent.com/valkey-io/valkey/unstable/.github/copilot-instructions.md
 ---
 
 **One text, six destinations.** The Developer Certificate of Origin is Version 1.1 and has not
 changed; eleven records here reach a position on AI by reasoning about it or about a substitute, and
 they do not agree on what it requires, whether it can be met, or whether it is worth keeping.
 
-**Any summary that explains a stance by *"they require a DCO"* is explaining nothing.**
+**Any summary that explains a stance by "they require a DCO" is explaining nothing.**
 
 ## Where the instrument leads
 
@@ -67,7 +73,7 @@ they do not agree on what it requires, whether it can be met, or whether it is w
 | [Kubernetes](../projects/kubernetes.md) | CLA | an AI **cannot** sign one[^co-k8s] | the inability becomes the **enforcement gate** |
 | [OWASP](../foundations/owasp.md) | DCO, mandated | *"original work"*, *"risks of plagiarized code"*[^co-owasp] | **never extended** to AI |
 | [FreeBSD](../distributions/freebsd.md) | none | the same licence-provenance argument | reached **without** a DCO |
-| [GCC](../projects/gcc.md) | copyright assignment | a **threshold**, not a certification | *"legally significant"* output declined |
+| [GCC](../projects/gcc.md) | copyright assignment | a **threshold**, not a certification | *"legally significant"*[^co-gcc] output declined |
 
 ## The disagreement is about clause (b), not about AI
 
@@ -86,7 +92,7 @@ non-compliance."*[^co-qemu]
 **The kernel reaches the opposite conclusion from the same document and names no clause at all.** It
 states only that *"Only humans can legally certify the Developer Certificate of Origin"*[^co-kernel]
 and requires the submitter to add their own sign-off — which works if the contribution is *"created
-in whole or in part by me"* under (a), with the model as an instrument. **Neither project argues
+in whole or in part by me"*[^co-dco] under (a), with the model as an instrument. **Neither project argues
 against the other, because neither addresses the clause the other is reading.**
 
 That is the whole disagreement. **It is not a question about AI; it is a question about what (b)
@@ -143,7 +149,7 @@ instrument is not having a position**; see [extending existing machinery](extend
 ## An AI now checks the certificate
 
 [Valkey](../projects/valkey.md) has no AI policy at all and briefs a review bot to *"Flag missing
-`Signed-off-by`"* in every commit. **Nothing is inconsistent** — confirming a line is present is not
+`Signed-off-by`"*[^co-valkey] in every commit. **Nothing is inconsistent** — confirming a line is present is not
 certifying anything — but it is the first instance here of AI touching the DCO, and it arrives from
 the one direction none of the arguments above anticipated: not whether a machine may certify, but a
 machine checking that a human did.
@@ -171,3 +177,5 @@ since NetworkManager and Nerves both dropped it without argument.
 [^co-nerves]: [CONTRIBUTING.md (nerves-project/nerves, main)](https://raw.githubusercontent.com/nerves-project/nerves/main/CONTRIBUTING.md)
 [^co-k8s]: [Open source maintainership in the age of AI (kubernetes.dev, 2026-06-26)](https://www.kubernetes.dev/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/)
 [^co-owasp]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
+[^co-gcc]: [GNU Compiler Collection — AI Policy](https://gcc.gnu.org/ai-policy.html)
+[^co-valkey]: [Valkey Project Instructions (.github/copilot-instructions.md, valkey-io/valkey, unstable)](https://raw.githubusercontent.com/valkey-io/valkey/unstable/.github/copilot-instructions.md)

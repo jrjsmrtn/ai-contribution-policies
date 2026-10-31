@@ -28,6 +28,15 @@ sources:
   - id: gtk-commit-free-ad
     title: 'commit 247617cd — Mention the "free ad" motivation'
     resource: https://gitlab.gnome.org/GNOME/gtk/-/commit/247617cdc7b9
+  - id: gtk-kernel-attribution
+    title: 'Linux commit 816d9992 — coding-assistants: simplify attribution'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b
+  - id: gtk-kernel-wireless
+    title: 'sysbot AI patches and wireless — linux-wireless thread, 2026-08-06'
+    resource: https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/
+  - id: gtk-nm-contributing
+    title: 'CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)'
+    resource: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md
 ---
 
 **Stance: permitted, tightly conditioned, and disclosed in prose rather than in a trailer.** GTK
@@ -49,7 +58,7 @@ This is the sharpest direct contradiction in this bundle, and both sides argue i
 
 The [Linux kernel](linux-kernel.md) **required** `Assisted-by:` until 2026-10-14, and narrowed it on 2026-08-03 from
 naming the model to the bare literal `LLM` on the ground that identifying models *"provides free
-advertising to proprietary software companies"*. **Same premise, opposite instrument**: the kernel
+advertising to proprietary software companies"*[^gtk-kernel-attribution]. **Same premise, opposite instrument**: the kernel
 kept the trailer and stripped the vendor from it; GTK removed the trailer and moved the disclosure
 into the merge request. On 2026-10-14 the kernel removed the trailer as well, for a different reason:
 too few contributors added it for it to tell a reviewer anything, so disclosure moved to the cover
@@ -81,7 +90,7 @@ mandatory in one tree, until 2026-10-14, and is forbidden in another.
 Two of these are not found elsewhere in this bundle. **Rule 2 caps the *shape* of the change**, not
 its volume — no broad rewrites, refactorings or style changes — which targets the failure the
 [Linux wireless maintainer](linux-kernel.md) described as *"sprinkling checks all over the code
-disregarding the architecture"*. A volume threshold counts lines; this one bounds blast radius.
+disregarding the architecture"*[^gtk-kernel-wireless]. A volume threshold counts lines; this one bounds blast radius.
 
 **Rule 4 governs fabricated evidence rather than generated code.** Benchmarks, bug reports, test
 results and reproducers are the artifacts a reviewer uses *to check the code*, and a hallucinated
@@ -96,7 +105,7 @@ contribution; this regulates the case made for it.
 > 3. Do **NOT** feed the review feedback to an LLM/GenAI tool.[^gtk-contributing]
 
 That third rule is the contributor-side half of what the wireless maintainer refused from the other
-side — *"I will absolutely not … argue with an LLM"*. Berg declined to be on one end of that
+side — *"I will absolutely not … argue with an LLM"*[^gtk-kernel-wireless]. Berg declined to be on one end of that
 exchange; **GTK forbids the contributor from creating it.** Read together, the two describe the same
 failure from opposite chairs, and GTK is the only policy here that closes it by rule.
 
@@ -123,7 +132,7 @@ prohibition on feeding feedback to a tool: both ends of the review must be human
 
 An IBM training slide from 1979, used here as the whole rationale in two lines. It is the
 accountability argument [NetworkManager](networkmanager.md) makes in prose — *"A tool cannot certify
-that for you"* — and the kernel makes procedurally by forbidding an agent to sign off.
+that for you"*[^gtk-nm-contributing] — and the kernel makes procedurally by forbidding an agent to sign off.
 
 ## Where this sits relative to GNOME
 
@@ -155,3 +164,6 @@ most likely to be revisited if a shared convention emerges.
 [^gtk-contributing]: [CONTRIBUTING.md — AI Contribution Policy (GTK, main)](https://gitlab.gnome.org/GNOME/gtk/-/raw/main/CONTRIBUTING.md)
 [^gtk-commit-guidelines]: [commit e76acf1c — Write down AI contribution guidelines](https://gitlab.gnome.org/GNOME/gtk/-/commit/e76acf1c991a)
 [^gtk-commit-free-ad]: [commit 247617cd — Mention the "free ad" motivation](https://gitlab.gnome.org/GNOME/gtk/-/commit/247617cdc7b9)
+[^gtk-kernel-attribution]: [Linux commit 816d9992 — coding-assistants: simplify attribution](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=816d9992d9ed434ec52cfbd63080d518e535a41b)
+[^gtk-kernel-wireless]: [sysbot AI patches and wireless — linux-wireless thread, 2026-08-06](https://lore.kernel.org/linux-wireless/3b6c46b6d79f3a0e0ded2967db3cfd469314b05c.camel@sipsolutions.net/T/)
+[^gtk-nm-contributing]: [CONTRIBUTING.md — Guidelines for Contributing (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)
