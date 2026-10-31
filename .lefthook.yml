@@ -75,6 +75,15 @@ pre-commit:
     audience:
       run: python3 ../../workspace/scripts/check-bundle-audience.py knowledge
 
+    # Every `*"..."*` against the saved snapshot of its cited source. Offline: it reads only
+    # `~/Projects/workspace/.quote-cache`, which snapshot-sources.py fills. Weekly-only until
+    # 2026-10-31, when the bundle had just been brought from 282 failures to none; on a commit it
+    # stops a broken quotation entering rather than waiting for Monday. About 15 s for the whole
+    # bundle, measured. A quotation from a NEW source fails until that source is fetched:
+    #   uv run ../../workspace/scripts/snapshot-sources.py --only=<url-part> knowledge
+    quotations:
+      run: ../../workspace/scripts/check-quotations.sh knowledge
+
     gitleaks:
       run: gitleaks protect --staged --verbose
     reuse:

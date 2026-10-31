@@ -124,6 +124,17 @@ okf lint knowledge         # recommended fields and style
 reuse lint                 # licensing
 ```
 
+**Every quotation is checked on commit** (since 2026-10-31), against a saved copy of its source. A
+record citing a source never fetched before cannot be committed until it is:
+
+```bash
+uv run ../../workspace/scripts/snapshot-sources.py --only=<part-of-url> knowledge
+../../workspace/scripts/check-quotations.sh knowledge
+```
+
+Use `--only=x`, not `--only x`: the space form is read as a bundle directory. The audience check
+also runs on commit, so a record cannot name a private repository or point into the workspace.
+
 Dates are ISO 8601 everywhere, including prose (`2026-08-04`, never `August 4, 2026`).
 
 ## Current Development Status

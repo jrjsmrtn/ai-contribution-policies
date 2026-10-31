@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   references to the maintainers' workspace and paths outside `knowledge/` in the published tree. Run
   weekly only, it missed a false positive that failed every sweep from 2026-10-12 and a log entry that
   shipped in v0.30.2. A planted reference was refused by the hook before this was committed.
+- **The quotation check now runs on every commit** too, against the saved copies of the cited sources,
+  so a quotation that does not match its source cannot be committed. It adds about 15 seconds. A record
+  citing a source not yet fetched must fetch it first; `CLAUDE.md` gives the command. A planted
+  one-word misquotation was refused by the hook.
 
 ## [0.30.4] - 2026-10-31
 
