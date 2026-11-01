@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.34.0] - 2026-11-01
+
 ### Added
 
 - **[`projects/coreboot.md`](knowledge/projects/coreboot.md)**: AI allowed in code review under a
