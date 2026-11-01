@@ -40,6 +40,7 @@ Directory: `projects/`
 | [Zed](zed.md) | Organization | Welcomes LLM-assisted coding, refuses autonomous agents outright, and reserve... |
 | [Zig](zig.md) | Organization | Bans LLM use absolutely — including paraphrasing, editing, translation, bra... |
 | [cdxgen](cdxgen.md) | Organization | Has no contribution policy at all — no CONTRIBUTING file and no code of con... |
+| [coreboot](coreboot.md) | Organization | Has no rule on AI-generated code, and a detailed one on AI in code review, ad... |
 | [curl](curl.md) | Organization | Accepts AI-assisted code that meets normal standards, but requires disclosure... |
 | [osquery](osquery.md) | Organization | Has no AI policy of its own and inherits the Linux Foundation's, which is gui... |
 | [pg_duckdb](pg-duckdb.md) | Organization | Has no AI contribution policy. Its contributing guide was trimmed from DuckDB... |

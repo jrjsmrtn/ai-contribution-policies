@@ -61,6 +61,12 @@ with a copied directory.
   nothing is written from them**: Void Linux, Mesa and coreboot, none of which has a record, and
   developments for [the Linux kernel](projects/linux-kernel.md) and [Debian](distributions/debian.md).
   Coverage of some days rests on an undated listing and is not proven complete.
+* **Creation: [coreboot](projects/coreboot.md)**, followed from the Phoronix lead to its primaries.
+  No rule on AI-generated code; a detailed one on AI in code review, merged 2026-09-13. Reviewers may
+  post AI-generated comments prefixed exactly `[AI-generated]`, without the model's name, read and
+  owned by the person posting them; AI may never set review flags, submit, or reply to a human.
+  **It is the second delimiter rule here, after TeX Live**, which answers an open question in
+  [prose reserved to humans](mechanisms/prose-reserved-to-humans.md).
 * **Creation: [Mesa](projects/mesa.md)**, followed from the Phoronix lead to its primaries. A
   project-wide compromise, described by one of its authors as one that *"(by design) satisfies nobody
   100%"*: no autonomous tools or review bots, AI discouraged for comments and commit messages, and

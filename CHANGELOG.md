@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/coreboot.md`](knowledge/projects/coreboot.md)**: AI allowed in code review under a
+  fixed `[AI-generated]` prefix and never in replies to people; the second delimiter rule after TeX Live.
+
 ## [0.33.0] - 2026-11-01
 
 ### Added

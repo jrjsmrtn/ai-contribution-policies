@@ -77,6 +77,7 @@ worries all attach to the code, and the prose is where none of them apply.
 | [TeX Live](../distributions/tex-live.md) | | | | ● |
 | [Dependency-Track](../projects/dependency-track.md) | | ● | | |
 | [GTK](../projects/gtk.md) | | | ● | |
+| [coreboot](../projects/coreboot.md) | | | ● | |
 | [Homebrew](../projects/homebrew.md) | | | ● | |
 | [Rust](../projects/rust.md) | | ● | ● | |
 | [Asahi Linux](../projects/asahi-linux.md) | ● | ● | ● | |
@@ -144,7 +145,9 @@ assertion.
 
 TeX Live takes a fourth position: not a ban but a **delimiter requirement**, permitting AI-written
 mail *"unless the AI's responses are clearly indicated and delimited from the rest of your
-email"*.[^pr-texlive] Attribution rather than prohibition, and the only instance of it here.
+email"*.[^pr-texlive] Attribution rather than prohibition. Since 2026-09-13
+[coreboot](../projects/coreboot.md) is a second instance: AI-written review comments are allowed under
+a fixed `[AI-generated]` prefix, and replies to people are not.
 
 ## Where it is a rule about agents rather than about writing
 
@@ -177,9 +180,8 @@ second branch from ripgrep, kept it — so the clause is lost by some copies, no
 ## What to watch
 
 Whether the register test spreads — Git is alone in it, and it is the version of this rule that
-punishes a person for how they write. Whether the delimiter approach picks up a second
-implementation, since it is the only one that treats the problem as attribution rather than
-authorship. And whether any project reserves prose *without* granting the translation exception now
+punishes a person for how they write. Whether the delimiter approach spreads beyond TeX Live
+and coreboot, the two that treat the problem as attribution rather than authorship. And whether any project reserves prose *without* granting the translation exception now
 that six have granted it; that combination is what the objection to this rule is actually about.
 
 [^pr-nm]: [CONTRIBUTING.md (NetworkManager, main)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/main/CONTRIBUTING.md)
