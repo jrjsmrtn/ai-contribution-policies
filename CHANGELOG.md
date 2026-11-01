@@ -8,15 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-### Changed
-
-- **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md)**: the tree's `AGENTS.md` (2026-10-14),
-  the proposed `agents/` skills, and two subsystem responses to AI-generated traffic.
-
 ### Added
 
 - **[`projects/coreboot.md`](knowledge/projects/coreboot.md)**: AI allowed in code review under a
   fixed `[AI-generated]` prefix and never in replies to people; the second delimiter rule after TeX Live.
+
+### Changed
+
+- **[`distributions/debian.md`](knowledge/distributions/debian.md)**: the Debian Inference Portal,
+  sponsored model access for contributors since 2026-09-23.
+- **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md)**: the tree's `AGENTS.md` (2026-10-14),
+  the proposed `agents/` skills, and two subsystem responses to AI-generated traffic.
+
+### Fixed
+
+- [`distributions/debian.md`](knowledge/distributions/debian.md) still said the kernel requires an
+  `Assisted-by:` trailer; it withdrew the tag on 2026-10-14.
 
 ## [0.33.0] - 2026-11-01
 

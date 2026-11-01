@@ -61,6 +61,12 @@ with a copied directory.
   nothing is written from them**: Void Linux, Mesa and coreboot, none of which has a record, and
   developments for [the Linux kernel](projects/linux-kernel.md) and [Debian](distributions/debian.md).
   Coverage of some days rests on an undated listing and is not proven complete.
+* **[Debian](distributions/debian.md) extended from the last Phoronix lead.** On 2026-09-23 a Debian
+  Inference Team announced sponsored LLM access for Debian Developers and Maintainers, for work that
+  benefits the project; its documentation states that outputs belong to the user and that prompts
+  are not retained or used for training. No other record describes a project's contributors being
+  supplied with model access. **Corrected the same record**: it still said the kernel requires an
+  `Assisted-by:` trailer, which stopped being true on 2026-10-14.
 * **[The Linux kernel](projects/linux-kernel.md) extended from four Phoronix leads.** Since
   2026-10-14 the tree has an `AGENTS.md`, a symlink to `README`, committed about an hour after the
   `Assisted-by` removal it cites as evidence of agents following the rules; `README` still promises
