@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   replacing the 2024 prohibition; the update itself is unpublished. Canonical's statement that Ubuntu
   will ship AI-co-authored code, previously unsourced, is cited to its author. CTAN's description of its
   mailing lists is corrected; its conclusion stands.
+- **The overview re-verified** against the records it summarises. It still called Fedora's policy
+  unpublished and Rust's a draft, miscounted two lists, and overstated the third-party index; all
+  corrected, with the day's SUSE and Canonical findings carried in.
 
 ## [0.30.4] - 2026-10-31
 

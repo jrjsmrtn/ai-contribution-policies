@@ -28,6 +28,12 @@ with a copied directory.
   a contributor using one.
 * **CTAN's lists were described too narrowly.** CTAN runs its own lists on `mailman.ctan.org`, all of
   them announcements or member-only, so the conclusion stands: there is no public CTAN discussion list.
+* **The [overview](overview.md) is re-verified against the records it summarises.** It still
+  described Fedora's policy as unpublished, seven weeks after the Fedora record was corrected, and
+  Rust's policy as a draft; both now sit in the shape table. A list of five organisations was
+  introduced as four, a count of projects shipping an `AGENTS.md` was wrong, and the third-party
+  index is recounted at 186 organisations instead of *"190+"*. The SUSE and Canonical findings of this
+  date are carried in, and *Why it expires* now cites this autumn's changes instead of two from 2026-08.
 
 ## 2026-10-31
 

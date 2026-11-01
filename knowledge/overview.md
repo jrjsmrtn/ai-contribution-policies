@@ -13,7 +13,9 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-05T01:15:00Z'
-stale_after: 2026-11-05
+  - by: claude/opus-5-5
+    at: '2026-11-01T16:30:00Z'
+stale_after: 2027-05-01
 sources:
   - id: git-submitting-patches-src
     title: Documentation/SubmittingPatches (git/git, master)
@@ -145,8 +147,8 @@ far better than the stance label does.
 | **Absolute prohibition** | origin, including laundering routes | [Zig](projects/zig.md) |
 | **Provenance prohibition** | inability to certify origin | [QEMU](projects/qemu.md), [NetBSD](distributions/netbsd.md), [Gentoo](distributions/gentoo.md) |
 | **Detection rule** | how the submission *looks* | [Git](projects/git.md) |
-| **Declaration rule** | whether you *said so* | [Rust](projects/rust.md) (draft), [OpenInfra](foundations/openinfra.md) |
-| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md), [Debian](distributions/debian.md), [NetworkManager](projects/networkmanager.md) |
+| **Declaration rule** | whether you *said so* | [Rust](projects/rust.md), [OpenInfra](foundations/openinfra.md) |
+| **Responsibility rule** | whether you can defend it | [Python](projects/python.md), [curl](projects/curl.md), [Linux kernel](projects/linux-kernel.md), [Debian](distributions/debian.md), [Fedora](distributions/fedora.md), [NetworkManager](projects/networkmanager.md) |
 | **Licence-compatibility rule** | rights in the output | [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md) |
 | **Copyright-threshold rule** | whether the contribution is *legally significant* | [GCC](projects/gcc.md) |
 
@@ -170,11 +172,10 @@ has argued the question to a vote and concluded its existing bar suffices is not
 as one that never asked**, even though neither ends up with a rule specific to AI — which is a
 caution about reading "no AI-specific rule" off a policy page as indifference.
 
-Two remain unshaped: [FreeBSD](distributions/freebsd.md) has a reported intention and no published
-rule, and **[Fedora](distributions/fedora.md) has a policy in force whose text is not published
-anywhere reachable** — approved by a minuted unanimous vote, effective immediately, and nine months
-later absent from the Council Policies page. A rule nobody can read is a fourth state, distinct from
-prohibited, permitted and undecided.
+One remains unshaped: [FreeBSD](distributions/freebsd.md) has a reported intention and no published
+rule. [Fedora](distributions/fedora.md) was listed here as a second, a policy in force with no
+readable text, until 2026-09-14. That was this bundle's error, not Fedora's: the policy had been
+published since 2025-10-24, under a heading the record never looked at.
 
 ## An eighth artifact, and it is not a shape
 
@@ -256,9 +257,9 @@ before review begins.[^nm-contributing]
 **Why review cost keeps appearing as the motive, stated most precisely by QEMU:** *"AI lowers the
 cost of producing a patch but does nothing to lower the cost of understanding and reviewing one; if
 anything it raises it, since **a reviewer can no longer assume that the submitter has reasoned
-through every line**."*[^qemu-relax-proposal] Six projects here give reviewer bandwidth as their
-ground — GNOME, the Linux wireless maintainer, the kernel's `generated-content.rst`, Nerves,
-MacPorts and QEMU — and this is the one that names the mechanism rather than the symptom. It also
+through every line**."*[^qemu-relax-proposal] GNOME, the Linux wireless maintainer, the
+kernel's `generated-content.rst`, Nerves, MacPorts and QEMU all give reviewer bandwidth as their
+ground, and this is the one that names the mechanism rather than the symptom. It also
 explains why volume caps and "be able to explain it" clauses keep arriving together: both are
 attempts to restore the prior the reviewer lost.
 
@@ -318,8 +319,8 @@ repository and an instruction to a tool. [Nerves](projects/nerves.md) governs th
 — *"Don't add AI tool configuration such as `AGENTS.md` or `CLAUDE.md` without asking first"*[^nerves-contributing] — while
 Asahi uses one as the policy's delivery mechanism.
 
-**But the filename predicts nothing, and this is now measurable.** Three projects ship an `AGENTS.md`
-and they are three different kinds of document:
+**But the filename predicts nothing, and this is now measurable.** Three agent-facing files recorded
+here are three different kinds of document:
 
 | Project | Size | What it actually is |
 |---|---|---|
@@ -367,7 +368,7 @@ Kubernetes takes the same fact and makes it the enforcement mechanism.
 
 ## The DCO settles nothing
 
-Four organisations reason from the **Developer Certificate of Origin** and reach four destinations:
+Five organisations reason from the **Developer Certificate of Origin** and reach five destinations:
 
 - **QEMU → prohibition.** The copyright status of generated output *"is ill-defined with no
   generally accepted, settled legal foundation"*, so how contributors *"could comply with DCO terms
@@ -410,8 +411,9 @@ record is irrelevant to you.
 [SUSE](vendors/suse.md) states it outright — *"The policy applies to SUSE
 employees"*[^suse-policy-html] — and [Red Hat](vendors/red-hat.md)'s published position defers
 explicitly to *"standards and practices of each unique community"*[^redhat-ai-assisted-dev], which
-resolves the question back to the receiving project. [Canonical](vendors/canonical.md) publishes
-nothing on AI at all, while requiring a CLA that is also silent on it.[^canonical-cla]
+resolves the question back to the receiving project. [Canonical](vendors/canonical.md) publishes no
+rule on AI-assisted contributions, while requiring a CLA that is also silent on it[^canonical-cla] —
+and its VP of Engineering has said Ubuntu will ship code co-authored by AI.
 
 **Where a vendor also runs a community — Fedora, openSUSE, Ubuntu — the community's policy is the one
 that binds a contributor**, and it is a separate document with a separate adoption process. Reading a
@@ -420,13 +422,16 @@ vendor's stance as its communities' policy gets both wrong.
 SUSE also supplies the sharpest caution in the bundle about trusting any single source: **two
 SUSE-published versions of one policy disagree** on whether AI pair programming is prohibited — the
 2024 PDF forbids it, the live web policy does not mention it.[^suse-policy-pdf][^suse-policy-html]
+The explanation came from a third party: openSUSE's board minuted in 2025-10 that SUSE's internal
+policy had been updated to allow named AI tools. The update itself is not published.
 
 ## Foundations are floors, not answers
 
 The [Linux Foundation](foundations/linux-foundation.md), [ASF](foundations/apache-software-foundation.md)
-and [OpenInfra](foundations/openinfra.md) each set a permissive baseline across many projects — and
-each says projects may go further. *"Individual Linux Foundation projects may develop their own
-project-specific guidance"*.[^lf-generative-ai] The kernel's in-tree policy is exactly that, and it
+and [OpenInfra](foundations/openinfra.md) each set a permissive baseline across many projects, and
+projects can go further. *"Individual Linux Foundation projects may develop their own
+project-specific guidance"*;[^lf-generative-ai] OpenInfra's policy *"does not supersede any project
+specific requirements"*.[^openinfra-ai-policy] The kernel's in-tree policy is exactly that, and it
 is stricter.
 
 **Checking only the foundation is a reliable way to be wrong about the project.** The more active a
@@ -496,8 +501,8 @@ superseded rule into another project's draft policy, and from the draft into 316
 commits. The mechanism is evidenced; intent is not claimed. By 2026-09-14 the rendered page had caught up and served `Assisted-by: LLM`, so the pull
 request now cites as its authority a page that contradicts it — and nothing announced either change.
 
-**Where it is going**: disclosure in the pull request, which the three most recent adopters require
-instead. [OpenInfra](foundations/openinfra.md) split the field by what the tool did — `Assisted-By:` for
+**Where it is going**: towards prohibiting the tag and asking for disclosure in the pull request
+instead, which is how most of the newer records here handle it. [OpenInfra](foundations/openinfra.md) split the field by what the tool did — `Assisted-By:` for
 assistive tools, `Generated-By:` for generative ones — until 2026-09-25, when it began recommending
 `Assisted-By` for all material use[^openinfra-ai-policy] — and
 [QEMU](projects/qemu.md)'s proposed `AI-used-for:` is the one attempt to record **where** AI was used
@@ -550,16 +555,16 @@ consistent direction: **they dropped the qualifier that determines what a contri
 All five were filed as "complete ban". The pattern is not carelessness; it is what compression does
 to this subject. **The exceptions are the operative part** — whether a route exists, and who decides.
 
-[Fedora](distributions/fedora.md) shows the failure can start earlier than any summary. Its policy
-was adopted properly — open proposal, weeks of public discussion, revisions from feedback, a recorded
-unanimous vote — and then never published where a contributor can read it. **A rule in force that
-cannot be read is not a rule anyone can follow**, and every downstream summary of it, including a
-careful one, is then unverifiable by construction.
+**This bundle has made the same mistake in the other direction.** For six weeks its
+[Fedora](distributions/fedora.md) record said a policy adopted by unanimous vote had never been
+published. It had been, under a second policies heading the record never checked, and the page that
+did load was taken as confirmation. **An absence is a claim like any other**, and it needs the same
+evidence: the place a rule would be, read in full.
 
 ## What this bundle does not do
 
-It does not enumerate. A public index lists **190+ organisations** with published AI contribution
-policies[^policy-index], and the 27-entry survey this replaced was already a slice. Coverage is not
+It does not enumerate. A public index listed **186 organisations** with published AI contribution
+policies on 2026-11-01[^policy-index], and the 27-entry survey this replaced was already a slice. Coverage is not
 the goal and completeness is not claimed: records are chosen for foundations first, then novel
 reasoning, then what the consuming tools encounter. See ADR-0011 as amended.
 
@@ -574,8 +579,9 @@ Projects merely probed clean are logged, not recorded.
 ## Why it expires
 
 Every claim here is about another organisation's *current* position, which changes without telling
-anyone. Two records in this bundle already document state the prior survey could not have known: the
-kernel merged its policy, and Debian opened a vote. `sources` records where a claim came from,
+anyone. Between 2026-09-25 and 2026-10-28 alone, OpenInfra reversed its reviewer rule, systemd
+rewrote its policy, the Linux kernel withdrew its `Assisted-by` tag and Python began applying its
+guidance with labels, each under a record that was not yet due. `sources` records where a claim came from,
 `verified` records that somebody checked, and `stale_after` makes decay visible instead of silent.
 
 **A caution that applies to re-verification specifically.** Some primary sources are not
