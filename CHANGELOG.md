@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.31.0] - 2026-11-01
+
 ### Changed
 
 - **The audience check now runs on every commit**, not only in the weekly sweep. It catches private names,
