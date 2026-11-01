@@ -7,3 +7,7 @@
 
 # Playwright MCP scratch output (console logs, page snapshots) — never part of the bundle.
 .playwright-mcp/
+
+# OKF caches and per-bundle gate state: third-party page text and fingerprints, evidence for
+# local checks and never part of the product. The hook refuses a tracked file here. Knowledge ADR-0004.
+/.okf/cache/

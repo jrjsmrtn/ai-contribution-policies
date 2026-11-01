@@ -9,7 +9,8 @@
 #
 #   install: go install github.com/okfcli/okf/cmd/okf@v0.4.0
 #
-# The LOCAL gates in the `supplychain-workspace` meta-project now cover only what okf does not:
+# The LOCAL gates -- OKF checkers in the Knowledge workspace, generic ones in ~/Projects/workspace
+# (Knowledge ADR-0004; they lived in `supplychain-workspace` until 2026-09-20) -- cover what okf does not:
 #   - check-okf.py   two footnote-DEFINITION faults (referenced-but-undefined, defined-but-unused)
 #   - check-dates.py ISO dates across the whole repository, including CLAUDE.md and CHANGELOG.md,
 #                    which are not part of the bundle and which okf therefore never sees
@@ -41,6 +42,16 @@
 pre-commit:
   parallel: true
   commands:
+    # .okf/cache/ holds third-party page text and must never be committed: it is evidence for a
+    # local check, not part of the product, and not ours to redistribute. `git ls-files` reads the
+    # index, so a staged file is caught before it lands. Knowledge ADR-0004.
+    okf-cache-untracked:
+      run: |
+        if [ -n "$(git ls-files .okf/cache)" ]; then
+          echo "okf-cache-untracked: files under .okf/cache/ are tracked or staged:" >&2
+          git ls-files .okf/cache | head -5 >&2
+          exit 1
+        fi
     # Relative links, anchors, and a sweep for filenames git says no longer exist.
     #
     # Run HERE, against THIS repository's history -- not from the workspace. The dead-name set is
@@ -73,16 +84,16 @@ pre-commit:
     # entry pointing at a list outside the bundle shipped in v0.30.2 and was caught only by a
     # manual run. A published bundle should not need a schedule to catch what a commit adds.
     audience:
-      run: python3 ../../workspace/scripts/check-bundle-audience.py knowledge
+      run: python3 ../workspace/scripts/check-bundle-audience.py knowledge
 
     # Every `*"..."*` against the saved snapshot of its cited source. Offline: it reads only
-    # `~/Projects/workspace/.quote-cache`, which snapshot-sources.py fills. Weekly-only until
+    # `.okf/cache/quotes`, which snapshot-sources.py fills. Weekly-only until
     # 2026-10-31, when the bundle had just been brought from 282 failures to none; on a commit it
     # stops a broken quotation entering rather than waiting for Monday. About 15 s for the whole
     # bundle, measured. A quotation from a NEW source fails until that source is fetched:
-    #   uv run ../../workspace/scripts/snapshot-sources.py --only=<url-part> knowledge
+    #   uv run ../workspace/scripts/snapshot-sources.py --only=<url-part> knowledge
     quotations:
-      run: ../../workspace/scripts/check-quotations.sh knowledge
+      run: ../workspace/scripts/check-quotations.sh knowledge
 
     gitleaks:
       run: gitleaks protect --staged --verbose
@@ -124,12 +135,12 @@ pre-commit:
         S=../../workspace/scripts     # the outer meta-project: shared, format-generic checkers
         if [ ! -d "$G" ]; then
           echo "bundle-gates: no meta-project at $G" >&2
-          echo "The gates live in supplychain-workspace, expected beside this repository." >&2
+          echo "The OKF gates live in the Knowledge workspace, expected beside this repository." >&2
           echo "Without it, repo-level ISO dates are UNCHECKED (footnotes now come from okf-gate)." >&2
           exit 1
         fi
         okf-gate knowledge &&
         python3 "$S/check-dates.py" . &&
-        python3 "$S/check-bundle-types.py" knowledge &&
-        python3 "$S/check-bundle-index.py" knowledge &&
-        python3 "$S/check-bundle-log.py" knowledge/log.md
+        python3 "$G/check-bundle-types.py" knowledge &&
+        python3 "$G/check-bundle-index.py" knowledge &&
+        python3 "$G/check-bundle-log.py" knowledge/log.md

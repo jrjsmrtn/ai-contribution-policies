@@ -3,8 +3,9 @@ SPDX-PackageName = "ai-contribution-policies"
 SPDX-PackageSupplier = "Georges Martin <jrjsmrtn@gmail.com>"
 
 # Single-licensed, matching the landscape bundle. Attribution is what every upstream source asks
-# for, and what this bundle already does structurally through `sources` and footnotes. The gates
-# that check it live in the supplychain-workspace meta-project and are licensed there.
+# for, and what this bundle already does structurally through `sources` and footnotes. The shared
+# gates that check it live in the Knowledge workspace and are licensed there; this bundle's own
+# tooling is in scripts/, annotated below.
 [[annotations]]
 path = ["knowledge/**", "README.md", "CHANGELOG.md", "CLAUDE.md", "CONTRIBUTING.md", "SECURITY.md", "CODE_OF_CONDUCT.md", "LICENSE"]
 precedence = "aggregate"
@@ -12,7 +13,15 @@ SPDX-FileCopyrightText = "2026 Georges Martin <jrjsmrtn@gmail.com>"
 SPDX-License-Identifier = "CC-BY-4.0"
 
 [[annotations]]
-path = [".gitignore", ".editorconfig", ".lefthook.yml", ".okf-types", "REUSE.toml"]
+path = [".gitignore", ".editorconfig", ".lefthook.yml", ".okf/**", "REUSE.toml"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Georges Martin <jrjsmrtn@gmail.com>"
 SPDX-License-Identifier = "CC0-1.0"
+
+# This bundle's own tooling: the twice-weekly primary-source watch and its probes. Code, not
+# knowledge. Moved here from supplychain-workspace on 2026-11-01 (Knowledge ADR-0004).
+[[annotations]]
+path = ["scripts/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Georges Martin <jrjsmrtn@gmail.com>"
+SPDX-License-Identifier = "Apache-2.0"

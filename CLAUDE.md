@@ -93,8 +93,8 @@ name. LLVM carries `.github/instructions/*.instructions.md`, a convention no pro
 Same failure both times: **a pattern that matches less than you think, reported as an absence.**
 
 ```bash
-../../SupplyChain/workspace/scripts/survey-agent-files.py <owner/repo>[:<ref>] ...   # what does it carry?
-../../SupplyChain/workspace/scripts/survey-agent-files.py --conventions             # the list, with provenance
+scripts/survey-agent-files.py <owner/repo>[:<ref>] ...   # what does it carry?
+scripts/survey-agent-files.py --conventions             # the list, with provenance
 ```
 
 The list lives in that script and nowhere else, so a sweep cannot quietly use a shorter one. Entries
@@ -128,8 +128,8 @@ reuse lint                 # licensing
 record citing a source never fetched before cannot be committed until it is:
 
 ```bash
-uv run ../../workspace/scripts/snapshot-sources.py --only=<part-of-url> knowledge
-../../workspace/scripts/check-quotations.sh knowledge
+uv run ../workspace/scripts/snapshot-sources.py --only=<part-of-url> knowledge
+../workspace/scripts/check-quotations.sh knowledge
 ```
 
 Use `--only=x`, not `--only x`: the space form is read as a bundle directory. The audience check
@@ -144,7 +144,8 @@ first release driven by a `stale_after` coming due rather than by new material, 
 expected shape: a scheduled job reports a due record, the primary is re-read, the release follows.
 **Expiry alone proved insufficient on 2026-09-14**, when three records were found wrong before they
 came due. Since then a source watch runs on Mondays and Thursdays and reports primaries that changed
-and movements in the third-party lead list (`supplychain-workspace` ADR-0013). It never edits a
+and movements in the third-party lead list (`supplychain-workspace` ADR-0013); since 2026-11-01 its
+scripts live in this repository's `scripts/` and the Knowledge workspace schedules them. It never edits a
 record: a reported change is re-read here, against the primary, like any other.
 **Which versions have shipped is derived — `git tag` and `CHANGELOG.md` — and is not enumerated
 here.** A hand-written range said *"v0.1.0 to v0.6.0"* and was false from v0.7.0 onward, sitting
