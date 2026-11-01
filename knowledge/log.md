@@ -61,6 +61,13 @@ with a copied directory.
   nothing is written from them**: Void Linux, Mesa and coreboot, none of which has a record, and
   developments for [the Linux kernel](projects/linux-kernel.md) and [Debian](distributions/debian.md).
   Coverage of some days rests on an undated listing and is not proven complete.
+* **[The Linux kernel](projects/linux-kernel.md) extended from four Phoronix leads.** Since
+  2026-10-14 the tree has an `AGENTS.md`, a symlink to `README`, committed about an hour after the
+  `Assisted-by` removal it cites as evidence of agents following the rules; `README` still promises
+  attribution guidance that is gone. A proposed `agents/` directory of skills is under discussion,
+  not merged. EDAC orphaned four drivers over *"AI-generated fixes frenzy"*, and a taint flag meant to
+  stem bot-driven fuzzing reports was added and reverted. A fifth lead, netdev deferring 50+ fixes, is
+  parked: its pull request does not mention AI.
 * **Creation: [coreboot](projects/coreboot.md)**, followed from the Phoronix lead to its primaries.
   No rule on AI-generated code; a detailed one on AI in code review, merged 2026-09-13. Reviewers may
   post AI-generated comments prefixed exactly `[AI-generated]`, without the model's name, read and

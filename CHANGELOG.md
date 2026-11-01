@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **[`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md)**: the tree's `AGENTS.md` (2026-10-14),
+  the proposed `agents/` skills, and two subsystem responses to AI-generated traffic.
+
 ### Added
 
 - **[`projects/coreboot.md`](knowledge/projects/coreboot.md)**: AI allowed in code review under a

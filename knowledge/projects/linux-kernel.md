@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Linux Kernel
-description: Permits AI-assisted contributions under two merged in-tree documents — a tool-generic one covering anything not written by a person in the Signed-off-by chain and asking for transparency in cover letters and changelogs, and an AI-specific one that bars agents from signing off. It asked for an Assisted-by tag until 2026-10-14, first naming the model and from 2026-08-03 not, and then removed it, because about one commit in ten carried it while LLM use was far wider.
+description: Permits AI-assisted contributions under two merged in-tree documents — a tool-generic one covering anything not written by a person in the Signed-off-by chain and asking for transparency in cover letters and changelogs, and an AI-specific one that bars agents from signing off. It asked for an Assisted-by tag until 2026-10-14, first naming the model and from 2026-08-03 not, and then removed it, because about one commit in ten carried it while LLM use was far wider. The same day it gained an AGENTS.md, a symlink to README, so agents find the rules on their own.
 resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/coding-assistants.rst
 tags:
   - ai-contribution
@@ -60,6 +60,21 @@ sources:
   - id: kernel-macports-pr-420
     title: 'CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)'
     resource: https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md
+  - id: kernel-agents-md-commit
+    title: 'commit 90d9f76c — docs: add AGENTS.md as a symlink to README (torvalds/linux, 2026-10-14)'
+    resource: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=90d9f76ccb72
+  - id: kernel-readme
+    title: 'README (torvalds/linux, master)'
+    resource: https://raw.githubusercontent.com/torvalds/linux/master/README
+  - id: kernel-agents-series
+    title: '[PATCH 0/2] agents: add portable agent skills and Fixes attribution (Sasha Levin, 2026-10-08) — thread'
+    resource: https://lore.kernel.org/all/cover.1791499378.git.sashal@kernel.org/T/
+  - id: kernel-edac-pull
+    title: '[GIT PULL] EDAC updates for v7.4-rc1 (Borislav Petkov, 2026-10-19)'
+    resource: https://lore.kernel.org/lkml/20261019182708.GAatZg_AcjQ76Ubjvt@fat_crate.local/raw
+  - id: kernel-taint-revert
+    title: '[PATCH] Revert "driver core: add TAINT_FORCED_BIND …" (Greg Kroah-Hartman, 2026-10-28)'
+    resource: https://lore.kernel.org/all/20261028-bind_taint-revert-v1-1-7c6b9cef30c9@linuxfoundation.org/raw
 ---
 
 **Stance: permitted, with transparency asked and a human on the hook.** The kernel governs this in
@@ -251,6 +266,47 @@ and it comes from someone refusing the contributions.
 He also names the human cost plainly, to the two contributors caught in it: *"I'm sorry you're
 effectively the two first victims of this new process."*[^kernel-wireless-syzbot]
 
+## An entry point for agents, and what subsystems did about the volume
+
+**Since 2026-10-14 the tree has an `AGENTS.md`**, a symlink to `README`. The commit explains why:
+agents load `AGENTS.md` on their own, and `README` *"already tells AI tools to read and follow
+Documentation/process/coding-assistants.rst, but that only helps if the agent decides to read README
+before acting, which in practice it often doesn't."* Its test: without the file, one agent added a
+`Signed-off-by` for the user, and *"With AGENTS.md in place, neither agent added a Signed-off-by, and
+both used the Assisted-by tag."*[^kernel-agents-md-commit]
+
+**It was committed about an hour after the tag it cites was removed**: the removal at 16:51 UTC on
+2026-10-14, the `AGENTS.md` at 17:45. The `Signed-off-by` result stands; the `Assisted-by` result
+described a rule already gone. `README` still says `coding-assistants.rst` *"contains essential
+requirements about licensing, attribution, and the Developer Certificate of Origin"*,[^kernel-readme]
+and that file has had no attribution section since the removal. See
+[agent-file pointers](../mechanisms/agent-file-pointers.md) for the pattern of an agent file that
+points at another document.
+
+**A proposed `agents/` directory of skills is under discussion and not merged.** The series, posted
+2026-10-08, adds a skill that works out a patch's `Fixes:` tag from the history. One motivation
+given in the thread is a figure relayed from another developer: *"in his estimation 15-20% of the
+Fixes tags were actively wrong"*. The
+replies argue about location and markup, not about whether the kernel should ship tooling for
+agents.[^kernel-agents-series] [Zed](zed.md) already ships skills of this kind, under
+`.agents/skills/`.
+
+**Two subsystems changed course because of AI-generated traffic**, without any change of policy:
+
+- **EDAC orphaned four drivers** that were *"receiving just drive-by updates and no one really uses
+  them"*: *"with the advent of AI-generated fixes frenzy, and because no one can really test fixes on
+  those, it is time to sunset them"*.[^kernel-edac-pull]
+- **The driver core added, then reverted, a taint flag.** `TAINT_FORCED_BIND` marked a kernel whose
+  devices had been bound to drivers by hand, and *"was originally intended to stem the flow of
+  unnecessary fuzzing reports of "broken" drivers where random devices were being bound to random
+  drivers"*. It broke VFIO users and was reverted, the revert merged 2026-10-31; the fuzzer had
+  stopped, *"and hopefully no one else starts it up again (but in this madness of LLMs these days,
+  you can't be sure.)"*[^kernel-taint-revert]
+
+Both are the [wireless](#the-discretion-exercised-wireless-2026-08-06) pattern at a larger scale:
+maintainers reducing the surface that machine-generated reports can reach, since they cannot
+reduce the reports.
+
 ## A mandatory procedure for AI bug-hunting
 
 Added 2026-08-04 by commit `3d7c44f7`, prompted by report quality: *"the quality of reports
@@ -345,3 +401,8 @@ commit before.
 [^kernel-submitting-patches-pre-removal]: [Documentation/process/submitting-patches.rst before the removal (torvalds/linux, commit 8fdbd353)](https://raw.githubusercontent.com/torvalds/linux/8fdbd353e6928492fdc46c359aabd2bfb7630fba/Documentation/process/submitting-patches.rst)
 [^kernel-gcc-ai-policy]: [GCC AI policy — the counterpart rule](https://gcc.gnu.org/ai-policy.html)
 [^kernel-macports-pr-420]: [CONTRIBUTING.md as proposed in macports/macports-base PR 420 (commit 5d3ca136, 2026-08-04)](https://raw.githubusercontent.com/jmroot/macports-base/5d3ca13648c94bdb83c7342bf73c31e39eb1f918/CONTRIBUTING.md)
+[^kernel-agents-md-commit]: [commit 90d9f76c — docs: add AGENTS.md as a symlink to README (torvalds/linux, 2026-10-14)](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/patch/?id=90d9f76ccb72)
+[^kernel-readme]: [README (torvalds/linux, master)](https://raw.githubusercontent.com/torvalds/linux/master/README)
+[^kernel-agents-series]: [[PATCH 0/2] agents: add portable agent skills and Fixes attribution (Sasha Levin, 2026-10-08) — thread](https://lore.kernel.org/all/cover.1791499378.git.sashal@kernel.org/T/)
+[^kernel-edac-pull]: [[GIT PULL] EDAC updates for v7.4-rc1 (Borislav Petkov, 2026-10-19)](https://lore.kernel.org/lkml/20261019182708.GAatZg_AcjQ76Ubjvt@fat_crate.local/raw)
+[^kernel-taint-revert]: [[PATCH] Revert "driver core: add TAINT_FORCED_BIND …" (Greg Kroah-Hartman, 2026-10-28)](https://lore.kernel.org/all/20261028-bind_taint-revert-v1-1-7c6b9cef30c9@linuxfoundation.org/raw)
