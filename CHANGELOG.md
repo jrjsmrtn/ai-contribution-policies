@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.33.0] - 2026-11-01
+
 ### Added
 
 - **[`projects/mesa.md`](knowledge/projects/mesa.md)**: a compromise floor that four drivers
@@ -20,6 +22,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - `knowledge/log.md` records a probe of the Erlang Ecosystem Foundation: no AI-contribution policy
   and no record written.
+- `knowledge/log.md` records a Phoronix sweep from 2026-09-08 to 2026-11-01: nine leads, of which Void
+  Linux and Mesa are now records.
+- **The source watch moved into this repository** (Knowledge ADR-0004): `scripts/` holds
+  `watch-sources.sh` and its helpers, `.okf/` holds the type vocabulary (was `.okf-types`) and a
+  git-ignored cache of quotation snapshots and watch state. The watch had failed on every run since
+  2026-09-20, because it looked for the bundle in its old location.
+
+### Security
+
+- `scripts/check-primary-drift.py` refuses a cited source that is not an `http(s)` URL and passes URLs
+  to `curl` with `--url`, so a value starting with `-` can no longer be read as an option.
+
 
 ## [0.32.0] - 2026-11-01
 
