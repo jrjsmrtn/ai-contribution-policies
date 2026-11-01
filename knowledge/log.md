@@ -54,6 +54,13 @@ with a copied directory.
   rule. `erlef.org` links bylaws and no policy page. The rules contributors meet come from the projects
   themselves; see [Elixir](projects/elixir.md). Worth re-probing when that record comes due, for an
   ecosystem-wide guidance document or a working group drafting one.
+* **Phoronix sweep, 2026-09-08 → 11-01.** 937 articles, from Internet Archive captures of the
+  homepage, the live news listing and RSS; 93 carry an AI term in the title, 53 of them in the window.
+  Dates come from each article, not from a listing. Three were already covered (the systemd canary and
+  the kernel's withdrawal of `Assisted-by`). **Nine leads, not yet followed to their primaries, so
+  nothing is written from them**: Void Linux, Mesa and coreboot, none of which has a record, and
+  developments for [the Linux kernel](projects/linux-kernel.md) and [Debian](distributions/debian.md).
+  Coverage of some days rests on an undated listing and is not proven complete.
 
 ## 2026-10-31
 
