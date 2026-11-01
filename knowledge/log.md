@@ -44,6 +44,16 @@ with a copied directory.
   kernel's model-named form that the kernel has since simplified and then withdrawn.
 * **[The Linux kernel](projects/linux-kernel.md) record said no other record asks for the prompts.**
   The openSUSE Forums do.
+* **The Erlang Ecosystem Foundation was probed and has no AI-contribution policy; no record is
+  written.** Its GitHub organisation's defaults repository holds a code of conduct, a security policy,
+  funding metadata and a README, and no contribution guide. A code search across the organisation for
+  generative AI, AI policy, AI tools, `Assisted-by`, Copilot and artificial intelligence found no rule,
+  and none of its repositories carries an `AGENTS.md` or `CLAUDE.md`; a search for *machine-generated* <!-- quote-ok: a search term, not a quotation -->
+  errored and is unchecked. The mentions of LLMs that exist are in supporters' statements for the
+  security working group's Ægis project and in two 2026 board candidates' statements, none of them a
+  rule. `erlef.org` links bylaws and no policy page. The rules contributors meet come from the projects
+  themselves; see [Elixir](projects/elixir.md). Worth re-probing when that record comes due, for an
+  ecosystem-wide guidance document or a working group drafting one.
 
 ## 2026-10-31
 

@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- `knowledge/log.md` records a probe of the Erlang Ecosystem Foundation: no AI-contribution policy
+  and no record written.
+
 ## [0.32.0] - 2026-11-01
 
 ### Added
