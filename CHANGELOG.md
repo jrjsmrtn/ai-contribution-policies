@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`projects/mesa.md`](knowledge/projects/mesa.md)**: a compromise floor that four drivers
+  raise, and an agent-file watermark withdrawn because it reached drafts the policy never meant to.
+- **[`distributions/void-linux.md`](knowledge/distributions/void-linux.md)**: a human-origin rule
+  for all content, where understanding and vouching for generated text were ruled insufficient, at the
+  cost of 113 orphaned packages.
+
 ### Changed
 
 - `knowledge/log.md` records a probe of the Erlang Ecosystem Foundation: no AI-contribution policy

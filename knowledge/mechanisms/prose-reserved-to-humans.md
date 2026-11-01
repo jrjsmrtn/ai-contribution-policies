@@ -66,6 +66,7 @@ worries all attach to the code, and the prose is where none of them apply.
 | [Nerves](../projects/nerves.md) | ● | ● | ● | |
 | [Zig](../projects/zig.md) | ● | ● | ● | ● |
 | [Perl](../projects/perl.md) | ● | ● | ● | ● |
+| [Void Linux](../distributions/void-linux.md) | ● | ● | ● | ● |
 | [Astral](../vendors/astral.md) | | ● | ● | |
 | [ripgrep](../projects/ripgrep.md) | | ● | ● | |
 | [Zed](../projects/zed.md) | | ● | ● | |

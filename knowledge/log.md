@@ -61,6 +61,23 @@ with a copied directory.
   nothing is written from them**: Void Linux, Mesa and coreboot, none of which has a record, and
   developments for [the Linux kernel](projects/linux-kernel.md) and [Debian](distributions/debian.md).
   Coverage of some days rests on an undated listing and is not proven complete.
+* **Creation: [Mesa](projects/mesa.md)**, followed from the Phoronix lead to its primaries. A
+  project-wide compromise, described by one of its authors as one that *"(by design) satisfies nobody
+  100%"*: no autonomous tools or review bots, AI discouraged for comments and commit messages, and
+  disclosure required through `Assisted-by: LLM` or `Generated-by: LLM`, the model unnamed since
+  2026-10-22. **Four drivers raised that floor within 23 days** (Intel's Jay, nouveau, panfrost,
+  PowerVR), and `AGENTS.md` routes agents away from them. The agent file carried NetworkManager's
+  `biblioklept` watermark from 2026-09-16 until 2026-10-22, when it was loosened without changing the
+  policy because it stopped drafts a human would revise; added to
+  [the review canary](mechanisms/review-canary.md) as the first watermark withdrawn.
+* **Creation: [Void Linux](distributions/void-linux.md)**, followed from the Phoronix lead to its
+  primaries. One organisation-wide policy, adopted 2026-07-14 with the approval of ten maintainers:
+  every contribution must originate from a human, including pull-request descriptions and comments;
+  AI is allowed for research, learning and translation; all use is disclosed; AI review tools are
+  banned from pull requests. Its first public enforcement, on 2026-09-12, rejected the defence that
+  generated text was understood and vouched for, and the maintainer concerned orphaned 113 packages
+  the next day. Added to the four-surface rows of
+  [prose reserved to humans](mechanisms/prose-reserved-to-humans.md).
 
 ## 2026-10-31
 

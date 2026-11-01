@@ -38,6 +38,9 @@ sources:
   - id: systemd-canary-check-mech
     title: 'commit 69cb8c4a — ci: draft PRs and skip reviews while the README notice is present (systemd/systemd, 2026-09-23)'
     resource: https://github.com/systemd/systemd/commit/69cb8c4a94a4
+  - id: mesa-agents-loosen
+    title: 'commit 8e21f044 — AGENTS.md: do not enforce the comment/commit rules (mesa/mesa, merged 2026-10-22)'
+    resource: https://gitlab.freedesktop.org/mesa/mesa/-/commit/8e21f044.patch
 ---
 
 **A canary asks the agent to leave a trace, then looks for it.** It is one of the few enforcement ideas in
@@ -133,8 +136,13 @@ lands:
   `Signed-off-by:`, `Assisted-by:`, `Co-authored-by:` and `Co-developed-by:`
 - `contrib/scripts/check-mr-description.sh` — CI, against `CI_MERGE_REQUEST_DESCRIPTION`
 
+**[Mesa](../projects/mesa.md) copied the watermark, word included, and withdrew it.** Its first
+`AGENTS.md`, on 2026-09-16, carried the same instruction with the same word; on 2026-10-22 the prose
+rules and the watermark were removed from the agent file, though not from the policy, because they
+also stopped drafts that a human would revise before submitting.[^mesa-agents-loosen]
+
 **The description check reports its own blind spot.** GitLab truncates that variable at 2,700
-characters, and the script prints *"only that part is checked"* rather than implying full coverage — a
+characters, and the script prints *"only that part is checked"*[^nm-canary-mech] rather than implying full coverage — a
 gate that says what it cannot see.
 
 ## Why the mechanism works at all, and the three ways it fails
@@ -175,3 +183,4 @@ in the proposal.
 [^nm-canary-mech]: [commit 329b610e — contrib: reject the AI canary marker in contributor text (NetworkManager)](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/commit/329b610e)
 [^systemd-labeler-mech]: [.github/workflows/labeler.yml (systemd/systemd, main)](https://raw.githubusercontent.com/systemd/systemd/main/.github/workflows/labeler.yml)
 [^systemd-canary-check-mech]: [commit 69cb8c4a — ci: draft PRs and skip reviews while the README notice is present (systemd/systemd, 2026-09-23)](https://github.com/systemd/systemd/commit/69cb8c4a94a4)
+[^mesa-agents-loosen]: [commit 8e21f044 — AGENTS.md: do not enforce the comment/commit rules (mesa/mesa, merged 2026-10-22)](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8e21f044.patch)

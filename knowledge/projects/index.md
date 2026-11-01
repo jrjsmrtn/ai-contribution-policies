@@ -25,6 +25,7 @@ Directory: `projects/`
 | [Ladybug](ladybug.md) | Organization | Has no AI contribution policy, and its contributing guide has not been touche... |
 | [Linux Kernel](linux-kernel.md) | Organization | Permits AI-assisted contributions under two merged in-tree documents — a to... |
 | [MacPorts](macports.md) | Organization | Has no adopted AI policy, but its unmerged proposal is already practice. An o... |
+| [Mesa](mesa.md) | Organization | A project-wide compromise reached after long debate — no autonomous tools, ... |
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance, reserves all contributor prose to humans, and since 20... |
 | [Open Build Service](open-build-service.md) | Organization | openSUSE's build service permits AI-assisted contributions, requires disclosu... |
