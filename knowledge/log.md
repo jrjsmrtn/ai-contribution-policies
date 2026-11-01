@@ -11,6 +11,24 @@ with a copied directory.
 **Releases**, newest first: **v0.30.4** 2026-10-31 (every quotation matches its source again) · **v0.30.3** 2026-10-31 (the kernel withdraws its Assisted-by tag) · **v0.30.2** 2026-10-31 (two policies rewritten under their records, and a record that quoted words its source never had) · **v0.30.1** 2026-10-31 (a policy that reversed itself, and quotations checked against their sources again) · **v0.30.0** 2026-10-31 (a guide copied before its source gained an AI rule) · **v0.29.0** 2026-10-09 (a copied policy without its teeth, and three projects with none) · **v0.28.0** 2026-10-03 (no policy, and a guide untouched while Claude was credited) · **v0.27.0** 2026-09-16 (two policies in one repository) · **v0.26.0** 2026-09-16 (the project that closed the door) · **v0.25.0** 2026-09-15 (Rust's policy spread before its text said so) · **v0.24.0** 2026-09-15 (a draft already in practice) · **v0.23.0** 2026-09-14 (three records a third-party list proved wrong) · **v0.22.0** 2026-09-14 (a pattern of names cannot catch a trailer that names no one) · **v0.21.0** 2026-09-10 (no policy, and an AI briefed to guard the governance file) · **v0.20.0** 2026-09-10 (one certificate, six destinations) · **v0.19.0** 2026-09-10 (nobody forbids autonomy, because nobody can detect it) · **v0.18.0** 2026-09-10 (a policy is an artifact with a supply chain) · **v0.17.0** 2026-09-10 (the most widely shared rule in the bundle is not about code) · **v0.16.0** 2026-09-09 (the fifth mechanism, and five records shortened to a link) · **v0.15.0** 2026-09-09 (Django, and a policy that enforces itself in the bot's own words) · **v0.14.0** 2026-09-09 (a symlink that documents itself) · **v0.13.0** 2026-09-09 (LLVM, and two sweep gaps closed) · **v0.12.0** 2026-09-09 (the mechanisms layer completed, and a claim corrected in six records) · **v0.11.0** 2026-09-09 (the trailer mechanism, and a gate for the defect that shipped) · **v0.10.0** 2026-09-09 (a policy lineage, and the mechanisms layer it forced) · **v0.9.0** 2026-09-07 (inheritance is thinner than it looks) · **v0.8.0** 2026-09-07 (two OWASP records that invert each other) · **v0.7.0** 2026-08-30 (debian decided; eight records added) · **v0.6.0** 2026-08-14 (debian re-verified) · **v0.5.0** 2026-08-13 (tooling only) · **v0.4.0** 2026-08-13 · **v0.3.0** 2026-08-05 · **v0.2.0** 2026-08-05 · **v0.1.0** 2026-08-05.
 [`../CHANGELOG.md`](../CHANGELOG.md) is the repository-level view of the same releases. <!-- audience-ok: an explicit repository-level pointer; a copied tree loses it by design -->
 
+## 2026-11-01
+
+* **Three records re-verified as they came due**: [Canonical](vendors/canonical.md),
+  [SUSE](vendors/suse.md) and [CTAN](distributions/ctan.md). None has published an AI-contribution
+  policy, and each record gained something its first pass missed.
+* **SUSE's AI prohibition has gone, by openSUSE's account.** The openSUSE board's minutes of
+  2025-10-27 record that SUSE's internal policy *"has now been updated"* and *"now allows Gemini, Qwen
+  2.5 (3.0 coming), and GitHub Copilot"*. The update is not published, and the repository the live
+  policy names for changes answers 404, so the record reports what each source says rather than a
+  current rule.
+* **Canonical's plan to ship AI-co-authored code is now cited**, to Jon Seager's reply on the Ubuntu
+  Discourse of 2026-04-28. The record had stated it, and a remark about *"slop"*, with no source. The
+  repository behind Ubuntu's contributor documentation carries GitHub Copilot instructions and, since
+  2026-09-07, an LLM-assisted review tool whose drafts a person must verify. There is still no rule for
+  a contributor using one.
+* **CTAN's lists were described too narrowly.** CTAN runs its own lists on `mailman.ctan.org`, all of
+  them announcements or member-only, so the conclusion stands: there is no public CTAN discussion list.
+
 ## 2026-10-31
 
 * **Every quotation in the bundle matches its source again**, for the first time since the weekly check

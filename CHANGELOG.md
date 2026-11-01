@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   so a quotation that does not match its source cannot be committed. It adds about 15 seconds. A record
   citing a source not yet fetched must fetch it first; `CLAUDE.md` gives the command. A planted
   one-word misquotation was refused by the hook.
+- **Canonical, SUSE and CTAN re-verified** as their `stale_after` came due. SUSE's record now reports
+  openSUSE board minutes saying SUSE's internal policy was updated in 2025 to allow named AI tools,
+  replacing the 2024 prohibition; the update itself is unpublished. Canonical's statement that Ubuntu
+  will ship AI-co-authored code, previously unsourced, is cited to its author. CTAN's description of its
+  mailing lists is corrected; its conclusion stands.
 
 ## [0.30.4] - 2026-10-31
 

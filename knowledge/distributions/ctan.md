@@ -17,7 +17,9 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-10T20:40:00Z'
-stale_after: 2026-11-10
+  - by: claude/opus-5-5
+    at: '2026-11-01T15:30:00Z'
+stale_after: 2027-02-01
 sources:
   - id: lotz-ctan
     title: Manfred Lotz (CTAN team) on the tex-live list, 2026-05-21
@@ -66,18 +68,23 @@ Karl Berry, answering the same question the day before: "TeX Live and CTAN are t
 with different people involved. For an answer about CTAN, you should write
 ctan at ctan.org."[^berry-separate]
 
-That routing matters, because **CTAN has no public mailing list**. Of the 63 public lists on
-`lists.tug.org`, none is `ctan` or `ctan-ann`; `ctan.org/ctan-ann` is a web announcement feed, not a
-discussion forum. So there is no CTAN archive to search — questions of this kind surface on
-`tex-live`, as this one did, or go privately to `ctan@ctan.org`.
+That routing matters, because **CTAN has no public discussion list**. Of the 63 public lists on
+`lists.tug.org`, none is CTAN's. CTAN runs its own lists on `mailman.ctan.org`, checked 2026-11-01:
+`ctan-ann` and `ctan-mirrors-announce` carry announcements, and `ctanweb`, which is about the CTAN
+web site, keeps its archive for members. So there is no CTAN discussion archive to search —
+questions of this kind surface on `tex-live`, as this one did, or go privately to `ctan@ctan.org`.
 
 # The published documents remain silent
 
-Checked 2026-08-10: the upload instructions,[^ctan-upload-pkg] the upload
-addendum[^ctan-addendum] (26,125 characters of plain text; **zero** matches for AI, artificial
-intelligence, LLM, generative, machine-generated or ChatGPT), the full help index, and the candidate
-URLs `/aipolicy`, `/help/ai`, `/ai-policy`, `/help/aipolicy` (all HTTP 404). CTAN's published
-conditions are licence-based: state the licence, be entitled to upload.
+Checked 2026-08-10 and again 2026-11-01: the upload instructions[^ctan-upload-pkg] and the upload
+addendum[^ctan-addendum] have **zero** matches for AI, artificial intelligence, LLM, generative,
+machine-generated or ChatGPT, and the candidate URLs `/aipolicy`, `/help/ai`, `/ai-policy`,
+`/help/aipolicy` all answer HTTP 404. The full help index was read on 2026-08-10 only. CTAN's
+published conditions are licence-based: state the licence, be entitled to upload.
+
+Searched by subject line, the `tex-live` archive from 2026-06 to 2026-10 carries one more message
+on the subject, from Karl Berry on 2026-06-07, announcing the TeX Live policy and repeating that CTAN
+is separate. Nothing in those months is from the CTAN team.
 
 # What a submitter should do
 

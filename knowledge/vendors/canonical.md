@@ -1,7 +1,7 @@
 ---
 type: Organization
 title: Canonical
-description: Requires a Harmony-based CLA and has no AI-contribution policy — its contributor documentation is silent, while it publicly plans to ship AI-co-authored code in Ubuntu.
+description: Requires a Harmony-based CLA and has no AI-contribution policy. Its contributor documentation and CLA are silent, while its VP of Engineering has said Ubuntu will ship code co-authored by AI, and the repository behind the contributor documentation now carries instructions for coding agents and an LLM-assisted review tool.
 resource: https://ubuntu.com/project/docs/contributors/
 tags:
   - ai-contribution
@@ -16,7 +16,9 @@ generated:
 verified:
   - by: claude/opus-5
     at: '2026-08-05T07:50:00Z'
-stale_after: 2026-11-05
+  - by: claude/opus-5-5
+    at: '2026-11-01T14:30:00Z'
+stale_after: 2027-05-01
 sources:
   - id: ubuntu-contributors
     title: Contributing to Ubuntu Development — contributor documentation
@@ -24,6 +26,18 @@ sources:
   - id: canonical-cla
     title: Contributor Licence Agreement — Ubuntu and Canonical Legal
     resource: https://canonical.com/legal/contributors
+  - id: seager-ai-post
+    title: The future of AI in Ubuntu — Jon Seager, Ubuntu Discourse, 2026-04-27
+    resource: https://discourse.ubuntu.com/t/the-future-of-ai-in-ubuntu/81130
+  - id: seager-clarification
+    title: The future of AI in Ubuntu, reply 41 (raw) — Jon Seager, Ubuntu Discourse, 2026-04-28
+    resource: https://discourse.ubuntu.com/raw/81130/41
+  - id: upd-tools-instructions
+    title: '.github/instructions/tools-development.instructions.md (ubuntu/ubuntu-project-docs, main)'
+    resource: https://raw.githubusercontent.com/ubuntu/ubuntu-project-docs/main/.github/instructions/tools-development.instructions.md
+  - id: upd-auto-mir
+    title: 'tools/auto-mir/README.md (ubuntu/ubuntu-project-docs, main)'
+    resource: https://raw.githubusercontent.com/ubuntu/ubuntu-project-docs/main/tools/auto-mir/README.md
 ---
 
 **Stance: no AI-contribution policy, and a CLA that has nothing to say about AI either.**
@@ -31,13 +45,14 @@ sources:
 ## The absence is verified, and the search path is wide
 
 Ubuntu's contributor documentation contains **no mention** of AI, LLMs, generative tooling or coding
-assistants across its eighteen sections — bug triaging, QA and testing, debugging, bug fixing,
-building, updating, merging, uploading and sponsorship, new packages, stable release updates,
-accessibility, documentation, and the rest.[^ubuntu-contributors]
+assistants.[^ubuntu-contributors] Since this record was first written the page has become part of a
+larger Ubuntu project documentation site, built from the `ubuntu/ubuntu-project-docs` repository.
+Searched on 2026-11-01, that whole repository mentions AI only in the documentation of one tool,
+Auto-MIR (below), and in a build dependency.
 
 This is a stronger absence than a single-file check. The documentation covers the whole contribution
-path, including the sponsorship queue where an AI-assistance rule would most naturally sit, and says
-nothing.
+path, including the sponsorship queue and the Patch Pilots, where an AI-assistance rule would most
+naturally sit, and says nothing.
 
 ## The CLA is the binding instrument, and it is silent
 
@@ -58,14 +73,38 @@ does not answer the AI question.
 
 ## The tension worth recording
 
-Canonical has publicly stated it intends to **ship AI-co-authored code in Ubuntu**, framing this as
-following projects like the Linux kernel that now have governing policies, and has said it does not
-want AI used carelessly or to produce "slop".
+Jon Seager, Canonical's VP of Engineering, set out the company's plans for AI in Ubuntu on the Ubuntu
+Discourse on 2026-04-27. On the kind of contribution this bundle tracks, he wrote: *"Many of you will
+have read reports of "slop" pull requests and contributions that have been flung at open source
+projects with little care, consideration or thought. This has never been an acceptable way to
+contribute, and is absolutely not what is being encouraged at Canonical."*[^seager-ai-post]
+
+A day later, replying in the same thread:
+
+> Regarding whether or not we should ship code that was co-authored by an AI - in reality we will be
+> doing this. Even foundational projects in the ecosystem like the Kernel itself now have policies
+> around how to govern this, and will accept tasteful, correct contributions that have been authored
+> with AI.[^seager-clarification]
 
 Those are statements about **product strategy and internal practice**, not a contribution policy —
 and this record does not treat them as one. But the gap is real: Canonical plans to *produce*
 AI-assisted code while publishing nothing about *receiving* it. A contributor cannot infer from a
-roadmap what will be accepted in a merge proposal.
+roadmap what will be accepted in a merge proposal. The kernel policy he points to has itself changed
+since: see [the Linux kernel](../projects/linux-kernel.md).
+
+## The documentation repository already has rules for agents
+
+The repository behind the contributor documentation carries three path-scoped GitHub Copilot
+instruction files, the first added on 2026-03-12. The one for tool code tells the agent: *"Sign-off is
+not configured here: create every commit with `git commit --no-gpg-sign` (It will be reviewed and
+signed by a human reviewer later)."*[^upd-tools-instructions] The signature here is a GPG commit
+signature, not a DCO sign-off, and the rule is addressed to the agent, not to a contributor.
+
+The same repository has shipped **Auto-MIR** since 2026-09-07, a tool that uses an LLM to draft Main
+Inclusion Review reports and reviews. It keeps the decision with a person: *"Auto-MIR does not post to
+Launchpad and does not make the final ACK or NACK decision. A reviewer must verify, edit, and complete
+every generated draft."*[^upd-auto-mir] So Canonical publishes rules for an LLM helping its own
+reviewers and for agents editing its documentation, and still none for a contributor using one.
 
 ## The vendor pattern, third variant
 
@@ -88,15 +127,25 @@ what it will accept from outside.
 
 ## Re-verification notes
 
-Two places, both needed:
+Three places, all needed:
 
 1. **`ubuntu.com/project/docs/contributors/`** — where a contribution rule would live. Note this URL
    is the redirect target; `documentation.ubuntu.com/project/contributors/` 301s to it.
-2. **`canonical.com/legal/contributors`** — the CLA. An AI clause added *there* would bind every
+2. **`ubuntu/ubuntu-project-docs`** — the repository that page is built from. Search the whole
+   repository, not the page: a rule could land in any guide, and the agent instructions and Auto-MIR
+   live here too.
+3. **`canonical.com/legal/contributors`** — the CLA. An AI clause added *there* would bind every
    contributor at once and is the higher-leverage change to watch.
+
+Also watch the Discourse thread: a plan to ship AI-co-authored code makes a rule for receiving it the
+obvious next document.
 
 A Canonical policy is more likely to appear as a CLA amendment than as a documentation section,
 because the CLA is the instrument contributors actually sign.
 
 [^ubuntu-contributors]: [Contributing to Ubuntu Development — contributor documentation](https://ubuntu.com/project/docs/contributors/)
 [^canonical-cla]: [Contributor Licence Agreement — Ubuntu and Canonical Legal](https://canonical.com/legal/contributors)
+[^seager-ai-post]: [The future of AI in Ubuntu — Jon Seager, Ubuntu Discourse, 2026-04-27](https://discourse.ubuntu.com/t/the-future-of-ai-in-ubuntu/81130)
+[^seager-clarification]: [The future of AI in Ubuntu, reply 41 (raw) — Jon Seager, Ubuntu Discourse, 2026-04-28](https://discourse.ubuntu.com/raw/81130/41)
+[^upd-tools-instructions]: [.github/instructions/tools-development.instructions.md (ubuntu/ubuntu-project-docs, main)](https://raw.githubusercontent.com/ubuntu/ubuntu-project-docs/main/.github/instructions/tools-development.instructions.md)
+[^upd-auto-mir]: [tools/auto-mir/README.md (ubuntu/ubuntu-project-docs, main)](https://raw.githubusercontent.com/ubuntu/ubuntu-project-docs/main/tools/auto-mir/README.md)
