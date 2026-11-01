@@ -116,6 +116,10 @@ def collect_sources(knowledge_dirs) -> dict[str, set[str]]:
                 raise SystemExit(f"check-primary-drift: cannot parse frontmatter in {p}: {e}")
             for s in fm.get("sources") or []:
                 url = (s or {}).get("resource")
+                # Only http(s): every fetcher below hands the URL to curl or gh, and a value starting
+                # with "-" would otherwise be read as an option.
+                if url and not str(url).startswith(("https://", "http://")):
+                    raise SystemExit(f"check-primary-drift: {p}: resource is not an http(s) URL: {url!r}")
                 if url:
                     cited.setdefault(url, set()).add(f"{root.parent.name}/{p.relative_to(root)}")
     return cited
@@ -229,7 +233,7 @@ def curl_text(url: str) -> dict:
         try:
             r = subprocess.run(
                 ["curl", "-sSL", "--max-time", "45", "--retry", "1", "-A", UA,
-                 "-o", str(body), "-w", "%{http_code}\t%{content_type}", url],
+                 "-o", str(body), "-w", "%{http_code}\t%{content_type}", "--url", url],
                 capture_output=True, text=True, timeout=120)
         except (OSError, subprocess.TimeoutExpired) as e:
             return {"status": "error", "detail": f"curl: {e}"}
