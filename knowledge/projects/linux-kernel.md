@@ -161,7 +161,7 @@ includes:[^kernel-generated-content]
 > longer sessions, include a summary of the prompts and the nature of resulting
 > assistance.[^kernel-generated-content]
 
-**No other record in this bundle asks for the prompts.** It also asks which tools were used, which
+**The only other rule in this bundle that asks for the prompt is a forum's**: the openSUSE Forums want it with any post that AI helped write substantially (see [openSUSE](../distributions/opensuse.md)). It also asks which tools were used, which
 portions they affected, and how the result was tested — and for Coccinelle specifically, *"The input
 to the tools you used, like the Coccinelle source script."*
 

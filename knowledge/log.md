@@ -34,6 +34,16 @@ with a copied directory.
   introduced as four, a count of projects shipping an `AGENTS.md` was wrong, and the third-party
   index is recounted at 186 organisations instead of *"190+"*. The SUSE and Canonical findings of this
   date are carried in, and *Why it expires* now cites this autumn's changes instead of two from 2026-08.
+* **Two records added: [openSUSE](distributions/opensuse.md) and the
+  [Open Build Service](projects/open-build-service.md).** openSUSE has no adopted policy: its board
+  drafted guidelines modelled on Fedora's in 2025-11, minuted the need to vote, and lost momentum when
+  its membership changed; a list thread reopened the question from 2026-08-11 to 2026-09-15 without a
+  conclusion. The openSUSE Forums enforce a rule of their own that asks for the prompt. OBS adopted a
+  rule on 2026-05-29 assembled, by its own account, from Kubernetes, Fedora and the kernel's rendered
+  documentation. It requires disclosure of any use through the trailer Kubernetes forbids, in the
+  kernel's model-named form that the kernel has since simplified and then withdrawn.
+* **[The Linux kernel](projects/linux-kernel.md) record said no other record asks for the prompts.**
+  The openSUSE Forums do.
 
 ## 2026-10-31
 

@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- **[`distributions/opensuse.md`](knowledge/distributions/opensuse.md)**: no adopted policy, a board
+  draft modelled on Fedora's that stalled before its vote, and a forum rule already in force.
+- **[`projects/open-build-service.md`](knowledge/projects/open-build-service.md)**: a rule assembled
+  from Kubernetes, Fedora and the kernel, which delivers Kubernetes's disclosure through the trailer
+  Kubernetes forbids, in a form the kernel has since dropped.
+
+### Fixed
+
+- [`projects/linux-kernel.md`](knowledge/projects/linux-kernel.md) said no other record asks for the
+  prompts; the openSUSE Forums do.
+
 ## [0.31.0] - 2026-11-01
 
 ### Changed

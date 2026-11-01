@@ -27,6 +27,7 @@ Directory: `projects/`
 | [MacPorts](macports.md) | Organization | Has no adopted AI policy, but its unmerged proposal is already practice. An o... |
 | [Nerves](nerves.md) | Organization | Permits AI assistance, reserves all human-facing writing to the contributor w... |
 | [NetworkManager](networkmanager.md) | Organization | Permits AI assistance, reserves all contributor prose to humans, and since 20... |
+| [Open Build Service](open-build-service.md) | Organization | openSUSE's build service permits AI-assisted contributions, requires disclosu... |
 | [Orchard](orchard.md) | Organization | Has no contributing guide, so it has no AI contribution policy either. The re... |
 | [Packer](packer.md) | Organization | Has no AI contribution policy. Since 2026-07 it has carried an AGENTS.md that... |
 | [Perl](perl.md) | Organization | Draws its lines by artifact type rather than by tool or disclosure — code m... |

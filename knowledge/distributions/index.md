@@ -13,4 +13,5 @@ Directory: `distributions/`
 | [Gentoo](gentoo.md) | Organization | Source-based Linux distribution whose Council voted an express ban on contrib... |
 | [NetBSD](netbsd.md) | Organization | BSD operating system whose commit guidelines presume LLM-generated code to be... |
 | [TeX Live](tex-live.md) | Organization | Accepts AI-assisted contributions on a responsibility-first framing — a kno... |
+| [openSUSE](opensuse.md) | Organization | Has no adopted AI-contribution policy. Its board waited for SUSE's corporate ... |
 

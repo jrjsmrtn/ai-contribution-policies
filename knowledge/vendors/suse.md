@@ -121,8 +121,8 @@ Then two places that could settle what the comparison cannot:
    becomes public, it settles the question.
 
 If the clause reappears on the live page, or the PDF is withdrawn or superseded, this record
-resolves into an ordinary one. **An openSUSE record is a lead**: its board was drafting a policy of its
-own, with Fedora's as a baseline.
+resolves into an ordinary one. [openSUSE](../distributions/opensuse.md)'s board drafted a policy of its own,
+with Fedora's as a baseline, and has not adopted it.
 
 [^suse-policy-html]: [SUSE Open Source Policy (live web version)](https://opensource.suse.com/legal/policy)
 [^suse-policy-pdf]: [SUSE Open Source Policy, effective 2024-04 (PDF)](https://www.suse.com/siteassets/suse_open_source_policy2.pdf)
