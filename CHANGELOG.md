@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.35.0] - 2026-11-09
+
 ### Changed
 
 - **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)**: no-AI checkboxes in the
