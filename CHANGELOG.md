@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **[`projects/asahi-linux.md`](knowledge/projects/asahi-linux.md)**: no-AI checkboxes in the
+  organisation's pull-request and bug templates, the pull-request one certified by the sign-off, and
+  the move from MIT to GPL-2.0-or-later, with LLM rewriting among the reasons the project gave.
+- **[`mechanisms/certifying-origin.md`](knowledge/mechanisms/certifying-origin.md)**: a sign-off that
+  certifies the absence of AI.
+
 ## [0.34.0] - 2026-11-01
 
 ### Added

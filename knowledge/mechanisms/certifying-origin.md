@@ -1,7 +1,7 @@
 ---
 type: Practice
 title: Certifying origin
-description: Eleven records reach a position on AI by reasoning about a certification instrument, and one unchanged 2004 text — the Developer Certificate of Origin — is read as unsatisfiable, satisfiable only by a human, satisfiable below a volume threshold, irrelevant, and worth abolishing. The disagreement is not about AI but about what clause (b) and (c) always meant. Whatever the instrument, every destination puts the legal risk on the contributor.
+description: Twelve records reach a position on AI by reasoning about a certification instrument, and one unchanged 2004 text — the Developer Certificate of Origin — is read as unsatisfiable, satisfiable only by a human, satisfiable below a volume threshold, irrelevant, worth abolishing, and as a vehicle for a declaration that no AI was used. The disagreement is not about AI but about what clause (b) and (c) always meant. Whatever the instrument, every destination puts the legal risk on the contributor.
 resource: https://developercertificate.org/
 tags:
   - ai-contribution
@@ -51,10 +51,13 @@ sources:
   - id: co-valkey
     title: 'Valkey Project Instructions (.github/copilot-instructions.md, valkey-io/valkey, unstable)'
     resource: https://raw.githubusercontent.com/valkey-io/valkey/unstable/.github/copilot-instructions.md
+  - id: co-asahi
+    title: 'pull_request_template.md (AsahiLinux/.github, main)'
+    resource: https://raw.githubusercontent.com/AsahiLinux/.github/main/pull_request_template.md
 ---
 
 **One text, six destinations.** The Developer Certificate of Origin is Version 1.1 and has not
-changed; eleven records here reach a position on AI by reasoning about it or about a substitute, and
+changed; twelve records here reach a position on AI by reasoning about it or about a substitute, and
 they do not agree on what it requires, whether it can be met, or whether it is worth keeping.
 
 **Any summary that explains a stance by "they require a DCO" is explaining nothing.**
@@ -73,6 +76,7 @@ they do not agree on what it requires, whether it can be met, or whether it is w
 | [Kubernetes](../projects/kubernetes.md) | CLA | an AI **cannot** sign one[^co-k8s] | the inability becomes the **enforcement gate** |
 | [OWASP](../foundations/owasp.md) | DCO, mandated | *"original work"*, *"risks of plagiarized code"*[^co-owasp] | **never extended** to AI |
 | [FreeBSD](../distributions/freebsd.md) | none | the same licence-provenance argument | reached **without** a DCO |
+| [Asahi Linux](../projects/asahi-linux.md) | DCO | the sign-off **certifies a no-AI checkbox**[^co-asahi] | **prohibition**, attested per commit |
 | [GCC](../projects/gcc.md) | copyright assignment | a **threshold**, not a certification | *"legally significant"*[^co-gcc] output declined |
 
 ## The disagreement is about clause (b), not about AI
@@ -159,6 +163,15 @@ commit-format check rejects a `Signed-off-by:` trailer that names an AI identity
 is `Signed-off-by: Codex <noreply@openai.com>` — so *may a machine sign?* is answered by a regular
 expression, and a signatory whose name matches nothing on the list passes.
 
+## A sign-off that certifies the absence of AI
+
+Since 2026-09-11 [Asahi Linux](../projects/asahi-linux.md)'s pull-request template asks the
+contributor to tick *"I have not used generative AI/LLMs to develop this code"* and to certify the
+boxes with a sign-off on every commit.[^co-asahi] **Every other reading here asks whether the DCO
+survives AI; Asahi uses it to carry a statement about AI.** The certificate's own text is unchanged
+and says nothing about tools; the declaration is attached to it by the template, so a contributor
+who signs off certifies both.
+
 ## What to watch
 
 Whether any project cites a **clause number**. QEMU is the only one that does, and the argument
@@ -179,3 +192,4 @@ since NetworkManager and Nerves both dropped it without argument.
 [^co-owasp]: [Project Policy — OWASP Foundation (operational/projects.md, www-policy)](https://raw.githubusercontent.com/OWASP/www-policy/master/operational/projects.md)
 [^co-gcc]: [GNU Compiler Collection — AI Policy](https://gcc.gnu.org/ai-policy.html)
 [^co-valkey]: [Valkey Project Instructions (.github/copilot-instructions.md, valkey-io/valkey, unstable)](https://raw.githubusercontent.com/valkey-io/valkey/unstable/.github/copilot-instructions.md)
+[^co-asahi]: [pull_request_template.md (AsahiLinux/.github, main)](https://raw.githubusercontent.com/AsahiLinux/.github/main/pull_request_template.md)
